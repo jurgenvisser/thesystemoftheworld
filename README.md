@@ -65,28 +65,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-
-to setup after cloning
-
-
-# Create .env file by copying .env.example
+# # to setup after cloning
 cp .env.example .env
-
-# Install all composer dependencies
 composer install
-
-# Generate the application key
 php artisan key:generate
-
-# Run database migrations
 php artisan migrate
-
-# Run database seeders (optional, if you need seed data)
 php artisan db:seed
-
-# Set the correct file permissions for storage and cache directories
-chmod -R 775 storage
 chmod -R 775 bootstrap/cache
+chmod -R 775 storage
 
 to start run
 php artiswan serve
