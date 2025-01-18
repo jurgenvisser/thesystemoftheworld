@@ -18,3 +18,23 @@ export default {
     },
     plugins: [],
 };
+
+
+// # Create .env file by copying .env.example
+// cp .env.example .env
+
+// # Install all composer dependencies
+// composer install
+
+// # Generate the application key
+// php artisan key:generate
+
+// # Run database migrations
+// php artisan migrate
+
+// # Run database seeders (optional, if you need seed data)
+// php artisan db:seed
+
+// # Set the correct file permissions for storage and cache directories
+// chmod -R 775 storage
+// chmod -R 775 bootstrap/cache
