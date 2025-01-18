@@ -18,7 +18,7 @@
                     {!! file_get_contents(public_path('images/TheSystemText.svg')) !!}
                 </div>
             </div>
-             <div class="font-times text-3xl hidden lg:block">COMMING SOON...</div>
+             <div class="font-times text-3xl hidden lg:block">COMING SOON...</div>
             <div>
                 <div class="h-auto w-60 ml-6 hidden lg:block">
                     {!! file_get_contents(public_path('images/TheSystemCrypto.svg')) !!}
