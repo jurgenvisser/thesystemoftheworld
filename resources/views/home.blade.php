@@ -29,14 +29,14 @@
         <!-- Main Content Section -->
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row">
             <!-- Image Section -->
-            <div class="w-96 bg-black">
+            <div class="w-96 bg-black hidden lg:block">
                 {!! file_get_contents(public_path('images/TheSystemFull.svg')) !!}
             </div>
 
             <!-- Text Content Section -->
             <div class="bg-black font-times text-xl text-white p-8 h-96 w-96 mt-8 lg:mt-0 lg:ml-8 text-center lg:text-left">
                 We’re working hard behind the scenes to create something amazing for you! Our website is currently under development and will be live very soon. <br>
-                In the meantime, stay connected and get exclusive updates by following us on TikTok: <span class="underline decoration-systemYellow">@thesystemoftheworld</span>. <br>
+                In the meantime, stay connected and get exclusive updates by following us on TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-systemYellow">@thesystemoftheworld</a>. <br>
                 Thank you for your patience – we can’t wait to share what’s coming next!
             </div>      
         </div>
