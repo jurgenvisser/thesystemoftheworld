@@ -17,29 +17,31 @@
                     {!! file_get_contents(public_path('images/TheSystemText.svg')) !!}
                 </div>
             </div>
-            <div class="font-times text-3xl">COMING SOON...</div>
+            <div class="font-times text-3xl hidden lg:block">COMING SOON...</div>
             <div>
-                <div class="h-auto w-60 ml-6">
+                <div class="h-auto w-60 ml-6 hidden lg:block">
                     {!! file_get_contents(public_path('images/TheSystemCrypto.svg')) !!}
                 </div>
             </div>
         </div>
         <!-- Main Content Section -->
-        <div class="flex-1 flex items-center justify-center flex-col lg:flex-row">
-            <!-- Image Section -->
-            <div class="w-96 bg-black hidden lg:block">
-                {!! file_get_contents(public_path('images/TheSystemFull.svg')) !!}
-            </div>
-
-            <!-- Text Content Section -->
-            <div class="bg-black font-times text-xl text-white p-8 h-96 w-96 mt-8 lg:mt-0 lg:ml-8 text-center lg:text-left">
-                We’re working hard behind the scenes to create something amazing for you! Our website is currently under development and will be live very soon. <br>
-                In the meantime, stay connected and get exclusive updates by following us on TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-systemYellow">@thesystemoftheworld</a>. <br>
-                Thank you for your patience – we can’t wait to share what’s coming next!
-                <div class="w-full bg-black block lg:hidden pt-2 lg:pt-0">
-                    {!! file_get_contents(public_path('images/TheSystemCrypto.svg')) !!}
+        <div class="h-screen flex items-center justify-center">
+            <div class="flex-1 flex items-center justify-center flex-col lg:flex-row">
+                <!-- Image Section -->
+                <div class="w-96 bg-black hidden lg:block">
+                    {!! file_get_contents(public_path('images/TheSystemFull.svg')) !!}
                 </div>
-            </div>      
+        
+                <!-- Text Content Section -->
+                <div class="bg-black font-times text-xl text-white p-8 h-96 w-96 mt-8 lg:mt-0 lg:ml-8 text-center lg:text-left">
+                    We’re working hard behind the scenes to create something amazing for you! Our website is currently under development and will be live very soon. <br>
+                    In the meantime, stay connected and get exclusive updates by following us on TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-systemYellow">@thesystemoftheworld</a>. <br>
+                    Thank you for your patience – we can’t wait to share what’s coming next!
+                    <div class="w-full bg-black block lg:hidden pt-2 lg:pt-0">
+                        {!! file_get_contents(public_path('images/TheSystemCrypto.svg')) !!}
+                    </div>
+                </div>      
+            </div>
         </div>
 
     </div>
