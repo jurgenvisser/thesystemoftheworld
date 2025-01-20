@@ -30,6 +30,9 @@ export default {
 // # Install all composer dependencies
 // composer install
 
+// # Install all NPM dependencies
+// npm install
+
 // # Generate the application key
 // php artisan key:generate
 
