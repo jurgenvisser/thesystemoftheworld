@@ -15,16 +15,16 @@
 
                 <!-- Text below the title -->
                 <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    We begrijpen dat je hier bent omdat je iets zoekt. Een antwoord, een oplossing, of een stap vooruit. En dat is precies wat The System biedt.
+                    We begrijpen dat je hier bent omdat je iets zoekt. Een antwoord, een oplossing, een stap vooruit. En dat is precies wat The System biedt.
                 </p>
                 <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                     Op dit moment zijn we hard bezig met het bouwen van een platform dat jouw leven kan veranderen. Een plek waar je de tools vindt om te groeien, sterker te worden, en jezelf te ontdekken.
                 </p>
                 <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Dit wordt een beweging. The System is voor degenen die willen winnen, die vastberaden zijn door te breken.
+                    Dit wordt een beweging. The System is voor de mensen die willen winnen, die vastberaden zijn om door te breken.
                 </p>
                 <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Blijf op de hoogte voor updates en wees de eerste die toegang krijgt tot exclusieve content, producten, en meer.
+                    Blijf op de hoogte voor updates en wees de eerste die toegang krijgt tot exclusieve content, producten, en meer!
                 </p>
                 
                 <!-- Space between content and the follow text -->
