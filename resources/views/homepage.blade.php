@@ -11,7 +11,7 @@
 
             <!-- Text Content Section -->
             <div class="bg-black text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 h-auto lg:h-[600px] w-96 lg:w-[900px] lg:ml-8 text-center lg:text-left leading-loose">
-                <h1 class="text-5xl font-bold uppercase font-times mb-8">Homepage</h1>
+                <h1 class="text-4xl font-bold uppercase font-times mb-8">Homepage</h1>
 
                 <!-- Text below the title -->
                 <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
@@ -30,7 +30,7 @@
                 <!-- Space between content and the follow text -->
                 <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
                     Volg The System voor meer! <br>
-                    TikTok: @thesystemoftheworld.
+                    TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-systemYellow">@thesystemoftheworld</a>.
                 </p>
             </div>
 
