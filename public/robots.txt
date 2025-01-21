@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap verwijzing
+Sitemap: https://www.thesystemoftheworld.com/sitemap.xml

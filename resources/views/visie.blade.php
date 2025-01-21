@@ -1,0 +1,52 @@
+@extends('layouts.app')
+
+@section('title', 'Visie')  <!-- Set the title for this page -->
+
+@section('content')
+
+{{-- <!-- Main Content Section -->
+<div class="h-[calc(100vh-4rem)] bg-yellow-400 m-0">
+    <div class="h-full flex flex-col">
+        <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
+
+            <!-- Text Content Section -->
+            <div class="bg-black text-sm lg:text-2xl flex justify-center items-center text-white p-8 h-auto lg:h-[600px] w-96 lg:w-[900px] lg:ml-8 text-center lg:text-left leading-loose">
+                <h1 class="text-5xl font-bold uppercase font-times">Visie</h1>
+            </div>
+
+        </div>
+    </div>
+</div> --}}
+
+<!-- Main Content Section -->
+<div class="h-[calc(100vh-4rem)] bg-yellow-400 m-0">
+    <div class="h-full flex flex-col">
+        <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
+
+            <!-- Text Content Section -->
+            <div class="bg-black text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 h-auto lg:h-[600px] w-96 lg:w-[900px] lg:ml-8 text-center lg:text-left leading-loose">
+                <h1 class="text-5xl font-bold uppercase font-times mb-8">Visie</h1>
+
+                <!-- Text below the title -->
+                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                    Onze visie is simpel: een wereld creëren waarin iedereen de tools en steun heeft om zijn of haar volledige potentieel te bereiken. The System is de plaats waar mensen de kracht vinden om te breken met oude gewoontes en een nieuw pad in te slaan.
+                </p>
+                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                    We zijn vastbesloten om niet alleen te inspireren, maar ook echte verandering te brengen.
+                </p>
+                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                    Blijf op de hoogte van alles wat The System te bieden heeft en wees deel van de verandering.
+                </p>
+
+                <!-- Extra space between the text and the follow text -->
+                <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
+                    Volg The System voor meer! <br>
+                    TikTok: @thesystemoftheworld.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@endsection

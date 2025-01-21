@@ -1,38 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="The System" />
-    <link rel="manifest" href="/site.webmanifest" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>thesystemoftheworld.com</title>
-</head>
-<body class="h-screen bg-yellow-400 m-0">
-    <div class="h-full flex flex-col">
-        <!-- Header -->
-        <div class="bg-black h-16 flex items-center justify-between px-8 text-white">
-            <div class="flex items-center">
-                <div class="h-auto w-12">
-                    {!! file_get_contents(public_path('images/logos/TheSystemHorse.svg')) !!}
-                </div>
-                <div class="h-auto w-72 ml-4">
-                    {!! file_get_contents(public_path('images/logos/TheSystemText.svg')) !!}
-                </div>
-            </div>
-            <div class="font-times text-3xl hidden lg:block">COMING SOON...</div>
-            <div>
-                <div class="h-auto w-60 ml-6 hidden lg:block">
-                    {!! file_get_contents(public_path('images/logos/TheSystemCrypto.svg')) !!}
-                </div>
-            </div>
-        </div>
+@extends('layouts.app')
 
-        <!-- Main Content Section -->
+@section('title', 'Coming-Soon')  <!-- Set the title for this page. -->
+
+@section('content')
+
+<!-- Main Content Section -->
+<div class="h-[calc(100vh-4rem)] bg-yellow-400 m-0">
+    <div class="h-full flex flex-col">
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
             <!-- Image Section -->
             <div class="w-96 lg:w-[600px] lg:h-[600px] bg-black hidden lg:block">
@@ -53,5 +27,6 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+</div>
+
+@endsection
