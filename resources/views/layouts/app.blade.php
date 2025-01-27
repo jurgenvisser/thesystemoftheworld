@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-title" content="The System" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="description" content="Ontdek The System: een platform in ontwikkeling dat tools biedt om te groeien, sterker te worden en jezelf te ontdekken. Sluit je aan bij een beweging voor mensen die willen doorbreken. Volg ons voor updates en exclusieve content!" />
-    
+    <link rel="stylesheet" href="css/app.css">
     <!-- Add your CSS and JS files here with Vite -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     

@@ -14,15 +14,17 @@
                 <h1 class="text-4xl font-bold uppercase font-times mb-8">Toekomst</h1>
 
                 <!-- Text below the title -->
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    De toekomst is voor degenen die durven te dromen en het lef hebben om die dromen werkelijkheid te maken. Bij The System kijken we vooruit – altijd zoekend naar manieren om te groeien, innoveren en de wereld te verbeteren.
-                </p>
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    De toekomst van The System gaat verder dan technologie en producten. Het gaat om het bouwen van een gemeenschap die samenwerkt om een betere wereld te creëren.
-                </p>
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Blijf ons volgen voor de spannende dingen die nog komen gaan.
-                </p>
+                <div>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        De toekomst is voor degenen die durven te dromen en het lef hebben om die dromen werkelijkheid te maken. Bij The System kijken we vooruit – altijd zoekend naar manieren om te groeien, innoveren en de wereld te verbeteren.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        De toekomst van The System gaat verder dan technologie en producten. Het gaat om het bouwen van een gemeenschap die samenwerkt om een betere wereld te creëren.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Blijf ons volgen voor de spannende dingen die nog komen gaan.
+                    </p>
+                </div>
 
                 <!-- Extra space between the text and the follow text -->
                 <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">

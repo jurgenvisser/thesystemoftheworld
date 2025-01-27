@@ -14,15 +14,17 @@
                 <h1 class="text-4xl font-bold uppercase font-times mb-8">Visie</h1>
 
                 <!-- Text below the title -->
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Onze visie is simpel: een wereld creëren waarin iedereen de tools en steun heeft om zijn of haar volledige potentieel te bereiken. The System is de plaats waar mensen de kracht vinden om te breken met oude gewoontes en een nieuw pad in te slaan.
-                </p>
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    We zijn vastbesloten om niet alleen te inspireren, maar ook echte verandering te brengen.
-                </p>
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Blijf op de hoogte van alles wat The System te bieden heeft en wees deel van de verandering.
-                </p>
+                <div>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Onze visie is simpel: een wereld creëren waarin iedereen de tools en steun heeft om zijn of haar volledige potentieel te bereiken. The System is de plaats waar mensen de kracht vinden om te breken met oude gewoontes en een nieuw pad in te slaan.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        We zijn vastbesloten om niet alleen te inspireren, maar ook echte verandering te brengen.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Blijf op de hoogte van alles wat The System te bieden heeft en wees deel van de verandering.
+                    </p>
+                </div>
 
                 <!-- Extra space between the text and the follow text -->
                 <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">

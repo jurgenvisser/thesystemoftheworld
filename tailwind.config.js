@@ -9,6 +9,9 @@ export default {
         './resources/**/*.js',
         './resources/**/*.vue',
     ],
+    safelist: [
+        'bg-h-backdrop-4', // Add the class you want to safelist here
+    ],
     theme: {
         extend: {
             fontFamily: {
@@ -18,9 +21,37 @@ export default {
             colors: {
                 systemYellow: '#D9AF5C',
             },
+            backgroundImage: {
+                'h-backdrop-1': "url('/public/images/backdrop/horizontal/h_backdrop_1.jpg')",
+                'h-backdrop-2': "url('/public/images/backdrop/horizontal/h_backdrop_2.jpg')",
+                'h-backdrop-3': "url('/public/images/backdrop/horizontal/h_backdrop_3.jpg')",
+                'h-backdrop-4': "url('/public/images/backdrop/horizontal/h_backdrop_4.jpg')",
+
+                'v-backdrop-1': "url('/public/images/backdrop/vertical/v_backdrop_1.jpg')",
+                'v-backdrop-2': "url('/public/images/backdrop/vertical/v_backdrop_2.jpg')",
+                'v-backdrop-3': "url('/public/images/backdrop/vertical/v_backdrop_3.jpg')",
+                'v-backdrop-4': "url('/public/images/backdrop/vertical/v_backdrop_4.jpg')",
+                'v-backdrop-5': "url('/public/images/backdrop/vertical/v_backdrop_5.jpg')",
+                'v-backdrop-6': "url('/public/images/backdrop/vertical/v_backdrop_6.PNG')",
+                'v-backdrop-7': "url('/public/images/backdrop/vertical/v_backdrop_7.jpg')",
+                'v-backdrop-8': "url('/public/images/backdrop/vertical/v_backdrop_8.jpg')",
+                'v-backdrop-9': "url('/public/images/backdrop/vertical/v_backdrop_9.jpg')",
+            },
+            boxShadow: {
+                'text': '2px 2px 4px rgba(0, 0, 0, 0.5)', // Custom text shadow
+            },
         },
     },
-    plugins: [],
+    plugins: [
+        // plugin for adding text-shadow utility to Tailwind
+        function ({ addUtilities }) {
+            addUtilities({
+                '.text-shadow': {
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // custom shadow
+                },
+            });
+        }
+    ],
 };
 
 

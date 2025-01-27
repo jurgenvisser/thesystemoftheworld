@@ -14,15 +14,17 @@
                 <h1 class="text-4xl font-bold uppercase font-times mb-8">Merchandise</h1>
 
                 <!-- Text below the title -->
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Onze merchandise is niet alleen een product, het is een statement. Het is voor de mensen die niet bang zijn om zichzelf uit te drukken en die trots zijn op hun reis.
-                </p>
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Met The System merchandise draag je niet alleen iets fysieks, je draagt een boodschap van kracht, doorzettingsvermogen en ambitie.
-                </p>
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Blijf op de hoogte voor onze nieuwste producten en exclusieve releases!
-                </p>
+                <div>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Onze merchandise is niet alleen een product, het is een statement. Het is voor de mensen die niet bang zijn om zichzelf uit te drukken en die trots zijn op hun reis.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Met The System merchandise draag je niet alleen iets fysieks, je draagt een boodschap van kracht, doorzettingsvermogen en ambitie.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Blijf op de hoogte voor onze nieuwste producten en exclusieve releases!
+                    </p>
+                </div>
 
                 <!-- Extra space between the text and the follow text -->
                 <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">

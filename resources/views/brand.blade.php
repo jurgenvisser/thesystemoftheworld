@@ -14,18 +14,20 @@
                 <h1 class="text-4xl font-bold uppercase font-times mb-8">Brand</h1>
 
                 <!-- Text below the title -->
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Wij begrijpen dat jouw merk meer is dan alleen een logo en een naam. Het is een verhaal, een identiteit, en een gevoel. En dat is precies wat The System helpt te creëren.
-                </p>
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Op dit moment werken we hard aan het ontwikkelen van een platform dat jouw merk helpt groeien, je boodschap te versterken en je merk te onderscheiden van de rest.
-                </p>
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Dit wordt een beweging. The System is voor de merken die willen winnen, die vastberaden zijn om door te breken in de wereld.
-                </p>
-                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                    Blijf op de hoogte voor updates en wees de eerste die toegang krijgt tot exclusieve content, producten, en meer.
-                </p>
+                <div>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Wij begrijpen dat jouw merk meer is dan alleen een logo en een naam. Het is een verhaal, een identiteit, en een gevoel. En dat is precies wat The System helpt te creëren.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Op dit moment werken we hard aan het ontwikkelen van een platform dat jouw merk helpt groeien, je boodschap te versterken en je merk te onderscheiden van de rest.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Dit wordt een beweging. The System is voor de merken die willen winnen, die vastberaden zijn om door te breken in de wereld.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Blijf op de hoogte voor updates en wees de eerste die toegang krijgt tot exclusieve content, producten, en meer.
+                    </p>
+                </div>
                 
                 <!-- Extra space between the text and the follow text -->
                 <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
