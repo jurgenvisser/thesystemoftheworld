@@ -20,10 +20,10 @@
 
 {{-- ? maybe put the image section and the text section in a div and make the image section its own div that gets its background via the theming bg-the-system-full and use a calc to get the height of the ttext section and apply it to the withd of the image section --}}
 <div class="h-auto bg-systemYellow/20 m-0 py-24 space-y-10">
-    <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative space-x-10">
+    <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative lg:space-x-10">
         
         <!-- Image Section -->
-        <div class="border-[2rem] border-black">
+        <div class="border-0 lg:border-[2rem] lg:border-black">
             <div class="lg:w-[600px] bg-black hidden lg:block">
                 {!! file_get_contents(public_path('images/Logos/TheSystemFull.svg')) !!}
             </div>
@@ -31,7 +31,6 @@
 
         <!-- Text Content Section -->
         <div class="bg-systemYellow/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 h-auto w-96 lg:w-[800px] lg:ml-8 text-justify leading-loose">
-            
             <div class="">
                 <h1 class="mb-8 text-4xl font-bold uppercase font-times">Homepage</h1>
                 <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
