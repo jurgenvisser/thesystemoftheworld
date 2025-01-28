@@ -19,7 +19,7 @@ export default {
                 times: ['"Times New Roman"', 'serif'], // Add Times New Roman as a custom font
             },
             colors: {
-                systemYellow: '#D9AF5C',
+                systemYellow: '#D9AF5C', // Add systemYellow as a custom color
             },
             backgroundImage: {
                 'h-backdrop-1': "url('/public/images/backdrop/horizontal/h_backdrop_1.jpg')",
@@ -36,23 +36,24 @@ export default {
                 'v-backdrop-7': "url('/public/images/backdrop/vertical/v_backdrop_7.jpg')",
                 'v-backdrop-8': "url('/public/images/backdrop/vertical/v_backdrop_8.jpg')",
                 'v-backdrop-9': "url('/public/images/backdrop/vertical/v_backdrop_9.jpg')",
-            },
-            boxShadow: {
-                'text': '2px 2px 4px rgba(0, 0, 0, 0.5)', // Custom text shadow
+
+                'the-system-full': "url('/public/images/backdrop/the_system_full.jpg')",
             },
         },
     },
-    plugins: [
-        // plugin for adding text-shadow utility to Tailwind
-        function ({ addUtilities }) {
-            addUtilities({
-                '.text-shadow': {
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // custom shadow
-                },
-            });
-        }
-    ],
+    plugins: [],
 };
+
+// !! This is for serious warnings or depricated methods
+// ! This is for alerts
+// & This is for notes
+// todo This is for ToDo's
+// * This is for suggestions
+// ? This is for questions
+// . This is for informative comments
+// # This is for important information
+// This is a normal comment
+// // This is a commented out comment and will be deleted in furute versions
 
 
 // # Create .env file by copying .env.example

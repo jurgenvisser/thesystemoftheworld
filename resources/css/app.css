@@ -8,3 +8,45 @@
 body {
     font-family: 'Roboto Slab', serif;
 }
+
+/* Custom CSS for fade-in effect of the text color */
+@keyframes fadeInTextColor {
+    0% {
+        color: white;
+    }
+    100% {
+        color: theme('colors.systemYellow'); /* Use the color from tailwind.config.js */
+    }
+}
+
+.animate-text-color {
+    color: white; /* Initial color of the text */
+    transition: color 0.3s ease; /* Ensures the text color transitions smoothly */
+}
+
+.animate-text-color:hover {
+    animation: fadeInTextColor 0.3s forwards; /* Apply the fade-in animation on hover */
+}
+
+.animate-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.animate-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: theme('colors.systemYellow'); /* Use the color from tailwind.config.js */
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+    transform-origin: center;
+}
+
+.animate-underline:hover::after {
+    width: 100%; /* Expand the underline to full width */
+    left: 50%; /* Keep the underline centered */
+}

@@ -16,7 +16,7 @@
     
     <title>@yield('title', 'Homepage')</title>
 </head>
-<body>
+<body class="bg-black">
         <!-- Here you can add your header or navigation -->
         @include('layouts.header')
 

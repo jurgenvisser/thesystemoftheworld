@@ -5,26 +5,23 @@ use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Spatie\Sitemap\SitemapGenerator;
 
-//!! This is only temporary, this should not exist when the rest of the website is done
-//. This is curently in place so that the website is not visible to the public
+// // !! This is only temporary, this should not exist when the rest of the website is done
+// // . This is curently in place so that the website is not visible to the public
+// // Route::get('/', function () {
+// //     return redirect('/coming-soon');
+// // }); 
+
+// Route::get('/homepage', function () {
+//     return view('homepage');
+// })->name('homepage');
+
+// Route::get('/index', function () {
+//     return view('homepage');
+// });
+
+// Route for the 'Homepage' page
 Route::get('/', function () {
-    return redirect('/coming-soon');
-}); 
-
-//. This should be the normal route for the website once the rest is done
-//* change /index to / to make it the main page
-Route::get('/index', function () {
-    return view('homepage');
-})->name('index');
-
-// This the route for the coming-soon page
-Route::get('/coming-soon', function () {
-    return view('coming-soon');
-})->name('coming-soon');
-
-// Route for the 'Brand' page
-Route::get('/brand', function () {
-    return view('brand'); // Refer to brand.blade.php
+    return view('homepage'); // Refer to homepage.blade.php
 });
 
 // Route for the 'Social Media' page
@@ -32,9 +29,14 @@ Route::get('/social-media', function () {
     return view('social-media'); // Refer to social-media.blade.php
 });
 
-// Route for the 'Visie' page
-Route::get('/visie', function () {
-    return view('visie'); // Refer to visie.blade.php
+// Route for the 'Missie & Visie' page
+Route::get('/missie-visie', function () {
+    return view('missie-visie'); // Refer to missie-visie.blade.php
+});
+
+// Route for the 'Merchandise' page
+Route::get('/merchandise', function () {
+    return view('merchandise'); // Refer to merchandise.blade.php
 });
 
 // Route for the 'Toekomst' page
@@ -42,10 +44,15 @@ Route::get('/toekomst', function () {
     return view('toekomst'); // Refer to toekomst.blade.php
 });
 
-// Route for the 'Merchandise' page
-Route::get('/merchandise', function () {
-    return view('merchandise'); // Refer to merchandise.blade.php
+// Route for the 'Brand' page
+Route::get('/brand', function () {
+    return view('brand'); // Refer to brand.blade.php
 });
+
+// This the route for the coming-soon page
+Route::get('/coming-soon', function () {
+    return view('coming-soon');
+})->name('coming-soon'); // Refer to coming-soon.blade.php
 
 // Route for generating sitemap
 Route::get('/generate-sitemap', function () {

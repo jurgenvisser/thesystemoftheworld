@@ -11,13 +11,13 @@
 
     <!-- Links (Desktop) Positioned between the two logos -->
     <div class="hidden sm:flex justify-center items-center space-x-4 sm:space-x-8 mx-4 flex-1">
-        <a href="/index" class="text-sm sm:text-xl font-semibold uppercase text-white hover:text-systemYellow">Homepage</a>
-        <a href="/brand" class="text-sm sm:text-xl font-semibold uppercase text-white hover:text-systemYellow">Brand</a>
-        <a href="/social-media" class="text-sm sm:text-xl font-semibold uppercase text-white hover:text-systemYellow">Social Media</a>
-        <a href="/visie" class="text-sm sm:text-xl font-semibold uppercase text-white hover:text-systemYellow">Visie</a>
-        <a href="/toekomst" class="text-sm sm:text-xl font-semibold uppercase text-white hover:text-systemYellow">Toekomst</a>
-        <a href="/merchandise" class="text-sm sm:text-xl font-semibold uppercase text-white hover:text-systemYellow">Merchandise</a>
-        <a href="/coming-soon" class="text-sm sm:text-xl font-semibold uppercase text-white hover:text-systemYellow">Coming Soon</a>
+        <a href="/" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Homepage</a>
+        <a href="/missie-visie" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Missie & Visie</a>
+        <a href="/social-media" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Social Media</a>
+        <a href="/merchandise" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Merchandise</a>
+        {{-- <a href="/brand" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Brand</a> --}}
+        {{-- <a href="/toekomst" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Toekomst</a> --}}
+        {{-- <a href="/coming-soon" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Coming Soon</a> --}}
     </div>
 
     <!-- Right Logo Section (visible on desktop) -->
@@ -38,41 +38,42 @@
 <!-- Mobile Menu (Hidden by default, toggled by hamburger) -->
 <div id="mobile-menu" class="sm:hidden w-full bg-black text-white absolute top-16 left-0 hidden max-h-screen overflow-y-auto z-50">
     <div class="flex flex-col space-y-0 py-4">
-        <div class="w-full border-b border-t border-systemYellow">
-            <a href="/index" class="block text-lg font-semibold uppercase text-white hover:text-systemYellow text-center py-2">
+        <div class="border-b border-systemYellow"></div>
+        <div class="border-b border-t border-systemYellow/80">
+            <a href="/" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
                 Homepage
             </a>
         </div>
-        <div class="w-full border-b border-systemYellow/90">
-            <a href="/brand" class="block text-lg font-semibold uppercase text-white hover:text-systemYellow text-center py-2">
-                Brand
+        <div class="border-b border-systemYellow/60">
+            <a href="/missie-visie" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
+                Missie & Visie
             </a>
         </div>
-        <div class="w-full border-b border-systemYellow/80">
-            <a href="/social-media" class="block text-lg font-semibold uppercase text-white hover:text-systemYellow text-center py-2">
+        <div class="border-b border-systemYellow/40">
+            <a href="/social-media" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
                 Social Media
             </a>
         </div>
-        <div class="w-full border-b border-systemYellow/70">
-            <a href="/visie" class="block text-lg font-semibold uppercase text-white hover:text-systemYellow text-center py-2">
-                Visie
-            </a>
-        </div>
-        <div class="w-full border-b border-systemYellow/60">
-            <a href="/toekomst" class="block text-lg font-semibold uppercase text-white hover:text-systemYellow text-center py-2">
-                Toekomst
-            </a>
-        </div>
-        <div class="w-full border-b border-systemYellow/50">
-            <a href="/merchandise" class="block text-lg font-semibold uppercase text-white hover:text-systemYellow text-center py-2">
+        <div class="border-b border-systemYellow/20">
+            <a href="/merchandise" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
                 Merchandise
             </a>
         </div>
-        <div class="w-full border-b border-systemYellow/40">
-            <a href="/coming-soon" class="block text-lg font-semibold uppercase text-white hover:text-systemYellow text-center py-2">
+        {{-- <div class="border-b border-systemYellow/90">
+            <a href="/brand" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
+                Brand
+            </a>
+        </div> --}}
+        {{-- <div class="border-b border-systemYellow/60">
+            <a href="/toekomst" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
+                Toekomst
+            </a>
+        </div> --}}
+        {{-- <div class="border-b border-systemYellow/40">
+            <a href="/coming-soon" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
                 Coming Soon
             </a>
-        </div>
+        </div> --}}
     </div>
 </div>
 
