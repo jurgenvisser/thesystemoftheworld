@@ -1,6 +1,6 @@
 <div class="bg-black h-16 flex items-center justify-between px-4 sm:px-8 text-white overflow-hidden">
     <!-- Left Logo Section -->
-    <a href="/index" class="flex items-center">
+    <a href="/" class="flex items-center">
         <div class="h-auto w-12">
             {!! file_get_contents(public_path('images/logos/TheSystemHorse.svg')) !!}
         </div>
