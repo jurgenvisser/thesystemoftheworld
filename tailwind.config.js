@@ -70,6 +70,14 @@ export default {
                     backgroundRepeat: 'no-repeat',
                     verticalAlign: 'middle',
                 },
+                '.responsive-width': {
+                    width: '85vw', // Default width for mobile and small screens
+                },
+                '@screen lg': {
+                    '.responsive-width': {
+                        width: '80vw', // Width for large screens and above
+                    },
+                },
             });
         }),
     ],
@@ -77,8 +85,8 @@ export default {
 
 // !! This is for serious warnings or depricated methods
 // ! This is for alerts
-// & This is for notes
 // todo This is for ToDo's
+// & This is for notes
 // * This is for suggestions
 // ? This is for questions
 // . This is for informative comments

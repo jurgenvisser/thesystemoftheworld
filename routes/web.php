@@ -5,19 +5,13 @@ use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Spatie\Sitemap\SitemapGenerator;
 
-// // !! This is only temporary, this should not exist when the rest of the website is done
-// // . This is curently in place so that the website is not visible to the public
-// // Route::get('/', function () {
-// //     return redirect('/coming-soon');
-// // }); 
+// // Route::get('/homepage', function () {
+// //     return view('homepage');
+// // })->name('homepage');
 
-// Route::get('/homepage', function () {
-//     return view('homepage');
-// })->name('homepage');
-
-// Route::get('/index', function () {
-//     return view('homepage');
-// });
+// // Route::get('/index', function () {
+// //     return view('homepage');
+// // });
 
 // Route for the 'Homepage' page
 Route::get('/', function () {
