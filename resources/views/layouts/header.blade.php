@@ -1,4 +1,4 @@
-<div class="bg-black h-16 flex items-center justify-between px-4 sm:px-8 text-white overflow-hidden">
+<div class="bg-black h-16 flex items-center justify-between px-4 sm:px-8 text-white sticky top-0 z-50">
     <!-- Left Logo Section -->
     <a href="/" class="flex items-center">
         <div class="h-auto w-12">
@@ -15,6 +15,7 @@
         <a href="/missie-visie" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Missie & Visie</a>
         <a href="/social-media" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Social Media</a>
         <a href="/merchandise" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Merchandise</a>
+        <a href="/contact" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Contact</a>
         {{-- <a href="/brand" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Brand</a> --}}
         {{-- <a href="/toekomst" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Toekomst</a> --}}
         {{-- <a href="/coming-soon" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase">Coming Soon</a> --}}
@@ -39,24 +40,29 @@
 <div id="mobile-menu" class="sm:hidden w-full bg-black text-white absolute top-16 left-0 hidden max-h-screen overflow-y-auto z-50">
     <div class="flex flex-col space-y-0 py-4">
         <div class="border-b border-systemYellow"></div>
-        <div class="border-b border-t border-systemYellow/80">
+        <div class="border-b border-t border-systemYellow/85">
             <a href="/" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
                 Homepage
             </a>
         </div>
-        <div class="border-b border-systemYellow/60">
+        <div class="border-b border-systemYellow/70">
             <a href="/missie-visie" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
                 Missie & Visie
             </a>
         </div>
-        <div class="border-b border-systemYellow/40">
+        <div class="border-b border-systemYellow/55">
             <a href="/social-media" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
                 Social Media
             </a>
         </div>
-        <div class="border-b border-systemYellow/20">
+        <div class="border-b border-systemYellow/40">
             <a href="/merchandise" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
                 Merchandise
+            </a>
+        </div>
+        <div class="border-b border-systemYellow/25">
+            <a href="/contact" class="animate-text-color block text-lg font-semibold uppercase text-center py-2">
+                Contact
             </a>
         </div>
         {{-- <div class="border-b border-systemYellow/90">

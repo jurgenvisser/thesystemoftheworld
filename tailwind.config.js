@@ -1,4 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
+const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -41,7 +42,37 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        plugin(function({ addUtilities }) {
+            addUtilities({
+                '.clover-chess': {
+                    display: 'inline-flex',       // Display both items inline
+                    alignItems: 'center',         // Align items vertically
+                    gap: '0em',                 // Adjust space between the two images
+                },
+                '.clover-chess::before': {
+                    content: '""',
+                    display: 'inline-block',
+                    width: '1em',
+                    height: '1em',
+                    backgroundImage: "url('/public/images/emojis/clover.png')",  // Clover emoji
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                    verticalAlign: 'middle',
+                },
+                '.clover-chess::after': {
+                    content: '""',
+                    display: 'inline-block',
+                    width: '1em',
+                    height: '1em',
+                    backgroundImage: "url('/public/images/emojis/chess.png')",   // Chess emoji
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+                    verticalAlign: 'middle',
+                },
+            });
+        }),
+    ],
 };
 
 // !! This is for serious warnings or depricated methods

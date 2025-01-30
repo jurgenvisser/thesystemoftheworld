@@ -10,7 +10,7 @@
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
 
             <!-- Title Section -->
-            <div class="bg-systemYellow/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-96 lg:w-auto">
+            <div class="bg-systemYellow/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Misie & Visie</h1>
             </div>
 
@@ -21,10 +21,10 @@
 <div class="h-auto bg-systemYellow/20 m-0 py-24 space-y-10">
     <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
         <!-- Text Content Section -->
-        <div class="bg-systemYellow/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 h-auto w-96 lg:w-[800px] lg:ml-8 text-justify leading-loose">
+        <div class="bg-systemYellow/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 h-auto w-[85vw] lg:w-[80vw] text-justify leading-loose">
 
             <div class="">
-                <h1 class="mb-8 text-4xl font-bold uppercase font-times">Misie & Visie</h1>
+                <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Misie & Visie</h1>
                 <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                     Onze visie is simpel: een wereld creëren waarin iedereen de tools en steun heeft om zijn of haar volledige potentieel te bereiken. The System is de plaats waar mensen de kracht vinden om te breken met oude gewoontes en een nieuw pad in te slaan.
                 </p>

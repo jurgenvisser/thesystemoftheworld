@@ -10,7 +10,7 @@
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
 
             <!-- Text Content Section -->
-            <div class="bg-systemYellow/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-96 lg:w-auto">
+            <div class="bg-systemYellow/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Homepage</h1>
             </div>
 
@@ -18,21 +18,20 @@
     </div>
 </div>
 
-{{-- ? maybe put the image section and the text section in a div and make the image section its own div that gets its background via the theming bg-the-system-full and use a calc to get the height of the ttext section and apply it to the withd of the image section --}}
 <div class="h-auto bg-systemYellow/20 m-0 py-24 space-y-10">
+
     <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative lg:space-x-10">
-        
         <!-- Image Section -->
-        <div class="border-0 lg:border-[2rem] lg:border-black">
+        <div class="border-0 lg:border-[1.95rem] lg:border-black">
             <div class="lg:w-[600px] bg-black hidden lg:block">
                 {!! file_get_contents(public_path('images/Logos/TheSystemFull.svg')) !!}
             </div>
         </div>
 
         <!-- Text Content Section -->
-        <div class="bg-systemYellow/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 h-auto w-96 lg:w-[800px] lg:ml-8 text-justify leading-loose">
+        <div class="bg-systemYellow/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 h-auto w-[85vw] lg:w-[40.9vw] text-justify leading-loose">
             <div class="">
-                <h1 class="mb-8 text-4xl font-bold uppercase font-times">Homepage</h1>
+                <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Introductie</h1>
                 <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                     We begrijpen dat je hier bent omdat je iets zoekt. Een antwoord, een oplossing, een stap vooruit. En dat is precies wat The System biedt.
                 </p>
@@ -52,7 +51,39 @@
                 </p>
             </div>
         </div>
+    </div>
 
+    <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative lg:space-x-10">
+        <div class="bg-systemYellow/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 h-auto w-[85vw] lg:w-[80vw] text-justify leading-loose">
+            <div class="">
+                <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Groei naar succes</h1>
+                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                    Sta jij stil in het leven? Voelt elke dag hetzelfde, zonder echte vooruitgang? The System is hier om dat te doorbreken.
+                </p>
+                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                    Dit is geen plek voor excuses. Dit is een beweging voor mensen die écht willen groeien. Mentaal sterker worden, meer discipline opbouwen en eindelijk de controle over je leven nemen.
+                </p>
+                <h2 class="mb-6 px-4 lg:px-0 text-lg lg:text-2xl font-bold uppercase font-times">Wat kun je verwachten?</h2>
+                <p class="text-base lg:text-lg mb-6 px-4 lg:px-0 space-y-4">
+                    <span class="block">
+                        <span class="font-bold">Mentale kracht</span> – Doorbreek negatieve gedachten en bouw zelfvertrouwen op.
+                    </span>
+                    <span class="block">
+                        <span class="font-bold">Discipline & Focus</span> – Geen afleiding, alleen actie.
+                    </span>
+                    <span class="block">
+                        <span class="font-bold">Doorbreek je grenzen</span> – Word de sterkste versie van jezelf.
+                    </span>
+                    <span class="block">
+                        <span class="font-bold">Een krachtige community</span> – Omring jezelf met winnaars.
+                    </span>
+                </p>
+                <h2 class="mb-6 px-4 lg:px-0 text-lg lg:text-2xl font-bold uppercase font-times">
+                    De keuze is aan jou. Blijf je zitten waar je bent? Of neem je vandaag de eerste stap?
+                    <span class="clover-chess"></span>
+                </h2>
+            </div>
+        </div>
     </div>
 </div>
 
