@@ -41,7 +41,7 @@
 <div id="mobile-menu" class="sm:hidden w-full bg-black text-white absolute top-16 left-0 hidden max-h-screen overflow-y-auto z-50">
     <div class="flex flex-col space-y-0 py-4">
         <div class="border-b border-systemYellow"></div>
-        <div class="border-b border-t border-systemYellow/85">
+        <div class="border-b border-systemYellow/85">
             <a href="/" class="animate-text-color block text-lg font-semibold uppercase text-center py-2 theme-yellow">
                 Homepage
             </a>

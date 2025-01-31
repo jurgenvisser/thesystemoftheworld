@@ -25,6 +25,16 @@ export default {
         'text-systemBlue',
         'border-systemYellow',
         'border-systemBlue',
+        'border-systemYellow/85',
+        'border-systemBlue/85',
+        'border-systemYellow/70',
+        'border-systemBlue/70',
+        'border-systemYellow/55',
+        'border-systemBlue/55',
+        'border-systemYellow/40',
+        'border-systemBlue/40',
+        'border-systemYellow/25',
+        'border-systemBlue/25',
     ],
     theme: {
         extend: {
