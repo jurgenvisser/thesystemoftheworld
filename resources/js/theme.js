@@ -1,19 +1,5 @@
-// resources/js/theme.js
-
-import { setCookie, getCookie } from './cookie.js';  // Import functions from cookie.js
-
-// Function to apply the stored theme from the cookie on page load
-function applyStoredTheme() {
-    let currentTheme = getCookie("theme");
-    if (currentTheme === "yellow") {
-        setTheme('yellow');
-    } else if (currentTheme === "blue") {
-        setTheme('blue');
-    }
-}
-
-// Helper function to actually set the theme on the page
-function setTheme(theme) {
+// Function to actually set the theme on the page
+export function setTheme(theme) {
     const elementsToToggle = [
         document.body, // The body
         ...document.querySelectorAll(
@@ -96,30 +82,12 @@ function setTheme(theme) {
     });
 }
 
-// Change the theme and store it in the cookie
-function toggleTheme() {
-    let currentTheme = getCookie("theme");
-    let newTheme = currentTheme === "yellow" ? "blue" : "yellow";
-    
-    // Set the new theme
-    setTheme(newTheme);
-    
-    // Store the new theme in the cookie
-    setCookie("theme", newTheme, 30);
-}
-
-// Attach event listener to theme toggle button
-document.addEventListener('DOMContentLoaded', () => {
-    // Apply the stored theme when the page loads
-    applyStoredTheme();
-
-    const themeToggleButtons = document.querySelectorAll('.theme-toggle');
-
-    if (themeToggleButtons.length) {
-        themeToggleButtons.forEach((themeToggleButton) => {
-            themeToggleButton.addEventListener('click', toggleTheme);
-        });
-    } else {
-        console.error('Theme toggle button not found!');
-    }
-});
+// // Function to apply the stored theme from the cookie on page load
+// export function applyStoredTheme() {
+//     let currentTheme = getCookie("theme");
+//     if (currentTheme === "yellow") {
+//         setTheme('yellow');
+//     } else if (currentTheme === "blue") {
+//         setTheme('blue');
+//     }
+// }
