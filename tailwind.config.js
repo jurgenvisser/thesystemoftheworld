@@ -1,4 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
+import { generateSafelist } from './resources/js/utils/selectors.js'; // Ensure the path is correct
+
 const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
@@ -10,31 +12,8 @@ export default {
         './resources/**/*.js',
         './resources/**/*.vue',
     ],
-    safelist: [
-        'bg-h-backdrop-4', // Add the class you want to safelist here
-        'bg-systemYellow',
-        'bg-systemBlue',
-        'bg-opacity-20',
-        'text-systemYellow',
-        'text-systemBlue',
-        'border-systemYellow',
-        'border-systemBlue',
-        'bg-systemYellow/60',
-        'bg-systemBlue/60',
-        'text-systemYellow',
-        'text-systemBlue',
-        'border-systemYellow',
-        'border-systemBlue',
-        'border-systemYellow/85',
-        'border-systemBlue/85',
-        'border-systemYellow/70',
-        'border-systemBlue/70',
-        'border-systemYellow/55',
-        'border-systemBlue/55',
-        'border-systemYellow/40',
-        'border-systemBlue/40',
-        'border-systemYellow/25',
-        'border-systemBlue/25',
+    safelist: [// Add the class you want to safelist here
+        ...generateSafelist(),
     ],
     theme: {
         extend: {
@@ -43,7 +22,6 @@ export default {
                 times: ['"Times New Roman"', 'serif'], // Add Times New Roman as a custom font
             },
             colors: {
-                // systemYellow: '#62dfe6', // Add systemYellow as a custom color
                 systemYellow: '#D9AF5C', // Add systemYellow as a custom color
                 systemBlue: '#62dfe6', // Add systemBlue as a custom color
             },
