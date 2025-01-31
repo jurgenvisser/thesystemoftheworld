@@ -85,7 +85,7 @@
          <!-- Third Section (2/6) -->
          <div class="bg-black col-span-2 hidden lg:block h-full">
             <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-                <image href="{{ asset('images/logos/TheSystemFull.svg') }}" class="w-full h-full object-cover" />
+                <image id="theme-image-contact-logo-full" href="{{ asset('images/logos/TheSystemFull.svg') }}" class="w-full h-full object-cover" />
             </svg>
         </div>
 

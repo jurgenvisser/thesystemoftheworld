@@ -4,16 +4,15 @@
         <div class="flex flex-col lg:flex-row justify-between items-center">
 
             <!-- Logo for larger screens -->
-            <div id="theme-toggle" class="theme-toggle crypto-toggle h-auto w-60 ml-6 hidden lg:block">
-                {!! file_get_contents(public_path('images/logos/BlueprintCrypto.svg')) !!}
-            </div>
+            <svg class="theme-toggle h-auto w-48 sm:w-72 ml-4 hidden lg:block">
+                <image id="theme-image-footer-crypto-flipped-desktop" href="/images/logos/BlueprintCrypto.svg" width="100%" height="100%"/>
+            </svg>
             
-            <div class="bg-systemYellow/20">
+            {{-- <div class="bg-systemYellow/20">
                 <button class="theme-toggle bg-systemYellow text-white border-systemYellow p-2 rounded">
                     Toggle Theme
                 </button>
-                {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
-            </div>
+            </div> --}}
 
             <!-- Footer content and social media links -->
             <div class="flex flex-col lg:flex-row justify-between items-center lg:w-2/3 text-center lg:text-left space-y-6 lg:space-y-0">
@@ -44,6 +43,11 @@
                 <div class="text-sm mt-6 lg:mt-0">
                     <p class="">&copy; <span id="current-year"></span> <span class="text-systemYellow">The System</span>. All rights reserved.</p>
                 </div>
+
+                <!-- Logo for smaller screens -->
+                <svg class="theme-toggle h-auto w-48 sm:w-72 ml-4 block lg:hidden">
+                    <image id="theme-image-footer-crypto-flipped-mobile" href="/images/logos/BlueprintCrypto.svg" width="100%" height="100%"/>
+                </svg>
             </div>
         </div>
     </div>

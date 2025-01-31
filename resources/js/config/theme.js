@@ -1,5 +1,6 @@
 // Import the generateSelectors function from the selectors file
-import { generateSelectors, defaultOpacities, defaultColorClasses, defaultElementTypes } from './utils/selectors';
+import { generateSelectors, defaultOpacities, defaultColorClasses, defaultElementTypes } from '../utils/selectors';
+import { updateThemeImage } from './theme-images.js';
 
 // Function to actually set the theme on the page
 export function setTheme(theme) {
@@ -66,4 +67,5 @@ export function setTheme(theme) {
             });
         });
     });
+    updateThemeImage(theme);
 }

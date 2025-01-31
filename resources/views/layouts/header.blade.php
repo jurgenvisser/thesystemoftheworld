@@ -1,12 +1,12 @@
 <div class="bg-black h-16 flex items-center justify-between px-4 sm:px-8 text-white sticky top-0 z-50">
     <!-- Left Logo Section -->
     <a href="/" class="flex items-center">
-        <div class="h-auto w-12">
-            {!! file_get_contents(public_path('images/logos/TheSystemHorse.svg')) !!}
-        </div>
-        <div class="h-auto w-48 sm:w-72 ml-4">
-            {!! file_get_contents(public_path('images/logos/TheSystemText.svg')) !!}
-        </div>
+        <svg class="h-12 w-12">
+            <image id="theme-image-header-logo" href="/images/logos/TheSystemHorse.svg" width="100%" height="100%"/>
+        </svg>
+        <svg class="h-auto w-48 sm:w-72 ml-4">
+            <image id="theme-image-header-logo-text" href="/images/logos/TheSystemText.svg" width="100%" height="100%"/>
+        </svg>
     </a>
 
     <!-- Links (Desktop) Positioned between the two logos -->
@@ -23,9 +23,9 @@
     </div>
 
     <!-- Right Logo Section (visible on desktop) -->
-    <div class="h-auto w-60 ml-6 hidden lg:block">
-        {!! file_get_contents(public_path('images/logos/TheSystemCrypto.svg')) !!}
-    </div>
+    <svg class="h-auto w-48 sm:w-72 ml-4 hidden lg:block">
+        <image id="theme-image-header-crypto" href="/images/logos/TheSystemCrypto.svg" width="100%" height="100%"/>
+    </svg>
 
     <!-- Hamburger Menu Button (Visible on mobile) -->
     <div class="sm:hidden flex items-center">

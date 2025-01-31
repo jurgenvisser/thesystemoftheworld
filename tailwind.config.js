@@ -41,7 +41,10 @@ export default {
                 'v-backdrop-8': "url('/public/images/backdrop/vertical/v_backdrop_8.jpg')",
                 'v-backdrop-9': "url('/public/images/backdrop/vertical/v_backdrop_9.jpg')",
 
-                'the-system-full': "url('/public/images/backdrop/the_system_full.jpg')",
+                'the-system-full': "url('/public/images/logos/TheSystemFull.svg')",
+                'blueprint-full': "url('/public/images/logos/BlueprintFull.svg')",
+                'the-system-horse': "url('/public/images/logos/TheSystemHorse.svg')",
+                'blueprint-horse': "url('/public/images/logos/BlueprintHorse.svg')",
             },
         },
     },

@@ -1,11 +1,12 @@
 import './bootstrap';
-import './theme';  // Import theme functions
+import './config/theme.js';  // Import theme functions
+import './config/theme-images.js';
 
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
 // Import functions from theme.js and cookie.js
-import { setCookie, getCookie } from './cookie.js';
-import { setTheme } from './theme.js';
+import { setCookie, getCookie } from './services/cookie.js';
+import { setTheme } from './config/theme.js';
 
 // Function to apply the stored theme from the cookie on page load
 function applyStoredThemeFromCookie() {
