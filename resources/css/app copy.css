@@ -4,28 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Set Roboto Slab as the default font globally */
+/* Optionally, set the font globally */
 body {
     font-family: 'Roboto Slab', serif;
 }
 
-/*# -------------- TEXT COLOR TRANSITION -------------- */
 /* Custom CSS for text color transition */
 .animate-text-color {
     color: white; /* Initial color of the text */
     transition: color 0.3s ease; /* Smooth transition for text color */
 }
 
-/* Hover state for text color change with animate-text-color */
+/* Hover state for text color change */
 .theme-yellow .animate-text-color:hover {
-    color: theme('colors.systemYellow'); /* Change text color to yellow on hover */
+    color: theme('colors.systemYellow'); /* Change text color to yellow */
 }
 
 .theme-blue .animate-text-color:hover {
-    color: theme('colors.systemBlue'); /* Change text color to blue on hover */
+    color: theme('colors.systemBlue'); /* Change text color to blue */
 }
 
-/* Default state for links with theme classes */
+/* Default state for links */
 a.theme-yellow, a.theme-blue {
     color: white; /* Keep links white by default */
     text-decoration: none; /* No underline by default */
@@ -34,16 +33,16 @@ a.theme-yellow, a.theme-blue {
     transition: color 0.3s ease; /* Smooth transition for text color */
 }
 
-/* Hover state for link color change - this should only affect links with animate-text-color */
-a.theme-yellow.animate-text-color:hover {
+/* Hover state for link color change */
+a.theme-yellow:hover {
     color: theme('colors.systemYellow'); /* Change text color to yellow on hover */
 }
 
-a.theme-blue.animate-text-color:hover {
+a.theme-blue:hover {
     color: theme('colors.systemBlue'); /* Change text color to blue on hover */
 }
 
-/*# -------------- UNDERLINE ANIMATION -------------- */
+
 /* Default state for links */
 a.theme-yellow, a.theme-blue {
     color: white; /* Keep links white */
@@ -69,7 +68,7 @@ a.animate-underline::after {
 
 /* Hover effect for yellow theme with animate-underline */
 a.theme-yellow.animate-underline::after {
-    background-color: theme('colors.systemYellow'); /* Yellow underline */
+    background-color: #fbd100; /* Yellow underline */
 }
 
 a.theme-yellow.animate-underline:hover::after {
@@ -78,7 +77,7 @@ a.theme-yellow.animate-underline:hover::after {
 
 /* Hover effect for blue theme with animate-underline */
 a.theme-blue.animate-underline::after {
-    background-color: theme('colors.systemBlue'); /* Blue underline */
+    background-color: #3b82f6; /* Blue underline */
 }
 
 a.theme-blue.animate-underline:hover::after {

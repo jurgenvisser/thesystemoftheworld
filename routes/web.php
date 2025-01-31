@@ -28,14 +28,19 @@ Route::get('/missie-visie', function () {
     return view('missie-visie'); // Refer to missie-visie.blade.php
 });
 
+// Route for the 'Merchandise' page
+Route::get('/merchandise', function () {
+    return view('merchandise'); // Refer to merchandise.blade.php
+});
+
 // Route for the 'Missie & Visie' page
 Route::get('/contact', function () {
     return view('contact'); // Refer to missie-visie.blade.php
 });
 
-// Route for the 'Merchandise' page
-Route::get('/merchandise', function () {
-    return view('merchandise'); // Refer to merchandise.blade.php
+// Route for the 'Missie & Visie' page
+Route::get('/test', function () {
+    return view('test'); // Refer to missie-visie.blade.php
 });
 
 // Route for the 'Toekomst' page
