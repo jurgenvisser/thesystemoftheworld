@@ -18,6 +18,7 @@
 </head>
 <body class="bg-black">
     <script src="{{ mix('js/app.js') }}" defer></script>
+    {{-- <script src="{{ mix('js/cookie.js') }}" defer></script> --}}
         <!-- Here you can add your header or navigation -->
         @include('layouts.header')
 
