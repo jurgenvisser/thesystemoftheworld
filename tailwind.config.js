@@ -49,42 +49,88 @@ export default {
         },
     },
     plugins: [
-        plugin(function({ addUtilities }) {
-            addUtilities({
-                '.clover-chess': {
-                    display: 'inline-flex',       // Display both items inline
-                    alignItems: 'center',         // Align items vertically
-                    gap: '0em',                 // Adjust space between the two images
-                },
-                '.clover-chess::before': {
-                    content: '""',
-                    display: 'inline-block',
-                    width: '1em',
-                    height: '1em',
-                    backgroundImage: "url('/public/images/emojis/clover.png')",  // Clover emoji
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-                    verticalAlign: 'middle',
-                },
-                '.clover-chess::after': {
-                    content: '""',
-                    display: 'inline-block',
-                    width: '1em',
-                    height: '1em',
-                    backgroundImage: "url('/public/images/emojis/chess.png')",   // Chess emoji
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-                    verticalAlign: 'middle',
-                },
-                '.responsive-width': {
-                    width: '85vw', // Default width for mobile and small screens
-                },
-                '@screen lg': {
+        plugin(function ({ addUtilities, theme }) {
+            addUtilities(
+                {
+                    /* Existing utilities */
+                    '.clover-chess': {
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0em',
+                    },
+                    '.clover-chess::before': {
+                        content: '""',
+                        display: 'inline-block',
+                        width: '1em',
+                        height: '1em',
+                        backgroundImage: "url('/public/images/emojis/clover.png')",
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                        verticalAlign: 'middle',
+                    },
+                    '.clover-chess::after': {
+                        content: '""',
+                        display: 'inline-block',
+                        width: '1em',
+                        height: '1em',
+                        backgroundImage: "url('/public/images/emojis/chess.png')",
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                        verticalAlign: 'middle',
+                    },
                     '.responsive-width': {
-                        width: '80vw', // Width for large screens and above
+                        width: '85vw',
+                    },
+                    '@screen lg': {
+                        '.responsive-width': {
+                        width: '80vw',
+                        },
+                    },
+                    /* New utilities */
+                    '.animate-text-color': {
+                        color: 'white',
+                        transition: 'color 0.3s ease',
+                    },
+                    '.theme-yellow.animate-text-color:hover': {
+                        color: theme('colors.systemYellow'),
+                    },
+                    '.theme-blue.animate-text-color:hover': {
+                        color: theme('colors.systemBlue'),
+                    },
+                    '.animate-underline::after': {
+                        content: '""',
+                        position: 'absolute',
+                        bottom: '0',
+                        left: '50%',
+                        width: '0%',
+                        height: '2px',
+                        backgroundColor: 'transparent',
+                        transformOrigin: 'center center',
+                        transform: 'translateX(-50%)',
+                        transition: 'width 0.3s ease, background-color 0.3s ease',
+                    },
+                    '.theme-yellow.animate-underline::after': {
+                        backgroundColor: theme('colors.systemYellow'),
+                    },
+                    '.theme-yellow.animate-underline:hover::after': {
+                        width: '100%',
+                    },
+                    '.theme-blue.animate-underline::after': {
+                        backgroundColor: theme('colors.systemBlue'),
+                    },
+                    '.theme-blue.animate-underline:hover::after': {
+                        width: '100%',
+                    },
+                    '.theme-yellow, .theme-blue': {
+                        color: 'white', /* Keep links white by default */
+                        textDecoration: 'none', /* No underline by default */
+                        position: 'relative', /* So we can position the underline */
+                        overflow: 'hidden', /* Hide the underline by default */
+                        transition: 'color 0.3s ease', /* Smooth transition for text color */
                     },
                 },
-            });
+                ['responsive', 'hover']
+            );
         }),
     ],
 };

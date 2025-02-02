@@ -17,9 +17,8 @@
     <title>@yield('title', 'Homepage')</title>
 </head>
 <body class="bg-black">
-    <script src="{{ mix('js/app.js') }}" defer></script>
-    {{-- <script src="{{ mix('js/cookie.js') }}" defer></script> --}}
-        <!-- Here you can add your header or navigation -->
+    
+        <!-- Navigation of the page -->
         @include('layouts.header')
 
         <!-- Main information of the page -->
@@ -27,7 +26,7 @@
             @yield('content') <!-- The content of the specific page is loaded here -->
         </div>
 
-        <!-- Here you can add the footer -->
+        <!-- Footer of the page -->
         @include('layouts.footer')
 
 </body>

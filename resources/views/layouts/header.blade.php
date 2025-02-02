@@ -11,15 +11,7 @@
 
     <!-- Links (Desktop) Positioned between the two logos -->
     <div class="hidden sm:flex justify-center items-center space-x-4 sm:space-x-8 mx-4 flex-1">
-        <a href="/" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase theme-yellow">Homepage</a>
-        <a href="/missie-visie" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase theme-yellow">Missie & Visie</a>
-        <a href="/social-media" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase theme-yellow">Social Media</a>
-        <a href="/merchandise" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase theme-yellow">Merchandise</a>
-        <a href="/contact" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase theme-yellow">Contact</a>
-        <a href="/test" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase theme-yellow">test</a>
-        {{-- <a href="/brand" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase theme-yellow">Brand</a> --}}
-        {{-- <a href="/toekomst" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase theme-yellow">Toekomst</a> --}}
-        {{-- <a href="/coming-soon" class="animate-underline animate-text-color text-sm sm:text-xl font-semibold uppercase theme-yellow">Coming Soon</a> --}}
+        @include('layouts.header-menu')
     </div>
 
     <!-- Right Logo Section (visible on desktop) -->
@@ -37,49 +29,10 @@
     </div>
 </div>
 
+{{-- # Mobile Menu is outside of the parent div from the navbar. This is intended and needs to stay this way. --}}
 <!-- Mobile Menu (Hidden by default, toggled by hamburger) -->
 <div id="mobile-menu" class="sm:hidden w-full bg-black text-white fixed top-16 left-0 hidden max-h-screen overflow-y-auto z-40">
     <div class="flex flex-col space-y-0 py-4">
-        <div class="border-b border-systemYellow"></div>
-        <div class="border-b border-systemYellow/85">
-            <a href="/" class="animate-text-color block text-lg font-semibold uppercase text-center py-2 theme-yellow">
-                Homepage
-            </a>
-        </div>
-        <div class="border-b border-systemYellow/70">
-            <a href="/missie-visie" class="animate-text-color block text-lg font-semibold uppercase text-center py-2 theme-yellow">
-                Missie & Visie
-            </a>
-        </div>
-        <div class="border-b border-systemYellow/55">
-            <a href="/social-media" class="animate-text-color block text-lg font-semibold uppercase text-center py-2 theme-yellow">
-                Social Media
-            </a>
-        </div>
-        <div class="border-b border-systemYellow/40">
-            <a href="/merchandise" class="animate-text-color block text-lg font-semibold uppercase text-center py-2 theme-yellow">
-                Merchandise
-            </a>
-        </div>
-        <div class="border-b border-systemYellow/25">
-            <a href="/contact" class="animate-text-color block text-lg font-semibold uppercase text-center py-2 theme-yellow">
-                Contact
-            </a>
-        </div>
-        {{-- <div class="border-b border-systemYellow/90">
-            <a href="/brand" class="animate-text-color block text-lg font-semibold uppercase text-center py-2 theme-yellow">
-                Brand
-            </a>
-        </div> --}}
-        {{-- <div class="border-b border-systemYellow/60">
-            <a href="/toekomst" class="animate-text-color block text-lg font-semibold uppercase text-center py-2 theme-yellow">
-                Toekomst
-            </a>
-        </div> --}}
-        {{-- <div class="border-b border-systemYellow/40">
-            <a href="/coming-soon" class="animate-text-color block text-lg font-semibold uppercase text-center py-2 theme-yellow">
-                Coming Soon
-            </a>
-        </div> --}}
+        @include('layouts.header-menu')
     </div>
 </div>
