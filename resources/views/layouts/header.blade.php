@@ -29,7 +29,7 @@
 
     <!-- Hamburger Menu Button (Visible on mobile) -->
     <div class="sm:hidden flex items-center">
-        <button id="hamburger-icon" class="text-white focus:outline-none">
+        <button id="hamburger-icon" class="text-systemYellow focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -38,7 +38,7 @@
 </div>
 
 <!-- Mobile Menu (Hidden by default, toggled by hamburger) -->
-<div id="mobile-menu" class="sm:hidden w-full bg-black text-white absolute top-16 left-0 hidden max-h-screen overflow-y-auto z-50">
+<div id="mobile-menu" class="sm:hidden w-full bg-black text-white fixed top-16 left-0 hidden max-h-screen overflow-y-auto z-40">
     <div class="flex flex-col space-y-0 py-4">
         <div class="border-b border-systemYellow"></div>
         <div class="border-b border-systemYellow/85">
@@ -83,14 +83,3 @@
         </div> --}}
     </div>
 </div>
-
-<!-- JavaScript to toggle the mobile menu -->
-<script>
-    const hamburgerIcon = document.getElementById("hamburger-icon");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    hamburgerIcon.addEventListener("click", () => {
-        // Toggle the mobile menu visibility
-        mobileMenu.classList.toggle("hidden");
-    });
-</script>

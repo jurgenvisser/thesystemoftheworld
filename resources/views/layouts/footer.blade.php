@@ -4,15 +4,9 @@
         <div class="flex flex-col lg:flex-row justify-between items-center">
 
             <!-- Logo for larger screens -->
-            <svg class="theme-toggle h-auto w-48 sm:w-72 ml-4 hidden lg:block">
+            <svg class="theme-toggle h-16 w-80 hidden lg:block">
                 <image id="theme-image-footer-crypto-flipped-desktop" href="/images/logos/BlueprintCrypto.svg" width="100%" height="100%"/>
             </svg>
-            
-            {{-- <div class="bg-systemYellow/20">
-                <button class="theme-toggle bg-systemYellow text-white border-systemYellow p-2 rounded">
-                    Toggle Theme
-                </button>
-            </div> --}}
 
             <!-- Footer content and social media links -->
             <div class="flex flex-col lg:flex-row justify-between items-center lg:w-2/3 text-center lg:text-left space-y-6 lg:space-y-0">
@@ -45,7 +39,7 @@
                 </div>
 
                 <!-- Logo for smaller screens -->
-                <svg class="theme-toggle h-auto w-48 sm:w-72 ml-4 block lg:hidden">
+                <svg class="theme-toggle h-16 block lg:hidden">
                     <image id="theme-image-footer-crypto-flipped-mobile" href="/images/logos/BlueprintCrypto.svg" width="100%" height="100%"/>
                 </svg>
             </div>

@@ -1,7 +1,7 @@
 // Define a mapping of IDs to theme-specific image paths
 const themeImages = {
     'theme-image-header-logo': {
-        blue: '/images/logos/BlueprintHorse.svg',
+        blue: '/images/logos/BlueprintHorseFilled.svg',
         yellow: '/images/logos/TheSystemHorse.svg',
     },
     'theme-image-header-logo-text': {
