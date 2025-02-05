@@ -1,17 +1,15 @@
 import './bootstrap';
-import './config/theme.js';  // Import theme functions
+import './config/theme.js';
 import './config/theme-images.js';
-import './utils/mobile-menu.js';  // Import mobile menu functions
-// Import functions from theme.js and cookie.js
+import './utils/mobile-menu.js';
 import { setCookie, getCookie } from './services/cookie.js';
 import { setTheme } from './config/theme.js';
 
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
-
 // Function to apply the stored theme from the cookie on page load
 function applyStoredThemeFromCookie() {
-    let currentTheme = getCookie("theme");
+    const currentTheme = getCookie("theme");
     if (currentTheme === "yellow") {
         setTheme('yellow');
     } else if (currentTheme === "blue") {
@@ -21,27 +19,22 @@ function applyStoredThemeFromCookie() {
 
 // Function to toggle the theme and store it in the cookie
 function toggleTheme() {
-    let currentTheme = getCookie("theme");
-    let newTheme = currentTheme === "yellow" ? "blue" : "yellow";
+    const currentTheme = getCookie("theme");
+    const newTheme = currentTheme === "yellow" ? "blue" : "yellow";
     
     // Set the new theme
     setTheme(newTheme);
     
-    // Store the new theme in the cookie
+    // Store the new theme in the cookie (encrypted)
     setCookie("theme", newTheme, 30);
 }
 
 // Event listener to handle the theme switching button click
 document.addEventListener('DOMContentLoaded', () => {
-    // Apply the stored theme when the page loads
     applyStoredThemeFromCookie();
 
     const themeToggleButtons = document.querySelectorAll('.theme-toggle');
-    if (themeToggleButtons.length) {
-        themeToggleButtons.forEach((themeToggleButton) => {
-            themeToggleButton.addEventListener('click', toggleTheme);
-        });
-    } else {
-        console.error('Theme toggle button not found!');
-    }
+    themeToggleButtons.forEach((button) => {
+        button.addEventListener('click', toggleTheme);
+    });
 });

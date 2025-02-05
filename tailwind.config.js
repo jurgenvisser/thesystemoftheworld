@@ -155,6 +155,7 @@ export default {
 
 // # Install all NPM dependencies
 // npm install
+// npm install crypto-js
 
 // # Generate the application key
 // php artisan key:generate
