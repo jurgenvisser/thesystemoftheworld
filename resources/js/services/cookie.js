@@ -1,7 +1,7 @@
 import CryptoJS from 'crypto-js';
 
 // Secret key for encryption and decryption
-const SECRET_KEY = "QuanckerLtd.";
+const SECRET_KEY = "@Bloom2024";
 
 // Set a cookie with an encrypted value
 export function setCookie(name, value, days) {

@@ -10,7 +10,7 @@
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
 
             <!-- Title Section -->
-            <div class="bg-systemYellow/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
+            <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Misie & Visie</h1>
             </div>
 
@@ -19,13 +19,13 @@
 </div>
 
 <!-- Main Content Section -->
-<div class="bg-systemYellow/20 h-auto m-0 py-24 flex justify-center items-center">
+<div class="bg-colorPrimary/20 h-auto m-0 py-24 flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
 
 
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-systemYellow/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
             
                 <div class="">
@@ -42,7 +42,7 @@
                     <!-- Extra space between the text and the follow text -->
                     <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
                         Volg The System voor meer! <br>
-                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-systemYellow">@thesystemoftheworld</a>.
+                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
                     </p>
                 </div>
                 

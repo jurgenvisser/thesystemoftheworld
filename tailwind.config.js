@@ -22,10 +22,12 @@ export default {
                 times: ['"Times New Roman"', 'serif'], // Add Times New Roman as a custom font
             },
             colors: {
-                systemYellow: '#74A7D5', // Add systemYellow as a custom color
-                systemBlue: '#D767A7', // Add systemBlue as a custom color
-                juriPrimairy: '#74A7D5', // Add systemYellow as a custom color
-                juriSecondary: '#D767A7', // Add systemBlue as a custom color
+                systemYellow: '#D9AF5C', // Add systemYellow as a custom color
+                systemBlue: '#D9AF5C', // Add systemBlue as a custom color
+                juriPrimary: '#62dfe6', // Add juriPrimary as a custom color
+                juriSecondary: '#62dfe6', // Add juriSecondary as a custom color
+                colorPrimary: '#74A7D5', // Add colorPrimary as a custom color
+                colorSecondary: '#D767A7', // Add colorSecondary as a custom color
             },
             backgroundImage: {
                 'h-backdrop-1': "url('/public/images/backdrop/horizontal/h_backdrop_1.jpg')",
@@ -93,11 +95,11 @@ export default {
                         color: 'white',
                         transition: 'color 0.3s ease',
                     },
-                    '.theme-yellow.animate-text-color:hover': {
-                        color: theme('colors.systemYellow'),
+                    '.theme-primary.animate-text-color:hover': {
+                        color: theme('colors.colorPrimary'),
                     },
-                    '.theme-blue.animate-text-color:hover': {
-                        color: theme('colors.systemBlue'),
+                    '.theme-secondary.animate-text-color:hover': {
+                        color: theme('colors.colorSecondary'),
                     },
                     '.animate-underline::after': {
                         content: '""',
@@ -111,19 +113,19 @@ export default {
                         transform: 'translateX(-50%)',
                         transition: 'width 0.3s ease, background-color 0.3s ease',
                     },
-                    '.theme-yellow.animate-underline::after': {
-                        backgroundColor: theme('colors.systemYellow'),
+                    '.theme-primary.animate-underline::after': {
+                        backgroundColor: theme('colors.colorPrimary'),
                     },
-                    '.theme-yellow.animate-underline:hover::after': {
+                    '.theme-primary.animate-underline:hover::after': {
                         width: '100%',
                     },
-                    '.theme-blue.animate-underline::after': {
-                        backgroundColor: theme('colors.systemBlue'),
+                    '.theme-secondary.animate-underline::after': {
+                        backgroundColor: theme('colors.colorSecondary'),
                     },
-                    '.theme-blue.animate-underline:hover::after': {
+                    '.theme-secondary.animate-underline:hover::after': {
                         width: '100%',
                     },
-                    '.theme-yellow, .theme-blue': {
+                    '.theme-primary, .theme-secondary': {
                         color: 'white', /* Keep links white by default */
                         textDecoration: 'none', /* No underline by default */
                         position: 'relative', /* So we can position the underline */

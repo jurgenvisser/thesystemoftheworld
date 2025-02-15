@@ -1,32 +1,32 @@
 // Define a mapping of IDs to theme-specific image paths
 const themeImages = {
     'theme-image-header-logo': {
-        blue: '/images/logos/BlueprintHorseFilled.svg',
-        yellow: '/images/logos/TheSystemHorse.svg',
+        secondary: '/images/logos/BlueprintHorseFilled.svg',
+        primary: '/images/logos/TheSystemHorse.svg',
     },
     'theme-image-header-logo-text': {
-        blue: '/images/logos/BlueprintText.svg',
-        yellow: '/images/logos/TheSystemText.svg',
+        secondary: '/images/logos/BlueprintText.svg',
+        primary: '/images/logos/TheSystemText.svg',
     },
     'theme-image-header-crypto': {
-        blue: '/images/logos/BlueprintCrypto.svg',
-        yellow: '/images/logos/TheSystemCrypto.svg',
+        secondary: '/images/logos/BlueprintCrypto.svg',
+        primary: '/images/logos/TheSystemCrypto.svg',
     },
     'theme-image-footer-crypto-flipped-desktop': {
-        blue: '/images/logos/TheSystemCrypto.svg',
-        yellow: '/images/logos/BlueprintCrypto.svg',
+        secondary: '/images/logos/TheSystemCrypto.svg',
+        primary: '/images/logos/BlueprintCrypto.svg',
     },
     'theme-image-footer-crypto-flipped-mobile': {
-        blue: '/images/logos/TheSystemCrypto.svg',
-        yellow: '/images/logos/BlueprintCrypto.svg',
+        secondary: '/images/logos/TheSystemCrypto.svg',
+        primary: '/images/logos/BlueprintCrypto.svg',
     },
     'theme-image-homepage-logo-full': {
-        blue: '/images/logos/BlueprintFull.svg',
-        yellow: '/images/logos/TheSystemFull.svg',
+        secondary: '/images/logos/BlueprintFull.svg',
+        primary: '/images/logos/TheSystemFull.svg',
     },
     'theme-image-contact-logo-full': {
-        blue: '/images/logos/BlueprintFull.svg',
-        yellow: '/images/logos/TheSystemFull.svg',
+        secondary: '/images/logos/BlueprintFull.svg',
+        primary: '/images/logos/TheSystemFull.svg',
     },
     // Add more images as needed
 };

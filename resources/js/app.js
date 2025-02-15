@@ -10,17 +10,17 @@ document.getElementById('current-year').textContent = new Date().getFullYear();
 // Function to apply the stored theme from the cookie on page load
 function applyStoredThemeFromCookie() {
     const currentTheme = getCookie("theme");
-    if (currentTheme === "yellow") {
-        setTheme('yellow');
-    } else if (currentTheme === "blue") {
-        setTheme('blue');
+    if (currentTheme === "primary") {
+        setTheme('primary');
+    } else if (currentTheme === "secondary") {
+        setTheme('secondary');
     }
 }
 
 // Function to toggle the theme and store it in the cookie
 function toggleTheme() {
     const currentTheme = getCookie("theme");
-    const newTheme = currentTheme === "yellow" ? "blue" : "yellow";
+    const newTheme = currentTheme === "primary" ? "secondary" : "primary";
     
     // Set the new theme
     setTheme(newTheme);

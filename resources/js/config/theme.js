@@ -13,55 +13,55 @@ export function setTheme(theme) {
         // Loop through each of the dynamic color classes and element types
         defaultColorClasses.forEach((colorClass) => {
             defaultElementTypes.forEach((elementType) => {
-                if (theme === "yellow") {
-                    // Switching to yellow theme
+                if (theme === "primary") {
+                    // Switching to primary theme
                     if (el.classList.contains(`bg-${colorClass}`)) {
-                        el.classList.replace(`bg-${colorClass}`, `bg-systemYellow`);
+                        el.classList.replace(`bg-${colorClass}`, `bg-colorPrimary`);
                     }
                     defaultOpacities.forEach((opacity) => {
                         if (el.classList.contains(`bg-${colorClass}/${opacity}`)) {
-                            el.classList.replace(`bg-${colorClass}/${opacity}`, `bg-systemYellow/${opacity}`);
+                            el.classList.replace(`bg-${colorClass}/${opacity}`, `bg-colorPrimary/${opacity}`);
                         }
                         if (el.classList.contains(`border-${colorClass}/${opacity}`)) {
-                            el.classList.replace(`border-${colorClass}/${opacity}`, `border-systemYellow/${opacity}`);
+                            el.classList.replace(`border-${colorClass}/${opacity}`, `border-colorPrimary/${opacity}`);
                         }
                     });
                     if (el.classList.contains(`text-${colorClass}`)) {
-                        el.classList.replace(`text-${colorClass}`, `text-systemYellow`);
+                        el.classList.replace(`text-${colorClass}`, `text-colorPrimary`);
                     }
                     if (el.classList.contains(`border-${colorClass}`)) {
-                        el.classList.replace(`border-${colorClass}`, `border-systemYellow`);
+                        el.classList.replace(`border-${colorClass}`, `border-colorPrimary`);
                     }
                     if (el.classList.contains(`decoration-${colorClass}`)) {
-                        el.classList.replace(`decoration-${colorClass}`, 'decoration-systemYellow');
+                        el.classList.replace(`decoration-${colorClass}`, 'decoration-colorPrimary');
                     }
-                    if (el.classList.contains('theme-blue')) {
-                        el.classList.replace('theme-blue', 'theme-yellow');
+                    if (el.classList.contains('theme-secondary')) {
+                        el.classList.replace('theme-secondary', 'theme-primary');
                     }
                 } else {
-                    // Switching to blue theme
+                    // Switching to secondary theme
                     if (el.classList.contains(`bg-${colorClass}`)) {
-                        el.classList.replace(`bg-${colorClass}`, `bg-systemBlue`);
+                        el.classList.replace(`bg-${colorClass}`, `bg-colorSecondary`);
                     }
                     defaultOpacities.forEach((opacity) => {
                         if (el.classList.contains(`bg-${colorClass}/${opacity}`)) {
-                            el.classList.replace(`bg-${colorClass}/${opacity}`, `bg-systemBlue/${opacity}`);
+                            el.classList.replace(`bg-${colorClass}/${opacity}`, `bg-colorSecondary/${opacity}`);
                         }
                         if (el.classList.contains(`border-${colorClass}/${opacity}`)) {
-                            el.classList.replace(`border-${colorClass}/${opacity}`, `border-systemBlue/${opacity}`);
+                            el.classList.replace(`border-${colorClass}/${opacity}`, `border-colorSecondary/${opacity}`);
                         }
                     });
                     if (el.classList.contains(`text-${colorClass}`)) {
-                        el.classList.replace(`text-${colorClass}`, `text-systemBlue`);
+                        el.classList.replace(`text-${colorClass}`, `text-colorSecondary`);
                     }
                     if (el.classList.contains(`border-${colorClass}`)) {
-                        el.classList.replace(`border-${colorClass}`, `border-systemBlue`);
+                        el.classList.replace(`border-${colorClass}`, `border-colorSecondary`);
                     }
                     if (el.classList.contains(`decoration-${colorClass}`)) {
-                        el.classList.replace(`decoration-${colorClass}`, 'decoration-systemBlue');
+                        el.classList.replace(`decoration-${colorClass}`, 'decoration-colorSecondary');
                     }
-                    if (el.classList.contains('theme-yellow')) {
-                        el.classList.replace('theme-yellow', 'theme-blue');
+                    if (el.classList.contains('theme-primary')) {
+                        el.classList.replace('theme-primary', 'theme-secondary');
                     }
                 }
             });
