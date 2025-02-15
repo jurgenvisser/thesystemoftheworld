@@ -39,24 +39,24 @@ Route::get('/contact', function () {
 });
 
 // Route for the 'Missie & Visie' page
-Route::get('/test', function () {
-    return view('test'); // Refer to missie-visie.blade.php
-});
+// Route::get('/test', function () {
+//     return view('test'); // Refer to missie-visie.blade.php
+// });
 
 // Route for the 'Toekomst' page
-Route::get('/toekomst', function () {
-    return view('toekomst'); // Refer to toekomst.blade.php
-});
+// Route::get('/toekomst', function () {
+//     return view('toekomst'); // Refer to toekomst.blade.php
+// });
 
 // Route for the 'Brand' page
-Route::get('/brand', function () {
-    return view('brand'); // Refer to brand.blade.php
-});
+// Route::get('/brand', function () {
+//     return view('brand'); // Refer to brand.blade.php
+// });
 
 // This the route for the coming-soon page
-Route::get('/coming-soon', function () {
-    return view('coming-soon');
-})->name('coming-soon'); // Refer to coming-soon.blade.php
+// Route::get('/coming-soon', function () {
+//     return view('coming-soon'); // Refer to coming-soon.blade.php
+// });
 
 // Route for generating sitemap
 Route::get('/generate-sitemap', function () {
