@@ -22,8 +22,10 @@ export default {
                 times: ['"Times New Roman"', 'serif'], // Add Times New Roman as a custom font
             },
             colors: {
-                systemYellow: '#D9AF5C', // Add systemYellow as a custom color
-                systemBlue: '#62dfe6', // Add systemBlue as a custom color
+                systemYellow: '#74A7D5', // Add systemYellow as a custom color
+                systemBlue: '#D767A7', // Add systemBlue as a custom color
+                juriPrimairy: '#74A7D5', // Add systemYellow as a custom color
+                juriSecondary: '#D767A7', // Add systemBlue as a custom color
             },
             backgroundImage: {
                 'h-backdrop-1': "url('/public/images/backdrop/horizontal/h_backdrop_1.jpg')",
