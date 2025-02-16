@@ -89,9 +89,9 @@
             </svg>
         </div>
 
+        @include('layouts.email-form')
         
     </div>
 </div>
 
-{{-- @include('layouts.email-form') --}}
 @endsection

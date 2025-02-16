@@ -1,43 +1,92 @@
-<div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative lg:space-x-10">
-    <!-- Text and Form Section -->
-    <div class="bg-juriPrimary/60 text-sm lg:text-2xl flex flex-col lg:flex-col justify-between text-white p-8 lg:p-20 py-20 h-auto w-[85vw] lg:w-[40.9vw] text-justify leading-loose relative">
-
-        <!-- Introductory Text -->
-        <div class="mb-8 text-justify">
-            <h2 class="mb-6 px-4 lg:px-0 text-4xl font-bold uppercase font-times">COntacteer ons</h2>
-            <p class="text-base lg:text-lg">
+ <!-- Text Section (3/6) -->
+ <div class="h-auto lg:h-full col-span-3 flex">
+    <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+        <!-- Content goes here -->
+        <div class="">
+            <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Contact The System</h1>
+            <p class="text-base lg:text-lg mb-6">
                 Heb je vragen, suggesties, of wil je gewoon met ons in contact komen? 
-                Gebruik het onderstaande formulier om ons te bereiken. 
+                Gebruik het email formulier om ons te bereiken via email. 
                 We streven ernaar om binnen 24 uur te reageren. We horen graag van je!
+            </p>
+            <h1 class="mb-8 mt-12 px-4 lg:px-0 text-2xl font-bold  font-times">Liever Direct Messaging?</h1>
+            <p class="text-base lg:text-lg">
+                Als e-mailen niet jouw ding is of je een snellere manier zoekt om contact op te nemen, stuur me gerust een direct bericht op TikTok, Instagram of Facebook. 
+                Of je nu vragen hebt, iets wilt delen of gewoon hallo wilt zeggen, ik hoor graag van je! Je vindt de links naar mijn socialmedia-profielen op de pagina Social Media.
             </p>
         </div>
 
+    </div>
+</div>
+
+<!-- Form Section (3/6) -->
+<div class="h-auto lg:h-full col-span-3">
+    <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+
+        <!-- Introductory Text -->
+        <div class="text-justify">
+            <h2 class="px-4 lg:px-0 text-4xl font-bold uppercase font-times">Email formulier</h2>
+        </div>
+
         <!-- Email Form -->
-        <form action="/submit" method="POST" class="space-y-4 flex-1">
+        <form action="https://formsubmit.co/contact@theofficialjuri.com" method="POST" class="space-y-4 flex-1 w-full">
+
+            <input type="hidden" name="_next" value="http://127.0.0.1:8000/contact">
+            <input type="hidden" name="_autoresponse" value="Dankjewel voor je bericht aan The System! Wioj zullen je zo snel mogenlijk een passend antwoord geven.">
+            <input type="hidden" name="_template" value="box">
+            
+            <div class="flex items-center gap-4">
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Naam"
+                    class="w-full p-2 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40"
+                />
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    class="w-full p-2 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40"
+                />
+            </div>
             <input
                 type="text"
-                name="name"
-                placeholder="Uw Naam"
-                class="w-full p-2 border border-juriPrimary rounded focus:outline-none focus:ring focus:ring-juriPrimary bg-black/40"
-            />
-            <input
-                type="email"
-                name="email"
-                placeholder="Uw Email"
-                class="w-full p-2 border border-juriPrimary rounded focus:outline-none focus:ring focus:ring-juriPrimary bg-black/40"
+                name="_subject"
+                placeholder="Onderwerp"
+                class="w-full p-2 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40"
             />
             <textarea
                 name="message"
-                placeholder="Uw Bericht"
+                placeholder="Typ hier uw bericht"
                 rows="4"
-                class="w-full p-2 border border-juriPrimary rounded focus:outline-none focus:ring focus:ring-juriPrimary bg-black/40"
+                class="w-full p-2 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40"
             ></textarea>
-            <button
+            <div class="flex items-center gap-4">
+                <button
+                    type="submit"
+                    class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800"
+                >
+                    Verstuur
+                </button>
+                {{-- <div class="flex-1">
+                    <select
+                        name="genderPreference"
+                        class="w-full p-2 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40 appearance-none"
+                    >
+                        <option value="geen-voorkeur" disabled selected>Selecteer een antwoord voorkeur</option>
+                        <option value="man">Man</option>
+                        <option value="vrouw">Vrouw</option>
+                        <option value="geen-voorkeur">Geen voorkeur</option>
+                    </select>
+                </div> --}}
+            </div>
+            {{-- <button
                 type="submit"
-                class="bg-black text-white rounded hover:ring hover:ring-juriPrimary py-2 px-4 hover:bg-gray-800"
+                class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800"
             >
                 Verstuur
-            </button>
+            </button> --}}
         </form>
     </div>
 </div>
+
