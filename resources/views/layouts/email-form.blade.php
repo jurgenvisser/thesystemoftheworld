@@ -10,7 +10,7 @@
         </div>
 
         <!-- Email Form -->
-        <form action="https://formsubmit.co/contact@theofficialjuri.com" method="POST" class="space-y-4 flex-1 w-full">
+        <form action="https://formsubmit.co/contact@thesystemoftheworld.com" method="POST" class="space-y-4 flex-1 w-full">
 
             <input type="hidden" name="_next" value="http://127.0.0.1:8000/contact">
             <input type="hidden" name="_autoresponse" value="Dankjewel voor je bericht aan The System! Wioj zullen je zo snel mogenlijk een passend antwoord geven.">
