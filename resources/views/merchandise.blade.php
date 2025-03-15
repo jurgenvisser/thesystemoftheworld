@@ -31,13 +31,13 @@
                     <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Merchandise</h1>
     
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Onze merchandise is niet alleen een product, het is een statement. Het is voor de mensen die niet bang zijn om zichzelf uit te drukken en die trots zijn op hun reis.
+                        Dit is het moment. The System gaat verder dan woorden – het wordt een beweging die je kunt dragen. Binnenkort droppen we exclusieve merchandise, ontworpen voor degenen die begrijpen wat het betekent om te groeien, te strijden en te winnen.
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Met The System merchandise draag je niet alleen iets fysieks, je draagt een boodschap van kracht, doorzettingsvermogen en ambitie.
+                        Dit is geen kleding. Dit is een symbool van discipline kracht en doorzettingsvermogen. Zwakke mensen dragen dit niet.
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Blijf op de hoogte voor onze nieuwste producten en exclusieve releases!
+                        Ben jij klaar om deel uit te maken van The System? Blijf scherp, want zodra het live gaat, is het slechts voor de mensen die niet opgeven. 
                     </p>
                     <!-- Extra space between the text and the follow text -->
                     <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">

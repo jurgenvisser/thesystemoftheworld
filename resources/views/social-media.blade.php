@@ -31,13 +31,16 @@
                     <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Social Media</h1>
     
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        The System is meer dan alleen een platform. Het is een community. Een groep mensen die vastbesloten zijn om hun dromen waar te maken en een verschil te maken in de wereld.
+                        Dit is niet zomaar een platform. Dit is een beweging. Een beweging voor mensen zoals jij die niet tevreden zijn met middelmatigheid. Jij voelt dat er meer in je zit, maar je twijfelt. Waarom wacht je nog?
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Op onze social media kanalen vind je niet alleen updates, maar ook inspiratie, tips en verhalen van gelijkgestemde mensen die hetzelfde pad bewandelen.
+                        Weet je wat het verschil maakt? Actie.
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Volg ons en maak deel uit van de beweging. Jouw verhaal kan het volgende grote verhaal zijn!
+                        The System is niet voor de mensen die opgeven. Het is voor de mensen die bereid zijn om de waarheid te horen en de confrontatie aan te gaan met hun eigen excuses. Jij kiest: blijf je hangen of kies je voor je zelf.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                       Begin nu. Je hebt geen tijd te verliezen.
                     </p>
                     <!-- Extra space between the text and the follow text -->
                     <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">

@@ -53,7 +53,7 @@
         </div>
 
 
-        <!-- Second Section (4/6) -->
+        {{-- <!-- Second Section (4/6) -->
         <div class="h-auto lg:h-full col-span-4 flex">
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
@@ -87,6 +87,43 @@
             <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
                 <image id="theme-image-contact-logo-full" href="{{ asset('images/logos/TheSystemFull.svg') }}" class="w-full h-full object-cover" />
             </svg>
+        </div> --}}
+
+         <!-- Text Section (3/6) -->
+        <div class="h-auto lg:h-full col-span-3 flex">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+                <!-- Content goes here -->
+                <div>
+                    <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Contact The System</h1>
+                    <p class="text-base lg:text-lg mb-6">
+                        Heb jij vragen, ideeën of wil je direct in contact komen met The System? Dit is geen standaard platform wij zijn hier om actie te ondernemen en verandering te brengen.
+                    </p>
+                    <p class="text-base lg:text-lg">
+                        Gebruik het contactformulier om ons te bereiken. Of je nu vastzit hulp nodig hebt, of simpelweg klaar bent om de volgende stap te zetten wij luisteren.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Text Section (3/6) -->
+        <div class="h-auto lg:h-full col-span-3 flex">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+
+                <div>
+                    <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Liever Direct Messaging?</h1>
+                    <p class="text-base lg:text-lg mb-6">
+                        E-mail niet jouw ding? Geen probleem. The System draait om direct schakelen. Stuur ons een bericht op TikTok, Instagram of Facebook.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6">
+                        Of je nu een vraag hebt, je verhaal wilt delen
+                    </p>
+                    <p class="text-base lg:text-lg">
+                        We luisteren 
+                    </p>
+                </div>
+
+            </div>
         </div>
 
         @include('layouts.email-form')

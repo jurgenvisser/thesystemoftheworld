@@ -23,29 +23,36 @@
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
 
 
-        <!-- First Section (6/6) -->
-        <div class="h-auto lg:h-full col-span-6">
+        <!-- First Section (3/6) -->
+        <div class="h-auto lg:h-full col-span-3 flex">
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
             
                 <div class="">
-                    <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Misie & Visie</h1>
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Onze Visie</h1>
+                    <p class="text-base lg:text-lg px-4 lg:px-0">
+                        The System is gebouwd voor degenen die weigeren middelmatig te zijn. Wij zijn hier om je te ontwaken, om je te laten zien dat jij de controle hebt over je eigen leven. Geen excuses, geen twijfel – alleen actie. Wij bieden de kennis, mindset en tools om sterker te worden, mentaal en fysiek. Dit is niet voor iedereen. Dit is voor doorzetters.                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Second Section (3/6) -->
+        <div class="h-auto lg:h-full col-span-3">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-left text-white p-8 lg:p-20 py-20 text-left lg:text-left ">
+            <!-- Content goes here -->
+    
+                <div class="">
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Onze Missie</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Onze visie is simpel: een wereld creëren waarin iedereen de tools en steun heeft om zijn of haar volledige potentieel te bereiken. The System is de plaats waar mensen de kracht vinden om te breken met oude gewoontes en een nieuw pad in te slaan.
+                        Namens The System zien wij het overal. Mensen die vast in hun eigen hoofd zitten. Gevangen in een systeem dat hen klein houdt. Twijfel. Angst. Uitstelgedrag. Het vreet je op.
                     </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        We zijn vastbesloten om niet alleen te inspireren, maar ook echte verandering te brengen.
-                    </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Blijf op de hoogte van alles wat The System te bieden heeft en wees deel van de verandering.
-                    </p>
-                    <!-- Extra space between the text and the follow text -->
-                    <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
-                        Volg The System voor meer! <br>
-                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
+                    <p class="text-base lg:text-lg px-4 lg:px-0">
+                        Wij accepteren dat niet. Wij bouwen een beweging. Sterke individuen die hun eigen pad bepalen. Geen slachtoffers, geen volgers.
                     </p>
                 </div>
-                
+
             </div>
         </div>
 
