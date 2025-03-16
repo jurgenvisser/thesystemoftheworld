@@ -10,7 +10,7 @@
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
 
             <!-- Title Section -->
-            <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
+            <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-4 lg:p-20 h-auto w-[85vw] lg:w-auto">
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Homepage</h1>
             </div>
 
@@ -31,11 +31,11 @@
 
         <!-- Second Section (4/6) -->
         <div class="h-full col-span-4 flex">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 py-20 text-left lg:text-justify">
             <!-- Content goes here -->
 
                 <div class="">
-                    <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Introductie</h1>
+                    <h1 class="mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Introductie</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                         We begrijpen dat je hier bent omdat je iets zoekt. Een antwoord, een oplossing, een stap vooruit. En dat is precies wat The System biedt.
                     </p>
@@ -61,11 +61,11 @@
 
         <!-- Third Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
             
                 <div class="">
-                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Groei naar succes</h1>
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Groei naar succes</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                         Sta jij stil in het leven? Voelt elke dag hetzelfde, zonder echte vooruitgang? The System is hier om dat te doorbreken.
                     </p>
@@ -80,11 +80,11 @@
 
         <!-- Fourth Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-left text-white p-8 lg:p-20 py-20 text-left lg:text-left ">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-left text-white p-4 lg:p-20 py-20 text-left lg:text-left ">
             <!-- Content goes here -->
     
                 <div class="">
-                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Wat kun je verwachten?</h1>
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Wat kun je verwachten?</h1>
                     <p class="text-base lg:text-lg px-4 lg:px-0 space-y-4">
                         <span class="block">
                             <span class="font-bold">Mentale kracht</span> – Doorbreek negatieve gedachten en bouw zelfvertrouwen op.
@@ -106,7 +106,7 @@
 
         <!-- Fifth Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <div class="">

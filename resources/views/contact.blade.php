@@ -10,7 +10,7 @@
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
 
             <!-- Title Section -->
-            <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
+            <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-4 lg:p-20 h-auto w-[85vw] lg:w-auto">
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Contact</h1>
             </div>
 
@@ -25,10 +25,10 @@
 
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
-                    <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Team The System</h1>
+                    <h1 class="mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Team The System</h1>
                 
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                         Het team van The System bestaat uit een diverse groep mensen die allemaal gedreven worden door dezelfde passie: het creëren van een impactvolle en vooruitstrevende gemeenschap. Elk lid brengt unieke talenten en perspectieven in, waardoor we samen sterker staan.
@@ -53,48 +53,12 @@
         </div>
 
 
-        {{-- <!-- Second Section (4/6) -->
-        <div class="h-auto lg:h-full col-span-4 flex">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
-                <!-- Content goes here -->
-                <div class="">
-                    <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Introductie</h1>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        We begrijpen dat je hier bent omdat je iets zoekt. Een antwoord, een oplossing, een stap vooruit. En dat is precies wat The System biedt.
-                    </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Op dit moment zijn we hard bezig met het bouwen van een platform dat jouw leven kan veranderen. Een plek waar je de tools vindt om te groeien, sterker te worden, en jezelf te ontdekken.
-                    </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Dit wordt een beweging. The System is voor de mensen die willen winnen, die vastberaden zijn om door te breken.
-                    </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Blijf op de hoogte voor updates en wees de eerste die toegang krijgt tot exclusieve content, producten, en meer!
-                    </p>
-                    <!-- Space between content and the follow text -->
-                    <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
-                        Volg The System voor meer! <br>
-                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-
-         <!-- Third Section (2/6) -->
-         <div class="bg-black col-span-2 hidden lg:block h-full">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-                <image id="theme-image-contact-logo-full" href="{{ asset('images/logos/TheSystemFull.svg') }}" class="w-full h-full object-cover" />
-            </svg>
-        </div> --}}
-
          <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div>
-                    <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Contact The System</h1>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Contact The System</h1>
                     <p class="text-base lg:text-lg mb-6">
                         Heb jij vragen, ideeën of wil je direct in contact komen met The System? Dit is geen standaard platform wij zijn hier om actie te ondernemen en verandering te brengen.
                     </p>
@@ -111,7 +75,7 @@
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
 
                 <div>
-                    <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Liever Direct Messaging?</h1>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Liever Direct Messaging?</h1>
                     <p class="text-base lg:text-lg mb-6">
                         E-mail niet jouw ding? Geen probleem. The System draait om direct schakelen. Stuur ons een bericht op TikTok, Instagram of Facebook.
                     </p>

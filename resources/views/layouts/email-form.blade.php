@@ -6,22 +6,22 @@
 
         <!-- Introductory Text -->
         <div class="text-justify">
-            <h2 class="px-4 lg:px-0 text-4xl font-bold uppercase font-times">Email formulier</h2>
+            <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times">Email formulier</h2>
         </div>
 
         <!-- Email Form -->
-        <form action="https://formsubmit.co/contact@thesystemoftheworld.com" method="POST" class="space-y-4 flex-1 w-full">
+        <form action="https://formsubmit.co/contact@thesystemoftheworld.com" method="POST" class="space-y-2 lg:space-y-4 flex-1 w-full">
 
             <input type="hidden" name="_next" value="http://127.0.0.1:8000/contact">
             <input type="hidden" name="_autoresponse" value="Dankjewel voor je bericht aan The System! Wioj zullen je zo snel mogenlijk een passend antwoord geven.">
             <input type="hidden" name="_template" value="box">
             
-            <div class="flex items-center gap-4">
+            <div class="lg:flex items-center lg:gap-4">
                 <input
                     type="text"
                     name="name"
                     placeholder="Naam"
-                    class="w-full p-2 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40"
+                    class="w-full p-2 mb-2 lg:mb-0 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40"
                 />
                 <input
                     type="email"
@@ -30,12 +30,12 @@
                     class="w-full p-2 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40"
                 />
             </div>
-            <div class="flex items-center gap-4">
+            <div class="lg:flex items-center lg:gap-4">
                 <input
                     type="text"
                     name="_subject"
                     placeholder="Onderwerp"
-                    class="w-full p-2 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40"
+                    class="w-full p-2 mb-2 lg:mb-0 border border-colorPrimary rounded focus:outline-none focus:ring focus:ring-colorPrimary bg-black/40"
                 />
                 <select
                     name="genderPreference"

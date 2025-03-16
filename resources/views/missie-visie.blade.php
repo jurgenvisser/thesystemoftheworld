@@ -10,8 +10,8 @@
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
 
             <!-- Title Section -->
-            <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
-                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Misie & Visie</h1>
+            <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-4 lg:p-20 h-auto w-[85vw] lg:w-auto">
+                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times ">Misie & Visie</h1>
             </div>
 
         </div>
@@ -25,11 +25,11 @@
 
         <!-- First Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
             
                 <div class="">
-                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Onze Visie</h1>
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Onze Visie</h1>
                     <p class="text-base lg:text-lg px-4 lg:px-0">
                         The System is gebouwd voor degenen die weigeren middelmatig te zijn. Wij zijn hier om je te ontwaken, om je te laten zien dat jij de controle hebt over je eigen leven. Geen excuses, geen twijfel – alleen actie. Wij bieden de kennis, mindset en tools om sterker te worden, mentaal en fysiek. Dit is niet voor iedereen. Dit is voor doorzetters.                    </p>
                 </div>
@@ -40,11 +40,11 @@
 
         <!-- Second Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-left text-white p-8 lg:p-20 py-20 text-left lg:text-left ">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-left text-white p-4 lg:p-20 py-20 text-left lg:text-left ">
             <!-- Content goes here -->
     
                 <div class="">
-                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Onze Missie</h1>
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Onze Missie</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                         Namens The System zien wij het overal. Mensen die vast in hun eigen hoofd zitten. Gevangen in een systeem dat hen klein houdt. Twijfel. Angst. Uitstelgedrag. Het vreet je op.
                     </p>
