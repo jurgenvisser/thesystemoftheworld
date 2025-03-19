@@ -39,7 +39,7 @@
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                         Ben jij klaar om deel uit te maken van The System? Blijf scherp, want het eerste product is een feit, en er is meer onderweg. Houd de socials in de gaten voor exclusieve hints naar toekomstige producten.
                     </p>
-                    <a href="http://store.thesystemoftheworld.com" target="_blank" class="animate-underline animate-text-color theme-primary bg-black px-4 py-2 rounded text-base lg:text-lg">The System Store</a>
+                    <a href="http://store.thesystemoftheworld.com" target="_blank" class="animate-underline animate-text-color theme-primary bg-black px-4 py-2 ml-4 lg:ml-0 rounded text-base lg:text-lg">The System Store</a>
                     <!-- Extra space between the text and the follow text -->
                     <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
                         Volg The System voor meer! <br>
