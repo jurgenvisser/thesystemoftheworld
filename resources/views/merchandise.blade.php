@@ -31,14 +31,15 @@
                     <h1 class="mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Merchandise</h1>
     
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Dit is het moment. The System gaat verder dan woorden – het wordt een beweging die je kunt dragen. Binnenkort droppen we exclusieve merchandise, ontworpen voor degenen die begrijpen wat het betekent om te groeien, te strijden en te winnen.
+                        The System gaat verder dan woorden – het wordt een beweging die je kunt dragen. Dit is het moment van de eerste drop van The System. Bezoek de store om het eerste hulpmiddel te downloaden dat jouw leven gaat veranderen. Dit zal later uitgebreid worden met exclusieve merchandise, ontworpen voor degenen die begrijpen wat het betekent om te groeien, te strijden en te winnen.
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Dit is geen kleding. Dit is een symbool van discipline kracht en doorzettingsvermogen. Zwakke mensen dragen dit niet.
+                        Dit is niet zomaar een store en niet zomaar kleding. Dit is een symbool van discipline, kracht en doorzettingsvermogen. 
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Ben jij klaar om deel uit te maken van The System? Blijf scherp, want zodra het live gaat, is het slechts voor de mensen die niet opgeven. 
+                        Ben jij klaar om deel uit te maken van The System? Blijf scherp, want het eerste product is een feit, en er is meer onderweg. Houd de socials in de gaten voor exclusieve hints naar toekomstige producten.
                     </p>
+                    <a href="http://store.thesystemoftheworld.com" target="_blank" class="animate-underline animate-text-color theme-primary bg-black px-4 py-2 rounded text-base lg:text-lg">The System Store</a>
                     <!-- Extra space between the text and the follow text -->
                     <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
                         Volg The System voor meer! <br>

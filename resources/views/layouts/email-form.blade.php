@@ -13,7 +13,7 @@
         <form action="https://formsubmit.co/contact@thesystemoftheworld.com" method="POST" class="space-y-2 lg:space-y-4 flex-1 w-full">
 
             <input type="hidden" name="_next" value="http://127.0.0.1:8000/contact">
-            <input type="hidden" name="_autoresponse" value="Dankjewel voor je bericht aan The System! Wioj zullen je zo snel mogenlijk een passend antwoord geven.">
+            <input type="hidden" name="_autoresponse" value="Dankjewel voor je bericht aan The System! Wij zullen je zo snel mogenlijk een passend antwoord geven.">
             <input type="hidden" name="_template" value="box">
             
             <div class="lg:flex items-center lg:gap-4">
