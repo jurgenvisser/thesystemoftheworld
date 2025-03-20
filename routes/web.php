@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('homepage'); // Refer to homepage.blade.php
 });
 
+// // Route for the 'Merchandise' page
+// Route::get('/shop', function () {
+//     return view('shop'); // Refer to merchandise.blade.php
+// });
+
 // Route for the 'Social Media' page
 Route::get('/social-media', function () {
     return view('social-media'); // Refer to social-media.blade.php
