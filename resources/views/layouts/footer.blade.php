@@ -34,8 +34,12 @@
                 </div>
                 
                 <!-- Copyright -->
-                <div class="text-sm mt-6 lg:mt-0">
-                    <p class="">&copy; <span id="current-year"></span> <span class="text-colorPrimary">The System</span>. All rights reserved.</p>
+                <div class="text-sm mt-6 lg:mt-0 text-center lg:text-right">
+                    <p>&copy; <span id="current-year"></span> <span class="text-colorPrimary">The System</span>. All rights reserved.</p>
+                    <p class="mt-2">
+                        <a href="/privacy" class="animate-underline animate-text-color theme-primary !text-gray-600">Privacy Policy</a>
+                        {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
+                    </p>
                 </div>
 
                 <!-- Logo for smaller screens -->

@@ -44,6 +44,11 @@ Route::get('/contact', function () {
 });
 
 // Route for the 'Missie & Visie' page
+Route::get('/privacy', function () {
+    return view('privacy'); // Refer to missie-visie.blade.php
+});
+
+// Route for the 'Missie & Visie' page
 // Route::get('/test', function () {
 //     return view('test'); // Refer to missie-visie.blade.php
 // });
