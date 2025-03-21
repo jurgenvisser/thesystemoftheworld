@@ -41,7 +41,7 @@
                             <a href="/privacy" class="animate-underline animate-text-color theme-primary !text-gray-600">Privacy Policy</a>
                             {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
                         </p>
-                        <p class="text-gray-600">v1.0.8</p>
+                        <span class="text-gray-800">Website Version: TSotW.1.0.8p</span>
                     </p>
                 </div>
 
