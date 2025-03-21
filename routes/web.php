@@ -4,24 +4,14 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Spatie\Sitemap\SitemapGenerator;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Request;
 
-// // Route::get('/homepage', function () {
-// //     return view('homepage');
-// // })->name('homepage');
-
-// // Route::get('/index', function () {
-// //     return view('homepage');
-// // });
 
 // Route for the 'Homepage' page
 Route::get('/', function () {
     return view('homepage'); // Refer to homepage.blade.php
 });
-
-// // Route for the 'Merchandise' page
-// Route::get('/shop', function () {
-//     return view('shop'); // Refer to merchandise.blade.php
-// });
 
 // Route for the 'Social Media' page
 Route::get('/social-media', function () {
@@ -33,40 +23,108 @@ Route::get('/missie-visie', function () {
     return view('missie-visie'); // Refer to missie-visie.blade.php
 });
 
-// Route for the 'Merchandise' page
-Route::get('/merchandise', function () {
-    return view('merchandise'); // Refer to merchandise.blade.php
-});
-
 // Route for the 'Missie & Visie' page
 Route::get('/contact', function () {
-    return view('contact'); // Refer to missie-visie.blade.php
+    return view('contact'); // Refer to contact.blade.php
 });
 
 // Route for the 'Missie & Visie' page
 Route::get('/privacy', function () {
-    return view('privacy'); // Refer to missie-visie.blade.php
+    return view('privacy'); // Refer to privacy.blade.php
 });
 
-// Route for the 'Missie & Visie' page
-// Route::get('/test', function () {
-//     return view('test'); // Refer to missie-visie.blade.php
+// // Route for the 'Admin Testing Panel' page
+// Route::get('/admin', function () {
+//     return view('admin'); // Refer to admin.blade.php
 // });
 
-// Route for the 'Toekomst' page
-// Route::get('/toekomst', function () {
-//     return view('toekomst'); // Refer to toekomst.blade.php
-// });
+// Route to access the admin login page
+Route::get('/admin', function () {
+    // Check if the user is already logged in
+    if (session('admin_logged_in')) {
+        return redirect('/admin/dashboard'); // Redirect to dashboard if already logged in
+    }
 
-// Route for the 'Brand' page
-// Route::get('/brand', function () {
-//     return view('brand'); // Refer to brand.blade.php
-// });
+    // If not logged in, show login form (or handle the login query)
+    return view('admin'); // You can create a view that shows the login form if needed.
+});
 
-// This the route for the coming-soon page
-// Route::get('/coming-soon', function () {
-//     return view('coming-soon'); // Refer to coming-soon.blade.php
-// });
+Route::post('/admin/dashboard', function () {
+    $adminPassword = 'TheSkySystem'; // Define your admin password
+
+    // Use the facade to get the password from the request
+    if (request()->input('password') === $adminPassword) {
+        // Store the session to indicate the user is logged in
+        session(['admin_logged_in' => true]);
+
+        return redirect('/admin/dashboard'); // Redirect to the admin dashboard
+    } else {
+        // Redirect back to the login page with an error message
+        return redirect('/admin')->with('error', 'Password is incorrect');
+    }
+});
+
+Route::get('/admin/dashboard', function () {
+    // Ensure the user is logged in before allowing access to the dashboard
+    if (session('admin_logged_in')) {
+        return view('admin-testing-panel'); // Show the dashboard if logged in
+    } else {
+        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
+    }
+});
+
+
+// Logout route to clear the session
+Route::get('/admin/logout', function () {
+    session()->forget('admin_logged_in'); // Clear the session
+    return redirect('/admin')->with('message', 'You have been logged out');
+});
+
+// Route for the 'Test' page
+Route::get('/admin/test', function () {
+    // Check if the user is logged in
+    if (!session('admin_logged_in')) {
+        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
+    }
+    return view('test'); // Refer to test.blade.php
+});
+
+// Route for the 'HTML/CSS Footer for Payhip' page
+Route::get('/admin/html-css-footer-for-payhip', function () {
+    // Check if the user is logged in
+    if (!session('admin_logged_in')) {
+        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
+    }
+    return view('html-css-footer-for-payhip'); // Refer to html-css-footer-for-payhip.blade.php
+});
+
+// Route for the 'Merchandise' page
+Route::get('/admin/merchandise', function () {
+    // Check if the user is logged in
+    if (!session('admin_logged_in')) {
+        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
+    }
+    return view('merchandise'); // Refer to merchandise.blade.php
+});
+
+// Route for the 'Shop' page
+Route::get('/admin/shop', function () {
+    // Check if the user is logged in
+    if (!session('admin_logged_in')) {
+        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
+    }
+    return view('shop'); // Refer to shop.blade.php
+});
+
+// Route for the 'Empty' page
+Route::get('/admin/empty', function () {
+    // Check if the user is logged in
+    if (!session('admin_logged_in')) {
+        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
+    }
+    return view('empty'); // Refer to shop.blade.php
+});
+
 
 // Route for generating sitemap
 Route::get('/generate-sitemap', function () {

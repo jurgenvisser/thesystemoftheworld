@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('title', 'TITLE')  <!-- Set the title for this page --> {{-- todo: Set the title --}}
+
 @section('content')
+
+@include('layouts.admin-testing-panel') {{-- !! This line needs to be removed if the page goes into the production environment --}}
 
 <!-- Hero Content Section -->
 <div class="h-[calc(100vh-4rem)] bg-v-backdrop-8 lg:bg-h-backdrop-1 bg-cover relative m-0"> {{-- todo: Alter the background image --}}

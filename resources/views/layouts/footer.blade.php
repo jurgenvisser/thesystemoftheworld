@@ -11,7 +11,7 @@
             <!-- Footer content and social media links -->
             <div class="flex flex-col lg:flex-row justify-between items-center lg:w-2/3 text-center lg:text-left space-y-6 lg:space-y-0">
                 <!-- Social media links -->
-                <div class="text-md lg:text-xl flex flex-col justify-between items-center">
+                <div class="text-base lg:text-xl flex flex-col justify-between items-center">
                     <p class="mb-2 font-semibold">Follow <span class="text-colorPrimary">The System</span> for more</p>
                     <div class="flex justify-center lg:justify-start space-x-8 font-semibold">
                         <!-- TikTok -->

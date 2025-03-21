@@ -3,6 +3,8 @@
 @section('title', 'Store')  <!-- Set the title for this page --> {{-- todo: Set the title --}}
 @section('content')
 
+@include('layouts.admin-testing-panel')
+
 <!-- Hero Content Section -->
 <div class="h-[calc(100vh-4rem)] bg-v-backdrop-8 lg:bg-h-backdrop-1 bg-cover relative m-0"> {{-- todo: Alter the background image --}}
     <div class="h-full flex flex-col">

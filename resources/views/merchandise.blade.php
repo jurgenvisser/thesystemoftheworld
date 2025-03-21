@@ -4,6 +4,8 @@
 
 @section('content')
 
+@include('layouts.admin-testing-panel')
+
 <!-- Hero Content Section -->
 <div class="h-[calc(100vh-4rem)] bg-v-backdrop-8 lg:bg-h-backdrop-1 bg-cover relative m-0">
     <div class="h-full flex flex-col">

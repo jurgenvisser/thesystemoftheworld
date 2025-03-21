@@ -1,0 +1,234 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set Roboto Slab as the default font globally */
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.animate-slide-down {
+    animation: slide-down 0.3s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.3s ease-in forwards;
+}
+
+select {
+    -webkit-appearance: none; /* Verwijdert standaard Safari-styling */
+    -moz-appearance: none;    /* Verwijdert standaard Firefox-styling */
+    appearance: none;         /* Verwijdert algemene styling */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>'); /* Custom dropdown-pijltje */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 2rem;
+}
+
+
+
+
+
+
+
+/* General Footer Styles */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-media {
+    text-align: center;
+    /* margin-top: 1.5rem; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px; /* Default for text-md */
+}
+
+.social-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    font-weight: 600;
+    /* text-decoration: underline; */
+    /* color: #D9AF5C; */
+}
+
+.privacy-policy {
+    text-decoration: underline;
+    color: oklch(0.446 0.03 256.802) !important
+}
+
+.privacy-parent {
+    margin-top: 0.5rem;
+}
+
+/* Logo Styles */
+.logo-large,
+.logo-small {
+    height: 4rem;
+    width: 20rem;
+}
+
+.text-colorPrimary {
+    color: #D9AF5C;
+}
+
+/* Copyright Section */
+.copyright {
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+}
+
+.footer-payment-icons {
+    display: flex;
+    justify-content: center;  /* Center the items on small screens */
+    margin-bottom: 1rem; /* Equivalent to `mb-4` */
+    gap: 2rem;  /* Equivalent to `space-x-8` */
+}
+
+/* Responsive styling for larger screens */
+@media (min-width: 1024px) {
+    .footer-payment-icons {
+        justify-content: flex-start;  /* Align items to the left on larger screens */
+    }
+}
+
+/* Responsive Styles */
+@media (min-width: 1024px) { 
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .social-media {
+        text-align: left;
+
+        font-size: 20px; /* For lg:text-xl */
+    }
+    
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    .copyright {
+        text-align: right;
+        font-size: 0.875rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Only show large logo on larger screens */
+    .logo-small {
+        display: none;
+    }
+
+    .logo-large {
+        display: block;
+    }
+}
+
+@media (max-width: 1023px) {
+    /* Only show small logo on smaller screens */
+    .logo-large {
+        display: none;
+    }
+
+    .logo-small {
+        display: block;
+    }
+}
+
+
+/* Animates the text color */
+.animate-text-color {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Change color when .theme-primary is hovered */
+.theme-primary.animate-text-color:hover {
+    color: #D9AF5C; /* Replace this with your hex or theme value for colorPrimary */
+}
+
+/* Animate the underline */
+.animate-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transform-origin: center center;
+    transform: translateX(-50%);
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Change underline color when .theme-primary is hovered */
+.theme-primary.animate-underline::after {
+    background-color: #D9AF5C; /* Replace this with your hex or theme value for colorPrimary */
+}
+
+/* Animate underline on hover */
+.theme-primary.animate-underline:hover::after {
+    width: 100%;
+}
+
+/* Base styling for links */
+.theme-primary, .theme-secondary {
+    color: white; /* Keep links white by default */
+    text-decoration: none; /* No underline by default */
+    position: relative; /* So we can position the underline */
+    overflow: hidden; /* Hide the underline by default */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
