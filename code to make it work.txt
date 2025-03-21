@@ -7,7 +7,6 @@ composer install
 # Install all NPM dependencies
 npm install
 npm install crypto-js
-npm install tailwindcss-text-stroke
 
 # Generate the application key
 php artisan key:generate
@@ -21,3 +20,5 @@ php artisan db:seed
 # Set the correct file permissions for storage and cache directories
 chmod -R 775 storage
 chmod -R 775 bootstrap/cache
+
+php artisan serve --host=192.168.178.148 --port=2096

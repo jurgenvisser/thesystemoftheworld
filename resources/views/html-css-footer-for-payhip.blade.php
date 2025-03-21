@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <!-- Add your CSS and JS files here with Vite -->
-    @vite(['resources/css/styles.css', 'resources/js/styles.js'])
+    @vite(['resources/css/styles.css', 'resources/js/app.js'])
     <title>@yield('title', 'Homepage')</title>
 </head>
 <body class="bg-white">
@@ -21,7 +21,7 @@
             <div class="flex flex-col lg:flex-row justify-between items-center">
 
                 <!-- Logo for larger screens -->
-                <svg class="theme-toggle h-16 w-80 hidden lg:block">
+                <svg class="h-16 w-80 hidden lg:block">
                     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 825.00 130.00">
@@ -230,7 +230,7 @@
                     </div>
 
                     <!-- Logo for smaller screens -->
-                    <svg class="theme-toggle h-16 block lg:hidden">
+                    <svg class="h-16 block lg:hidden">
                         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 825.00 130.00">
@@ -364,7 +364,7 @@
           <!-- Footer content container -->
           <div class="footer-content">
               <!-- Logo for larger screens -->
-              <svg class="theme-toggle logo-large">
+              <svg class="logo-large">
                 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 825.00 130.00">
@@ -561,7 +561,7 @@
               </div>
 
               <!-- Logo for smaller screens -->
-              <svg class="theme-toggle logo-small">
+              <svg class="logo-small">
                   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                   <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 825.00 130.00">

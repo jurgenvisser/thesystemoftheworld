@@ -9,6 +9,7 @@ import { setTheme } from './config/theme.js';
 
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
+
 // Function to apply the stored theme from the cookie on page load
 function applyStoredThemeFromCookie() {
     const currentTheme = getCookie("theme");
@@ -23,9 +24,9 @@ function applyStoredThemeFromCookie() {
 function toggleTheme() {
     const currentTheme = getCookie("theme");
     const newTheme = currentTheme === "primary" ? "secondary" : "primary";
-    
     // Set the new theme
     setTheme(newTheme);
+
     
     // Store the new theme in the cookie (encrypted)
     setCookie("theme", newTheme, 30);

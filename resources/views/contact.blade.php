@@ -80,10 +80,10 @@
                         E-mail niet jouw ding? Geen probleem. The System draait om direct schakelen. Stuur ons een bericht op TikTok, Instagram of Facebook.
                     </p>
                     <p class="text-base lg:text-lg mb-6">
-                        Of je nu een vraag hebt, je verhaal wilt delen
+                        Of je nu een vraag hebt, je verhaal wilt delen.
                     </p>
                     <p class="text-base lg:text-lg">
-                        We luisteren 
+                        We luisteren!
                     </p>
                 </div>
 
