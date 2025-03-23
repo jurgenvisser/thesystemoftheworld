@@ -2,7 +2,7 @@
 
     <div class="w-full lg:w-auto block lg:hidden border-b border-colorPrimary lg:border-none"></div>
     <div class="w-full lg:w-auto border-b border-colorPrimary/85 lg:border-none flex justify-center">
-        <a href="/" class="lg:animate-underline animate-text-color text-lg font-semibold uppercase py-2 lg:py-0 theme-primary text-center">
+        <a href="/" aria-label="Main homepage link" class="lg:animate-underline animate-text-color text-lg font-semibold uppercase py-2 lg:py-0 theme-primary text-center">
             Homepage
         </a>
     </div>
