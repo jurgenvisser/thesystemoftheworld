@@ -12,7 +12,7 @@
             <!-- Title Section -->
             <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-4 lg:p-20 h-auto w-[85vw] lg:w-auto">
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">The System</h1>
-                <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times">Jouw Verhaal, Jouw Kracht</h2>
+                <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center">Jouw Verhaal, Jouw Kracht</h2>
             </div>
 
         </div>
