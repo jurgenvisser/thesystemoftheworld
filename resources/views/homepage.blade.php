@@ -66,7 +66,7 @@
                 <!-- Content goes here -->
             
                 <div class="">
-                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Mentorschap & Coaching</h1>
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">Mentorschap & Coaching</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                         Het moment om je dromen om te zetten in actie is nú. Bij The System begrijpen we dat het behalen van je doelen niet altijd makkelijk is, en dat je soms de juiste richting of begeleiding nodig hebt om verder te komen. Daarom bieden wij persoonlijk mentorschap en coaching – op maat gemaakt voor jouw unieke situatie en ambities.
                     </p>
