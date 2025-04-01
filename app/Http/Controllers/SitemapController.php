@@ -22,7 +22,7 @@ class SitemapController extends Controller
         ];
 
         $urls[] = [
-            'loc' => URL::to('/social-media'),
+            'loc' => URL::to('/community'),
             'lastmod' => Carbon::now()->toAtomString(),
             'changefreq' => 'weekly',
             'priority' => '0.9',

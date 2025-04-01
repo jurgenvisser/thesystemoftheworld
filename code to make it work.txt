@@ -22,5 +22,3 @@ chmod -R 775 storage
 chmod -R 775 bootstrap/cache
 
 php artisan serve --host=192.168.178.148 --port=2096
-
-"TSotW.1.1.0p This version gives a complete update to all text on the website. It is now more descriptive and grabs the attention of the reader. The footer link for facebook has the typo fixed because the facebook page was renamed. The socialmedia page is disabled. and the content moved to the new comunity page" 
