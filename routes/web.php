@@ -13,9 +13,14 @@ Route::get('/', function () {
     return view('homepage'); // Refer to homepage.blade.php
 });
 
-// Route for the 'Social Media' page
-Route::get('/social-media', function () {
-    return view('social-media'); // Refer to social-media.blade.php
+// // Route for the 'Social Media' page
+// Route::get('/social-media', function () {
+//     return view('social-media'); // Refer to social-media.blade.php
+// });
+
+// Route for the 'Community' page
+Route::get('/community', function () {
+    return view('community'); // Refer to missie-visie.blade.php
 });
 
 // Route for the 'Missie & Visie' page
@@ -87,6 +92,15 @@ Route::get('/admin/test', function () {
         return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
     }
     return view('test'); // Refer to test.blade.php
+});
+
+// Route for the 'Social Media' page
+Route::get('/admin/social-media', function () {
+    // Check if the user is logged in
+    if (!session('admin_logged_in')) {
+        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
+    }
+    return view('social-media'); // Refer to social-media.blade.php
 });
 
 // Route for the 'HTML/CSS Footer for Payhip' page

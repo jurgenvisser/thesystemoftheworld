@@ -12,8 +12,8 @@
         </a>
     </div>
     <div class="w-full lg:w-auto border-b border-colorPrimary/55 lg:border-none flex justify-center">
-        <a href="/social-media" class="lg:animate-underline animate-text-color text-lg font-semibold uppercase py-2 lg:py-0 theme-primary text-center">
-            Social Media
+        <a href="/community" class="lg:animate-underline animate-text-color text-lg font-semibold uppercase py-2 lg:py-0 theme-primary text-center">
+            Community
         </a>
     </div>
     <div class="w-full lg:w-auto border-b border-colorPrimary/40 lg:border-none flex justify-center">

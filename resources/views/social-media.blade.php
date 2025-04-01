@@ -31,22 +31,25 @@
                     <h1 class="mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Social Media</h1>
     
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Dit is niet zomaar een platform. Dit is een beweging. Een beweging voor mensen zoals jij die niet tevreden zijn met middelmatigheid. Jij voelt dat er meer in je zit, maar je twijfelt. Waarom wacht je nog?
+                        Welkom op onze Social Media pagina! Hier vind je links naar al onze platformen waar The System actief is. Onze sociale media zijn meer dan gewoon content; ze zijn een plek waar we samenkomen als community, elkaar ondersteunen en inspireren.
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Weet je wat het verschil maakt? Actie.
+                        Klik op de knoppen hieronder om deel uit te maken van onze beweging en te blijven groeien, leren en doorzetten met The System.
                     </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        The System is niet voor de mensen die opgeven. Het is voor de mensen die bereid zijn om de waarheid te horen en de confrontatie aan te gaan met hun eigen excuses. Jij kiest: blijf je hangen of kies je voor je zelf.
-                    </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                       Begin nu. Je hebt geen tijd te verliezen.
-                    </p>
-                    <!-- Extra space between the text and the follow text -->
-                    <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
-                        Volg The System voor meer! <br>
-                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
-                    </p>
+                    <div class="flex space-x-4 justify-center lg:justify-start w-full">
+                        <a href="https://music.apple.com/us/artist/juri/1777135807" class="w-12 lg:w-16 h-12 lg:h-16 bg-instagram-white bg-cover rounded-lg flex items-center justify-center">
+                            <!-- Apple Music Icon -->
+                        </a>
+                        <a href="https://open.spotify.com/artist/6V5305M5J7Z8UXD9EVWMYj?si=acNfjgalRMON76ndy7xlOA" class="w-12 lg:w-16 h-12 lg:h-16 bg-threads-white bg-cover rounded-lg flex items-center justify-center">
+                            <!-- Spotify Icon -->
+                        </a>
+                        <a href="https://www.youtube.com/@JURI-Bloom" class="w-12 lg:w-16 h-12 lg:h-16 bg-x-white bg-contain bg-center bg-no-repeat rounded-lg flex items-center justify-center">
+                            <!-- YouTube Icon -->
+                        </a>
+                        <a href="https://music.youtube.com/channel/UCpS0XdY_5L7IE7AOUEWaAyg" class="w-12 lg:w-16 h-12 lg:h-16 bg-facebook-white bg-cover rounded-lg flex items-center justify-center">
+                            <!-- YouTube Music Icon -->
+                        </a>
+                    </div>
                 </div>
 
             </div>

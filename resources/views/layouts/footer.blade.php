@@ -27,7 +27,7 @@
                             Instagram
                         </a>
                         <!-- Facebook -->
-                        <a href="https://www.facebook.com/thesystemofthewolrd" target="_blank" class="animate-underline animate-text-color theme-primary">
+                        <a href="https://www.facebook.com/thesystemoftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
                             Facebook
                         </a>
                     </div>
@@ -41,7 +41,7 @@
                             <a href="/privacy" class="animate-underline animate-text-color theme-primary !text-gray-600">Privacy Policy</a>
                             {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
                         </p>
-                        <span class="text-gray-800">Website Version: TSotW.1.0.10p</span>
+                        <span class="text-gray-800">Website Version: TSotW.1.1.0p</span>
                     </p>
                 </div>
 

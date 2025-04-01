@@ -12,6 +12,7 @@
             <!-- Title Section -->
             <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-4 lg:p-20 h-auto w-[85vw] lg:w-auto">
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Contact</h1>
+                {{-- <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times">Support is dichtbij</h2> --}}
             </div>
 
         </div>
@@ -28,22 +29,38 @@
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
-                    <h1 class="mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Team The System</h1>
+                    <h1 class="mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Het Team van The System – Jouw Steun en Begeleiding</h1>
                 
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Het team van The System bestaat uit een diverse groep mensen die allemaal gedreven worden door dezelfde passie: het creëren van een impactvolle en vooruitstrevende gemeenschap. Elk lid brengt unieke talenten en perspectieven in, waardoor we samen sterker staan.
+                        Bij The System bestaat ons team uit mensen die echt begrijpen wat je doormaakt. We hebben geen personeel die alleen theorieën delen; we zijn mensen die zelf ook hebben gevochten, geleerd en gegroeid. We hebben allemaal momenten gekend van onzekerheid, tegenslagen en het gevoel vast te zitten. En nu willen we onze ervaring en kennis met jou delen om je te helpen verder te komen.
+                    </p>
+                    <h2 class="text-xl lg:text-2xl text-white font-bold uppercase font-times px-4 lg:px-0">Social Media Team</h2>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Ons team creëert en deelt dagelijks waardevolle content om je te inspireren en te motiveren. Ze bouwen een online community die jou helpt gefocust te blijven en vooruit te gaan.
+                    </p>
+                    <h2 class="text-xl lg:text-2xl text-white font-bold uppercase font-times px-4 lg:px-0">Webdevelopment Team</h2>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Onze tech-experts zorgen ervoor dat onze website altijd soepel werkt, zodat jij gemakkelijk toegang hebt tot alle tools en informatie die je nodig hebt om verder te komen.
+                    </p>
+                    <h2 class="text-xl lg:text-2xl text-white font-bold uppercase font-times px-4 lg:px-0">Klantenservice Team</h2>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Ons supportteam staat klaar om je snel en persoonlijk te helpen via direct message of e-mail. Jij hoeft je geen zorgen te maken – we zorgen voor je.
+                    </p>
+                    <h2 class="text-xl lg:text-2xl text-white font-bold uppercase font-times px-4 lg:px-0">Coaching Team</h2>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Onze coaches bieden maatwerkbegeleiding en helpen je door middel van persoonlijke coaching om je doelen te bereiken en obstakels te overwinnen.
+                    </p>
+                    <p class="text-base lg:text-lg my-12 px-4 lg:px-0">
+                        ⸻
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        We zijn een team van visionairs, innovators en doorzetters, die zich inzetten voor het inspireren van anderen. Onze missie is niet alleen het bouwen van een merk, maar ook het bevorderen van een cultuur van kracht, zelfvertrouwen en authenticiteit.
+                        Bij The System ben je nooit alleen. Ons team werkt elke dag hard om jou te voorzien van de tools, begeleiding en ondersteuning die je nodig hebt om te slagen. Wij zijn er om je te helpen groeien, ongeacht waar je nu staat.
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Bij The System geloven we in samenwerking en het omarmen van verschillende ideeën en achtergronden. Samen creëren we een ruimte waar iedereen zich gehoord en gesteund voelt op hun persoonlijke reis.
-                    </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        We werken voortdurend aan het verbeteren van ons merk en onze boodschap. Blijf op de hoogte van onze nieuwste ontwikkelingen en maak deel uit van onze groeiende gemeenschap.
+                        Wij geloven in jou – en wij geloven dat jij het in je hebt om meer te bereiken. Samen staan we sterker.
                     </p>
                     <!-- Extra space between the text and the follow text -->
-                    <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
+                    <p class="text-base lg:text-lg px-4 lg:px-0">
                         Volg The System voor meer! <br>
                         TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
                     </p>
