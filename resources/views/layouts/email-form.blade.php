@@ -60,7 +60,7 @@
                 >
                 Verstuur
             </button>
-            <p class="text-xs lg:text-sm text-gray-300">*Door het formulier in te vullen en op te sturen ga je akkoord met onze <a href="/privacy" class="animate-underline animate-text-color theme-primary !text-gray-300">Privacy Policy</a>.</p>
+            <p class="text-xs lg:text-sm text-gray-300">*Door het formulier in te vullen en op te sturen ga je akkoord met onze <a href="/privacy-policy" class="animate-underline animate-text-color theme-primary !text-gray-300">Privacy Policy</a> en <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary !text-gray-300">Terms & Conditions</a>.</p>
         </form>
     </div>
 </div>

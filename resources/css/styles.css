@@ -101,8 +101,11 @@ select {
     /* color: #D9AF5C; */
 }
 
-.privacy-policy {
+.privacy-policy, .underline {
     text-decoration: underline;
+}
+
+.text-gray {
     color: oklch(0.446 0.03 256.802) !important
 }
 

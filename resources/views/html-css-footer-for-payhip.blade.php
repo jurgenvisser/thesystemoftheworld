@@ -555,8 +555,10 @@
               <!-- Copyright -->
               <div class="copyright">
                   <p>&copy; 2025 <span class="text-colorPrimary">The System</span>. All rights reserved.</p>
-                  <p class="privacy-parent">
-                      <a href="/privacy" class="privacy-policy animate-underline animate-text-color theme-primary">Privacy Policy</a>
+                  <p class="">
+                      <a href="/privacy-policy" class="underline text-gray animate-underline animate-text-color theme-primary">Privacy Policy</a>
+                      <span class="text-gray"> | </span>
+                      <a href="/terms-and-conditions" class="underline text-gray animate-underline animate-text-color theme-primary">Terms & Conditions</a>
                   </p>
               </div>
 
