@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Homepage')  <!-- Set the title for this page -->
+@section('title', 'Privacy Policy')  <!-- Set the title for this page -->
 
 @section('content')
 
-{{-- !! Let erop dat als deze informatie veranderd dat de privacypolicy.js ook aangepast word zodat de doawnload klopt! --}}
+{{-- !! Let erop dat als deze informatie veranderd dat de privacy-policy.js ook aangepast word zodat de doawnload klopt! --}}
 
 <div class="bg-colorPrimary/20 h-auto m-0 py-24 flex justify-center items-center">
   <div class="bg-colorPrimary/60 max-w-4xl mx-auto p-6 text-white">
@@ -114,15 +114,15 @@
     <section class="mt-8">
       <h2 class="text-xl font-semibold mb-4">9. Wijzigingen</h2>
       <p>
-        Deze Privacy Policy kan van tijd tot tijd worden bijgewerkt. Controleer deze pagina regelmatig om op de hoogte te blijven van eventuele wijzigingen.
+        De Privacy Policy kan van tijd tot tijd worden bijgewerkt. Controleer deze pagina regelmatig om op de hoogte te blijven van eventuele wijzigingen.
       </p>
     </section>
   
     <footer class="mt-8 text-center text-sm">
-      <p>Heb je vragen over deze Privacy Policy? Neem contact met ons op via: <a href="mailto:contact@thesystemoftheworld.com" class="animate-underline animate-text-color theme-primary">contact@thesystemoftheworld.com</a></p>
+      <p>Heb je vragen over ons Privacy Policy? Neem contact met ons op via: <a href="mailto:contact@thesystemoftheworld.com" class="animate-underline animate-text-color theme-primary">contact@thesystemoftheworld.com</a></p>
       <p>
         Wil je de Privacy Policy downloaden voor later gebruik?
-        <button id="downloadBtn" class="animate-underline animate-text-color theme-primary">
+        <button id="downloadPPBtn" class="animate-underline animate-text-color theme-primary">
           Download Privacy Policy PDF
         </button>
       </p>

@@ -1,4 +1,4 @@
-const downloadBtn = document.getElementById('downloadBtn');
+const downloadBtn = document.getElementById('downloadPPBtn');
 
 if (downloadBtn) {
   downloadBtn.addEventListener('click', () => {
@@ -143,15 +143,15 @@ if (downloadBtn) {
 
     // Wijzigingen
     addText("9. Wijzigingen", true, true);  // Set as heading
-    addText("Deze Privacy Policy kan van tijd tot tijd worden bijgewerkt. Controleer deze pagina regelmatig om op de hoogte te blijven van eventuele wijzigingen.");
+    addText("De Privacy Policy kan van tijd tot tijd worden bijgewerkt. Controleer deze pagina regelmatig om op de hoogte te blijven van eventuele wijzigingen.");
 
     // Footer
-    addText("Heb je vragen over deze Privacy Policy? Neem contact met ons op via: contact@thesystemoftheworld.com");
+    addText("Heb je vragen over onze Privacy Policy? Neem contact met ons op via: contact@thesystemoftheworld.com", false, true);
 
     // Save the file as a PDF and trigger the download
     const pdfDownloadDate = new Date().toLocaleDateString().replace(/\//g, '-'); // Hernoem de datum met streepjes
     doc.save(`thesystemoftheworld.com-privacy-policy-${pdfDownloadDate}.pdf`);
   });
 } else {
-  // console.log("Download button not found on this page. Please visit the /privacy page to download the PDF.");
+  // console.log("Download button not found on this page. Please visit the /privacy-policy page to download the PDF.");
 }

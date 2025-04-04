@@ -4,23 +4,15 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Spatie\Sitemap\SitemapGenerator;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Request;
-
 
 // Route for the 'Homepage' page
 Route::get('/', function () {
     return view('homepage'); // Refer to homepage.blade.php
 });
 
-// // Route for the 'Social Media' page
-// Route::get('/social-media', function () {
-//     return view('social-media'); // Refer to social-media.blade.php
-// });
-
 // Route for the 'Community' page
 Route::get('/community', function () {
-    return view('community'); // Refer to missie-visie.blade.php
+    return view('community'); // Refer to community.blade.php
 });
 
 // Route for the 'Missie & Visie' page
@@ -28,20 +20,24 @@ Route::get('/missie-visie', function () {
     return view('missie-visie'); // Refer to missie-visie.blade.php
 });
 
-// Route for the 'Missie & Visie' page
+// Route for the 'Contact' page
 Route::get('/contact', function () {
     return view('contact'); // Refer to contact.blade.php
 });
 
-// Route for the 'Missie & Visie' page
-Route::get('/privacy', function () {
-    return view('privacy'); // Refer to privacy.blade.php
+// Route for the 'Privacy Policy' page
+Route::get('/privacy-policy', function () {
+    return view('privacy-policy'); // Refer to privacy-policy.blade.php
 });
 
-// // Route for the 'Admin Testing Panel' page
-// Route::get('/admin', function () {
-//     return view('admin'); // Refer to admin.blade.php
-// });
+// Route for the 'Terms & Conditions' page
+Route::get('/terms-and-conditions', function () {
+    return view('terms-and-conditions'); // Refer to terms-and-conditions.blade.php
+});
+
+
+
+
 
 // Route to access the admin login page
 Route::get('/admin', function () {
@@ -138,6 +134,11 @@ Route::get('/admin/empty', function () {
     }
     return view('empty'); // Refer to shop.blade.php
 });
+
+
+
+
+
 
 
 // Route for generating sitemap

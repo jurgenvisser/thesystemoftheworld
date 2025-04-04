@@ -3,7 +3,8 @@ import './config/theme.js';
 import './config/theme-images.js';
 import './utils/mobile-menu.js';
 import './utils/testing-menu.js';
-import './services/privacypolicy.js';
+import './services/privacy-policy.js';
+import './services/terms-and-conditions.js';
 import { setCookie, getCookie } from './services/cookie.js';
 import { setTheme } from './config/theme.js';
 
