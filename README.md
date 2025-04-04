@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://thesystemoftheworld.com" target="_blank">
-    <div style="background-color: black; display: inline-block; padding: 20px; border-radius: 8px;">
+    <div style="background-color: black;">
       <img src="https://thesystemoftheworld.com/images/logos/TheSystemFull.svg" width="400" alt="The System Logo">
     </div>
   </a>
