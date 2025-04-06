@@ -81,6 +81,8 @@ if (downloadBtn) {
     addText("Alle adviezen, suggesties en coachingdiensten zijn bedoeld als algemene begeleiding en ondersteuning. Wij garanderen niet dat onze adviezen in alle situaties geschikt of effectief zijn. De klant is volledig verantwoordelijk voor het toepassen van de adviezen en het beoordelen van de geschiktheid ervan voor de persoonlijke situatie. Wij zijn niet aansprakelijk voor directe of indirecte schade, verlies of gevolgen voortvloeiend uit het opvolgen van onze adviezen.");
     addText("5.2 Gebruik van Producten", true);
     addText("Onze producten worden geleverd zoals omschreven op de website. Wij zijn niet verantwoordelijk voor eventuele schade, ongemak of negatieve ervaringen voortvloeiend uit het gebruik van onze producten. De klant is verantwoordelijk voor het juist gebruiken van de producten en het naleven van eventuele veiligheidsvoorschriften.");
+    addText("5.3 Persoonlijke Aansprakelijkheidsbeperking bij Psychisch of Emotioneel Letsel", true);
+    addText("De coachingdiensten van The System zijn niet bedoeld ter vervanging van medische, psychologische of psychiatrische hulp. Hoewel wij streven naar professionele begeleiding, zijn wij niet aansprakelijk voor psychisch of emotioneel letsel voortvloeiend uit het gebruik van onze diensten. De klant blijft te allen tijde zelf verantwoordelijk voor het inschatten van zijn of haar mentale en emotionele gezondheid en het inschakelen van professionele hulp indien nodig.");
     
     addText("6. Intellectueel Eigendom", true, true);
     addText("Alle inhoud, inclusief teksten, afbeeldingen, en cursusmateriaal, is eigendom van The System en mag niet zonder schriftelijke toestemming worden gekopieerd, gedeeld of commercieel gebruikt.");
@@ -90,6 +92,9 @@ if (downloadBtn) {
     
     addText("8. Contact", true, true);
     addText("Voor vragen of klachten kunt u contact opnemen met onze klantenservice via contact@thesystemoftheworld.com");
+    
+    addText("9. Gedragsregels en Fair Use", true, true);
+    addText("Om een veilige en respectvolle omgeving te waarborgen voor alle gebruikers van onze diensten en eventuele community-platformen, vragen wij het volgende: Behandel andere gebruikers met respect en beleefdheid. Gebruik onze platformen niet voor haatzaaiing, intimidatie, spam of andere ongewenste gedragingen. Misbruik van toegang tot diensten of communitygedeeltes kan leiden tot waarschuwingen, tijdelijke schorsing of permanente uitsluiting van onze diensten. The System behoudt zich het recht voor om accounts te beperken of te verwijderen bij overtreding van deze gedragsregels.");
 
     // Wijzigingen
     addText("9. Wijzigingen", true, true);  // Set as heading

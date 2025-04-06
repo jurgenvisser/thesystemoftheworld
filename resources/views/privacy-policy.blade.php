@@ -39,6 +39,9 @@
         <li>Telefoonnummer (alleen bij fysieke producten)</li>
         <li>Adresgegevens (alleen bij fysieke producten)</li>
       </ul>
+      
+      <h3 class="text-lg font-medium mt-6 mb-2">Coachingdiensten:</h3>
+      <p>In het kader van coachingdiensten kunnen aanvullende gegevens worden verzameld die relevant zijn voor persoonlijke begeleiding (zoals voorkeuren, doelen, of voortgang). Deze worden uitsluitend intern gebruikt en niet gedeeld met derden.</p>
     </section>
   
     <section class="mt-8">

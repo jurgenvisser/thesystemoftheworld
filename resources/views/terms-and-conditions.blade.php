@@ -62,6 +62,11 @@
     </section>
 
     <section class="mt-8">
+      <h2 class="text-xl font-semibold mb-2">5.3 Persoonlijke Aansprakelijkheidsbeperking bij Psychisch of Emotioneel Letsel</h2>
+      <p>De coachingdiensten van The System zijn niet bedoeld ter vervanging van medische, psychologische of psychiatrische hulp. Hoewel wij streven naar professionele begeleiding, zijn wij niet aansprakelijk voor psychisch of emotioneel letsel voortvloeiend uit het gebruik van onze diensten. De klant blijft te allen tijde zelf verantwoordelijk voor het inschatten van zijn of haar mentale en emotionele gezondheid en het inschakelen van professionele hulp indien nodig.</p>
+    </section>
+
+    <section class="mt-8">
       <h2 class="text-xl font-semibold mb-4">6. Intellectueel Eigendom</h2>
       <p>Alle inhoud, inclusief teksten, afbeeldingen, en cursusmateriaal, is eigendom van The System en mag niet zonder schriftelijke toestemming worden gekopieerd, gedeeld of commercieel gebruikt.</p>
     </section>
@@ -70,14 +75,25 @@
       <h2 class="text-xl font-semibold mb-4">7. Wijzigingen en Updates</h2>
       <p>The System behoudt zich het recht voor om deze voorwaarden op elk moment te wijzigen. De meest recente versie wordt altijd op onze website gepubliceerd.</p>
     </section>
-
+    
     <section class="mt-8">
       <h2 class="text-xl font-semibold mb-4">8. Contact</h2>
       <p>Voor vragen of klachten kunt u contact opnemen met onze klantenservice via <a href="mailto:contact@thesystemoftheworld.com" class="animate-underline animate-text-color theme-primary">contact@thesystemoftheworld.com</a></p>
     </section>
+    
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold mb-4">9. Gedragsregels en Fair Use</h2>
+      <p>Om een veilige en respectvolle omgeving te waarborgen voor alle gebruikers van onze diensten en eventuele community-platformen, vragen wij het volgende:</p>
+      <ul class="list-disc list-inside space-y-2 my-2">
+        <li>Behandel andere gebruikers met respect en beleefdheid.</li>
+        <li>Gebruik onze platformen niet voor haatzaaiing, intimidatie, spam of andere ongewenste gedragingen.</li>
+        <li>Misbruik van toegang tot diensten of communitygedeeltes kan leiden tot waarschuwingen, tijdelijke schorsing of permanente uitsluiting van onze diensten.</li>
+      </ul>
+      <p>The System behoudt zich het recht voor om accounts te beperken of te verwijderen bij overtreding van deze gedragsregels.</p>
+    </section>
 
     <section class="mt-8">
-      <h2 class="text-xl font-semibold mb-4">9. Wijzigingen</h2>
+      <h2 class="text-xl font-semibold mb-4">10. Wijzigingen</h2>
       <p>
         De Terms & Conditions kunnen van tijd tot tijd worden bijgewerkt. Controleer deze pagina regelmatig om op de hoogte te blijven van eventuele wijzigingen.
       </p>

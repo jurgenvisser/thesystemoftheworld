@@ -95,6 +95,9 @@ if (downloadBtn) {
     addText("• E-mailadres");
     addText("• Telefoonnummer (alleen bij fysieke producten)");
     addText("• Adresgegevens (alleen bij fysieke producten)");
+    
+    addText("Coachingdiensten:");
+    addText("In het kader van coachingdiensten kunnen aanvullende gegevens worden verzameld die relevant zijn voor persoonlijke begeleiding (zoals voorkeuren, doelen, of voortgang). Deze worden uitsluitend intern gebruikt en niet gedeeld met derden.");
 
     // Waarom we gegevens verzamelen
     addText("2. Waarom we gegevens verzamelen", true, true);  // Set as heading
