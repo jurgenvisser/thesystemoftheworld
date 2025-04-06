@@ -97,7 +97,7 @@ if (downloadBtn) {
     addText("Om een veilige en respectvolle omgeving te waarborgen voor alle gebruikers van onze diensten en eventuele community-platformen, vragen wij het volgende: Behandel andere gebruikers met respect en beleefdheid. Gebruik onze platformen niet voor haatzaaiing, intimidatie, spam of andere ongewenste gedragingen. Misbruik van toegang tot diensten of communitygedeeltes kan leiden tot waarschuwingen, tijdelijke schorsing of permanente uitsluiting van onze diensten. The System behoudt zich het recht voor om accounts te beperken of te verwijderen bij overtreding van deze gedragsregels.");
 
     // Wijzigingen
-    addText("9. Wijzigingen", true, true);  // Set as heading
+    addText("10. Wijzigingen", true, true);  // Set as heading
     addText("De Terms & Conditions kunnen van tijd tot tijd worden bijgewerkt. Controleer deze pagina regelmatig om op de hoogte te blijven van eventuele wijzigingen.");
 
     // Footer
