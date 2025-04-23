@@ -53,6 +53,9 @@ export default {
                 'youtube-color': "url('/public/images/icons/youtube_red.svg')",
                 'youtube-black': "url('/public/images/icons/youtube_black.svg')",
                 'youtube-white': "url('/public/images/icons/youtube_white.svg')",
+                'telegram-color': "url('/public/images/icons/telegram_color.svg')",
+                'telegram-black': "url('/public/images/icons/telegram_black.svg')",
+                'telegram-white': "url('/public/images/icons/telegram_white.svg')",
                 'instagram-color': "url('/public/images/icons/Instagram_Glyph_Gradient.svg')",
                 'instagram-black': "url('/public/images/icons/Instagram_Glyph_Black.svg')",
                 'instagram-white': "url('/public/images/icons/Instagram_Glyph_White.svg')",
@@ -97,6 +100,16 @@ export default {
                     '@screen lg': {
                         '.responsive-width': {
                         width: '80vw',
+                        },
+                    },
+                    '.py-responsive': {
+                        paddingTop: '3rem',
+                        paddingBottom: '3rem',
+                    },
+                    '@screen lg': {
+                        '.py-responsive': {
+                            paddingTop: '6rem',
+                            paddingBottom: '6rem',
                         },
                     },
                     /* New utilities */

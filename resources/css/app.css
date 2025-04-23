@@ -44,3 +44,19 @@ select {
     background-position: right 1rem center;
     background-size: 2rem;
 }
+
+/* Animation to be added dynamically */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+#marquee {
+    will-change: transform; /* Enables GPU acceleration */
+    backface-visibility: hidden; /* Prevents flickering during animation */
+    transform-style: preserve-3d; /* Ensures smoother animations */
+}

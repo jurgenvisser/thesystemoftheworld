@@ -42,3 +42,34 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', toggleTheme);
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const marquee = document.getElementById("marquee");
+    const container = marquee.parentElement;
+
+    const duplicateContent = () => {
+        const containerWidth = container.offsetWidth;
+        let marqueeWidth = marquee.scrollWidth;
+
+        // Duplicate content until the total width is at least twice the container width
+        while (marqueeWidth < containerWidth * 2) {
+            const children = [...marquee.children];
+            children.forEach((item) => {
+                const clone = item.cloneNode(true);
+                marquee.appendChild(clone);
+            });
+            marqueeWidth = marquee.scrollWidth;
+        }
+    };
+
+    duplicateContent();
+
+    // Calculate animation duration dynamically
+    const totalWidth = marquee.scrollWidth;
+    const speed = 100; // Adjust this value for desired scrolling speed
+    const duration = totalWidth / speed;
+
+    marquee.style.animation = `marquee ${duration}s linear infinite`;
+});

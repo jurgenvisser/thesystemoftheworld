@@ -18,6 +18,10 @@
                         <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
                             TikTok
                         </a>
+                        <!-- Telegram -->
+                        <a href="https://t.me/+hS5RjxjtFvw2ZjFk" target="_blank" class="animate-underline animate-text-color theme-primary">
+                            Telegram
+                        </a>
                         <!-- YouTube -->
                         <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
                             YouTube
@@ -42,7 +46,7 @@
                         <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary !text-gray-600">Terms & Conditions</a>
                         {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
                     </p>
-                    <p class="text-gray-800">Website Version: TSotW.1.1.9p</p>
+                    <p class="text-gray-800">Website Version: TSotW.1.1.10p</p>
                 </div>
 
                 <!-- Logo for smaller screens -->

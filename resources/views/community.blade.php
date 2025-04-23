@@ -21,7 +21,7 @@
 </div>
 
 <!-- Main Content Section -->
-<div class="bg-colorPrimary/20 h-auto m-0 py-24 flex justify-center items-center">
+<div class="bg-colorPrimary/20 h-auto m-0 pt-12 lg:pt-24 flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
 
 
@@ -77,6 +77,9 @@
                     <div class="flex space-x-4 justify-center lg:justify-start w-full pt-0 lg:pt-0">
                         <a href="https://www.tiktok.com/@thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-tiktok-white bg-cover rounded-lg flex items-center justify-center">
                             <!-- TikTok Icon -->
+                        </a>
+                        <a href="https://t.me/+hS5RjxjtFvw2ZjFk" class="w-12 lg:w-16 h-12 lg:h-16 bg-telegram-white bg-cover rounded-lg flex items-center justify-center">
+                            <!-- Telegram Icon -->
                         </a>
                         <a href="https://www.youtube.com/@TheSystem_oftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-youtube-white bg-contain bg-center bg-no-repeat rounded-lg flex items-center justify-center">
                             <!-- YouTube Icon -->
