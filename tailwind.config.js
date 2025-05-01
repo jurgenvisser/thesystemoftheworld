@@ -102,12 +102,12 @@ export default {
                         width: '80vw',
                         },
                     },
-                    '.py-responsive': {
+                    '.responsive-height': {
                         paddingTop: '3rem',
                         paddingBottom: '3rem',
                     },
-                    '@screen lg': {
-                        '.py-responsive': {
+                    [`@media (min-width: ${theme('screens.lg')})`]: {
+                        '.responsive-height': {
                             paddingTop: '6rem',
                             paddingBottom: '6rem',
                         },

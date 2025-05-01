@@ -24,8 +24,10 @@
 <!-- Scroll Banner Section -->
 @include('components.scroll-banner')
 
+{{-- @include('components.cta') --}}
+
 <!-- Main Content Section -->
-<div class="bg-colorPrimary/20 h-auto m-0 py-12 lg:py-24 flex justify-center items-center">
+<div class="bg-colorPrimary/20 h-auto m-0 responsive-height flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
        
         <!-- First Section (2/6) -->
