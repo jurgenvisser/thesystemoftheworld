@@ -54,7 +54,7 @@
                         The System is er al. Nu jij nog.
                     </p>
                     <a
-                        href="http://127.0.0.1:8000/kennis-maken"
+                        href="/kennis-maken"
                         class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 mx-4 lg:mx-0 hover:bg-gray-800">
                         Vrijblijvend kennismaken? Klik hier!
                     </a>
