@@ -8,7 +8,7 @@
     </div>
     <div class="w-full lg:w-auto border-b border-colorPrimary/80 lg:border-none flex justify-center">
         <a href="https://shop.thesystemoftheworld.com" class="lg:animate-underline animate-text-color text-lg font-semibold uppercase py-2 lg:py-0 theme-primary text-center">
-            Shop
+            Webshop
         </a>
     </div>
     <div class="w-full lg:w-auto border-b border-colorPrimary/60 lg:border-none flex justify-center">
