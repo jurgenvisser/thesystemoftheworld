@@ -1,8 +1,6 @@
-
-
 <!-- Form Section (6/6) -->
 <div class="h-auto lg:h-full col-span-6">
-    <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+    <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
 
         <!-- Introductory Text -->
         <div class="text-justify">
@@ -55,13 +53,15 @@
             ></textarea>
             <div class="flex items-center gap-4">
                 <button
-                type="submit"
-                class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800"
-                >
-                Verstuur
-            </button>
-            <p class="text-xs lg:text-sm text-gray-300">*Door het formulier in te vullen en op te sturen ga je akkoord met onze <a href="/privacy-policy" class="animate-underline animate-text-color theme-primary !text-gray-300">Privacy Policy</a> en <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary !text-gray-300">Terms & Conditions</a>.</p>
+                    type="submit"
+                    class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800"
+                    >
+                    Verstuur
+                </button>
+                <p class="text-xs lg:text-sm text-gray-300">
+                    *Door het formulier in te vullen en op te sturen ga je akkoord met onze <a href="/privacy-policy" class="animate-underline animate-text-color theme-primary !text-gray-300">Privacy Policy</a> en <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary !text-gray-300">Terms & Conditions</a>.
+                </p>
+            </div>
         </form>
     </div>
 </div>
-

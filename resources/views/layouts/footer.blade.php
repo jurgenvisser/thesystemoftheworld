@@ -13,27 +13,33 @@
                 <!-- Social media links -->
                 <div class="text-base lg:text-xl flex flex-col justify-between items-center">
                     <p class="mb-2 font-semibold">Follow <span class="text-colorPrimary">The System</span> for more</p>
-                    <div class="flex justify-center lg:justify-start space-x-8 font-semibold">
-                        <!-- TikTok -->
-                        <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
-                            TikTok
-                        </a>
-                        <!-- Telegram -->
-                        <a href="https://t.me/+hS5RjxjtFvw2ZjFk" target="_blank" class="animate-underline animate-text-color theme-primary">
-                            Telegram
-                        </a>
-                        <!-- YouTube -->
-                        <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
-                            YouTube
-                        </a>
-                        <!-- Instagram -->
-                        <a href="https://www.instagram.com/thesystemoftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
-                            Instagram
-                        </a>
-                        <!-- Facebook -->
-                        <a href="https://www.facebook.com/thesystemoftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
-                            Facebook
-                        </a>
+                    <div class="lg:flex justify-center lg:justify-start lg:space-x-8 space-y-2 lg:space-y-0 font-semibold">
+                        <div class="grid lg:flex grid-cols-6 gap-4 lg:gap-8">
+                            <!-- TikTok -->
+                            <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                                TikTok
+                            </a>
+                            <!-- Telegram -->
+                            <a href="https://t.me/+hS5RjxjtFvw2ZjFk" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                                Telegram
+                            </a>
+                            <!-- YouTube -->
+                            <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                                YouTube
+                            </a>
+                        </div>
+                        <div class="grid lg:flex grid-cols-6 gap-4 lg:gap-8">
+                            <span class="col-span-1 block lg:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                                Instagram
+                            </a>
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                                Facebook
+                            </a>
+                            <span class="col-span-1 block lg:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                        </div>
                     </div>
                 </div>
                 
@@ -46,7 +52,7 @@
                         <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary !text-gray-600">Terms & Conditions</a>
                         {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
                     </p>
-                    <p class="text-gray-800">Website Version: TSotW.1.1.11p</p>
+                    <p class="text-gray-800">Website Version: TSotW.1.1.12p</p>
                 </div>
 
                 <!-- Logo for smaller screens -->

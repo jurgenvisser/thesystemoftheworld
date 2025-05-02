@@ -27,6 +27,11 @@
     </a>
 </div>
 <div class="w-full lg:w-auto border-b border-colorPrimary/25 lg:border-none flex justify-center">
+    <a href="/kennis-maken" class="lg:animate-underline animate-text-color text-lg font-semibold uppercase py-2 lg:py-0 theme-primary text-center">
+        Kennis Maken
+    </a>
+</div>
+<div class="w-full lg:w-auto border-b border-colorPrimary/25 lg:border-none flex justify-center">
     <a href="/admin/social-media" class="lg:animate-underline animate-text-color text-lg font-semibold uppercase py-2 lg:py-0 theme-primary text-center">
         Social Media
     </a>

@@ -32,7 +32,7 @@
                 <div class="">
                     <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">TITLE</h1> {{-- todo: Set the title --}}
     
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0"> {{-- todo: Remove mb-6 for last doby of text --}}
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0"> {{-- todo: Remove mb-6 for last body of text --}}
                         Body of text {{-- todo: Add custom text --}}
                     </p>
                 </div>

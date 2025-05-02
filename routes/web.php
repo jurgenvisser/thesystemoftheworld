@@ -20,9 +20,14 @@ Route::get('/missie-visie', function () {
     return view('missie-visie'); // Refer to missie-visie.blade.php
 });
 
-// Route for the 'Missie & Visie' page
+// Route for the 'Over Ons' page
 Route::get('/over-ons', function () {
     return view('about-us'); // Refer to team-and-origin.blade.php
+});
+
+// Route for the 'Kennis Maken' page
+Route::get('/kennis-maken', function () {
+    return view('kennis-maken'); // Refer to kennis-maken.blade.php
 });
 
 // Route for the 'Contact' page

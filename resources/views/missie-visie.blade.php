@@ -25,9 +25,9 @@
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
 
 
-        <!-- First Section (3/6) -->
+        <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
             
                 <div class="">
@@ -44,9 +44,9 @@
         </div>
 
 
-        <!-- Second Section (3/6) -->
+        <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-start items-left text-white p-4 lg:p-20 py-20 text-left lg:text-left ">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-start items-left text-white p-4 lg:p-20 responsive-height text-left lg:text-left ">
             <!-- Content goes here -->
     
                 <div class="">
@@ -62,9 +62,9 @@
             </div>
         </div>
 
-        <!-- Third Section (6/6) -->
+        <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Platform</h1>
