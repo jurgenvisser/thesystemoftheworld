@@ -31,16 +31,20 @@
                 <p class="text-base lg:text-lg">Daarom is deze pagina er. Om jou vrijblijvend te laten kennismaken met The System. Zonder verplichtingen. Zonder druk.</p>
             </div>
         </div>
-
+        
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify shadow-md">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6">Wat je hier kunt doen</h2>
-                <ul class="list-disc list-inside px-4 lg:px-0 text-base lg:text-lg">
-                    <li>Stel je vragen aan ons team</li>
-                    <li>Krijg uitleg over hoe The System werkt</li>
-                    <li>Of laat gewoon je e-mailadres achter, dan nemen we contact met je op</li>
-                </ul>
+                <p class="text-base lg:text-lg mb-6">
+                    Je hoeft nog niks te beslissen. Maar dit zijn je eerste opties: Stel je vraag aan ons team open en zonder oordeel.
+                </p>
+                <p class="text-base lg:text-lg mb-6">
+                    Krijg direct uitleg over hoe The System jou helpt bouwen.
+                </p>
+                <p class="text-base lg:text-lg">
+                    Laat je e-mailadres achter en we nemen persoonlijk contact met je op.
+                </p>
             </div>
         </div>
 
@@ -48,21 +52,49 @@
         <div class="h-auto lg:h-full col-span-3 flex">
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6">Vertrouwen versterken</h2>
-                <p class="text-base lg:text-lg">Je hoeft nu nog niks te beslissen. Maar je kunt wel vandaag beginnen met helderheid.</p>
-                {{-- <div class="mt-6">
-                    <a href="INSERT_LINK_TO_STORE" class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800"">Plan je kennismaking</a>
-                </div> --}}
+                <p class="text-base lg:text-lg">
+                    Wij hebben zelf de twijfel meegemaakt. The System is er niet zomaar. Het is de plek waar je eerlijk ontdekt of dit bij je past. Omdat wij het ook hebben gedaan.
+                </p>
+                <div class="mt-6">
+                    <a href="https://shop.thesystemoftheworld.com/b/coaching" class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800"">Plan je kennismaking</a>
+                </div>
             </div>
         </div>
-
+        
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify shadow-md">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6">Toch nog twijfels?</h2>
-                <ul class="list-disc list-inside px-4 lg:px-0 text-base lg:text-lg">
-                    <li>Bekijk een korte video waarin Lior uitlegt dat je vrijblijvend een gesprek kunt plannen.</li>
-                </ul>
+                <p class="text-base lg:text-lg mb-6">
+                    Je hoeft het niet nu te weten. Je hoeft alleen te voelen dat het anders moet. Daar begint het. Niet met zekerheid maar met eerlijk zijn tegen jezelf.
+                </p>
+                <p class="text-base lg:text-lg">                    
+                    Lior legt je in 1 minuut uit waarom je niks te verliezen hebt. Bekijk de video. En beslis daarna zelf.
+                </p>
             </div>
+        </div>
+
+        <!-- Video Section (3/6) -->
+        <div class="bg-colorPrimary/60 relative h-[200px] lg:h-full col-span-3 flex">
+            <!-- Fallback Text -->
+            <div class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+                <div class="text-white text-center">
+                    <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6">Bekijk hier de video</h2>
+                    <p class="text-base lg:text-lg mb-6">                    
+                        Klik hier om de video om te bekijken.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Video -->
+            <video 
+                src="/videos/MotivationalVideo.mov" 
+                class="absolute inset-0 w-full h-full object-cover z-10" 
+                loop 
+                playsinline 
+                controls>
+                Your browser does not support the video tag.
+            </video>
         </div>
 
     </div>

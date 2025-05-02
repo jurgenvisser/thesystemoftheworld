@@ -540,18 +540,47 @@
                   </div>
                 </div>
                 <p class="social-text">Follow <span class="text-colorPrimary">The System</span> for more</p>
-                <div class="social-links">
-                  <!-- TikTok -->
-                  <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="social-link animate-underline animate-text-color theme-primary">TikTok</a>
-                  <!-- YouTube -->
-                  <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="social-link animate-underline animate-text-color theme-primary">YouTube</a>
-                  <!-- Instagram -->
-                  <a href="https://www.instagram.com/thesystemoftheworld" target="_blank" class="social-link animate-underline animate-text-color theme-primary">Instagram</a>
-                  <!-- Facebook -->
-                  <a href="https://www.facebook.com/thesystemofthewolrd" target="_blank" class="social-link animate-underline animate-text-color theme-primary">Facebook</a>
+                {{-- <div class="social-links">
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="social-link animate-underline animate-text-color theme-primary">TikTok</a>
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="social-link animate-underline animate-text-color theme-primary">YouTube</a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/thesystemoftheworld" target="_blank" class="social-link animate-underline animate-text-color theme-primary">Instagram</a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/thesystemofthewolrd" target="_blank" class="social-link animate-underline animate-text-color theme-primary">Facebook</a>
+                </div> --}}
+                <div class="lg:flex justify-center lg:justify-start lg:space-x-8 space-y-2 lg:space-y-0 font-semibold">
+                    <div class="grid lg:flex grid-cols-6 gap-4 lg:gap-8">
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                            TikTok
+                        </a>
+                        <!-- Telegram -->
+                        <a href="https://t.me/+hS5RjxjtFvw2ZjFk" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                            Telegram
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                            YouTube
+                        </a>
+                    </div>
+                    <div class="grid lg:flex grid-cols-6 gap-4 lg:gap-8">
+                        <span class="col-span-1 block lg:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                            Instagram
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                            Facebook
+                        </a>
+                        <span class="col-span-1 block lg:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                    </div>
                 </div>
               </div>
-              
+
+             
               <!-- Copyright -->
               <div class="copyright">
                   <p>&copy; 2025 <span class="text-colorPrimary">The System</span>. All rights reserved.</p>
