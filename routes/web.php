@@ -88,7 +88,7 @@ Route::get('/admin/dashboard', function () {
 // Logout route to clear the session
 Route::get('/admin/logout', function () {
     session()->forget('admin_logged_in'); // Clear the session
-    return redirect('/admin')->with('message', 'You have been logged out');
+    return redirect('/')->with('message', 'You have been logged out');
 });
 
 // Route for the 'Test' page

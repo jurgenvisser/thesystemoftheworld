@@ -1,4 +1,4 @@
-<div class="bg-black h-16 flex items-center justify-between px-4 sm:px-8 text-white sticky top-0 z-50 hidden lg:block">
+<div class="bg-black h-16 items-center justify-between px-4 sm:px-8 text-white sticky top-0 z-50 hidden lg:block">
 
     <!-- Links (Desktop) Positioned between the two logos -->
     <div class="hidden sm:flex justify-center items-center space-x-4 sm:space-x-8 mx-4 flex-1">

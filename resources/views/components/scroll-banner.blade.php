@@ -9,11 +9,11 @@
             <!-- Marquee Content -->
             <div id="marquee" class="absolute whitespace-nowrap flex items-center">
                 <span class="inline-block text-base lg:text-2xl font-semibold pr-8 lg:pr-16">The System Community is live</span>
-                <span class="inline-block mr-8 lg:mr-16 w-6 lg:w-8 h-6 lg:h-8 bg-telegram-white bg-cover rounded-lg flex items-center justify-center"></span>
-                {{-- <span class="inline-block mr-8 lg:mr-16 w-6 lg:w-8 h-6 lg:h-8 bg-the-system-horse bg-cover rounded-lg flex items-center justify-center"></span> --}}
+                <span class="inline-block mr-8 lg:mr-16 w-6 lg:w-8 h-6 lg:h-8 bg-telegram-white bg-cover rounded-lg items-center justify-center"></span>
+                {{-- <span class="inline-block mr-8 lg:mr-16 w-6 lg:w-8 h-6 lg:h-8 bg-the-system-horse bg-cover rounded-lg items-center justify-center"></span> --}}
                 <span class="inline-block text-base lg:text-2xl font-semibold pr-8 lg:pr-16">Check het nu op Telegram!</span>
-                <span class="inline-block mr-8 lg:mr-16 w-6 lg:w-8 h-6 lg:h-8 bg-telegram-white bg-cover rounded-lg flex items-center justify-center"></span>
-                {{-- <span class="inline-block mr-8 lg:mr-16 w-6 lg:w-8 h-6 lg:h-8 bg-the-system-horse bg-cover rounded-lg flex items-center justify-center"></span> --}}
+                <span class="inline-block mr-8 lg:mr-16 w-6 lg:w-8 h-6 lg:h-8 bg-telegram-white bg-cover rounded-lg items-center justify-center"></span>
+                {{-- <span class="inline-block mr-8 lg:mr-16 w-6 lg:w-8 h-6 lg:h-8 bg-the-system-horse bg-cover rounded-lg items-center justify-center"></span> --}}
             </div>
         </div>
     </a>
