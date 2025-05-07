@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- Hero Content Section -->
-<div class="h-[calc(100vh-4rem)] bg-v-backdrop-8 lg:bg-h-backdrop-1 bg-cover relative m-0">
+<div class="h-[calc(100vh-4rem)] bg-v-backdrop-6 lg:bg-h-backdrop-1 bg-cover relative m-0">
     <div class="h-full flex flex-col">
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
 

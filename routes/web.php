@@ -35,6 +35,11 @@ Route::get('/contact', function () {
     return view('contact'); // Refer to contact.blade.php
 });
 
+// // Route for the 'For Business' page
+// Route::get('/bedrijven', function () {
+//     return view('for-business'); // Refer to for-business.blade.php
+// });
+
 // Route for the 'Privacy Policy' page
 Route::get('/privacy-policy', function () {
     return view('privacy-policy'); // Refer to privacy-policy.blade.php
