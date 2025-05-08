@@ -38,28 +38,26 @@
         </div>
 
         <!-- Call-To-Action Section (6/6) -->
-        <div class="h-auto lg:h-full col-span-4 flex">
+        <div class="h-auto lg:h-full col-span-4 flex items-stretch">
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
-                <!-- Content goes here -->
-                
+                <!-- Updated Call-To-Action Content -->
                 <div class="">
                     <h2 class="mb-8 lg:mb-16 px-4 lg:px-0 text-4xl lg:text-5xl uppercase">
-                        Klaar om te <span class="font-bold">beginnen</span>?
+                        Klaar om <span class="font-bold">actie</span> te ondernemen?
                         <span class="clover-chess"></span>
                     </h2>
                     <p class="text-base lg:text-lg mb-2 px-4 lg:px-0">
-                        Wat je vandaag niet doet, bepaal je morgen. Je weet allang dat er meer in je zit. Alleen jouw volgende stap helder en haalbaar.
+                        Wacht niet langer om je doelen te bereiken. Het pad naar jouw succes begint hier. Neem vandaag nog de eerste stap en ontdek jouw potentieel.
                     </p>
                     <p class="text-base lg:text-lg mb-8 lg:mb-16 px-4 lg:px-0">
-                        The System is er al. Nu jij nog.
+                        Sluit je aan bij The System en maak van jouw dromen werkelijkheid.
                     </p>
                     <a
                         href="/kennis-maken"
-                        class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 mx-4 lg:mx-0 hover:bg-gray-800">
-                        Vrijblijvend kennismaken? Klik hier!
+                        class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-3 px-6 mx-4 lg:mx-0 hover:bg-gray-800 text-lg lg:text-xl">
+                        Begin nu jouw reis!
                     </a>
                 </div>
-
             </div>
         </div>
 
