@@ -4,9 +4,6 @@
 
 @section('content')
 
-@include('layouts.admin-testing-panel') {{-- !! This line needs to be removed if the page goes into the production environment --}}
-
-
 <!-- Hero Content Section -->
 <div class="h-[calc(100vh-4rem)] bg-v-backdrop-4 lg:bg-h-backdrop-1 bg-cover relative m-0">
     <div class="h-full flex flex-col">
@@ -28,7 +25,7 @@
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Mentale veerkracht & structuur voor jouw team</h1>
                     <p class="text-base lg:text-lg mb-6">
@@ -44,19 +41,26 @@
             </div>
         </div>
 
-        <!-- Text Section (3/6) -->
-        <div class="h-auto lg:h-full col-span-3 flex">
+        <!-- Text Section (twee blokken) (3/6) -->
+        <div class="h-auto lg:h-full col-span-3 flex flex-col gap-10">
+            
+            <!-- Eerste blok -->
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
-                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Waarom kiezen voor The System?</h1>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Waarom kiezen voor The System?</h1>
                     <p class="text-base lg:text-lg mb-6">
                         Veel medewerkers voelen zich overbelast, maar durven dat niet toe te geven. Focus verdwijnt, productiviteit daalt en motivatie neemt af. Ze raken overweldigd, reageren in plaats van vooruit te denken, en verliezen het overzicht.
                     </p>
-                    <p class="text-base lg:text-lg mb-8 lg:mb-16">
+                    <p class="text-base lg:text-lg">
                         The System biedt direct toepasbare oplossingen met resultaten op korte termijn.
                     </p>
-
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Waarom bedrijven voor The System kiezen:</h2>
+                </div>
+            </div>
+            
+            <!-- Tweede blok -->
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+                <div>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Waarom bedrijven voor The System kiezen</h1>
                     <ul class="list-disc pl-8 list-outside">
                         <li class="text-base lg:text-lg mb-2">Medewerkers krijgen weer grip op hun werk én hun leven.</li>
                         <li class="text-base lg:text-lg mb-2">Directe veranderingen dankzij praktische begeleiding en concrete stappen.</li>
@@ -68,12 +72,12 @@
         </div>
 
         <!-- Text Section (3/6) -->
-        <div class="h-auto lg:h-full col-span-3">
+        <div class="h-auto lg:h-full col-span-3 flex">
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
-                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Wat wij voor jouw organisatie doen</h1>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Wat wij voor jouw organisatie doen</h1>
 
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Mentale hersteltrajecten voor werknemers</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times text-start">Mentale hersteltrajecten voor werknemers</h2>
                     <p class="text-base lg:text-lg mb-6">
                         Wij helpen je medewerkers hun mentale balans en veerkracht te herstellen met concrete tools zoals:
                     </p>
@@ -83,7 +87,7 @@
                         <li class="text-base lg:text-lg"><span class="font-bold">Dagelijkse actieplannen:</span> Voor focus en effectiviteit op het werk én rust en structuur in het privéleven.</li>
                     </ul>
 
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Structurele ondersteuning voor dagelijks werk</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times text-start">Structurele ondersteuning voor dagelijks werk</h2>
                     <p class="text-base lg:text-lg mb-6">
                         Wij zorgen voor een aanpak die medewerkers in hun dagelijkse taken ondersteunt:
                     </p>
@@ -99,7 +103,7 @@
         <div class="h-auto lg:h-full col-span-3 flex">
             <div class="bg-colorPrimary/60 w-full text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
-                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Wat kost het om niets te doen?</h1>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Wat kost het om niets te doen?</h1>
                     <ul class="list-disc pl-8 list-outside">
                         <li class="text-base lg:text-lg mb-2">Verlies van productiviteit door overwerkt personeel.</li>
                         <li class="text-base lg:text-lg mb-2">Teams zonder focus of structuur, wat onrust veroorzaakt.</li>
@@ -111,9 +115,9 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
-                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Plan een kennismaking met ons team</h1>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Plan een kennismaking met ons team</h1>
                     <p class="text-base lg:text-lg mb-6">
                         De stap naar hulp kan lastig zijn, maar wij maken het eenvoudig. We helpen je medewerkers sterker te worden – zowel mentaal als professioneel.
                     </p>
@@ -124,24 +128,24 @@
             </div>
         </div>
 
-        {{-- <!-- Text Section (6/6) -->
+        <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <div class="">
-                    <h2 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl uppercase">
-                        Wij geloven in jou – en wij geloven dat jij het in je hebt om meer te bereiken. Samen staan we <span class="font-bold">sterker</span>.
+                    <h2 class="px-4 lg:px-0 text-2xl lg:text-4xl uppercase">
+                        Wij helpen uw bedrijf te functioneren op een hoger niveau. <span class="font-bold">Professioneel</span> én <span class="font-bold">persoonlijk</span>.
                         <span class="clover-chess"></span>
                     </h2>
                     <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
-                        Volg The System voor meer! <br>
-                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
+                        Neem vandaag nog contact op!<br>
+                        Email: <a href="mailto:contact@thesystemoftheworld.com" target="_blank" class="underline decoration-colorPrimary">contact@thesystemoftheworld.com</a>
                     </p>
                 </div>
 
             </div>
-        </div> --}}
+        </div>
 
     </div>
 </div>

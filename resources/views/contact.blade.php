@@ -34,7 +34,7 @@
                         Heb jij vragen, ideeën of wil je direct in contact komen met The System? Dit is geen standaard platform wij zijn hier om actie te ondernemen en verandering te brengen.
                     </p>
                     <p class="text-base lg:text-lg">
-                        Gebruik het contactformulier om ons te bereiken. Of je nu vastzit hulp nodig hebt, of simpelweg klaar bent om de volgende stap te zetten wij luisteren.
+                        Gebruik het contactformulier om ons te bereiken. Of je nu vastzit, hulp nodig hebt of simpelweg klaar bent om de volgende stap te zetten, wij luisteren.
                     </p>
                 </div>
 

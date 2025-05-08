@@ -43,16 +43,16 @@
                         <span class="col-span-1 block lg:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                     </div>
                 </div>
-                {{-- <div class="border-t border-gray-800 w-full mt-4 lg:mt-2 pt-2 lg:pt-0 lg:flex justify-center lg:space-x-8 space-y-2 lg:space-y-0 font-semibold">
+                <div class="border-t border-gray-800 w-full mt-4 lg:mt-2 pt-2 lg:pt-0 lg:flex justify-center lg:space-x-8 space-y-2 lg:space-y-0 font-semibold">
                     <div class="grid lg:flex grid-cols-6 gap-4 lg:gap-8">
-                        <span class="col-span-2 block lg:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div 
+                        <span class="col-span-2 block lg:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                         <!-- Business -->
                         <a href="/bedrijven" class="col-span-2 animate-underline animate-text-color theme-primary !text-gray-800">
                             Business
                         </a>
-                        <span class="col-span-2 block lg:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div 
+                        <span class="col-span-2 block lg:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div>
 
@@ -72,7 +72,7 @@
                 <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary !text-gray-600">Terms & Conditions</a>
                 {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
             </p>
-            <p class="text-gray-800">Website Version: TSotW.1.2.4p</p>
+            <p class="text-gray-800">Website Version: TSotW.1.2.5p</p>
         </div>
 
 
