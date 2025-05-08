@@ -29,7 +29,9 @@
     </div>
 </div>
 
-<!-- Mobile Menu -->
+
+{{-- # Mobile Menu is outside of the parent div from the navbar. This is intended and needs to stay this way. --}}
+<!-- Mobile Menu (Hidden by default, toggled by hamburger) -->
 <div id="mobile-menu" class="xl:hidden w-full bg-black text-white fixed top-16 left-0 hidden max-h-screen overflow-y-auto z-40">
     <div class="flex flex-col space-y-0 py-4">
         @include('layouts.header-menu')

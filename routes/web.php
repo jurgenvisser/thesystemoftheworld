@@ -150,6 +150,15 @@ Route::get('/admin/empty', function () {
     return view('empty'); // Refer to shop.blade.php
 });
 
+// Route for the 'Voor Bedrijven' page
+Route::get('/admin/bedrijven', function () {
+    // Check if the user is logged in
+    if (!session('admin_logged_in')) {
+        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
+    }
+    return view('for-business'); // Refer to shop.blade.php
+});
+
 
 
 
