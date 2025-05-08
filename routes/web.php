@@ -105,15 +105,6 @@ Route::get('/admin/test', function () {
     return view('test'); // Refer to test.blade.php
 });
 
-// Route for the 'Social Media' page
-Route::get('/admin/social-media', function () {
-    // Check if the user is logged in
-    if (!session('admin_logged_in')) {
-        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
-    }
-    return view('social-media'); // Refer to social-media.blade.php
-});
-
 // Route for the 'HTML/CSS Footer for Payhip' page
 Route::get('/admin/html-css-footer-for-payhip', function () {
     // Check if the user is logged in
@@ -121,24 +112,6 @@ Route::get('/admin/html-css-footer-for-payhip', function () {
         return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
     }
     return view('html-css-footer-for-payhip'); // Refer to html-css-footer-for-payhip.blade.php
-});
-
-// Route for the 'Merchandise' page
-Route::get('/admin/merchandise', function () {
-    // Check if the user is logged in
-    if (!session('admin_logged_in')) {
-        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
-    }
-    return view('merchandise'); // Refer to merchandise.blade.php
-});
-
-// Route for the 'Shop' page
-Route::get('/admin/shop', function () {
-    // Check if the user is logged in
-    if (!session('admin_logged_in')) {
-        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
-    }
-    return view('shop'); // Refer to shop.blade.php
 });
 
 // Route for the 'Empty' page
@@ -149,16 +122,6 @@ Route::get('/admin/empty', function () {
     }
     return view('empty'); // Refer to shop.blade.php
 });
-
-// // Route for the 'Voor Bedrijven' page
-// Route::get('/admin/bedrijven', function () {
-//     // Check if the user is logged in
-//     if (!session('admin_logged_in')) {
-//         return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
-//     }
-//     return view('for-business'); // Refer to shop.blade.php
-// });
-
 
 
 
