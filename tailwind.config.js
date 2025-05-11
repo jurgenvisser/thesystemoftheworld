@@ -24,6 +24,7 @@ export default {
             colors: {
                 colorPrimary: '#D9AF5C', // Add colorPrimary as a custom color
                 colorSecondary: '#62dfe6', // Add colorSecondary as a custom color
+                colorDocument: '#946900', // Add colorDocument as a custom color
             },
             screens: {
                 'xl': '1600px', // Custom breakpoint for 1600px

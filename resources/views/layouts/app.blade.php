@@ -17,6 +17,15 @@
     
     <title>@yield('title', 'Homepage')</title>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGL4WJCZBJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DGL4WJCZBJ');
+</script>
 <body class="bg-black">
     
         <!-- Navigation of the page -->
