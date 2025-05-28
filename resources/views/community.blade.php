@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Social Media')  <!-- Set the title for this page -->
+@section('title', 'Community')  <!-- Set the title for this page -->
 
 @section('content')
 
@@ -74,22 +74,29 @@
                     <p class="text-base lg:text-lg mb-8 px-4 lg:px-0">
                         Klik op de knoppen hieronder om deel uit te maken van onze beweging en te blijven groeien, leren en doorzetten met The System.
                     </p>
-                    <div class="flex space-x-4 justify-center lg:justify-start w-full pt-0 lg:pt-0">
-                        <a href="https://www.tiktok.com/@thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-tiktok-white bg-cover rounded-lg flex items-center justify-center">
-                            <!-- TikTok Icon -->
-                        </a>
-                        <a href="https://t.me/+hS5RjxjtFvw2ZjFk" class="w-12 lg:w-16 h-12 lg:h-16 bg-telegram-white bg-cover rounded-lg flex items-center justify-center">
-                            <!-- Telegram Icon -->
-                        </a>
-                        <a href="https://www.youtube.com/@TheSystem_oftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-youtube-white bg-contain bg-center bg-no-repeat rounded-lg flex items-center justify-center">
-                            <!-- YouTube Icon -->
-                        </a>
-                        <a href="https://www.instagram.com/thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-instagram-white bg-cover rounded-lg flex items-center justify-center">
-                            <!-- Instagram Icon -->
-                        </a>
-                        <a href="https://www.facebook.com/thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-facebook-white bg-cover rounded-lg flex items-center justify-center">
-                            <!-- Facebook Icon -->
-                        </a>
+                    <div class="md:flex space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start w-full md:pl-4 lg:pl-0">
+                        <div class="flex space-x-4 justify-center lg:justify-start">
+                            <a href="https://www.tiktok.com/@thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-tiktok-white bg-cover rounded-lg flex items-center justify-center">
+                                <!-- TikTok Icon -->
+                            </a>
+                            <a href="https://t.me/+hS5RjxjtFvw2ZjFk" class="w-12 lg:w-16 h-12 lg:h-16 bg-telegram-white bg-cover rounded-lg flex items-center justify-center">
+                                <!-- Telegram Icon -->
+                            </a>
+                            <a href="https://wa.me/31645603530" class="w-12 lg:w-16 h-12 lg:h-16 bg-whatsapp-white bg-cover rounded-lg flex items-center justify-center">
+                                <!-- WhatsApp Icon -->
+                            </a>
+                        </div>
+                        <div class="flex space-x-4 justify-center lg:justify-start">
+                            <a href="https://www.instagram.com/thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-instagram-white bg-cover rounded-lg flex items-center justify-center">
+                                <!-- Instagram Icon -->
+                            </a>
+                            <a href="https://www.facebook.com/thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-facebook-white bg-cover rounded-lg flex items-center justify-center">
+                                <!-- Facebook Icon -->
+                            </a>
+                            <a href="https://www.youtube.com/@TheSystem_oftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-youtube-white bg-contain bg-center bg-no-repeat rounded-lg flex items-center justify-center">
+                                <!-- YouTube Icon -->
+                            </a>
+                        </div>
                     </div>
                 </div>
 

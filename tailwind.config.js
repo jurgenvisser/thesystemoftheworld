@@ -66,6 +66,10 @@ export default {
                 'instagram-white': "url('/public/images/icons/Instagram_Glyph_White.svg')",
                 'facebook-color': "url('/public/images/icons/Facebook_Logo_Primary.png')",
                 'facebook-white': "url('/public/images/icons/Facebook_Logo_Secondary.png')",
+                'whatsapp-green': "url('/public/images/icons/WhatsApp_Green.svg')",
+                'whatsapp-black': "url('/public/images/icons/WhatsApp_Black.svg')",
+                'whatsapp-white': "url('/public/images/icons/WhatsApp_White.svg')",
+                'whatsapp-dark-green': "url('/public/images/icons/WhatsApp_Dark_green.svg')",
             },
         },
     },
@@ -119,7 +123,7 @@ export default {
                     },
                     /* New utilities */
                     '.animate-text-color': {
-                        color: 'white',
+                        // // color: 'white',
                         transition: 'color 0.3s ease',
                     },
                     '.theme-primary.animate-text-color:hover': {
@@ -153,7 +157,7 @@ export default {
                         width: '100%',
                     },
                     '.theme-primary, .theme-secondary': {
-                        color: 'white', /* Keep links white by default */
+                        // // color: 'white', /* Keep links white by default */
                         textDecoration: 'none', /* No underline by default */
                         position: 'relative', /* So we can position the underline */
                         overflow: 'hidden', /* Hide the underline by default */

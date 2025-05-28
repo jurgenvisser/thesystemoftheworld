@@ -46,15 +46,15 @@
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
 
                 <div>
-                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Liever Direct Messaging?</h1>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Liever WhatsApp?</h1>
                     <p class="text-base lg:text-lg mb-6">
-                        E-mail niet jouw ding? Geen probleem. The System draait om direct schakelen. Stuur ons een bericht op TikTok, Instagram of Facebook.
+                        E-mail niet jouw ding? Geen probleem. The System draait om direct schakelen.
                     </p>
                     <p class="text-base lg:text-lg mb-6">
-                        Of je nu een vraag hebt, je verhaal wilt delen.
+                        Heeft u onmiddellijke ondersteuning of specifieke informatie nodig? U kunt altijd contact met ons opnemen via ons <a href="https://wa.me/31645603530" class="animate-underline animate-text-color theme-primary text-colorPrimary">WhatsApp-nummer</a>.
                     </p>
                     <p class="text-base lg:text-lg">
-                        We luisteren!
+                        Wij nemen uw bericht serieus en reageren zo snel mogelijk.
                     </p>
                 </div>
 
