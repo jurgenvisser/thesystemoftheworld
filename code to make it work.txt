@@ -22,3 +22,14 @@ chmod -R 775 storage
 chmod -R 775 bootstrap/cache
 
 php artisan serve --host=192.168.178.148 --port=2096
+
+// !! This is for serious warnings or depricated methods
+// ! This is for alerts
+// todo This is for ToDo's
+// & This is for notes
+// * This is for suggestions
+// ? This is for questions
+// . This is for informative comments
+// # This is for important information
+// This is a normal comment
+// // This is a commented out comment and will be deleted in furute versions

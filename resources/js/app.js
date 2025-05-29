@@ -3,6 +3,7 @@ import './config/theme.js';
 import './config/theme-images.js';
 import './utils/mobile-menu.js';
 import './utils/testing-menu.js';
+import './utils/scrolling-banner.js';
 import './services/privacy-policy.js';
 import './services/terms-and-conditions.js';
 import { setCookie, getCookie } from './services/cookie.js';
@@ -41,35 +42,4 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleButtons.forEach((button) => {
         button.addEventListener('click', toggleTheme);
     });
-});
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const marquee = document.getElementById("marquee");
-    const container = marquee.parentElement;
-
-    const duplicateContent = () => {
-        const containerWidth = container.offsetWidth;
-        let marqueeWidth = marquee.scrollWidth;
-
-        // Duplicate content until the total width is at least twice the container width
-        while (marqueeWidth < containerWidth * 2) {
-            const children = [...marquee.children];
-            children.forEach((item) => {
-                const clone = item.cloneNode(true);
-                marquee.appendChild(clone);
-            });
-            marqueeWidth = marquee.scrollWidth;
-        }
-    };
-
-    duplicateContent();
-
-    // Calculate animation duration dynamically
-    const totalWidth = marquee.scrollWidth;
-    const speed = 100; // Adjust this value for desired scrolling speed
-    const duration = totalWidth / speed;
-
-    marquee.style.animation = `marquee ${duration}s linear infinite`;
 });

@@ -28,9 +28,6 @@ export default {
                 blurple: '#5865F2', // Add Discord Blurple color
                 lightBlurple: '#E0E3FF', // Add Discord Light Blurple color
             },
-            spacing: {
-                46: '11.5rem', // Add your custom value here (e.g., 46px)
-            },
             screens: {
                 // 'sm': '640px', // Small screens
                 // 'md': '768px', // Medium screens
@@ -69,9 +66,9 @@ export default {
                 'youtube-color': "url('/public/images/icons/youtube_red.svg')",
                 'youtube-black': "url('/public/images/icons/youtube_black.svg')",
                 'youtube-white': "url('/public/images/icons/youtube_white.svg')",
-                // 'telegram-color': "url('/public/images/icons/telegram_color.svg')",
-                // 'telegram-black': "url('/public/images/icons/telegram_black.svg')",
-                // 'telegram-white': "url('/public/images/icons/telegram_white.svg')",
+                'telegram-color': "url('/public/images/icons/telegram_color.svg')",
+                'telegram-black': "url('/public/images/icons/telegram_black.svg')",
+                'telegram-white': "url('/public/images/icons/telegram_white.svg')",
                 'discord-blurple': "url('/public/images/icons/Discord_Symbol_Blurple.svg')",
                 'discord-black': "url('/public/images/icons/Discord_Symbol_Black.svg')",
                 'discord-white': "url('/public/images/icons/Discord_Symbol_White.svg')",
@@ -179,6 +176,11 @@ export default {
                         overflow: 'hidden', /* Hide the underline by default */
                         transition: 'color 0.3s ease', /* Smooth transition for text color */
                     },
+                    '.scrolling-banner': {
+                        willChange: 'transform', // Enables GPU acceleration
+                        backfaceVisibility: 'hidden', // Prevents flickering during animation
+                        transformStyle: 'preserve-3d', // Ensures smoother animations
+                    },
                 },
                 ['responsive', 'hover']
             );
@@ -196,27 +198,3 @@ export default {
 // # This is for important information
 // This is a normal comment
 // // This is a commented out comment and will be deleted in furute versions
-
-
-// # Create .env file by copying .env.example
-// cp .env.example .env
-
-// # Install all composer dependencies
-// composer install
-
-// # Install all NPM dependencies
-// npm install
-// npm install crypto-js
-
-// # Generate the application key
-// php artisan key:generate
-
-// # Run database migrations
-// php artisan migrate
-
-// # Run database seeders (optional, if you need seed data)
-// php artisan db:seed
-
-// # Set the correct file permissions for storage and cache directories
-// chmod -R 775 storage
-// chmod -R 775 bootstrap/cache

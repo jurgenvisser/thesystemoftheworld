@@ -79,9 +79,9 @@
                             <a href="https://www.tiktok.com/@thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-tiktok-white bg-cover rounded-lg flex items-center justify-center">
                                 <!-- TikTok Icon -->
                             </a>
-                            {{-- <a href="ADD.DISCORD.LINK" class="w-12 lg:w-16 h-12 lg:h-16 bg-discord-white bg-cover rounded-lg flex items-center justify-center">
+                            <a href="https://discord.gg/PBFbmBU8" class="w-12 lg:w-16 h-12 lg:h-16 bg-discord-white bg-cover rounded-lg flex items-center justify-center">
                                 <!-- Discord Icon -->
-                            </a> --}}
+                            </a>
                             <a href="https://wa.me/31645603530" class="w-12 lg:w-16 h-12 lg:h-16 bg-whatsapp-white bg-cover rounded-lg flex items-center justify-center">
                                 <!-- WhatsApp Icon -->
                             </a>

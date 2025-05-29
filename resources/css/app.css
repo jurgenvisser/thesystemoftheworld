@@ -9,6 +9,26 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
+select {
+    -webkit-appearance: none; /* Verwijdert standaard Safari-styling */
+    -moz-appearance: none;    /* Verwijdert standaard Firefox-styling */
+    appearance: none;         /* Verwijdert algemene styling */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>'); /* Custom dropdown-pijltje */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 2rem;
+}
+
+/* Animation to be added dynamically */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 @keyframes slide-down {
     from {
         transform: translateY(-100%);
@@ -33,30 +53,4 @@ body {
 
 .animate-slide-up {
     animation: slide-up 0.3s ease-in forwards;
-}
-
-select {
-    -webkit-appearance: none; /* Verwijdert standaard Safari-styling */
-    -moz-appearance: none;    /* Verwijdert standaard Firefox-styling */
-    appearance: none;         /* Verwijdert algemene styling */
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>'); /* Custom dropdown-pijltje */
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 2rem;
-}
-
-/* Animation to be added dynamically */
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-#marquee {
-    will-change: transform; /* Enables GPU acceleration */
-    backface-visibility: hidden; /* Prevents flickering during animation */
-    transform-style: preserve-3d; /* Ensures smoother animations */
 }
