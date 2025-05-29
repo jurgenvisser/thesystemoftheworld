@@ -1,6 +1,6 @@
-<footer class="bg-black text-white py-8">
+<footer class="bg-black text-white py-8 flex justify-center items-center">
     <!-- Footer content container -->
-    <div class="container mx-auto responsive-width flex flex-col xl:flex-row justify-between items-center">
+    <div class="responsive-width flex flex-col xl:flex-row justify-between items-center">
 
 
         <!-- Section 1: Logo for larger screens -->
@@ -78,7 +78,7 @@
                 <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary text-gray-600">Terms & Conditions</a>
                 {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
             </p>
-            <p class="text-gray-800">Website Version: TSotW.1.2.9p</p>
+            <p class="text-gray-800">Website Version: TSotW.1.2.10p</p>
         </div>
 
 

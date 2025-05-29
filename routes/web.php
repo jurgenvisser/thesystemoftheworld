@@ -83,7 +83,7 @@ Route::post('/admin/dashboard', function () {
 Route::get('/admin/dashboard', function () {
     // Ensure the user is logged in before allowing access to the dashboard
     if (session('admin_logged_in')) {
-        return view('admin-testing-panel'); // Show the dashboard if logged in
+        return view('admin-dashboard'); // Show the dashboard if logged in
     } else {
         return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
     }
