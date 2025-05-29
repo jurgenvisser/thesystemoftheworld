@@ -25,6 +25,8 @@ export default {
                 colorPrimary: '#D9AF5C', // Add colorPrimary as a custom color
                 colorSecondary: '#62dfe6', // Add colorSecondary as a custom color
                 colorDocument: '#946900', // Add colorDocument as a custom color
+                blurple: '#5865F2', // Add Discord Blurple color
+                lightBlurple: '#E0E3FF', // Add Discord Light Blurple color
             },
             spacing: {
                 46: '11.5rem', // Add your custom value here (e.g., 46px)
