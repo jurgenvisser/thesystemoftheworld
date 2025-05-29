@@ -22,9 +22,7 @@
 </div>
 
 <!-- Scroll Banner Section -->
-@include('components.scroll-banner')
-
-{{-- @include('components.cta') --}}
+{{-- @include('components.scroll-banner') --}}
 
 <!-- Main Content Section -->
 <div class="bg-colorPrimary/20 h-auto m-0 responsive-height flex justify-center items-center">

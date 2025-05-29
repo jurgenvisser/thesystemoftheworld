@@ -17,18 +17,22 @@
                 <p class="mb-2 font-semibold">Follow <span class="text-colorPrimary">The System</span> for more</p>
                 <div class="2xl:flex justify-center 2xl:justify-start 2xl:space-x-8 space-y-2 2xl:space-y-0 font-semibold">
                     <div class="grid 2xl:flex grid-cols-6 gap-4 xl:gap-16 2xl:gap-8">
+                        <span class="col-span-1 block 2xl:hidden"></span>
+                        {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                         <!-- TikTok -->
                         <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             TikTok
                         </a>
-                        <!-- Telegram -->
-                        <a href="https://t.me/+hS5RjxjtFvw2ZjFk" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
-                            Telegram
-                        </a>
+                        {{-- <!-- Discord -->
+                        <a href="ADD.DISCORD.LINK" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                            Discord
+                        </a> --}}
                         <!-- WhatsApp -->
                         <a href="https://wa.me/31645603530" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             WhatsApp
                         </a>
+                        <span class="col-span-1 block 2xl:hidden"></span>
+                        {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                     </div>
                     <div class="grid 2xl:flex grid-cols-6 gap-4 xl:gap-16 2xl:gap-8">
                         {{-- <span class="col-span-1 block 2xl:hidden"></span> --}}
@@ -78,7 +82,7 @@
                 <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary text-gray-600">Terms & Conditions</a>
                 {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
             </p>
-            <p class="text-gray-800">Website Version: TSotW.1.2.10p</p>
+            <p class="text-gray-800">Website Version: TSotW.1.2.11p</p>
         </div>
 
 
