@@ -1,21 +1,21 @@
 <div class="bg-black h-16 flex items-center justify-between px-4 sm:px-8 text-white sticky top-0 z-50">
     <!-- Left Logo Section -->
     <a href="/" aria-label="Go to the homepage via the logo" class="flex items-center">
-        <svg class="h-12 w-12">
+        <svg class="h-12 w-12"> 
             <image id="theme-image-header-logo" href="/images/logos/TheSystemHorse.svg" width="100%" height="100%"/>
         </svg>
-        <svg class="h-auto w-48 sm:w-72 ml-4">
+        <svg class="h-auto sm:w-72 w-48 xl:w-56 2xl:w-72 ml-4">
             <image id="theme-image-header-logo-text" href="/images/logos/TheSystemText.svg" width="100%" height="100%"/>
         </svg>
     </a>
 
     <!-- Links (Desktop) -->
-    <div class="hidden xl:flex justify-center items-center space-x-4 sm:space-x-8 mx-4 flex-1">
+    <div class="hidden xl:flex justify-center items-center space-x-8 lg:space-x-4 mx-4 flex-1">
         @include('layouts.header-menu')
     </div>
 
     <!-- Right Logo Section -->
-    <svg class="h-auto w-48 sm:w-72 ml-4 hidden xl:block">
+    <svg class="h-auto sm:w-72 w-48 xl:w-56 2xl:w-72 ml-4 hidden xl:block">
         <image id="theme-image-header-crypto" href="/images/logos/TheSystemCrypto.svg" width="100%" height="100%"/>
     </svg>
 

@@ -26,9 +26,18 @@ export default {
                 colorSecondary: '#62dfe6', // Add colorSecondary as a custom color
                 colorDocument: '#946900', // Add colorDocument as a custom color
             },
+            spacing: {
+                46: '11.5rem', // Add your custom value here (e.g., 46px)
+            },
             screens: {
-                'xl': '1600px', // Custom breakpoint for 1600px
-                '2xl': '1800px', // Make 2xl larger than xl
+                // 'sm': '640px', // Small screens
+                // 'md': '768px', // Medium screens
+                // 'lg': '1024px', // Large screens
+                // 'xl': '1280px', // Extra large screens
+                // '2xl': '1536px', // Small Monitor screens
+                '3xl': '1680px', // Medium Monitor screens
+                '4xl': '1920px', // Large Monitor screens
+                '5xl': '2560px', // Extra Large Monitor screens
             },
             backgroundImage: {
                 'h-backdrop-1': "url('/public/images/backdrop/horizontal/h_backdrop_1.jpg')",

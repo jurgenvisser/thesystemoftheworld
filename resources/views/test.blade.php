@@ -5,7 +5,7 @@
 
 @include('layouts.admin-testing-panel') {{-- !! This line needs to be removed if the page goes into the production environment --}}
 
-<!-- Hero Content Section -->
+{{-- <!-- Hero Content Section -->
 <div class="h-[calc(100vh-4rem)] bg-v-backdrop-8 lg:bg-h-backdrop-1 bg-cover relative m-0">
     <div class="h-full flex flex-col">
         <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
@@ -17,10 +17,10 @@
 
         </div>
     </div>
-</div>
+</div> --}}
 
 <!-- Main Content Section -->
-<div class="bg-colorPrimary/20 h-auto m-0 pt-12 lg:pt-24 flex justify-center items-center">
+<div class="bg-colorPrimary/20 h-auto m-0 pt-12 lg:pt-24 pb-12 lg:pb-24 flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
 
 
