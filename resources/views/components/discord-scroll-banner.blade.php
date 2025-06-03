@@ -9,27 +9,27 @@
             <!-- Marquee Content -->
             <div class="scrolling-banner absolute whitespace-nowrap flex items-center">
                 
-                <span class="inline-block text-base lg:text-2xl font-semibold pr-8 lg:pr-16">De Community is vernieuwd en verbeterd.</span>
-
+                <span class="inline-block text-base text-white lg:text-2xl font-semibold pr-8 lg:pr-16">De Community is vernieuwd en verbeterd.</span>
                 <div class="flex items-center mr-8 lg:mr-16 gap-2 lg:gap-4">
                     <div class="bg-black rounded-full w-10 lg:w-20 h-10 lg:h-20 flex items-center justify-center">
                         <span class="inline-block w-6 lg:w-14 h-6 lg:h-14 bg-the-system-horse bg-cover rounded-lg items-center justify-center"></span>
                     </div>
-                    <span class="inline-block text-base lg:text-2xl font-thin">x</span>
+                    <span class="inline-block text-base text-white lg:text-2xl font-thin">x</span>
                     <div class="bg-black rounded-full w-10 lg:w-20 h-10 lg:h-20 flex items-center justify-center">
-                        <span class="inline-block w-6 lg:w-14 h-6 lg:h-14 bg-discord-white bg-cover rounded-lg items-center justify-center"></span>
+                        <span class="inline-block w-6 lg:w-14 h-6 lg:h-14 bg-discord-blurple bg-cover rounded-lg items-center justify-center"></span>
                     </div>
                 </div>
 
-                <span class="inline-block text-base lg:text-2xl font-semibold pr-8 lg:pr-16">Join onze Discord Server!</span>
-
+                <span class="inline-block text-base text-white lg:text-2xl font-semibold pr-4 lg:pr-8">Klik Hier!</span>
+                <span class="inline-block text-base text-white lg:text-2xl font-semibold pr-4 lg:pr-8">•</span>
+                <span class="inline-block text-base text-white lg:text-2xl font-semibold pr-8 lg:pr-16">Join onze Discord Server!</span>
                 <div class="flex items-center mr-8 lg:mr-16 gap-2 lg:gap-4">
                     <div class="bg-black rounded-full w-10 lg:w-20 h-10 lg:h-20 flex items-center justify-center">
                         <span class="inline-block w-6 lg:w-14 h-6 lg:h-14 bg-the-system-horse bg-cover rounded-lg items-center justify-center"></span>
                     </div>
-                    <span class="inline-block text-base lg:text-2xl font-thin">x</span>
+                    <span class="inline-block text-base text-white lg:text-2xl font-thin">x</span>
                     <div class="bg-black rounded-full w-10 lg:w-20 h-10 lg:h-20 flex items-center justify-center">
-                        <span class="inline-block w-6 lg:w-14 h-6 lg:h-14 bg-discord-white bg-cover rounded-lg items-center justify-center"></span>
+                        <span class="inline-block w-6 lg:w-14 h-6 lg:h-14 bg-discord-blurple bg-cover rounded-lg items-center justify-center"></span>
                     </div>
                 </div>
 

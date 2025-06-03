@@ -38,6 +38,9 @@ export default {
                 '4xl': '1920px', // Large Monitor screens
                 '5xl': '2560px', // Extra Large Monitor screens
             },
+            spacing: {
+                18: '4.5rem', // This is 72px (18 * 4px, assuming the default base unit)
+            },
             backgroundImage: {
                 'h-backdrop-1': "url('/public/images/backdrop/horizontal/h_backdrop_1.jpg')",
                 'h-backdrop-2': "url('/public/images/backdrop/horizontal/h_backdrop_2.jpg')",
@@ -83,6 +86,8 @@ export default {
                 'whatsapp-black': "url('/public/images/icons/WhatsApp_Black.svg')",
                 'whatsapp-white': "url('/public/images/icons/WhatsApp_White.svg')",
                 'whatsapp-dark-green': "url('/public/images/icons/WhatsApp_Dark_green.svg')",
+                'x-black': "url('/public/images/icons/x_logo_black.svg')",
+                'x-white': "url('/public/images/icons/x_logo_white.svg')",
             },
         },
     },
