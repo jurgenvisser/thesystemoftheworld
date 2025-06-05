@@ -82,7 +82,7 @@
                                 </a>
                             </div>
                             <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
-                                <a href="https://discord.gg/PBFbmBU8" class="w-12 lg:w-16 h-12 lg:h-16 bg-discord-white bg-cover rounded-lg flex items-center justify-center">
+                                <a href="https://discord.gg/vmyW5gYQgA" class="w-12 lg:w-16 h-12 lg:h-16 bg-discord-white bg-cover rounded-lg flex items-center justify-center">
                                     <!-- Discord Icon -->
                                 </a>
                             </div>

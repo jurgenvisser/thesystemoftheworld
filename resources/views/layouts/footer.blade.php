@@ -24,7 +24,7 @@
                             TikTok
                         </a>
                         <!-- Discord -->
-                        <a href="https://discord.gg/PBFbmBU8" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                        <a href="https://discord.gg/vmyW5gYQgA" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             Discord
                         </a>
                         <!-- WhatsApp -->
@@ -92,7 +92,7 @@
                 <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary text-gray-600">Terms & Conditions</a>
                 {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
             </p>
-            <p class="text-gray-800">Website Version: TSotW.1.3.1p</p>
+            <p class="text-gray-800">Website Version: TSotW.1.3.2p</p>
         </div>
 
 
