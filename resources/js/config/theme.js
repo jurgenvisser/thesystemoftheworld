@@ -18,9 +18,15 @@ export function setTheme(theme) {
                     if (el.classList.contains(`bg-${colorClass}`)) {
                         el.classList.replace(`bg-${colorClass}`, `bg-colorPrimary`);
                     }
+                    if (el.classList.contains(`hover:bg-${colorClass}`)) {
+                        el.classList.replace(`hover:bg-${colorClass}`, `hover:bg-colorPrimary`);
+                    }
                     defaultOpacities.forEach((opacity) => {
                         if (el.classList.contains(`bg-${colorClass}/${opacity}`)) {
                             el.classList.replace(`bg-${colorClass}/${opacity}`, `bg-colorPrimary/${opacity}`);
+                        }
+                        if (el.classList.contains(`hover:bg-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`hover:bg-${colorClass}/${opacity}`, `hover:bg-colorPrimary/${opacity}`);
                         }
                         if (el.classList.contains(`border-${colorClass}/${opacity}`)) {
                             el.classList.replace(`border-${colorClass}/${opacity}`, `border-colorPrimary/${opacity}`);
@@ -43,9 +49,15 @@ export function setTheme(theme) {
                     if (el.classList.contains(`bg-${colorClass}`)) {
                         el.classList.replace(`bg-${colorClass}`, `bg-colorSecondary`);
                     }
+                    if (el.classList.contains(`hover:bg-${colorClass}`)) {
+                        el.classList.replace(`hover:bg-${colorClass}`, `hover:bg-colorSecondary`);
+                    }
                     defaultOpacities.forEach((opacity) => {
                         if (el.classList.contains(`bg-${colorClass}/${opacity}`)) {
                             el.classList.replace(`bg-${colorClass}/${opacity}`, `bg-colorSecondary/${opacity}`);
+                        }
+                        if (el.classList.contains(`hover:bg-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`hover:bg-${colorClass}/${opacity}`, `hover:bg-colorSecondary/${opacity}`);
                         }
                         if (el.classList.contains(`border-${colorClass}/${opacity}`)) {
                             el.classList.replace(`border-${colorClass}/${opacity}`, `border-colorSecondary/${opacity}`);

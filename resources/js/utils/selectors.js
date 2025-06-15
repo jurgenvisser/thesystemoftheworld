@@ -16,10 +16,14 @@ const generateSelectors = (colorClasses = defaultColorClasses, opacities = defau
             // Add the basic color class (e.g. .bg-colorPrimary, .text-colorPrimary)
             selectors.push(`.${type}-${color}`);
 
+            // Add the hover variants for basic color class
+            selectors.push(`.hover\\:${type}-${color}`);
+
             // Add the opacity variations for bg and border classes (e.g. .bg-colorPrimary/20)
             if (type === 'bg' || type === 'border') {
                 opacities.forEach(opacity => {
                     selectors.push(`.${type}-${color}\\/${opacity}`);
+                    selectors.push(`.hover\\:${type}-${color}\\/${opacity}`);
                 });
             }
         });
@@ -33,7 +37,6 @@ const generateSelectors = (colorClasses = defaultColorClasses, opacities = defau
 
 // Combined function to generate the safelist for Tailwind config with default parameters
 function generateSafelist(colorClasses = defaultColorClasses, opacities = defaultOpacities, elementTypes = defaultElementTypes) {
-    // Call generateSelectors inside the generateSafelist function
     let selectors = [];
     
     // Loop through each color
@@ -42,11 +45,13 @@ function generateSafelist(colorClasses = defaultColorClasses, opacities = defaul
         elementTypes.forEach(type => {
             // Add the basic color class (e.g. .bg-colorPrimary, .text-colorPrimary)
             selectors.push(`${type}-${color}`);
+            selectors.push(`hover:${type}-${color}`);
 
             // Add the opacity variations for bg and border classes (e.g. .bg-colorPrimary/20)
             if (type === 'bg' || type === 'border') {
                 opacities.forEach(opacity => {
                     selectors.push(`${type}-${color}/${opacity}`);
+                    selectors.push(`hover:${type}-${color}/${opacity}`);
                 });
             }
         });
