@@ -86,18 +86,6 @@
                                     <!-- Discord Icon -->
                                 </a>
                             </div>
-                        </div>
-                        <div class="flex space-x-4 justify-center lg:justify-start">
-                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
-                                <a href="https://wa.me/31645603530" class="w-12 lg:w-16 h-12 lg:h-16 bg-whatsapp-white bg-cover flex items-center justify-center">
-                                    <!-- WhatsApp Icon -->
-                                </a>
-                            </div>
-                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
-                                <a href="https://www.x.com/TheSystemOTW" class="w-12 lg:w-16 h-12 lg:h-16 bg-x-white bg-cover flex items-center justify-center">
-                                    <!-- X / Twitter Icon -->
-                                </a>
-                            </div>
                             <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
                                 <a href="https://www.instagram.com/thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-instagram-white bg-cover rounded-lg flex items-center justify-center">
                                     <!-- Instagram Icon -->
@@ -116,6 +104,18 @@
                                 </a>
                             </div>
                         </div>
+                        {{-- <div class="flex space-x-4 justify-center lg:justify-start">
+                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
+                                <a href="https://wa.me/31645603530" class="w-12 lg:w-16 h-12 lg:h-16 bg-whatsapp-white bg-cover flex items-center justify-center">
+                                    <!-- WhatsApp Icon -->
+                                </a>
+                            </div>
+                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
+                                <a href="https://www.x.com/TheSystemOTW" class="w-12 lg:w-16 h-12 lg:h-16 bg-x-white bg-cover flex items-center justify-center">
+                                    <!-- X / Twitter Icon -->
+                                </a>
+                            </div>
+                        </div> --}}
                     </div>
                 </div>
 

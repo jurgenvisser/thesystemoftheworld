@@ -19,7 +19,7 @@
 </div>
 
 <!-- Main Content Section -->
-<div class="bg-colorPrimary/20 h-auto m-0 responsive-height  flex justify-center items-center">
+<div class="bg-colorPrimary/20 h-auto m-0 responsive-height flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
 
 
@@ -69,29 +69,29 @@
         <div class="h-auto lg:h-full col-span-3 flex">
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
-                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Onze AI collega - Lior</h1>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Quinn – het gezicht van The System</h1>
 
                     <p class="text-base lg:text-lg mb-8">
-                        Bij The System draait alles om persoonlijke groei. Lior is onze neutrale AI-stem die zorgt voor duidelijke en toegankelijke video’s, zodat jij je kunt focussen op jouw ontwikkeling.
+                        Quinn, de oprichter van The System, is nu het gezicht van onze social media. Hij brengt zelf de boodschap over en deelt verhalen en kennis vanuit zijn eigen ervaringen om de connectie met onze community te versterken.
                     </p>
 
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Wat doet Lior?</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Wat doet Quinn?</h2>
                     <p class="text-base lg:text-lg mb-2">
-                        Lior is geen gewone stem. Het zorgt ervoor dat onze video’s:
+                        Quinn zorgt ervoor dat onze video’s:
                     </p>
                     <ul class="list-disc pl-8 mb-8 list-outside">
-                        <li class="text-base lg:text-lg mb-2">Neutraal zijn en een breed publiek aanspreken.</li>
-                        <li class="text-base lg:text-lg mb-2">De focus op inhoud houden, zodat jij kunt groeien.</li>
-                        <li class="text-base lg:text-lg mb-2">Op de achtergrond blijven zonder invloed op persoonlijke interacties.</li>
+                        <li class="text-base lg:text-lg mb-2">Persoonlijk en authentiek zijn.</li>
+                        <li class="text-base lg:text-lg mb-2">Een directe verbinding met de community opbouwen.</li>
+                        <li class="text-base lg:text-lg mb-2">Inspireren en motiveren met duidelijke en eerlijke boodschappen.</li>
                     </ul>
 
                     <p class="text-base lg:text-lg mb-8">
-                        Het menselijke aspect blijft voorop staan. Al het maatwerk en de begeleiding komt van ons team, Lior brengt alleen de boodschap over.
+                        Hoewel Lior niet langer actief onze video’s inspreekt, blijft deze AI-collega op de achtergrond betrokken bij innovatie binnen The System. Lior blijft beschikbaar voor persoonlijke videos op aanvraag, maar Quinn neemt nu de hoofdrol op zich in onze communicatie.
                     </p>
 
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Waarom Lior?</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Waarom Quinn?</h2>
                     <p class="text-base lg:text-lg">
-                        Lior maakt onze video’s betrouwbaar en toegankelijk, waardoor we jou dichter bij de essentie van The System brengen.
+                        Door zelf de boodschap over te brengen, versterkt Quinn de band met de community en laat hij zien dat persoonlijke betrokkenheid centraal staat bij The System.
                     </p>
                 </div>
             </div>

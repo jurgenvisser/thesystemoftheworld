@@ -33,8 +33,11 @@
                     <p class="text-base lg:text-lg mb-6">
                         Heb jij vragen, ideeën of wil je direct in contact komen met The System? Dit is geen standaard platform wij zijn hier om actie te ondernemen en verandering te brengen.
                     </p>
-                    <p class="text-base lg:text-lg">
+                    <p class="text-base lg:text-lg mb-6">
                         Gebruik het contactformulier om ons te bereiken. Of je nu vastzit, hulp nodig hebt of simpelweg klaar bent om de volgende stap te zetten, wij luisteren.
+                    </p>
+                    <p class="text-base lg:text-lg">
+                        Als je meer zoekt of de drempel te hoog vindt, overweeg dan onze community te bekijken.
                     </p>
                 </div>
 
@@ -46,15 +49,20 @@
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
 
                 <div>
-                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Liever WhatsApp?</h1>
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Word deel van onze community</h1>
                     <p class="text-base lg:text-lg mb-6">
-                        E-mail niet jouw ding? Geen probleem. The System draait om direct schakelen.
+                        Wil je snel schakelen of direct hulp van onze community? Sluit je aan bij onze officiële Discord-server. Hier kun je vragen stellen, ervaringen delen en ondersteuning krijgen van zowel ons team als andere communityleden.
                     </p>
                     <p class="text-base lg:text-lg mb-6">
-                        Heeft u onmiddellijke ondersteuning of specifieke informatie nodig? U kunt altijd contact met ons opnemen via ons <a href="https://wa.me/31645603530" class="animate-underline animate-text-color theme-primary text-colorPrimary">WhatsApp-nummer</a>.
+                        Met Discord kun je eenvoudig in contact blijven en zelfs direct een bericht naar ons sturen als dat nodig is.
                     </p>
-                    <p class="text-base lg:text-lg">
-                        Wij nemen uw bericht serieus en reageren zo snel mogelijk.
+                    <p class="text-base lg:text-lg mb-6">
+                        Deelname aan onze community betekent niet dat je verplicht bent om actief te posten. Je bent ook welkom om alleen te kijken, te leren van anderen en inspiratie op te doen.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6">
+                        <button onclick="window.location.href='https://discord.gg/n8G4HHAjMX'" class="bg-colorPrimary text-white py-2 px-4 rounded hover:bg-colorPrimary/80 transition">
+                            Join de Discord Community
+                        </button>
                     </p>
                 </div>
 

@@ -27,41 +27,41 @@
                         <a href="https://discord.gg/vmyW5gYQgA" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             Discord
                         </a>
-                        <!-- WhatsApp -->
-                        <a href="https://wa.me/31645603530" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
-                            WhatsApp
-                        </a>
-                        {{-- <span class="col-span-1 block 2xl:hidden"></span> --}}
-                        {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
-                    </div>
-                    <div class="grid 2xl:flex grid-cols-6 gap-4 xl:gap-16 2xl:gap-8">
-                        {{-- <span class="col-span-1 block 2xl:hidden"></span> --}}
-                        {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                         <!-- Instagram -->
                         <a href="https://www.instagram.com/thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             Instagram
                         </a>
-                        <!-- X / Twitter -->
-                        <a href="https://www.x.com/TheSystemOTW" target="_blank" class="whitespace-nowrap col-span-2 animate-underline animate-text-color theme-primary">
-                            X
-                        </a>
-                        <!-- Facebook -->
-                        <a href="https://www.facebook.com/thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
-                            Facebook
-                        </a>
                         {{-- <span class="col-span-1 block 2xl:hidden"></span> --}}
                         {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                     </div>
                     <div class="grid 2xl:flex grid-cols-6 gap-4 xl:gap-16 2xl:gap-8">
-                        <span class="col-span-2 block 2xl:hidden"></span>
+                        <span class="col-span-1 block 2xl:hidden"></span>
                         {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                         <!-- YouTube -->
                         <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             YouTube
                         </a>
-                        <span class="col-span-2 block 2xl:hidden"></span>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                            Facebook
+                        </a>
+                        <span class="col-span-1 block 2xl:hidden"></span>
                         {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                     </div>
+                    {{-- <div class="grid 2xl:flex grid-cols-6 gap-4 xl:gap-16 2xl:gap-8">
+                        <span class="col-span-1 block 2xl:hidden"></span> --}}
+                        {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                        {{-- <!-- WhatsApp -->
+                        <a href="https://wa.me/31645603530" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                            WhatsApp
+                        </a> --}}
+                        <!-- X / Twitter -->
+                        {{-- <a href="https://www.x.com/TheSystemOTW" target="_blank" class="whitespace-nowrap col-span-2 animate-underline animate-text-color theme-primary">
+                            X
+                        </a>
+                        <span class="col-span-1 block 2xl:hidden"></span> --}}
+                        {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                    {{-- </div> --}}
                 </div>
                 <div class="border-t border-gray-800 w-full mt-4 2xl:mt-2 pt-2 2xl:pt-0 2xl:flex justify-center 2xl:space-x-8 space-y-2 2xl:space-y-0 font-semibold">
                     <div class="grid 2xl:flex grid-cols-6 gap-4 2xl:gap-8">
@@ -92,7 +92,7 @@
                 <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary text-gray-600">Terms & Conditions</a>
                 {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
             </p>
-            <p class="text-gray-800">Website Version: TSotW.1.3.3d</p>
+            <p class="text-gray-800">Website Version: TSotW.1.3.4d</p>
         </div>
 
 
