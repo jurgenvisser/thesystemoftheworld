@@ -3,6 +3,7 @@ cp .env.example .env
 
 # Install all composer dependencies
 composer install
+composer require symfony/polyfill-intl-idn
 
 # Install all NPM dependencies
 npm install
