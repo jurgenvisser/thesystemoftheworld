@@ -39,19 +39,17 @@
         </div>
 
         <!-- Text Section (3/6) -->
-        <div class="h-auto lg:h-full col-span-3">
+        <div class="h-auto lg:h-full col-span-3 flex">
             <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">De Teams van The System</h1>
 
                     <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Social Media Team</h2>
                     <p class="text-base lg:text-lg mb-8">
-                        Ons team creëert en deelt dagelijks waardevolle content om je te inspireren en te motiveren. Ze bouwen een online community die jou helpt gefocust te blijven en vooruit te gaan.
-                    </p>
+                        Ons team deelt dagelijks content om je te inspireren en motiveren. Ze bouwen een community op Discord die je helpt gefocust te blijven en vooruit te gaan door interactie te bevorderen.                    </p>
                     <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Webdevelopment Team</h2>
                     <p class="text-base lg:text-lg mb-8">
-                        Onze tech-experts zorgen ervoor dat onze website altijd soepel werkt, zodat jij gemakkelijk toegang hebt tot alle tools en informatie die je nodig hebt om verder te komen.
-                    </p>
+Onze tech-experts zorgen dat de website soepel werkt, zodat jij makkelijk toegang hebt tot alle tools en info die je nodig hebt. Ze beheren ook de Discord-server en zorgen voor een fijne ervaring voor onze community.                    </p>
                     <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Klantenservice Team</h2>
                     <p class="text-base lg:text-lg mb-8">
                         Ons supportteam staat klaar om je snel en persoonlijk te helpen via direct message of e-mail. Jij hoeft je geen zorgen te maken – we zorgen voor je.

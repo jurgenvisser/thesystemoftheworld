@@ -21,8 +21,6 @@
     </div>
 </div>
 
-@include('components.popup')
-
 <!-- Scroll Banner Section -->
 @include('components.discord-scroll-banner')
 
