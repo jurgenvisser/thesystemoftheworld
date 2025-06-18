@@ -19,6 +19,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                roboto: ['Roboto Slab', 'serif'],
                 times: ['"Times New Roman"', 'serif'], // Add Times New Roman as a custom font
             },
             colors: {

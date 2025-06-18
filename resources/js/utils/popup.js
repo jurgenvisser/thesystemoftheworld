@@ -5,8 +5,6 @@ if (!window.popupInitialized) {
         const popup = document.getElementById('popup');
         const closePopup = document.getElementById('closePopup');
 
-        // const popupContent = popup.querySelector('div.relative'); / select the popup content div by class
-
         function overlayClickHandler(event) {
             if (event.target === popup) {
                 popup.classList.add('hidden');
@@ -18,7 +16,7 @@ if (!window.popupInitialized) {
 
         if (popup && closePopup) {
             const popupKey = "popupLastShown";
-            const popupDisplayDelay = 200; // 2 seconds for development
+            const popupDisplayDelay = 15000; // 15 seconds for development
             const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
 
             // Function to get a cookie value by name
@@ -48,12 +46,12 @@ if (!window.popupInitialized) {
             }
 
             // Show the popup after delay if conditions are met
-            // if (shouldShowPopup()) {
+            if (shouldShowPopup()) {
                 setTimeout(() => {
                     popup.classList.remove('hidden');
                     setCookie(popupKey, new Date().toISOString(), 1); // Store for 1 day
                 }, popupDisplayDelay);
-            // }
+            }
 
             // Close the popup on button click
             closePopup.addEventListener('click', () => {

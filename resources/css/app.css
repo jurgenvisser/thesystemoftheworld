@@ -5,9 +5,10 @@
 @tailwind utilities;
 
 /* Set Roboto Slab as the default font globally */
-body {
+/*. has been moved to the body tag using a custon tailwind class */
+/* body {
     font-family: 'Roboto Slab', serif;
-}
+} */
 
 select {
     -webkit-appearance: none; /* Verwijdert standaard Safari-styling */

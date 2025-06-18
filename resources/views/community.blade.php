@@ -60,6 +60,25 @@
             </div>
         </div>
 
+        <!-- First Section (6/6) -->
+        <div class="h-auto lg:h-full col-span-6">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+                <!-- Content goes here -->
+                <div class="">
+                    <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Vragenlijst voor coachingtraject</h1>
+                    <p class="text-base lg:text-lg mb-6">
+                        Wil je coaching of meer uit onze community halen? Vul onze vragenlijst in en geef aan waar je hulp bij zoekt. Zo kunnen we je beter ondersteunen met advies op maat.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6">
+                        Of je nu coaching wilt, inspiratie zoekt, of gewoon advies nodig hebt, wij staan voor je klaar. Zet vandaag nog de eerste stap naar persoonlijke groei.
+                    </p>
+                    <a href="https://forms.gle/jN5JT6UuNTTsaoMy7" class="bg-colorPrimary text-white text-base md:text-lg lg:text-xl px-6 py-2 rounded-lg shadow hover:bg-colorPrimary/40 w-full">
+                        📋 Klik hier en meld je aan ✍️
+                    </a>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">

@@ -26,7 +26,7 @@
 
   gtag('config', 'G-DGL4WJCZBJ');
 </script>
-<body class="bg-black">
+<body class="bg-black font-roboto">
     
   <!-- Navigation of the page -->
   @include('layouts.header')

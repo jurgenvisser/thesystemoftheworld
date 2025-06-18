@@ -10,6 +10,11 @@ Route::get('/', function () {
     return view('homepage'); // Refer to homepage.blade.php
 });
 
+// Route for the 'Nieuws' page
+Route::get('/nieuws', function () {
+    return view('news'); // Refer to news.blade.php
+});
+
 // Route for the 'Community' page
 Route::get('/community', function () {
     return view('community'); // Refer to community.blade.php
