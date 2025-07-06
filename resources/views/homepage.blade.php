@@ -15,14 +15,16 @@
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times block lg:hidden">Jouw verhaal</h1>
                 <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center hidden lg:block">Jouw Verhaal, Jouw Kracht</h2>
                 <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center block lg:hidden">Jouw Kracht</h2>
+                <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center block">Samen met nog {{ ($tiktokData['user']['follower_count'] ?? 0) + ($discordMembersCount ?? 0) }} anderen.</h2>
+                {{-- <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center block">{{ json_encode($tiktokDebugHeaders, JSON_PRETTY_PRINT) }}</h2> --}}
             </div>
 
         </div>
     </div>
 </div>
-
+o
 <!-- Scroll Banner Section -->
-@include('components.discord-scroll-banner')
+@include('layouts.discord-scroll-banner')
 
 <!-- Main Content Section -->
 <div class="bg-colorPrimary/20 h-auto m-0 responsive-height flex justify-center items-center">

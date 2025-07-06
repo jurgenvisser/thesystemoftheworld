@@ -1,9 +1,52 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Spatie\Sitemap\SitemapGenerator;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\RegisteredUserController;
+
+use App\Http\Controllers\Auth\DiscordController;
+use App\Http\Controllers\Auth\TikTokController;
+
+Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
+Route::get('/callback', [DiscordController::class, 'handleDiscordCallback']);
+
+// TikTok authentication routes
+Route::middleware('auth')->group(function () {
+    Route::get('/tiktok/login', [TikTokController::class, 'redirectToTikTok']);
+    Route::get('/tiktok/callback', [TikTokController::class, 'handleTikTokCallback']);
+});
+
+
+// Route::middleware('guest')->group(function () {
+//     Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
+//     Route::post('/register', [RegisteredUserController::class, 'store']);
+// });
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
+
+
+// Route to access the admin login page
+Route::get('/admin', function () {
+    return view('admin'); // You can create a view that shows the login form if needed.
+});
+
+Route::post('/logout', function () {
+    Auth::logout();
+    request()->session()->invalidate();
+    request()->session()->regenerateToken();
+
+    return redirect('/');
+})->name('logout');
 
 // Route for the 'Homepage' page
 Route::get('/', function () {
@@ -57,80 +100,32 @@ Route::get('/terms-and-conditions', function () {
 
 
 
-use App\Http\Controllers\DiscordController;
-
-Route::get('/discord-widget', [DiscordController::class, 'fetchWidgetData']);
 
 
 
-// Route to access the admin login page
-Route::get('/admin', function () {
-    // Check if the user is already logged in
-    if (session('admin_logged_in')) {
-        return redirect('/admin/dashboard'); // Redirect to dashboard if already logged in
-    }
+Route::get('/dashboard', function () {
+    return redirect()->route('admin.dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-    // If not logged in, show login form (or handle the login query)
-    return view('admin'); // You can create a view that shows the login form if needed.
-});
-
-Route::post('/admin/dashboard', function () {
-    $adminPassword = 'TheSkySystem'; // Define your admin password
-
-    // Use the facade to get the password from the request
-    if (request()->input('password') === $adminPassword) {
-        // Store the session to indicate the user is logged in
-        session(['admin_logged_in' => true]);
-
-        return redirect('/admin/dashboard'); // Redirect to the admin dashboard
-    } else {
-        // Redirect back to the login page with an error message
-        return redirect('/admin')->with('error', 'Password is incorrect');
-    }
-});
 
 Route::get('/admin/dashboard', function () {
-    // Ensure the user is logged in before allowing access to the dashboard
-    if (session('admin_logged_in')) {
-        return view('admin-dashboard'); // Show the dashboard if logged in
-    } else {
-        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
-    }
-});
-
-
-// Logout route to clear the session
-Route::get('/admin/logout', function () {
-    session()->forget('admin_logged_in'); // Clear the session
-    return redirect('/')->with('message', 'You have been logged out');
-});
+    return view('admin-dashboard');
+})->middleware(['auth', 'verified'])->name('admin.dashboard');
 
 // Route for the 'Test' page
 Route::get('/admin/test', function () {
-    // Check if the user is logged in
-    if (!session('admin_logged_in')) {
-        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
-    }
-    return view('test'); // Refer to test.blade.php
-});
+    return view('test');
+})->middleware('auth');
 
 // Route for the 'HTML/CSS Footer for Payhip' page
 Route::get('/admin/html-css-footer-for-payhip', function () {
-    // Check if the user is logged in
-    if (!session('admin_logged_in')) {
-        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
-    }
-    return view('html-css-footer-for-payhip'); // Refer to html-css-footer-for-payhip.blade.php
-});
+    return view('html-css-footer-for-payhip');
+})->middleware('auth');
 
 // Route for the 'Empty' page
 Route::get('/admin/empty', function () {
-    // Check if the user is logged in
-    if (!session('admin_logged_in')) {
-        return redirect('/admin')->with('error', 'Please log in first'); // Redirect to login if not logged in
-    }
-    return view('empty'); // Refer to shop.blade.php
-});
+    return view('empty');
+})->middleware('auth');
 
 
 

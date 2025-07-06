@@ -134,9 +134,8 @@
             </div>
         </div>
 
-        @include('components.discord-iframe') {{-- This includes the Discord iframe component --}}
+        @include('layouts.discord-iframe') {{-- This includes the Discord iframe component --}}
 
-        
     </div>
 </div>
 

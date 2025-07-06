@@ -3,9 +3,19 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+use App\Models\User;
+
+use Laravel\Socialite\Facades\Socialite;
+use SocialiteProviders\Manager\SocialiteWasCalled;
+use SocialiteProviders\Discord\Provider as DiscordProvider;
+use SocialiteProviders\TikTok\TikTokExtendSocialite;
+use Illuminate\Support\Facades\Event;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +32,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Registreer Discord als custom driver
+        Socialite::extend('discord', function ($app) {
+            $config = $app['config']['services.discord'];
+            return Socialite::buildProvider(DiscordProvider::class, $config);
+        });
+
+        Event::listen(
+            SocialiteWasCalled::class,
+            [TikTokExtendSocialite::class, 'handle']
+        );
+
         // Haal discord widget op, cache 15 min
         $discordWidget = Cache::remember('discord_widget_data', 900, function () {
             $response = Http::get('https://discord.com/api/guilds/1377620696334602262/widget.json');
@@ -41,16 +62,21 @@ class AppServiceProvider extends ServiceProvider
             return $response->successful() ? $response->json() : null;
         });
 
-        $tiktokFollowers = 10;
-        $totalCommunitySize = $discordGuild['approximate_member_count'] + $tiktokFollowers;
-        View::share('totalCommunitySize', $totalCommunitySize);
+        $discordMembersCount = $discordGuild['approximate_member_count'] ?? 0;
+
+        View::composer('*', function ($view) {
+            $stat = \App\Models\TikTokStat::find(1);
+            $followerCount = $stat ? $stat->follower_count : 0;
+
+            $view->with('tiktokFollowerCount', $followerCount);
+        });
 
         // Deel met alle views
         View::share([
             'discordWidget' => $discordWidget,
             'discordLink' => $discordWidget['instant_invite'] ?? 'https://discord.gg/vmyW5gYQgA',
             'discordGuild' => $discordGuild,
-            'totalCommunitySize' => $totalCommunitySize,
+            'discordMembersCount' => $discordMembersCount,
         ]);
     }
 }

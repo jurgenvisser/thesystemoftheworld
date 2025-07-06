@@ -5,6 +5,10 @@ cp .env.example .env
 composer install
 composer require symfony/polyfill-intl-idn
 
+composer require laravel/socialite
+composer require socialiteproviders/discord
+composer require socialiteproviders/tiktok
+
 # Install all NPM dependencies
 npm install
 npm install crypto-js

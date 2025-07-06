@@ -29,7 +29,7 @@
 
                 <div class="">
                     <div class="w-full h-full">
-                        <div class="h-full flex justify-center items-center  p-8 lg:p-20 py-20">
+                        <div class="h-full flex flex-col justify-center items-center  p-8 lg:p-20 py-20">
                             <p class="text-base lg:text-lg text-center leading-snug">Discord Widget Info</p>
 
                             @if ($discordWidget)
@@ -50,13 +50,20 @@
 
                 <div class="">
                     <div class="w-full h-full">
-                        <div class="h-full flex justify-center items-center  p-8 lg:p-20 py-20">
-                            <p class="text-base lg:text-lg text-center leading-snug">Discord Widget Info</p>
-
+                        <div class="h-full flex flex-col justify-center items-center  p-8 lg:p-20 py-20">
+                            <p class="text-base lg:text-lg text-center leading-snug">Discord Guild Info</p>
                             @if ($discordGuild)
-                                <p>Totale leden: {{ $discordGuild['approximate_member_count'] }}</p>
+                                <p>Discord leden: {{ $discordMembersCount }}</p>
                                 <p>Online: {{ $discordGuild['approximate_presence_count'] }}</p>
-                                <p>Totale Community Leden: {{ $totalCommunitySize }}</p>
+                            @endif
+                                
+                            <p class="text-base lg:text-lg text-center leading-snug">TikTok Data</p>
+                            @if(isset($tiktokData['user']['follower_count']))
+                                <p>TikTok volgers: {{ $tiktokData['user']['follower_count'] }}</p>
+                                {{-- <pre>{{ json_encode($tiktokData, JSON_PRETTY_PRINT) }}</pre> --}}
+                                <p>Totale volgers: {{ ($tiktokData['user']['follower_count'] ?? 0) + ($discordMembersCount ?? 0) }}</p>
+                            @else
+                                {{ json_encode($tiktokDebugHeaders, JSON_PRETTY_PRINT) }}
                             @endif
                         </div>
                     </div>
