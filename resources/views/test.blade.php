@@ -23,8 +23,49 @@
 <div class="bg-colorPrimary/20 h-auto m-0 pt-12 lg:pt-24 pb-12 lg:pb-24 flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
 
+        <!-- Discord iframe (3/6) -->
+        <div class="min-h-[20rem] h-[20rem] lg:h-full col-span-3">
+            <div class="bg-colorPrimary/60 h-full flex flex-col justify-center items-center text-white text-sm lg:text-2xl text-left lg:text-justify overflow-hidden rounded-none">
 
-        <!-- First Section (6/6) -->
+                <div class="">
+                    <div class="w-full h-full">
+                        <div class="h-full flex justify-center items-center  p-8 lg:p-20 py-20">
+                            <p class="text-base lg:text-lg text-center leading-snug">Discord Widget Info</p>
+
+                            @if ($discordWidget)
+                                <p>Server naam: {{ $discordWidget['name'] }}</p>
+                                <p>Aantal online leden: {{ $discordWidget['presence_count'] }}</p>
+                                <p><a href="{{ $discordWidget['instant_invite'] }}" target="_blank">Join Link</a></p>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Discord iframe (3/6) -->
+        <div class="min-h-[20rem] h-[20rem] lg:h-full col-span-3">
+            <div class="bg-colorPrimary/60 h-full flex flex-col justify-center items-center text-white text-sm lg:text-2xl text-left lg:text-justify overflow-hidden rounded-none">
+
+                <div class="">
+                    <div class="w-full h-full">
+                        <div class="h-full flex justify-center items-center  p-8 lg:p-20 py-20">
+                            <p class="text-base lg:text-lg text-center leading-snug">Discord Widget Info</p>
+
+                            @if ($discordGuild)
+                                <p>Totale leden: {{ $discordGuild['approximate_member_count'] }}</p>
+                                <p>Online: {{ $discordGuild['approximate_presence_count'] }}</p>
+                                <p>Totale Community Leden: {{ $totalCommunitySize }}</p>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        {{-- <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
@@ -37,7 +78,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> --}}
 
         
     </div>

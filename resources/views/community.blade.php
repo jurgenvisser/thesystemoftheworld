@@ -62,9 +62,9 @@
 
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
-                <div class="">
+                <div class="w-full">
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Vragenlijst voor coachingtraject</h1>
                     <p class="text-base lg:text-lg mb-6">
                         Wil je coaching of meer uit onze community halen? Vul onze vragenlijst in en geef aan waar je hulp bij zoekt. Zo kunnen we je beter ondersteunen met advies op maat.
@@ -93,53 +93,48 @@
                     <p class="text-base lg:text-lg mb-8 px-4 lg:px-0">
                         Klik op de knoppen hieronder om deel uit te maken van onze beweging en te blijven groeien, leren en doorzetten met The System.
                     </p>
-                    <div class="md:flex space-y-2 md:space-y-0 md:space-x-4 justify-center md:justify-start w-full md:pl-4 lg:pl-0">
-                        <div class="flex space-x-4 justify-center lg:justify-start">
-                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
-                                <a href="https://www.tiktok.com/@thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-tiktok-white bg-cover rounded-lg flex items-center justify-center">
+                    <div class="md:flex space-y-2 md:space-y-0 md:space-x-4 lg:space-x-8 justify-center md:justify-start w-full md:pl-4 lg:pl-0">
+                        <div class="flex space-x-4 lg:space-x-8 justify-center lg:justify-start">
+                            <div class="rounded-full flex items-center justify-center">
+                                <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="w-12 lg:w-16 h-12 lg:h-16 bg-tiktok-white bg-cover rounded-lg flex items-center justify-center">
                                     <!-- TikTok Icon -->
                                 </a>
                             </div>
-                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
-                                <a href="https://discord.gg/vmyW5gYQgA" class="w-12 lg:w-16 h-12 lg:h-16 bg-discord-white bg-cover rounded-lg flex items-center justify-center">
+                            <div class="rounded-full flex items-center justify-center">
+                                <a href="{{ $discordLink }}" target="_blank" class="w-12 lg:w-16 h-12 lg:h-16 bg-discord-white bg-cover rounded-lg flex items-center justify-center">
                                     <!-- Discord Icon -->
                                 </a>
                             </div>
-                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
-                                <a href="https://www.instagram.com/thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-instagram-white bg-cover rounded-lg flex items-center justify-center">
+                            <div class="rounded-full flex items-center justify-center">
+                                <a href="https://www.instagram.com/thesystemoftheworld" target="_blank" class="w-12 lg:w-16 h-12 lg:h-16 bg-instagram-white bg-cover rounded-lg flex items-center justify-center">
                                     <!-- Instagram Icon -->
                                 </a>
                             </div>
                         </div>
-                        <div class="flex space-x-4 justify-center lg:justify-start">
-                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
-                                <a href="https://www.facebook.com/thesystemoftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-facebook-white bg-cover rounded-lg flex items-center justify-center">
+                        <div class="flex space-x-4 lg:space-x-8 justify-center lg:justify-start">
+                            <div class="rounded-full flex items-center justify-center">
+                                <a href="https://www.facebook.com/thesystemoftheworld" target="_blank" class="w-12 lg:w-16 h-12 lg:h-16 bg-facebook-white bg-cover rounded-lg flex items-center justify-center">
                                     <!-- Facebook Icon -->
                                 </a>
                             </div>
-                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
-                                <a href="https://www.youtube.com/@TheSystem_oftheworld" class="w-12 lg:w-16 h-12 lg:h-16 bg-youtube-white bg-contain bg-center bg-no-repeat rounded-lg flex items-center justify-center">
+                            <div class="rounded-full flex items-center justify-center">
+                                <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="w-12 lg:w-16 h-12 lg:h-16 bg-youtube-white bg-contain bg-center bg-no-repeat rounded-lg flex items-center justify-center">
                                     <!-- YouTube Icon -->
                                 </a>
                             </div>
-                        </div>
-                        {{-- <div class="flex space-x-4 justify-center lg:justify-start">
-                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
+                            {{-- <div class="rounded-full flex items-center justify-center">
                                 <a href="https://wa.me/31645603530" class="w-12 lg:w-16 h-12 lg:h-16 bg-whatsapp-white bg-cover flex items-center justify-center">
                                     <!-- WhatsApp Icon -->
                                 </a>
-                            </div>
-                            <div class="rounded-full w-18 lg:w-24 h-18 lg:h-24 flex items-center justify-center">
-                                <a href="https://www.x.com/TheSystemOTW" class="w-12 lg:w-16 h-12 lg:h-16 bg-x-white bg-cover flex items-center justify-center">
-                                    <!-- X / Twitter Icon -->
-                                </a>
-                            </div>
-                        </div> --}}
+                            </div> --}}
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
+
+        @include('components.discord-iframe') {{-- This includes the Discord iframe component --}}
 
         
     </div>

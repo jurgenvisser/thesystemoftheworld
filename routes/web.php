@@ -57,6 +57,10 @@ Route::get('/terms-and-conditions', function () {
 
 
 
+use App\Http\Controllers\DiscordController;
+
+Route::get('/discord-widget', [DiscordController::class, 'fetchWidgetData']);
+
 
 
 // Route to access the admin login page

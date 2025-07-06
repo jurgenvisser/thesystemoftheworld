@@ -13,6 +13,11 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
+    
+    'discord' => [
+        'bot_token' => env('DISCORD_BOT_TOKEN'),
+        'guild_id' => env('DISCORD_GUILD_ID'),
+    ],
 
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),

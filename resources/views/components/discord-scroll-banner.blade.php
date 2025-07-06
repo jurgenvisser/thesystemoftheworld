@@ -1,5 +1,5 @@
 <div class="bg-colorPrimary/20 pt-12 lg:pt-24">
-    <a href="https://discord.gg/vmyW5gYQgA" class="block">
+    <a href="{{ $discordLink }}" target="_blank" class="block">
         <div class="relative h-16 lg:h-32 bg-black/30 lg:bg-black/40 text-white flex items-center overflow-hidden">
             <!-- Fading edges -->
             <div class="absolute inset-0 pointer-events-none z-10">
