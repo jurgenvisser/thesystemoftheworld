@@ -6,12 +6,9 @@ use Spatie\Sitemap\SitemapGenerator;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Auth\RegisteredUserController;
-
 use App\Http\Controllers\Auth\DiscordController;
 use App\Http\Controllers\Auth\TikTokController;
 use App\Http\Controllers\AdminController;
-
 
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
 Route::get('/callback', [DiscordController::class, 'handleDiscordCallback']);
@@ -33,7 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 // Route to access the admin login page
 Route::get('/admin', function () {

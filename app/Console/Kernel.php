@@ -19,7 +19,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         // Register je artisan commands hier
-        // \App\Console\Commands\UpdateTikTokFollowers::class,
+        \App\Console\Commands\UpdateTikTokFollowers::class,
+        \App\Console\Commands\UpdateDiscordStats::class,
     ];
 
     /**
@@ -28,6 +29,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('tiktok:update-followers')->everyMinute();
+        $schedule->command('discord:update-stats')->everyMinute();
         $schedule->command('tiktok:refresh-token')->everyTwoHours();
     }
 

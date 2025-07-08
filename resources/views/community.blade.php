@@ -101,7 +101,7 @@
                                 </a>
                             </div>
                             <div class="rounded-full flex items-center justify-center">
-                                <a href="{{ $discordLink }}" target="_blank" class="w-12 lg:w-16 h-12 lg:h-16 bg-discord-white bg-cover rounded-lg flex items-center justify-center">
+                                <a href="{{ $discordInviteLink }}" target="_blank" class="w-12 lg:w-16 h-12 lg:h-16 bg-discord-white bg-cover rounded-lg flex items-center justify-center">
                                     <!-- Discord Icon -->
                                 </a>
                             </div>

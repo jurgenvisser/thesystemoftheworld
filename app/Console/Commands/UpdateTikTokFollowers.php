@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use App\Models\User;
-use App\Models\TikTokStat;
+use App\Models\SocialStat;
 use Carbon\Carbon;
 
 class UpdateTikTokFollowers extends Command
@@ -40,8 +40,8 @@ class UpdateTikTokFollowers extends Command
             $followers = $response->json()['data']['user']['follower_count'] ?? null;
 
             if ($followers !== null) {
-                TikTokStat::updateOrCreate(
-                    ['id' => 1],
+                SocialStat::updateOrCreate(
+                    ['platform' => 'tiktok'],
                     ['follower_count' => $followers]
                 );
                 $this->info("✅ TikTok follower count updated: {$followers}");

@@ -27,7 +27,7 @@
                     <p class="text-base lg:text-lg mb-6">
                         Word lid van onze Discord-server via de volgende onderstaande knop.
                     </p>
-                    <a href="{{ $discordLink }}" class="bg-colorPrimary text-white text-base md:text-lg lg:text-xl px-6 py-2 rounded-lg shadow hover:bg-colorPrimary/40 w-full">
+                    <a href="{{ $discordInviteLink }}" class="bg-colorPrimary text-white text-base md:text-lg lg:text-xl px-6 py-2 rounded-lg shadow hover:bg-colorPrimary/40 w-full">
                         Join de Discord Community
                     </a>
                 </div>
