@@ -33,8 +33,6 @@ class TikTokController extends Controller
 
     public function handleTikTokCallback(Request $request)
     {
-        $this->ensureValidAccessToken();
-
         if ($request->has('error')) {
             return response()->json(['error' => $request->input('error')], 400);
         }
@@ -75,64 +73,4 @@ class TikTokController extends Controller
             'message' => $response->body(),
         ], $response->status());
     }
-
-    /**
-     * Refresh the TikTok access token using the refresh token.
-     *
-     * @return \Illuminate\Http\JsonResponse|null
-     */
-    public function refreshAccessToken()
-    {
-        $user = Auth::user();
-
-        if (!$user || !$user->tiktok_refresh_token) {
-            return response()->json(['error' => 'Geen refresh token beschikbaar'], 400);
-        }
-
-        $response = Http::asForm()->post('https://open.tiktokapis.com/v2/oauth/token/', [
-            'client_key' => config('services.tiktok.client_key'),
-            'client_secret' => config('services.tiktok.client_secret'),
-            'grant_type' => 'refresh_token',
-            'refresh_token' => $user->tiktok_refresh_token,
-        ]);
-
-        if ($response->successful()) {
-            $data = $response->json();
-
-            $user->tiktok_access_token = $data['access_token'];
-            $user->tiktok_token_expires_at = Carbon::now()->addSeconds($data['expires_in']);
-            $user->tiktok_refresh_token = $data['refresh_token'] ?? $user->tiktok_refresh_token;
-            $user->tiktok_refresh_token_expires_at = isset($data['refresh_expires_in'])
-                ? Carbon::now()->addSeconds($data['refresh_expires_in'])
-                : $user->tiktok_refresh_token_expires_at;
-            $user->save();
-
-            return response()->json([
-                'message' => 'Access token vernieuwd',
-                'data' => $data,
-            ]);
-        }
-
-        return response()->json([
-            'error' => 'Refresh mislukt',
-            'message' => $response->body(),
-        ], $response->status());
-    }
-
-    private function ensureValidAccessToken()
-    {
-        $user = Auth::user();
-
-        if (!$user || !$user->tiktok_token_expires_at) {
-            return;
-        }
-
-        if (Carbon::now()->gte($user->tiktok_token_expires_at)) {
-            // Token is verlopen, ververs het
-            $this->refreshAccessToken();
-        }
-    }
 }
-
-
-// {"access_token":"act.IdvawHL39mDIWr15h70uYrtK4DzsNCmvCos3RLvHVLcvZx2n0AtlZHaI9tdF!5691.e1","expires_in":86400,"open_id":"-000Ua1jBRxoj9_NvVd72uHZ7ZXH9bHLCjr7","refresh_expires_in":31536000,"refresh_token":"rft.vgb78h6bTDXjNuLo5xZQbtb85HNf7qMAZzkiLLD7lqGcqAY2dwjmLrPj8OdR!5663.e1","scope":"user.info.basic,user.info.stats","token_type":"Bearer"}

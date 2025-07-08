@@ -58,12 +58,12 @@
                             @endif
                                 
                             <p class="text-base lg:text-lg text-center leading-snug">TikTok Data</p>
-                            @if(isset($tiktokData['user']['follower_count']))
-                                <p>TikTok volgers: {{ $tiktokData['user']['follower_count'] }}</p>
+                            @if(isset($tiktokFollowerCount))
+                                <p>TikTok volgers: {{ $tiktokFollowerCount }}</p>
                                 {{-- <pre>{{ json_encode($tiktokData, JSON_PRETTY_PRINT) }}</pre> --}}
-                                <p>Totale volgers: {{ ($tiktokData['user']['follower_count'] ?? 0) + ($discordMembersCount ?? 0) }}</p>
+                                <p>Totale volgers: {{ ($tiktokFollowerCount ?? 0) + ($discordMembersCount ?? 0) }}</p>
                             @else
-                                {{ json_encode($tiktokDebugHeaders, JSON_PRETTY_PRINT) }}
+                                {{-- {{ json_encode($tiktokDebugHeaders, JSON_PRETTY_PRINT) }} --}}
                             @endif
                         </div>
                     </div>

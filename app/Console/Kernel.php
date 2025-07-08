@@ -28,6 +28,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('tiktok:update-followers')->everyMinute();
+        $schedule->command('tiktok:refresh-token')->everyTwoHours();
     }
 
     /**

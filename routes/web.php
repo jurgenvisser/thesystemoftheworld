@@ -10,6 +10,8 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 
 use App\Http\Controllers\Auth\DiscordController;
 use App\Http\Controllers\Auth\TikTokController;
+use App\Http\Controllers\AdminController;
+
 
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
 Route::get('/callback', [DiscordController::class, 'handleDiscordCallback']);
@@ -19,7 +21,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/tiktok/login', [TikTokController::class, 'redirectToTikTok']);
     Route::get('/tiktok/callback', [TikTokController::class, 'handleTikTokCallback']);
 });
-
 
 // Route::middleware('guest')->group(function () {
 //     Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
@@ -33,7 +34,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
 
 // Route to access the admin login page
 Route::get('/admin', function () {
@@ -103,14 +103,14 @@ Route::get('/terms-and-conditions', function () {
 
 
 
-Route::get('/dashboard', function () {
-    return redirect()->route('admin.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
 
-Route::get('/admin/dashboard', function () {
-    return view('admin-dashboard');
-})->middleware(['auth', 'verified'])->name('admin.dashboard');
+    Route::post('/admin/refresh-token', [AdminController::class, 'refreshTikTokToken'])->name('admin.refresh-token');
+
+    Route::post('/admin/update-followers', [AdminController::class, 'updateTikTokFollowers'])->name('admin.update-followers');
+});
 
 // Route for the 'Test' page
 Route::get('/admin/test', function () {
