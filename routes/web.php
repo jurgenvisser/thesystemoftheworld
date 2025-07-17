@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\DiscordController;
 use App\Http\Controllers\Auth\TikTokController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FacebookController;
 
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
 Route::get('/callback', [DiscordController::class, 'handleDiscordCallback']);
@@ -18,6 +19,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/tiktok/login', [TikTokController::class, 'redirectToTikTok']);
     Route::get('/tiktok/callback', [TikTokController::class, 'handleTikTokCallback']);
 });
+
+Route::get('/facebook/login', [FacebookController::class, 'redirectToFacebook'])->name('facebook.login');
+Route::get('/facebook/callback', [FacebookController::class, 'handleFacebookCallback'])->name('facebook.callback');
 
 // Route::middleware('guest')->group(function () {
 //     Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
@@ -34,7 +38,7 @@ require __DIR__ . '/auth.php';
 
 // Route to access the admin login page
 Route::get('/admin', function () {
-    return view('admin'); // You can create a view that shows the login form if needed.
+    return view('admin.admin'); // You can create a view that shows the login form if needed.
 });
 
 Route::post('/logout', function () {
@@ -96,32 +100,36 @@ Route::get('/terms-and-conditions', function () {
 });
 
 
+Route::get('/admin/facebook-token', function () {
+    return view('admin.facebook-token', ['token' => session('token')]);
+})->name('facebook.token.show')->middleware('auth');
 
+// Route::get('/dashboard', function () {
+//     return view('admin');
+// })->middleware('auth')->name('dashboard');
 
-
-
-
-Route::middleware(['auth', 'verified'])->group(function () {
+// Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
+    Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
 
     Route::post('/admin/refresh-token', [AdminController::class, 'refreshTikTokToken'])->name('admin.refresh-token');
 
     Route::post('/admin/update-followers', [AdminController::class, 'updateTikTokFollowers'])->name('admin.update-followers');
-});
+// });
 
 // Route for the 'Test' page
 Route::get('/admin/test', function () {
-    return view('test');
+    return view('admin.test');
 })->middleware('auth');
 
 // Route for the 'HTML/CSS Footer for Payhip' page
 Route::get('/admin/html-css-footer-for-payhip', function () {
-    return view('html-css-footer-for-payhip');
+    return view('admin.html-css-footer-for-payhip');
 })->middleware('auth');
 
 // Route for the 'Empty' page
 Route::get('/admin/empty', function () {
-    return view('empty');
+    return view('admin.empty');
 })->middleware('auth');
 
 

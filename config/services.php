@@ -28,6 +28,17 @@ return [
         'redirect_uri' => env('TIKTOK_REDIRECT_URI'),
     ],
 
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => env('FACEBOOK_REDIRECT_URI'),
+        'page_id' => env('FACEBOOK_PAGE_ID'),
+    ],
+
+    'instagram' => [
+        'page_id' => env('INSTAGRAM_PAGE_ID'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],

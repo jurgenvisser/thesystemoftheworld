@@ -9,7 +9,7 @@ class AdminController extends Controller
 {
     public function showDashboard()
     {
-        return view('admin-dashboard');
+        return view('admin.admin-dashboard');
     }
 
     public function refreshTikTokToken(): RedirectResponse

@@ -8,6 +8,7 @@ composer require symfony/polyfill-intl-idn
 composer require laravel/socialite
 composer require socialiteproviders/discord
 composer require socialiteproviders/tiktok
+composer require --dev barryvdh/laravel-ide-helper
 
 # Install all NPM dependencies
 npm install

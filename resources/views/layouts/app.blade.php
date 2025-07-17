@@ -72,14 +72,20 @@
 
   <!-- Main information of the page -->
   <div class="content">
-    @include('components.popup')
-    @include('components.scroll-to-top-button')
+    @include('layouts.popup')
+    @include('layouts.scroll-to-top-button')
 
     @yield('content') <!-- The content of the specific page is loaded here -->
   </div>
 
   <!-- Footer of the page -->
   @include('layouts.footer')
+
+  <script>
+      if (window.location.hash && window.location.hash === '#_=_') {
+          history.replaceState('', document.title, window.location.pathname + window.location.search);
+      }
+  </script>
 
 </body>
 </html>

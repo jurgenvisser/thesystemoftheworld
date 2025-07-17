@@ -10,6 +10,8 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
+    // ->withConsoleKernel(App\Console\Kernel::class)
+    // ->withScheduleUsing(__DIR__.'/../routes/schedule.php');
     ->withMiddleware(function (Middleware $middleware) {
         //
     })
