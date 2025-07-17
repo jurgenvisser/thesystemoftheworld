@@ -32,16 +32,16 @@ Schedule::command('meta:update-followers')
 
 Schedule::call(function () {
     file_put_contents(
-        storage_path('logs/refresh_tokens.log'),
+        storage_path('logs/refresh_token.log'),
         "\n\t" . now()->format('d-m-Y H:i:s') . "\n",
         FILE_APPEND
     );
-})->everyMinute();
+})->everyTwoHours();
 
 Schedule::command('tiktok:refresh-token')
     ->everyTwoHours()
-    ->appendOutputTo(storage_path('logs/refresh_tokens.log'));
+    ->appendOutputTo(storage_path('logs/refresh_token.log'));
 
 Schedule::command('meta:refresh-token')
     ->everyTwoHours()
-    ->appendOutputTo(storage_path('logs/refresh_tokens.log'));
+    ->appendOutputTo(storage_path('logs/refresh_token.log'));

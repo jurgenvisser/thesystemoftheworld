@@ -14,8 +14,8 @@
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times hidden lg:block">The System</h1>
                 <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times block lg:hidden">Jouw verhaal</h1>
                 <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center hidden lg:block">Jouw Verhaal, Jouw Kracht</h2>
-                <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center block lg:hidden">Jouw Kracht</h2>
-                <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center block">Samen met nog {{ $totalFollowerCount }} anderen.</h2>
+                <h2 class="text-4xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center block lg:hidden">Jouw Kracht</h2>
+                <h2 class="text-xl lg:text-4xl text-white uppercase text-balance text-center block">Samen met nog <span class="font-bold">{{ $totalFollowerCount }}</span> anderen.</h2>
                 {{-- <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center block">{{ json_encode($tiktokDebugHeaders, JSON_PRETTY_PRINT) }}</h2> --}}
             </div>
 
@@ -28,7 +28,7 @@ o
 
 <!-- Main Content Section -->
 <div class="bg-colorPrimary/20 h-auto m-0 responsive-height flex justify-center items-center">
-    <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
+    <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10 items-stretch">
        
         <!-- Image Section (2/6) -->
         <div class="bg-black col-span-2 hidden lg:block h-full">
@@ -39,7 +39,7 @@ o
 
         <!-- Call-To-Action Section (6/6) -->
         <div class="h-auto lg:h-full col-span-4 flex items-stretch">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Updated Call-To-Action Content -->
                 <div class="">
                     <h2 class="mb-8 lg:mb-16 px-4 lg:px-0 text-4xl lg:text-5xl uppercase">
@@ -62,15 +62,21 @@ o
         </div>
 
         <!-- Text Section (3/6) -->
-        <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+        <div class="h-auto lg:h-full col-span-3">
+            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <div class="">
                     <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Jouw verhaal, jouw kracht</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Voel je je soms alleen, niet gehoord of onzeker over je toekomst? Bij The System staan we klaar met een luisterend oor zonder oordeel en een community die jou écht ziet. Jouw verhaal telt, en jij hebt de kracht om je leven te veranderen.
+                        Je voelt je alleen. Ongezien. Alsof niemand jou echt begrijpt.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        The System is er voor mensen die vastzitten, het niet meer weten, of bijna opgeven.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Geen masker. Geen oordeel. Alleen een plek waar je écht jezelf mag zijn.
                     </p>
                     <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Sluit je aan bij onze community op Telegram en ervaar de kracht van samen sterk staan. Jij bepaalt zelf de richting, maar je staat er niet alleen voor.
+                        Sluit je aan bij onze community. Je hoeft dit niet alleen te doen.
                     </p>
                 </div>
             </div>
@@ -78,54 +84,72 @@ o
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <div class="">
                     <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">Persoonlijk Mentorschap & Coaching</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Elke verandering begint met een stap. Wil je discipline versterken, gewoontes verbeteren, of obstakels overwinnen? Onze mentoren helpen je.
+                        Mentorschap van iemand die het zelf overleefde.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Geen theorie, maar structuur, gesprekken en begeleiding die je echt verder brengen.
+                    </p>
+                    <p class="text-base lg:text-lg mb-2 px-4 lg:px-0">
+                        Wat je leert:
                     </p>
                     <ul class="list-disc list-inside mb-6 text-base lg:text-lg px-4 lg:px-0">
-                        <li>Maatwerkcoaching: Persoonlijke begeleiding afgestemd op jouw doelen.</li>
-                        <li>Sterke gewoontes: Leer routines die jou verder helpen.</li>
-                        <li>Volledig potentieel: Ontdek jouw talenten en kracht.</li>
+                        <li>Discipline opbouwen</li>
+                        <li>Je hoofd structureren</li>
+                        <li>Obstakels doorbreken</li>
                     </ul>
                     <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Samen zorgen we ervoor dat je jouw ambities werkelijkheid maakt.
+                        Wil jij dat echt? Vraag vandaag een gesprek aan.
                     </p>
                 </div>
             </div>
         </div>
 
         <!-- Text Section (3/6) -->
-        <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+        <div class="h-auto lg:h-full col-span-3">
+            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <div class="">
                     <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">Vertrouwen, Veiligheid & Privacy</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Bij The System draait alles om jouw groei én jouw vertrouwen. Wat je met ons deelt blijft strikt tussen ons – jouw privacy is heilig.
+                        Ik weet dat vertrouwen moeilijk is. Zeker als je vaak gekwetst bent.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Daarom is The System een plek waar je niks hoeft te spelen.
                     </p>
                     <ul class="list-disc list-inside mb-6 text-base lg:text-lg px-4 lg:px-0">
-                        <li>Vertrouwelijkheid: Alles wat je deelt blijft privé.</li>
-                        <li>Veilige omgeving: Steun zonder oordeel.</li>
-                        <li>Jij in controle: Jij bepaalt wat je deelt.</li>
+                        <li>Wat je deelt, blijft tussen ons.</li>
+                        <li>Geen oordeel. Geen druk.</li>
+                        <li>Jij bepaalt wat je vertelt – en wanneer.</li>
                     </ul>
                     <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Richt je zonder zorgen op wat écht telt: jouw ontwikkeling.
+                        Je bent veilig hier.
+                    </p>
+                    <p class="text-base lg:text-lg px-4 lg:px-0">
+                        Eindelijk een plek waar je mag vallen, en weer op mag staan
                     </p>
                 </div>
             </div>
         </div>
 
         <!-- BText Section (3/6) -->
-        <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+        <div class="h-auto lg:h-full col-span-3">
+            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <div class="">
                     <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">Blijf geïnspireerd</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Volg The System voor meer inspiratie en dagelijkse motivatie. Sluit je aan bij onze beweging en blijf op de hoogte via social media:
+                        Soms heb je alleen maar één zin nodig om niet op te geven.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Daarom deel ik elke dag iets dat raakt, of jou wakker schudt.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 mt-12 px-4 lg:px-0">
+                        Volg The System op TikTok & Instagram en word lid van onze Discord community.
                     </p>
                     <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Word vandaag nog onderdeel van The System en zet samen met ons die eerste stap!
+                        Bouw. Groei. Val. Sta op. Samen.
                     </p>
                 </div>
             </div>
@@ -133,16 +157,16 @@ o
         
         <!-- Quote Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <div class="">
                     <h2 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl uppercase">
-                        De <span class="font-bold">keuze</span> is aan jou. Blijf je zitten waar je bent? Of neem je vandaag de eerste stap?
+                        De <span class="font-bold">keuze</span> is aan jou. Blijf hangen, of bouw je leven?
                         <span class="clover-chess"></span>
                     </h2>
                     <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
-                        Volg The System voor meer! <br>
+                        Volg The System. Geen onzin. <span class="block lg:inline"> Alleen resultaat.</span><br>
                         TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
                     </p>
                 </div>

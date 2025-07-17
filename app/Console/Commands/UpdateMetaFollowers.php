@@ -28,31 +28,39 @@ class UpdateMetaFollowers extends Command
         // --- Facebook Followers ophalen ---
         $pageId = config('services.facebook.page_id'); // of haal uit database
 
-        $fbResponse = Http::get("https://graph.facebook.com/{$pageId}?fields=followers_count&access_token={$accessToken}");
+        try {
+            $fbResponse = Http::get("https://graph.facebook.com/{$pageId}?fields=followers_count&access_token={$accessToken}");
 
-        if ($fbResponse->successful()) {
-            $fbData = $fbResponse->json();
-            $fbFollowers = $fbData['followers_count'] ?? null;
+            if ($fbResponse->successful()) {
+                $fbData = $fbResponse->json();
+                $fbFollowers = $fbData['followers_count'] ?? null;
 
-            if ($fbFollowers !== null) {
-                $socialStat = SocialStat::firstOrNew(['platform' => 'facebook']);
+                if ($fbFollowers !== null) {
+                    $socialStat = SocialStat::firstOrNew(['platform' => 'facebook']);
 
-                if ($socialStat->follower_count !== $fbFollowers) {
-                    $socialStat->follower_count = $fbFollowers;
-                    $socialStat->updated_at = Carbon::now();
-                    $socialStat->save();
+                    if ($socialStat->follower_count !== $fbFollowers) {
+                        $socialStat->follower_count = $fbFollowers;
+                        $socialStat->updated_at = Carbon::now();
+                        $socialStat->save();
 
-                    $this->info("✅ Facebook volgers geüpdatet naar: {$fbFollowers}");
-                } else {
-                    if (config('services.socials_log_all')) {
-                        $this->info("ℹ️ Facebook volgers zijn niet veranderd.");
+                        $this->info("✅ Facebook volgers geüpdatet naar: {$fbFollowers}");
+                    } else {
+                        if (config('services.socials_log_all')) {
+                            $this->info("ℹ️ Facebook volgers zijn niet veranderd.");
+                        }
                     }
+                } else {
+                    $this->error('❌ Facebook followers_count niet gevonden in response.');
                 }
             } else {
-                $this->error('❌ Facebook followers_count niet gevonden in response.');
+                $this->error('❌ Fout bij ophalen Facebook data: ' . $fbResponse->body());
             }
-        } else {
-            $this->error('❌ Fout bij ophalen Facebook data: ' . $fbResponse->body());
+        } catch (\Illuminate\Http\Client\ConnectionException $e) {
+            $this->error('❌ Verbindingsfout met Facebook API: ' . $e->getMessage());
+        } catch (\Illuminate\Http\Client\RequestException $e) {
+            $this->error('❌ Facebook API request exception: ' . $e->getMessage());
+        } catch (\Illuminate\Http\Client\ServerException $e) {
+            $this->error('❌ Onverwachte fout bij ophalen Facebook data: ' . $e->getMessage());
         }
 
         // --- Instagram Followers ophalen ---
@@ -63,31 +71,39 @@ class UpdateMetaFollowers extends Command
             return;
         }
 
-        $instaResponse = Http::get("https://graph.facebook.com/{$instaAccountId}?fields=followers_count&access_token={$accessToken}");
+        try {
+            $instaResponse = Http::get("https://graph.facebook.com/{$instaAccountId}?fields=followers_count&access_token={$accessToken}");
 
-        if ($instaResponse->successful()) {
-            $instaData = $instaResponse->json();
-            $instaFollowers = $instaData['followers_count'] ?? null;
+            if ($instaResponse->successful()) {
+                $instaData = $instaResponse->json();
+                $instaFollowers = $instaData['followers_count'] ?? null;
 
-            if ($instaFollowers !== null) {
-                $socialStat = SocialStat::firstOrNew(['platform' => 'instagram']);
+                if ($instaFollowers !== null) {
+                    $socialStat = SocialStat::firstOrNew(['platform' => 'instagram']);
 
-                if ($socialStat->follower_count !== $instaFollowers) {
-                    $socialStat->follower_count = $instaFollowers;
-                    $socialStat->updated_at = Carbon::now();
-                    $socialStat->save();
+                    if ($socialStat->follower_count !== $instaFollowers) {
+                        $socialStat->follower_count = $instaFollowers;
+                        $socialStat->updated_at = Carbon::now();
+                        $socialStat->save();
 
-                    $this->info("✅ Instagram volgers geüpdatet naar: {$instaFollowers}");
-                } else {
-                    if (config('services.socials_log_all')) {
-                        $this->info("ℹ️ Instagram volgers zijn niet veranderd.");
+                        $this->info("✅ Instagram volgers geüpdatet naar: {$instaFollowers}");
+                    } else {
+                        if (config('services.socials_log_all')) {
+                            $this->info("ℹ️ Instagram volgers zijn niet veranderd.");
+                        }
                     }
+                } else {
+                    $this->error('❌ Instagram followers_count niet gevonden in response.');
                 }
             } else {
-                $this->error('❌ Instagram followers_count niet gevonden in response.');
+                $this->error('❌ Fout bij ophalen Instagram data: ' . $instaResponse->body());
             }
-        } else {
-            $this->error('❌ Fout bij ophalen Instagram data: ' . $instaResponse->body());
+        } catch (\Illuminate\Http\Client\ConnectionException $e) {
+            $this->error('❌ Verbindingsfout met Instagram API: ' . $e->getMessage());
+        } catch (\Illuminate\Http\Client\RequestException $e) {
+            $this->error('❌ Instagram API request exception: ' . $e->getMessage());
+        } catch (\Exception $e) {
+            $this->error('❌ Onverwachte fout bij ophalen Instagram data: ' . $e->getMessage());
         }
     }
 }

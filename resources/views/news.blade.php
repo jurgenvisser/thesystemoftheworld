@@ -43,7 +43,7 @@
 
         @include('news.2025-06-18-website-update')
         @include('news.2025-05-19-discord-community-launch')
-        @include('news.start-of-news-page')
+        @include('news.end-of-news-page')
 
     </div>
 </div>

@@ -27,37 +27,44 @@ class UpdateTikTokFollowers extends Command
             return;
         }
 
-        $response = Http::withHeaders([
-            'Authorization' => 'Bearer ' . $user->tiktok_access_token,
-        ])->get('https://open.tiktokapis.com/v2/user/info/', [
-            'open_id' => $user->tiktok_open_id,
-            'fields' => 'follower_count',
-        ]);
+        try {
+            $response = Http::timeout(30)->withHeaders([
+                'Authorization' => 'Bearer ' . $user->tiktok_access_token,
+            ])->get('https://open.tiktokapis.com/v2/user/info/', [
+                'open_id' => $user->tiktok_open_id,
+                'fields' => 'follower_count',
+            ]);
 
-        if ($response->successful()) {
-            $followers = $response->json()['data']['user']['follower_count'] ?? null;
+            if ($response->successful()) {
+                $followers = $response->json()['data']['user']['follower_count'] ?? null;
+                if ($followers !== null) {
+                    // Haal oude follower count uit DB
+                    $socialStat = SocialStat::firstOrNew(['platform' => 'tiktok']);
 
-            if ($followers !== null) {
-                // Haal oude follower count uit DB
-                $socialStat = SocialStat::firstOrNew(['platform' => 'tiktok']);
+                    if ($socialStat->follower_count !== $followers) {
+                        $socialStat->follower_count = $followers;
+                        $socialStat->updated_at = Carbon::now();
+                        $socialStat->save();
 
-                if ($socialStat->follower_count !== $followers) {
-                    $socialStat->follower_count = $followers;
-                    $socialStat->updated_at = Carbon::now();
-                    $socialStat->save();
-
-                    $this->info("✅ TikTok volgers geüpdatet naar: {$followers}");
-                } else {
-                    if (config('services.socials_log_all')) {
-                        $this->info("ℹ️ TikTok volgers zijn niet veranderd.");
+                        $this->info("✅ TikTok volgers geüpdatet naar: {$followers}");
+                    } else {
+                        if (config('services.socials_log_all')) {
+                            $this->info("ℹ️ TikTok volgers zijn niet veranderd.");
+                        }
                     }
+                } else {
+                    $this->error('❌ Follower count ontbreekt in API response.');
+                    $this->info('❌ API response: ' . json_encode($response->json()));
                 }
             } else {
-                $this->error('❌ Follower count ontbreekt in API response.');
-                $this->info('❌ API response: ' . json_encode($response->json()));
+                $this->error('❌ TikTok API response was not successful: ' . $response->body());
             }
-        } else {
-            $this->error('❌ Fout bij ophalen TikTok data: ' . $response->body());
+        } catch (\Illuminate\Http\Client\ConnectionException $e) {
+            $this->error('❌ Verbindingsfout met TikTok API: ' . $e->getMessage());
+        } catch (\Illuminate\Http\Client\RequestException $e) {
+            $this->error('❌ TikTok API request exception: ' . $e->getMessage());
+        } catch (\Exception $e) {
+            $this->error('❌ Onverwachte fout: ' . $e->getMessage());
         }
     }
 }
