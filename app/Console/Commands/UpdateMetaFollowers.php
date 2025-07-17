@@ -26,9 +26,6 @@ class UpdateMetaFollowers extends Command
         $accessToken = $user->facebook_access_token;
 
         // --- Facebook Followers ophalen ---
-
-        // Facebook Graph API endpoint voor pagina statistieken
-        // Je hebt de Page ID nodig, die kan je in config of database zetten
         $pageId = config('services.facebook.page_id'); // of haal uit database
 
         $fbResponse = Http::get("https://graph.facebook.com/{$pageId}?fields=followers_count&access_token={$accessToken}");
@@ -38,28 +35,31 @@ class UpdateMetaFollowers extends Command
             $fbFollowers = $fbData['followers_count'] ?? null;
 
             if ($fbFollowers !== null) {
-                SocialStat::updateOrCreate(
-                    ['platform' => 'facebook'],
-                    ['follower_count' => $fbFollowers, 'updated_at' => Carbon::now()]
-                );
+                $socialStat = SocialStat::firstOrNew(['platform' => 'facebook']);
 
-                $this->info("Facebook followers geüpdatet: {$fbFollowers}");
+                if ($socialStat->follower_count !== $fbFollowers) {
+                    $socialStat->follower_count = $fbFollowers;
+                    $socialStat->updated_at = Carbon::now();
+                    $socialStat->save();
+
+                    $this->info("✅ Facebook volgers geüpdatet naar: {$fbFollowers}");
+                } else {
+                    if (config('services.socials_log_all')) {
+                        $this->info("ℹ️ Facebook volgers zijn niet veranderd.");
+                    }
+                }
             } else {
-                $this->error('Facebook followers_count niet gevonden in response.');
+                $this->error('❌ Facebook followers_count niet gevonden in response.');
             }
         } else {
-            $this->error('Fout bij ophalen Facebook data: ' . $fbResponse->body());
+            $this->error('❌ Fout bij ophalen Facebook data: ' . $fbResponse->body());
         }
 
         // --- Instagram Followers ophalen ---
-
-        // Voor Instagram heb je de Instagram Business Account ID nodig, die je via de Facebook Graph API kunt ophalen
-        // Hier een voorbeeld om het ID te krijgen, vaak moet je dat 1x opslaan in config of db
-
         $instaAccountId = config('services.instagram.page_id'); // vul dit in
 
         if (!$instaAccountId) {
-            $this->error('Geen Instagram Page ID ingesteld.');
+            $this->error('❌ Geen Instagram Page ID ingesteld.');
             return;
         }
 
@@ -70,17 +70,24 @@ class UpdateMetaFollowers extends Command
             $instaFollowers = $instaData['followers_count'] ?? null;
 
             if ($instaFollowers !== null) {
-                SocialStat::updateOrCreate(
-                    ['platform' => 'instagram'],
-                    ['follower_count' => $instaFollowers, 'updated_at' => Carbon::now()]
-                );
+                $socialStat = SocialStat::firstOrNew(['platform' => 'instagram']);
 
-                $this->info("Instagram followers geüpdatet: {$instaFollowers}");
+                if ($socialStat->follower_count !== $instaFollowers) {
+                    $socialStat->follower_count = $instaFollowers;
+                    $socialStat->updated_at = Carbon::now();
+                    $socialStat->save();
+
+                    $this->info("✅ Instagram volgers geüpdatet naar: {$instaFollowers}");
+                } else {
+                    if (config('services.socials_log_all')) {
+                        $this->info("ℹ️ Instagram volgers zijn niet veranderd.");
+                    }
+                }
             } else {
-                $this->error('Instagram followers_count niet gevonden in response.');
+                $this->error('❌ Instagram followers_count niet gevonden in response.');
             }
         } else {
-            $this->error('Fout bij ophalen Instagram data: ' . $instaResponse->body());
+            $this->error('❌ Fout bij ophalen Instagram data: ' . $instaResponse->body());
         }
     }
 }

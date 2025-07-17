@@ -33,36 +33,44 @@ class UpdateDiscordStats extends Command
             $inviteLink = $widgetData['instant_invite'] ?? null;
 
             if ($memberCount === null) {
-                $this->error('Geen member_count gevonden in API response.');
+                $this->error('❌ Geen member_count gevonden in API response.');
                 return 1; // exit with error code
             }
 
-            if ($inviteLink === null) {
-                $this->error('Geen invite link gevonden in widget API response.');
-                // Je kan hier kiezen om alsnog verder te gaan zonder invite link of juist stoppen:
-                // return 1; // stoppen als invite link verplicht is
+            // Haal bestaand record op of maak nieuw aan
+            $socialStat = SocialStat::firstOrNew(['platform' => 'discord']);
+
+            $hasFollowerChange = $socialStat->follower_count !== $memberCount;
+            $hasLinkChange = $socialStat->invite_link !== $inviteLink;
+            $hasChanges = $hasFollowerChange || $hasLinkChange;
+
+            if ($hasChanges) {
+                if ($hasFollowerChange) {
+                    $socialStat->follower_count = $memberCount;
+                    $this->info("✅ Discord member count geüpdatet naar: {$memberCount}");
+                }
+
+                if ($hasLinkChange) {
+                    $socialStat->invite_link = $inviteLink;
+                    $this->info("✅ Discord invite link geüpdatet naar: " . ($inviteLink ?? 'niet gevonden'));
+                }
+
+                $socialStat->updated_at = now();
+                $socialStat->save();
+            } elseif (config('services.socials_log_all')) {
+                $this->info("ℹ️ Discord member count en invite link zijn niet veranderd.");
             }
 
-            SocialStat::updateOrCreate(
-                ['platform' => 'discord'],
-                [
-                    'follower_count' => $memberCount,
-                    'invite_link' => $inviteLink,
-                ]
-            );
-
-            $this->info("✅ Discord member count updated: {$memberCount}");
-            $this->info("✅ Discord invite link updated: " . ($inviteLink ?? 'niet gevonden'));
 
             return 0; // success
         } else {
-            $this->error('Fout bij ophalen Discord data.');
+            $this->error('❌ Fout bij ophalen Discord data.');
 
             if (!$guildResponse->successful()) {
-                $this->error('Guild API response: ' . $guildResponse->body());
+                $this->error('❌ Guild API response: ' . $guildResponse->body());
             }
             if (!$widgetResponse->successful()) {
-                $this->error('Widget API response: ' . $widgetResponse->body());
+                $this->error('❌ Widget API response: ' . $widgetResponse->body());
             }
 
             return 1; // error

@@ -70,10 +70,4 @@
     </div>
 </div>
 
-@if(session('facebook_token'))
-    <div class="text-green-500 mt-4">
-        Access Token ontvangen: {{ session('facebook_token') }}
-    </div>
-@endif
-
 @endsection

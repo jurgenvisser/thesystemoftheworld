@@ -30,13 +30,23 @@
                 <div class="">
                     <div class="w-full h-full">
                         <div class="h-full flex flex-col justify-center items-center  p-8 lg:p-20 py-20">
-                            <p class="text-base lg:text-lg text-center leading-snug">Discord Widget Info</p>
+                            <p class="text-base lg:text-lg text-center leading-snug">Combined API Info</p>
+                            <p class="text-base lg:text-lg">TikTok volgers: {{ $tiktokFollowerCount }}</p>
+                            <p class="text-base lg:text-lg">Discord leden: {{ $discordMemberCount }}</p>
+                            <p class="text-base lg:text-lg">Facebook volgers: {{ $facebookFollowerCount }}</p>
+                            <p class="text-base lg:text-lg">Instagram volgers: {{ $instagramFollowerCount }}</p>
+                            <p class="text-base lg:text-lg">Totale volgers: {{ $totalFollowerCount }}</p>
+                            <p class="text-base lg:text-lg text-center leading-snug">Discord Invite Link</p>
+                            <p class="text-base lg:text-lg text-center leading-snug">
+                                <a href="{{ $discordInviteLink }}" class="text-colorPrimary hover:underline" target="_blank">
+                                    {{ $discordInviteLink }}
+                                </a>
+                            </p>
+                            <p class="text-base lg:text-lg text-center leading-snug">App Versie</p>
+                            <p class="text-base lg:text-lg text-center leading-snug">
+                                {{ $appVersion }}
+                            </p>
 
-                            @if ($discordWidget)
-                                <p>Server naam: {{ $discordWidget['name'] }}</p>
-                                <p>Aantal online leden: {{ $discordWidget['presence_count'] }}</p>
-                                <p><a href="{{ $discordWidget['instant_invite'] }}" target="_blank">Join Link</a></p>
-                            @endif
                         </div>
                     </div>
                 </div>
@@ -44,33 +54,6 @@
             </div>
         </div>
 
-        <!-- Discord iframe (3/6) -->
-        <div class="min-h-[20rem] h-[20rem] lg:h-full col-span-3">
-            <div class="bg-colorPrimary/60 h-full flex flex-col justify-center items-center text-white text-sm lg:text-2xl text-left lg:text-justify overflow-hidden rounded-none">
-
-                <div class="">
-                    <div class="w-full h-full">
-                        <div class="h-full flex flex-col justify-center items-center  p-8 lg:p-20 py-20">
-                            <p class="text-base lg:text-lg text-center leading-snug">Discord Guild Info</p>
-                            @if ($discordGuild)
-                                <p>Discord leden: {{ $discordMembersCount }}</p>
-                                <p>Online: {{ $discordGuild['approximate_presence_count'] }}</p>
-                            @endif
-                                
-                            <p class="text-base lg:text-lg text-center leading-snug">TikTok Data</p>
-                            @if(isset($tiktokFollowerCount))
-                                <p>TikTok volgers: {{ $tiktokFollowerCount }}</p>
-                                {{-- <pre>{{ json_encode($tiktokData, JSON_PRETTY_PRINT) }}</pre> --}}
-                                <p>Totale volgers: {{ ($tiktokFollowerCount ?? 0) + ($discordMembersCount ?? 0) }}</p>
-                            @else
-                                {{-- {{ json_encode($tiktokDebugHeaders, JSON_PRETTY_PRINT) }} --}}
-                            @endif
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
 
         {{-- <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">

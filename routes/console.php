@@ -2,7 +2,46 @@
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schedule;
 
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote')->hourly();
+
+
+Schedule::call(function () {
+    file_put_contents(
+        storage_path('logs/socials_update.log'),
+        "\n\t" . now()->format('d-m-Y H:i:s') . "\n",
+        FILE_APPEND
+    );
+})->everyMinute();
+
+Schedule::command('discord:update-stats')
+    ->everyMinute()
+    ->appendOutputTo(storage_path('logs/socials_update.log'));
+
+Schedule::command('tiktok:update-followers')
+    ->everyMinute()
+    ->appendOutputTo(storage_path('logs/socials_update.log'));
+
+Schedule::command('meta:update-followers')
+    ->everyMinute()
+    ->appendOutputTo(storage_path('logs/socials_update.log'));
+
+
+Schedule::call(function () {
+    file_put_contents(
+        storage_path('logs/refresh_tokens.log'),
+        "\n\t" . now()->format('d-m-Y H:i:s') . "\n",
+        FILE_APPEND
+    );
+})->everyMinute();
+
+Schedule::command('tiktok:refresh-token')
+    ->everyTwoHours()
+    ->appendOutputTo(storage_path('logs/refresh_tokens.log'));
+
+Schedule::command('meta:refresh-token')
+    ->everyTwoHours()
+    ->appendOutputTo(storage_path('logs/refresh_tokens.log'));

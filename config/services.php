@@ -39,6 +39,8 @@ return [
         'page_id' => env('INSTAGRAM_PAGE_ID'),
     ],
 
+    'socials_log_all' => env('SOCIALS_LOG_ALL', false),
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],

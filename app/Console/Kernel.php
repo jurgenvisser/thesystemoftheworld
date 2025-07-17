@@ -16,10 +16,12 @@ class Kernel extends ConsoleKernel
 
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('tiktok:update-followers')->everyMinute();
-        $schedule->command('discord:update-stats')->everyMinute();
-        $schedule->command('tiktok:refresh-token')->everyTwoHours();
-        $schedule->command('meta:update-followers')->everyMinute();
+        // $schedule->command('discord:update-stats')->everyMinute();
+        // $schedule->command('tiktok:update-followers')->everyMinute();
+        // $schedule->command('meta:update-followers')->everyMinute();
+
+        // $schedule->command('tiktok:refresh-token')->everyTwoHours();
+        // $schedule->command('meta:refresh-token')->everyTwoHours();
     }
 
     protected function commands(): void

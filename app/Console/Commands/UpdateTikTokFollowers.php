@@ -18,12 +18,12 @@ class UpdateTikTokFollowers extends Command
         $user = User::where('email', 'jurgenbv@gmail.com')->first();
 
         if (!$user || !$user->tiktok_access_token || !$user->tiktok_open_id) {
-            $this->error('Geen toegang tot TikTok tokens.');
+            $this->error('❌ Geen toegang tot TikTok tokens.');
             return;
         }
 
         if (!$user->tiktok_token_expires_at || Carbon::parse($user->tiktok_token_expires_at)->isPast()) {
-            $this->error('Access token is verlopen.');
+            $this->error('❌ Access token is verlopen.');
             return;
         }
 
@@ -35,22 +35,29 @@ class UpdateTikTokFollowers extends Command
         ]);
 
         if ($response->successful()) {
-            // $this->info('API response: ' . json_encode($response->json()));
-
             $followers = $response->json()['data']['user']['follower_count'] ?? null;
 
             if ($followers !== null) {
-                SocialStat::updateOrCreate(
-                    ['platform' => 'tiktok'],
-                    ['follower_count' => $followers]
-                );
-                $this->info("✅ TikTok follower count updated: {$followers}");
+                // Haal oude follower count uit DB
+                $socialStat = SocialStat::firstOrNew(['platform' => 'tiktok']);
+
+                if ($socialStat->follower_count !== $followers) {
+                    $socialStat->follower_count = $followers;
+                    $socialStat->updated_at = Carbon::now();
+                    $socialStat->save();
+
+                    $this->info("✅ TikTok volgers geüpdatet naar: {$followers}");
+                } else {
+                    if (config('services.socials_log_all')) {
+                        $this->info("ℹ️ TikTok volgers zijn niet veranderd.");
+                    }
+                }
             } else {
-                $this->error('Follower count ontbreekt in API response.');
-                $this->info('API response: ' . json_encode($response->json()));
+                $this->error('❌ Follower count ontbreekt in API response.');
+                $this->info('❌ API response: ' . json_encode($response->json()));
             }
         } else {
-            $this->error('Fout bij ophalen TikTok data: ' . $response->body());
+            $this->error('❌ Fout bij ophalen TikTok data: ' . $response->body());
         }
     }
 }
