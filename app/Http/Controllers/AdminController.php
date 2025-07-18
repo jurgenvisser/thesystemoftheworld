@@ -22,7 +22,20 @@ class AdminController extends Controller
         $newToken = $matches[1] ?? null;
 
         return back()->with('status', 'TikTok access token handmatig vernieuwd.')
-                     ->with('access_token', $newToken);
+                     ->with('tiktok_access_token', $newToken);
+    }
+
+    public function refreshMetaToken(): RedirectResponse
+    {
+        Artisan::call('meta:refresh-token');
+        $output = Artisan::output();
+
+        // Token ophalen uit output (indien beschikbaar in het outputformaat)
+        preg_match('/Nieuwe code is: (.+)/', $output, $matches);
+        $newToken = $matches[1] ?? null;
+
+        return back()->with('status', 'Meta access token handmatig vernieuwd.')
+                     ->with('meta_access_token', $newToken);
     }
 
     public function updateTikTokFollowers(): RedirectResponse
@@ -30,11 +43,25 @@ class AdminController extends Controller
         Artisan::call('tiktok:update-followers');
         $output = Artisan::output();
 
-        // Follower count ophalen uit output (indien beschikbaar in het outputformaat)
-        preg_match('/TikTok volgers geüpdatet: (\d+)/', $output, $matches);
-        $followerCount = $matches[1] ?? null;
+        return back()->with('status', 'TikTok followers handmatig bijgewerkt.')
+                     ->with('output', $output);
+    }
 
-        return back()->with('status', 'Follower count handmatig opgehaald.')
-                     ->with('follower_count', $followerCount);
+    public function updateMetaFollowers(): RedirectResponse
+    {
+        Artisan::call('meta:update-followers');
+        $output = Artisan::output();
+
+        return back()->with('status', 'Meta followers handmatig bijgewerkt.')
+                     ->with('output', $output);
+    }
+
+    public function updateDiscordFollowers(): RedirectResponse
+    {
+        Artisan::call('discord:update-stats');
+        $output = Artisan::output();
+
+        return back()->with('status', 'Discord followers handmatig bijgewerkt.')
+                     ->with('output', $output);
     }
 }

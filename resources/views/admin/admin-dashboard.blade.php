@@ -32,17 +32,27 @@
                     <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Forceer data ophalen bij server</h1>
     
                     <div class="space-y-8 w-full max-w-md self-start">
-                        <form method="POST" action="{{ route('admin.refresh-token') }}">
+                        <form method="POST" action="{{ route('admin.refresh-tiktok-token') }}">
                             @csrf
                             <button type="submit" class="w-full bg-black text-white rounded hover:ring hover:ring-colorPrimary py-3 px-6 hover:bg-gray-800 text-lg lg:text-xl">
                                 TikTok Access Token handmatig vernieuwen
                             </button>
-                            @if(session('access_token'))
-                                <p class="text-green-500 mt-2 text-base break-all">Nieuwe access token: {{ session('access_token') }}</p>
+                            @if(session('tiktok_access_token'))
+                                <p class="text-green-500 mt-2 text-base break-all">Nieuwe access token: {{ session('tiktok_access_token') }}</p>
                             @endif
                         </form>
 
-                        <form method="POST" action="{{ route('admin.update-followers') }}">
+                        <form method="POST" action="{{ route('admin.refresh-meta-token') }}">
+                            @csrf
+                            <button type="submit" class="w-full bg-black text-white rounded hover:ring hover:ring-colorPrimary py-3 px-6 hover:bg-gray-800 text-lg lg:text-xl">
+                                Meta Access Token handmatig vernieuwen
+                            </button>
+                            @if(session('meta_access_token'))
+                                <p class="text-green-500 mt-2 text-base break-all">Nieuwe access token: {{ session('meta_access_token') }}</p>
+                            @endif
+                        </form>
+
+                        {{-- <form method="POST" action="{{ route('admin.update-followers') }}">
                             @csrf
                             <button type="submit" class="w-full bg-black text-white rounded hover:ring hover:ring-colorPrimary py-3 px-6 hover:bg-gray-800 text-lg lg:text-xl">
                                 TikTok Follower Count ophalen
@@ -50,7 +60,8 @@
                             @if(session('follower_count'))
                                 <p class="text-green-500 mt-2 text-base">Nieuwe follower count: {{ session('follower_count') }}</p>
                             @endif
-                        </form>
+                        </form> --}} 
+                        {{-- todo: nog even maken allemaal --}}
                     </div>
 
                     <div>

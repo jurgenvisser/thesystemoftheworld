@@ -108,14 +108,15 @@ Route::get('/admin/facebook-token', function () {
 //     return view('admin');
 // })->middleware('auth')->name('dashboard');
 
-// Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
     Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
 
-    Route::post('/admin/refresh-token', [AdminController::class, 'refreshTikTokToken'])->name('admin.refresh-token');
+    Route::post('/admin/refresh-tiktok-token', [AdminController::class, 'refreshTikTokToken'])->name('admin.refresh-tiktok-token');
+    Route::post('/admin/refresh-meta-token', [AdminController::class, 'refreshMetaToken'])->name('admin.refresh-meta-token');
 
     Route::post('/admin/update-followers', [AdminController::class, 'updateTikTokFollowers'])->name('admin.update-followers');
-// });
+});
 
 // Route for the 'Test' page
 Route::get('/admin/test', function () {
