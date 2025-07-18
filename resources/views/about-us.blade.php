@@ -29,10 +29,30 @@
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Het Team van The System – Jouw Steun en Begeleiding</h1>
                     <p class="text-base lg:text-lg mb-6">
-                        Bij The System bestaat ons team uit mensen die echt begrijpen wat je doormaakt. We hebben geen personeel die alleen theorieën delen; we zijn mensen die zelf ook hebben gevochten, geleerd en gegroeid. We hebben allemaal momenten gekend van onzekerheid, tegenslagen en het gevoel vast te zitten. En nu willen we onze ervaring en kennis met jou delen om je te helpen verder te komen.
+                        Het team van The System bestaat niet uit mensen die je vertellen wat je zou moeten doen. Wij laten zien wat werkt, omdat we het zelf hebben geleefd.
                     </p>
-                    <p class="text-base lg:text-lg">
-                        Bij The System ben je nooit alleen. Ons team werkt elke dag hard om jou te voorzien van de tools, begeleiding en ondersteuning die je nodig hebt om te slagen. Wij zijn er om je te helpen groeien, ongeacht waar je nu staat.
+                    <p class="text-base font-bold lg:text-lg">
+                        Iedereen in dit team kent het:
+                    </p>
+                    <p class="text-base lg:text-lg mb-6">
+                        Twijfel. Uitstel. Leegte. En daarna: Kiezen. Bouwen. Doorgaan.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6">
+                        Wij zijn niet perfect. Maar wel echt. Geen theorie, geen toneel alleen bewezen tools, harde lessen en eerlijke begeleiding.
+                    </p>
+                    <p class="text-base lg:text-lg font-bold mb-2">
+                        Wat jij krijgt?
+                    </p>
+                    <ul class="list-disc mb-6 list-inside">
+                        <li class="text-base lg:text-lg mb-2">Support van mensen die je niet sparen, maar sterker maken.</li>
+                        <li class="text-base lg:text-lg mb-2">Praktische tools die direct toepasbaar zijn.</li>
+                        <li class="text-base lg:text-lg mb-2">Begrip voor waar je zit, en druk om er niet te blijven.</li>
+                    </ul>
+                    <p class="text-base lg:text-lg font-bold">
+                        We zijn hier om je systeem te geven dat je leven verandert.
+                    </p>
+                    <p class="text-base lg:text-lg font-bold">
+                        En we gaan ernaast staan tot je het waarmaakt.
                     </p>
                 </div>
             </div>
@@ -46,10 +66,12 @@
 
                     <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Social Media Team</h2>
                     <p class="text-base lg:text-lg mb-8">
-                        Ons team deelt dagelijks content om je te inspireren en motiveren. Ze bouwen een community op Discord die je helpt gefocust te blijven en vooruit te gaan door interactie te bevorderen.                    </p>
+                        Ons team deelt dagelijks content om je te inspireren en motiveren. Ze bouwen een community op Discord die je helpt gefocust te blijven en vooruit te gaan door interactie te bevorderen.
+                </p>
                     <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Webdevelopment Team</h2>
                     <p class="text-base lg:text-lg mb-8">
-Onze tech-experts zorgen dat de website soepel werkt, zodat jij makkelijk toegang hebt tot alle tools en info die je nodig hebt. Ze beheren ook de Discord-server en zorgen voor een fijne ervaring voor onze community.                    </p>
+                        Onze tech-experts zorgen dat de website soepel werkt, zodat jij makkelijk toegang hebt tot alle tools en info die je nodig hebt. Ze beheren ook de Discord-server en zorgen voor een fijne ervaring voor onze community.
+                    </p>
                     <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Klantenservice Team</h2>
                     <p class="text-base lg:text-lg mb-8">
                         Ons supportteam staat klaar om je snel en persoonlijk te helpen via direct message of e-mail. Jij hoeft je geen zorgen te maken – we zorgen voor je.
@@ -69,28 +91,30 @@ Onze tech-experts zorgen dat de website soepel werkt, zodat jij makkelijk toegan
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Quinn – het gezicht van The System</h1>
 
-                    <p class="text-base lg:text-lg mb-8">
-                        Quinn, de oprichter van The System, is nu het gezicht van onze social media. Hij brengt zelf de boodschap over en deelt verhalen en kennis vanuit zijn eigen ervaringen om de connectie met onze community te versterken.
+                    <p class="text-base lg:text-lg mb-6">
+                        Quinn is geen influencer. Hij is The System. Niet geboren als leider. Maar gevormd door strijd, structuur en discipline.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6">
+                        Elke video, elke boodschap komt recht uit zijn eigen proces. Geen show. Geen scripts. Alleen echte verhalen en harde waarheden. Want verandering begint pas als iemand je durft te confronteren.
                     </p>
 
                     <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Wat doet Quinn?</h2>
-                    <p class="text-base lg:text-lg mb-2">
-                        Quinn zorgt ervoor dat onze video’s:
-                    </p>
-                    <ul class="list-disc pl-8 mb-8 list-outside">
-                        <li class="text-base lg:text-lg mb-2">Persoonlijk en authentiek zijn.</li>
-                        <li class="text-base lg:text-lg mb-2">Een directe verbinding met de community opbouwen.</li>
-                        <li class="text-base lg:text-lg mb-2">Inspireren en motiveren met duidelijke en eerlijke boodschappen.</li>
+                    <ul class="list-disc mb-2 list-inside">
+                        <li class="text-base lg:text-lg mb-2">Hij spreekt de taal van de community, omdat hij zelf één van hen was</li>
+                        <li class="text-base lg:text-lg mb-2">Hij zet je stil met simpele waarheden die je wakker schudden</li>
+                        <li class="text-base lg:text-lg mb-2">Hij bouwt connectie en vertrouwen door te laten zien dat hij het leeft</li>
                     </ul>
+                    <blockquote class="bg-black/20 border-l-4 border-colorPrimary italic px-8 py-4 text-base lg:text-lg mb-6">
+                        “Ik vertel je niet wat je moet doen. Ik laat je zien wat werkt.”
+                        <footer class="mt-2 font-bold not-italic text-base lg:text-lg">– Quinn</footer>
+                    </blockquote>
 
-                    <p class="text-base lg:text-lg mb-8">
-                        Hoewel Lior niet langer actief onze video’s inspreekt, blijft deze AI-collega op de achtergrond betrokken bij innovatie binnen The System. Lior blijft beschikbaar voor persoonlijke videos op aanvraag, maar Quinn neemt nu de hoofdrol op zich in onze communicatie.
+                    <p class="text-base lg:text-lg mb-6">
+                        AI-stem ‘Lior’ blijft beschikbaar op aanvraag, maar The System wordt nu geleid door een echte stem, echt verhaal, echte mens.
                     </p>
 
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Waarom Quinn?</h2>
-                    <p class="text-base lg:text-lg">
-                        Door zelf de boodschap over te brengen, versterkt Quinn de band met de community en laat hij zien dat persoonlijke betrokkenheid centraal staat bij The System.
-                    </p>
+                    <h2 class="mb-1 text-xl lg:text-2xl text-white uppercase">Quinn is er om jou te helpen bouwen.</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-white uppercase">Stap in. Word wakker. </h2>
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
-    'version' => env('APP_VERSION', 'Niet Gespecificeerd'),
+    // 'version' => env('APP_VERSION', 'Niet Gespecificeerd'),
 
     /*
     |--------------------------------------------------------------------------

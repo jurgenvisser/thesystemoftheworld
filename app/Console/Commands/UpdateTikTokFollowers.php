@@ -13,7 +13,7 @@ class UpdateTikTokFollowers extends Command
     protected $signature = 'tiktok:update-followers';
     protected $description = 'Update TikTok follower count from the API and save to the database';
 
-    public function handle(): void
+    public function handle()
     {
         $user = User::where('email', 'jurgenbv@gmail.com')->first();
 
@@ -47,9 +47,11 @@ class UpdateTikTokFollowers extends Command
                         $socialStat->save();
 
                         $this->info("✅ TikTok volgers geüpdatet naar: {$followers}");
+                        return 0;
                     } else {
                         if (config('services.socials_log_all')) {
                             $this->info("ℹ️ TikTok volgers zijn niet veranderd.");
+                            return 1;
                         }
                     }
                 } else {

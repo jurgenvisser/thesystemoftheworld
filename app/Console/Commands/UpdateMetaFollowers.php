@@ -44,9 +44,11 @@ class UpdateMetaFollowers extends Command
                         $socialStat->save();
 
                         $this->info("✅ Facebook volgers geüpdatet naar: {$fbFollowers}");
+                        return 0;
                     } else {
                         if (config('services.socials_log_all')) {
                             $this->info("ℹ️ Facebook volgers zijn niet veranderd.");
+                            return 1;
                         }
                     }
                 } else {

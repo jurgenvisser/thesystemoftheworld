@@ -47,17 +47,20 @@ class UpdateDiscordStats extends Command
                     if ($hasFollowerChange) {
                         $socialStat->follower_count = $memberCount;
                         $this->info("✅ Discord member count geüpdatet naar: {$memberCount}");
+                        return 0;
                     }
 
                     if ($hasLinkChange) {
                         $socialStat->invite_link = $inviteLink;
                         $this->info("✅ Discord invite link geüpdatet naar: " . ($inviteLink ?? 'niet gevonden'));
+                        return 0;
                     }
 
                     $socialStat->updated_at = now();
                     $socialStat->save();
                 } elseif (config('services.socials_log_all')) {
                     $this->info("ℹ️ Discord member count en invite link zijn niet veranderd.");
+                    return 1;
                 }
 
                 return 0;

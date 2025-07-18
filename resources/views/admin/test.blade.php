@@ -22,40 +22,8 @@
 <!-- Main Content Section -->
 <div class="bg-colorPrimary/20 h-auto m-0 pt-12 lg:pt-24 pb-12 lg:pb-24 flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
-
-        <!-- Discord iframe (3/6) -->
-        <div class="min-h-[20rem] h-[20rem] lg:h-full col-span-3">
-            <div class="bg-colorPrimary/60 h-full flex flex-col justify-center items-center text-white text-sm lg:text-2xl text-left lg:text-justify overflow-hidden rounded-none">
-
-                <div class="">
-                    <div class="w-full h-full">
-                        <div class="h-full flex flex-col justify-center items-center  p-8 lg:p-20 py-20">
-                            <p class="text-base lg:text-lg text-center leading-snug">Combined API Info</p>
-                            <p class="text-base lg:text-lg">TikTok volgers: {{ $tiktokFollowerCount }}</p>
-                            <p class="text-base lg:text-lg">Discord leden: {{ $discordMemberCount }}</p>
-                            <p class="text-base lg:text-lg">Facebook volgers: {{ $facebookFollowerCount }}</p>
-                            <p class="text-base lg:text-lg">Instagram volgers: {{ $instagramFollowerCount }}</p>
-                            <p class="text-base lg:text-lg">Totale volgers: {{ $totalFollowerCount }}</p>
-                            <p class="text-base lg:text-lg text-center leading-snug">Discord Invite Link</p>
-                            <p class="text-base lg:text-lg text-center leading-snug">
-                                <a href="{{ $discordInviteLink }}" class="text-colorPrimary hover:underline" target="_blank">
-                                    {{ $discordInviteLink }}
-                                </a>
-                            </p>
-                            <p class="text-base lg:text-lg text-center leading-snug">App Versie</p>
-                            <p class="text-base lg:text-lg text-center leading-snug">
-                                {{ $appVersion }}
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        {{-- <!-- First Section (6/6) -->
+        
+        <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
@@ -68,7 +36,7 @@
                 </div>
 
             </div>
-        </div> --}}
+        </div>
 
         
     </div>

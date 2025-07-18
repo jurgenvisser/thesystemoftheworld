@@ -7,6 +7,11 @@
     </a>
 </div>
 <div class="w-full xl:w-auto border-b border-colorPrimary/90 xl:border-none flex justify-center">
+    <a href="/admin/force-apis" class="xl:animate-underline animate-text-color text-lg font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
+        API's
+    </a>
+</div>
+<div class="w-full xl:w-auto border-b border-colorPrimary/90 xl:border-none flex justify-center">
     <a href="/admin/test" class="xl:animate-underline animate-text-color text-lg font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
         Test
     </a>

@@ -40,7 +40,7 @@ class AppServiceProvider extends ServiceProvider
         $tiktokFollowerCount = SocialStat::where('platform', 'tiktok')->value('follower_count') ?? 0;
         $facebookFollowerCount = SocialStat::where('platform', 'facebook')->value('follower_count') ?? 0;
         $instagramFollowerCount = SocialStat::where('platform', 'instagram')->value('follower_count') ?? 0;
-        $discordMemberCount = SocialStat::where('platform', 'discord')->value('follower_count') ?? 0;
+        $discordMemberCount = ($rawDiscordCount = SocialStat::where('platform', 'discord')->value('follower_count')) !== null ? $rawDiscordCount - 4 : 0; // -4 om de bots en interne accounts uit te sluiten
         
         $discordInviteLink = SocialStat::where('platform', 'discord')->value('invite_link') ?? env('DISCORD_FALLBACK_INVITE', 'https://discord.gg/vmyW5gYQgA');
 
@@ -52,7 +52,7 @@ class AppServiceProvider extends ServiceProvider
             'discordMemberCount' => $discordMemberCount,
             'totalFollowerCount' => $tiktokFollowerCount + $facebookFollowerCount + $instagramFollowerCount + $discordMemberCount,
             'discordInviteLink' => $discordInviteLink,
-            'appVersion' => config('app.version'),
+            // 'appVersion' => config('app.version'),
         ]);
     }
 }

@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\DiscordController;
 use App\Http\Controllers\Auth\TikTokController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FacebookController;
+use Illuminate\Http\Request;
 
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
 Route::get('/callback', [DiscordController::class, 'handleDiscordCallback']);
@@ -116,7 +117,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/admin/refresh-meta-token', [AdminController::class, 'refreshMetaToken'])->name('admin.refresh-meta-token');
 
     Route::post('/admin/update-followers', [AdminController::class, 'updateTikTokFollowers'])->name('admin.update-followers');
+    Route::post('/admin/update-meta-followers', [AdminController::class, 'updateMetaFollowers'])->name('admin.update-meta-followers');
+    Route::post('/admin/update-discord-followers', [AdminController::class, 'updateDiscordFollowers'])->name('admin.update-discord-followers');
 });
+
+// Route for the 'Force API's' page
+Route::get('/admin/force-apis', function () {
+    return view('admin.server-force-api');
+})->middleware('auth');
 
 // Route for the 'Test' page
 Route::get('/admin/test', function () {
@@ -134,6 +142,18 @@ Route::get('/admin/empty', function () {
 })->middleware('auth');
 
 
+Route::post('/login', function (Request $request) {
+    $credentials = $request->only('email', 'password');
+
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
+        return redirect()->intended('/admin/dashboard');
+    }
+
+    return back()->withErrors([
+        'email' => 'De ingevoerde gegevens zijn onjuist.',
+    ])->onlyInput('email');
+})->name('login');
 
 
 

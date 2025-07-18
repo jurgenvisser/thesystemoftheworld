@@ -15,18 +15,18 @@ Schedule::call(function () {
         "\n\t" . now()->format('d-m-Y H:i:s') . "\n",
         FILE_APPEND
     );
-})->everyMinute();
+})->everyFiveMinutes();
 
 Schedule::command('discord:update-stats')
-    ->everyMinute()
+    ->everyFiveMinutes()
     ->appendOutputTo(storage_path('logs/socials_update.log'));
 
 Schedule::command('tiktok:update-followers')
-    ->everyMinute()
+    ->everyFiveMinutes()
     ->appendOutputTo(storage_path('logs/socials_update.log'));
 
 Schedule::command('meta:update-followers')
-    ->everyMinute()
+    ->everyFiveMinutes()
     ->appendOutputTo(storage_path('logs/socials_update.log'));
 
 

@@ -43,8 +43,12 @@ class AdminController extends Controller
         Artisan::call('tiktok:update-followers');
         $output = Artisan::output();
 
-        return back()->with('status', 'TikTok followers handmatig bijgewerkt.')
-                     ->with('output', $output);
+        if ($output === '') {
+            $output = 'ℹ️ TikTok volgers zijn niet veranderd.';
+        }
+
+        return back()->with('tiktok_status', '✅ Succes')
+                     ->with('tiktok_output', $output);
     }
 
     public function updateMetaFollowers(): RedirectResponse
@@ -52,8 +56,12 @@ class AdminController extends Controller
         Artisan::call('meta:update-followers');
         $output = Artisan::output();
 
-        return back()->with('status', 'Meta followers handmatig bijgewerkt.')
-                     ->with('output', $output);
+        if ($output === '') {
+            $output = 'ℹ️ Meta volgers zijn niet veranderd.';
+        }
+
+        return back()->with('meta_status', '✅ Succes')
+                     ->with('meta_output', $output);
     }
 
     public function updateDiscordFollowers(): RedirectResponse
@@ -61,7 +69,11 @@ class AdminController extends Controller
         Artisan::call('discord:update-stats');
         $output = Artisan::output();
 
-        return back()->with('status', 'Discord followers handmatig bijgewerkt.')
-                     ->with('output', $output);
+        if ($output === '') {
+            $output = 'ℹ️ Discord member count en invite link zijn niet veranderd.';
+        }
+
+        return back()->with('discord_status', '✅ Succes')
+                     ->with('discord_output', $output);
     }
 }

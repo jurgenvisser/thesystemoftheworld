@@ -106,21 +106,25 @@
                     <h1 class="mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Platform</h1>
     
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Dit is meer dan een platform. Dit is een beweging. Een beweging voor jou, voor de mensen die niet genoegen nemen met middelmatigheid. Jij voelt diep van binnen dat je voor iets groters bent gemaakt, maar de twijfel houdt je vast. Waarom wacht je nog?
+                        Dit is geen gewoon platform. Dit is een beweging.
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Weet je wat het verschil maakt? Actie.
+                        Voor mensen die voelen dat er meer in zit. Voor wie klaar is met middelmatigheid en excuses. Voor jou.
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        The System is voor mensen die niet opgeven. Het is voor degenen die klaar zijn om de waarheid te horen en eindelijk de confrontatie aan te gaan met de excuses die je tegenhouden. Jij hebt de keuze: blijf je vastzitten in je oude patronen of kies je voor jezelf, voor groei, voor succes.
+                        Je weet dat je voor iets groters bent gemaakt. Maar twijfel houdt je klein. Het enige verschil tussen vastzitten en doorbreken? Actie.
                     </p>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Je hebt geen tijd te verliezen. Elke seconde die je wacht, is een kans die je verliest. Het moment om te veranderen is nu.
+                        The System is gebouwd voor mensen die durven kiezen. Die willen groeien. Die de waarheid aankunnen. En die klaar zijn om hun oude patronen te breken.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Elke dag zonder actie is een verloren kans.
                     </p>
                     <!-- Extra space between the text and the follow text -->
                     <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
-                        Volg The System voor meer en begin vandaag met het nemen van actie. <br>
-                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
+                        <span class="font-bold">Jouw moment is nu.</span> <br>
+                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>. <br>
+                        Discord: <a href="{{ $discordInviteLink }}" target="_blank" class="underline decoration-colorPrimary">Join our community</a>.
                     </p>
                 </div>
 

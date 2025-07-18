@@ -205,9 +205,9 @@
                             <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
                                 TikTok
                             </a>
-                            <!-- YouTube -->
-                            <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
-                                YouTube
+                            <!-- Discord -->
+                            <a href="https://discord.gg/6TfT6Pdtk3" target="_blank" class="animate-underline animate-text-color theme-primary">
+                                Discord
                             </a>
                             <!-- Instagram -->
                             <a href="https://www.instagram.com/thesystemoftheworld" target="_blank" class="animate-underline animate-text-color theme-primary">
@@ -556,9 +556,9 @@
                         <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             TikTok
                         </a>
-                        <!-- Telegram -->
-                        <a href="https://t.me/+hS5RjxjtFvw2ZjFk" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
-                            Telegram
+                        <!-- Discord -->
+                        <a href="https://discord.gg/6TfT6Pdtk3" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                            Discord
                         </a>
                         <!-- YouTube -->
                         <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
