@@ -33,10 +33,28 @@
                 <div class="">
                     <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Onze Visie</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Bij The System begrijpen we dat jij niet hier bent om middelmatig te zijn. We weten hoe het voelt om vast te zitten, twijfels te hebben en niet te weten waar je moet beginnen. Maar jij hebt de kracht om je leven te veranderen. Dit is je moment om te ontwaken, om te begrijpen dat jij de controle hebt.
+                        Bij The System geloven we dat jij niet bent gemaakt voor een middelmatig leven.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Misschien voel je je vast. Misschien twijfel je. Misschien weet je niet waar je moet beginnen.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Dat betekent niet dat jij zwak bent. Het betekent dat je nog geen systeem hebt.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Wij zien jou. Niet zoals je nu bent maar zoals je kunt worden. Sterker. Scherper. Mentaal en fysiek.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Wij geven je geen motivatiepraat. Wij geven je structuur, ritme en bewijs. Elke dag opnieuw. Taken. Reflectie. Groei.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        The System is gebouwd voor mensen die willen vechten. Die willen bouwen. Die niet meer terug willen naar vroeger.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Als jij bereid bent om op te staan dan staan wij met je. Geen excuses. Geen half werk. Alleen progressie.
                     </p>
                     <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Jij verdient meer. We bieden je niet alleen kennis, maar een verandering van mindset en de tools om mentaal en fysiek sterker te worden. Dit is voor de doorzetters. Als jij bereid bent om alles te geven, zijn wij hier om je te helpen.
+                        Welkom bij The System. Dit is waar je begint.
                     </p>
                 </div>
 
@@ -52,11 +70,29 @@
                 <div class="">
                     <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Onze Missie</h1>
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        We zien te veel mensen die gevangen zitten in hun eigen angsten, twijfels en uitstelgedrag. Ze voelen zich klein, vast in een systeem dat hen tegenhoudt. Maar we accepteren dit niet voor jou. Jij bent niet het slachtoffer van je omstandigheden. Bij The System bouwen we een beweging van mensen die kiezen om sterker te worden, om zelf de regie over hun leven te nemen. Geen excuses. Alleen sterke, onafhankelijke individuen die zich niet laten stoppen. Dit is jouw kans om je verhaal opnieuw te schrijven. Ben jij er klaar voor om te beginnen?
+                        We zien het elke dag: mensen vast in hun hoofd. Gevangen in angst, twijfel, uitstelgedrag.
                     </p>
-                    {{-- <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Wij accepteren dat niet. Wij bouwen een beweging. Sterke individuen die hun eigen pad bepalen. Geen slachtoffers, geen volgers.
-                    </p> --}}
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Niet omdat ze zwak zijn, maar omdat het systeem om hen heen ze klein houdt.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Wij accepteren dat niet. Niet voor jou.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Jij bent geen slachtoffer van je omstandigheden. Jij bent degene die te lang heeft gelopen met het zelfde probleem.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Bij The System bouwen we Sterke, zelfbewuste individuen die hun leven niet langer laten bepalen door angst of gemak.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Geen smoesjes. Geen stilstand. Wel keuzes. Discipline. Groei.
+                    </p>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Dit is geen opgeven Dit is een beweging. Jouw kans om je verhaal opnieuw te schrijven.
+                    </p>
+                    <p class="text-base lg:text-lg px-4 lg:px-0">
+                        Ben jij klaar om te beginnen?
+                    </p>
                 </div>
 
             </div>
