@@ -42,7 +42,7 @@
                             YouTube
                         </a>
                         <!-- Facebook -->
-                        <a href="https://www.facebook.com/thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                        <a href="https://www.facebook.com/people/The-System/61578064385680/" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             Facebook
                         </a>
                         <span class="col-span-1 block 2xl:hidden"></span>
@@ -92,7 +92,7 @@
                 <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary text-gray-600">Terms & Conditions</a>
                 {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
             </p>
-            <p class="text-gray-800">Website Version: TSotW.2.0.2p</p>
+            <p class="text-gray-800">Website Version: TSotW.2.0.3p</p>
         </div>
 
 

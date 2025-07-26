@@ -123,7 +123,7 @@
                         </div>
                         <div class="flex space-x-4 lg:space-x-8 justify-center lg:justify-start">
                             <div class="rounded-full flex items-center justify-center">
-                                <a href="https://www.facebook.com/thesystemoftheworld" target="_blank" class="w-12 lg:w-16 h-12 lg:h-16 bg-facebook-white bg-cover rounded-lg flex items-center justify-center">
+                                <a href="https://www.facebook.com/people/The-System/61578064385680/" target="_blank" class="w-12 lg:w-16 h-12 lg:h-16 bg-facebook-white bg-cover rounded-lg flex items-center justify-center">
                                     <!-- Facebook Icon -->
                                 </a>
                             </div>
