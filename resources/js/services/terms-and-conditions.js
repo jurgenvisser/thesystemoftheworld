@@ -55,7 +55,7 @@ if (downloadBtn) {
     doc.setFontSize(12);
     
     addText("Terms & Conditions thesystemoftheworld.com", true);
-    addText("Laatste bijwerking: 4 april 2025");
+    addText("Laatste bijwerking: 27 augustus 2025");
     const downloadDate = new Date().toLocaleDateString(); // Get the current date
     addText(`Gedownload op: ${downloadDate}`);
 
@@ -83,7 +83,9 @@ if (downloadBtn) {
     addText("Onze producten worden geleverd zoals omschreven op de website. Wij zijn niet verantwoordelijk voor eventuele schade, ongemak of negatieve ervaringen voortvloeiend uit het gebruik van onze producten. De klant is verantwoordelijk voor het juist gebruiken van de producten en het naleven van eventuele veiligheidsvoorschriften.");
     addText("5.3 Persoonlijke Aansprakelijkheidsbeperking bij Psychisch of Emotioneel Letsel", true);
     addText("De coachingdiensten van The System zijn niet bedoeld ter vervanging van medische, psychologische of psychiatrische hulp. Hoewel wij streven naar professionele begeleiding, zijn wij niet aansprakelijk voor psychisch of emotioneel letsel voortvloeiend uit het gebruik van onze diensten. De klant blijft te allen tijde zelf verantwoordelijk voor het inschatten van zijn of haar mentale en emotionele gezondheid en het inschakelen van professionele hulp indien nodig.");
-    
+    addText("5.4 Aansprakelijkheid bij Communicatie Tussen Leden", true);
+    addText("Onze community biedt een platform waar leden met elkaar kunnen communiceren. Hoewel wij streven naar een veilige en respectvolle omgeving, hebben wij geen controle over privéberichten of andere directe interacties tussen leden. The System is niet aansprakelijk voor enige schade, ongemak of negatieve gevolgen voortvloeiend uit privécontacten of het gedrag van andere leden binnen of buiten de community. Wij behouden ons het recht voor om bij klachten achter de schermen actie te ondernemen, maar dit ontslaat de individuele leden niet van hun eigen verantwoordelijkheid in hun communicatie met anderen.");
+
     addText("6. Intellectueel Eigendom", true, true);
     addText("Alle inhoud, inclusief teksten, afbeeldingen, en cursusmateriaal, is eigendom van The System en mag niet zonder schriftelijke toestemming worden gekopieerd, gedeeld of commercieel gebruikt.");
     

@@ -10,7 +10,7 @@
   <div class="bg-colorPrimary/60 max-w-4xl mx-auto p-6 text-white">
     <h1 class="text-3xl font-bold text-center mb-6">Terms & Conditions</h1>
     <p class="text-sm text-center">thesystemoftheworld.com</p>
-    <p class="text-sm text-center">Laatste bijwerking: 4 april 2025</p>
+    <p class="text-sm text-center">Laatste bijwerking: 27 augustus 2025</p>
   
     <section class="mt-8">
       <h2 class="text-xl font-semibold mb-4">Inleiding</h2>
@@ -62,8 +62,13 @@
     </section>
 
     <section class="mt-8">
-      <h2 class="text-xl font-semibold mb-2">5.3 Persoonlijke Aansprakelijkheidsbeperking bij Psychisch of Emotioneel Letsel</h2>
+      <h2 class="text-lg font-semibold mb-2">5.3 Persoonlijke Aansprakelijkheidsbeperking bij Psychisch of Emotioneel Letsel</h2>
       <p>De coachingdiensten van The System zijn niet bedoeld ter vervanging van medische, psychologische of psychiatrische hulp. Hoewel wij streven naar professionele begeleiding, zijn wij niet aansprakelijk voor psychisch of emotioneel letsel voortvloeiend uit het gebruik van onze diensten. De klant blijft te allen tijde zelf verantwoordelijk voor het inschatten van zijn of haar mentale en emotionele gezondheid en het inschakelen van professionele hulp indien nodig.</p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-lg font-semibold mb-2">5.4 Aansprakelijkheid bij Communicatie Tussen Leden</h2>
+      <p>Onze community biedt een platform waar leden met elkaar kunnen communiceren. Hoewel wij streven naar een veilige en respectvolle omgeving, hebben wij geen controle over privéberichten of andere directe interacties tussen leden. The System is niet aansprakelijk voor enige schade, ongemak of negatieve gevolgen voortvloeiend uit privécontacten of het gedrag van andere leden binnen of buiten de community. Wij behouden ons het recht voor om bij klachten achter de schermen actie te ondernemen, maar dit ontslaat de individuele leden niet van hun eigen verantwoordelijkheid in hun communicatie met anderen.</p>
     </section>
 
     <section class="mt-8">
