@@ -24,7 +24,7 @@
             🚫 Alleen voor wie écht wil veranderen.
         </p>
         <div class="flex px-4 py-2 lg:py-8">
-            <a href="https://d35b361a.sibforms.com/serve/MUIFAA__MFnpfklaLsq-h1R9a5jCNMMem44cDfmGZBa0L82F93fvN9Vf7X00OcGsdqAi90hU4m5paj5WGfUbZpDfEcTW7phvv-jEFl4N5CfblPctMHuoLaJyKZLH0WbvfrkhR0IKtPadYLIwDFx3EoyVTn_4NdolKQrOCnhR9DGOOV1mnsvICYcECLN7JuwWaCdVl2Tqvz384R40" class="bg-colorPrimary text-white text-base md:text-lg lg:text-xl px-6 py-2 rounded-lg shadow hover:bg-colorPrimary/40 w-full">
+            <a href="{{ $brevoFormLink }}" class="bg-colorPrimary text-white text-base md:text-lg lg:text-xl px-6 py-2 rounded-lg shadow hover:bg-colorPrimary/40 w-full">
                 📋 Klik hier en meld je aan ✍️
             </a>
         </div>
