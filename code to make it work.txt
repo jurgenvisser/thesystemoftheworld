@@ -9,6 +9,7 @@ composer require laravel/socialite
 composer require socialiteproviders/discord
 composer require socialiteproviders/tiktok
 composer require --dev barryvdh/laravel-ide-helper
+composer require sendinblue/api-v3-sdk
 
 # Install all NPM dependencies
 npm install

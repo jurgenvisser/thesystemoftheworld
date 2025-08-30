@@ -1,0 +1,28 @@
+{
+  "id": 9999,
+  "contact_id": 1,
+  "contact_properties": {
+    "FIRSTNAME": "Jan",
+    "LASTNAME": "Janssen",
+    "SMS": "0612345678",
+    "EMAIL": "jurgenbv@gmail.com",
+    "AGE": "28",
+    "BIRTHDAY": "1990-01-01",
+    "CITY": "Amsterdam",
+    "GROOTSTE_UITDAGING": "Balans werk/privé en het vinden van motivatie om gezond te blijven leven.",
+    "HUIDIGE_MENTALE_EMOTIONELE_WELIJZN": "Redelijk",
+    "BELANGRIJKSTE_DOEL": "Meer rust vinden en betere gewoontes ontwikkelen.",
+    "EERDERE_COACHING_GEHAD": "1",
+    "EERDERE_COACHING_ERVARING": "Ik heb eerder een korte coaching gehad op werkgebied, dat was nuttig maar ik miste persoonlijke begeleiding.",
+    "WANNEER_SUCCES": "Als ik meer structuur in mijn dagen heb en me energieker voel.",
+    "WAT_WIL_JE_BEREIKEN": "Praktische tools en persoonlijke begeleiding om mijn leven beter in te richten.",
+    "ONTWIKKELING_INVESTERING": "2",
+    "WELKE_COACHINGSTIJL": "3",
+    "GROOTSTE_STRUIKELBLOK": "Mijn neiging om uit te stellen en motivatie te verliezen.",
+    "MARKETING_VOORKEUR": "Ja",
+    "ANDERE_BELANGRIJKE_INFORMATIE": "Ik heb ADHD en merk dat ik soms moeite heb om mijn focus te behouden, dat mag meegenomen worden in het traject."
+  },
+  "event_name": "form_submitted",
+  "form_id": "TEST123",
+  "form_name": "Vragenlijst test"
+}

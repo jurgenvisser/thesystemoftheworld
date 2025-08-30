@@ -10,6 +10,8 @@ use SocialiteProviders\Discord\Provider as DiscordProvider;
 use SocialiteProviders\TikTok\TikTokExtendSocialite;
 use Illuminate\Support\Facades\Event;
 use App\Models\SocialStat;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 class AppServiceProvider extends ServiceProvider
 {

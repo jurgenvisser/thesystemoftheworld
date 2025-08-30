@@ -54,6 +54,20 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
   
   <title>@yield('title', 'Homepage')</title>
+
+
+    <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
+    <script>
+        // Version: 2.0
+        window.Brevo = window.Brevo || [];
+        Brevo.push([
+            "init",
+            {
+            client_key: "jckvq7do842qx2nktpkdc1d0"
+            }
+        ]);
+    </script>
+
 </head>
 <script src="https://unpkg.com/alpinejs" defer></script>
 <!-- Google tag (gtag.js) -->
