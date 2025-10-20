@@ -119,7 +119,7 @@ async def load_cogs() -> None:
 
     # Load the AutoMod DM cog for sending direct messages when AutoMod triggers
     try:
-        await bot.load_extension("cogs.dm")
+        await bot.load_extension("cogs.automod")
     except Exception as exc:
         print(f"Failed to load AutoModDM cog: {exc}")
 
