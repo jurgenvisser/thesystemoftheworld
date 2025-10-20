@@ -229,6 +229,7 @@ class Trials(commands.Cog):
 
         # Record the trial
         start_time = datetime.now(timezone.utc)
+        # end_time = start_time + timedelta(seconds=10) # For testing purposes
         end_time = start_time + timedelta(days=7)
         self.active_trials[str(user.id)] = {
             "role_id": role.id,
@@ -386,6 +387,7 @@ class Trials(commands.Cog):
     # ------------------------------------------------------------------
     # Background task
     # ------------------------------------------------------------------
+    # @tasks.loop(seconds=20) # For testing purposes
     @tasks.loop(minutes=30)
     async def check_trials(self) -> None:
         """Periodically check for expired trials and remove roles accordingly."""

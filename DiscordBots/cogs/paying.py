@@ -191,12 +191,12 @@ class Paying(commands.Cog):
             # DM the user to thank them
             embed = discord.Embed(
                 description=(
-                    "# Bedankt voor het worden van een betaalde klant!\n\n"
+                    "# Je bent nu lid van The System Premium!\n\n"
                     "- Je hebt nu volledige toegang tot onze community en exclusieve functies.\n"
                     "- Als je vragen hebt of ondersteuning nodig hebt, laat het ons dan weten.\n\n"
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
-                color=discord.Color(int("32CD32", 16)),  # LimeGreen colour as a nice contrast
+                color=discord.Color(int("D9AF5C", 16)),  # LimeGreen colour as a nice contrast
             )
             try:
                 await user.send(embed=embed)
@@ -364,7 +364,7 @@ class Paying(commands.Cog):
         for user_id, info in self.active_paid.items():
             member = guild.get_member(int(user_id))
             nickname = member.nick if member.nick else member.display_name
-            display_name = member.display_name if member else info.get("username", user_id)
+            display_name = member.display_name if member else info.get("username", user_id) # This doesnt get used but is breaks if this isnt here. Need to fix this later!
             lines.append(f"@{nickname}")
 
         await interaction.response.send_message("\n".join(lines), suppress_embeds=True)
