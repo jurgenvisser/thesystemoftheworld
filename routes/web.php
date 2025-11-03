@@ -55,6 +55,9 @@ Route::get('/', function () {
     return view('homepage'); // Refer to homepage.blade.php
 });
 
+// Redirect for intake form
+Route::redirect('/intake', env('BREVO_FORM_LINK'), 301);
+
 // Route for the 'Nieuws' page
 Route::get('/nieuws', function () {
     return view('news'); // Refer to news.blade.php
