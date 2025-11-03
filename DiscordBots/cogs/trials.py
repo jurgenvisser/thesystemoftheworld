@@ -41,22 +41,20 @@ except (TypeError, ValueError):
 _GUILD = discord.Object(id=_GUILD_ID) if _GUILD_ID else None
 
 
+from discordbot import save_paid
+
 class Trials(commands.Cog):
-    """A Cog providing commands and background tasks for managing user trial periods."""
+    """A Cog providing commands and background tasks for managing user memberships with expiry."""
 
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
-
-        # Load environment variables from a .env file if present. This call is idempotent.
         load_dotenv()
 
-        # Guild and role/channel configuration. These mirror the constants in the original bot.
         try:
             self.guild_id: int = int(os.getenv("DISCORD_GUILD_ID"))
         except (TypeError, ValueError):
             self.guild_id = 0
 
-        # Channel used for posting automatic expiry notifications. Use env var if set, else default.
         channel_env = os.getenv("TRIAL_CHANNEL_ID")
         if channel_env is not None:
             try:
@@ -66,7 +64,6 @@ class Trials(commands.Cog):
         else:
             self.channel_id = 1410397459326439455
 
-        # Role to assign during trials and role needed to manage trials. Defaults mirror original.
         role_env = os.getenv("TRIAL_ROLE_ID")
         manager_env = os.getenv("TRIAL_MANAGER_ROLE_ID")
         try:
@@ -78,72 +75,18 @@ class Trials(commands.Cog):
         except ValueError:
             self.trial_manager_role_id = 1377620953135190127
 
-        # Path to the JSON file storing active trials. Keep it in the project root for consistency.
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.trial_file: str = os.path.join(base_dir, "trials.json")
+        # Use shared bot.active_paid for all members with expiry
+        if not hasattr(self.bot, "active_paid"):
+            self.bot.active_paid: Dict[str, Dict[str, Any]] = {}
 
-        # Active trials keyed by user ID as a string. Each entry holds role id, username,
-        # start time and end time. Datetimes are stored as naive UTC in Python and ISO 8601
-        # strings when persisted.
-        self.active_trials: Dict[str, Dict[str, Any]] = {}
-
-        # Load any existing trial data from the file on startup.
-        self._load_trials()
-
-        # Start the background loop that checks for expired trials. This will run every
-        # 30 minutes (matching the original implementation). It begins immediately on
-        # cog initialisation and is cancelled in ``cog_unload``.
-        self.check_trials.start()
-
-    # ------------------------------------------------------------------
-    # Internal persistence helpers
-    # ------------------------------------------------------------------
-    def _load_trials(self) -> None:
-        """Load trial data from the JSON file, converting date strings to ``datetime``."""
-        if not os.path.exists(self.trial_file):
-            self.active_trials = {}
-            return
-
-        try:
-            with open(self.trial_file, "r", encoding="utf-8") as fp:
-                data = json.load(fp)
-            for user_id, trial_info in data.items():
-                try:
-                    # Convert ISO formatted strings back into aware datetimes in UTC
-                    start = datetime.fromisoformat(trial_info["start"])
-                    end = datetime.fromisoformat(trial_info["end"])
-                    self.active_trials[user_id] = {
-                        "role_id": trial_info["role_id"],
-                        "username": trial_info["username"],
-                        "start": start,
-                        "end": end,
-                    }
-                except Exception:
-                    # Skip invalid entries rather than raising; these will be overwritten
-                    continue
-        except Exception:
-            # If the JSON is corrupt, start with an empty dataset
-            self.active_trials = {}
-
-    def _save_trials(self) -> None:
-        """Write the current trial state to disk as ISO formatted strings."""
-        serialisable: Dict[str, Dict[str, Any]] = {}
-        for user_id, trial_info in self.active_trials.items():
-            serialisable[user_id] = {
-                "role_id": trial_info["role_id"],
-                "username": trial_info["username"],
-                "start": trial_info["start"].isoformat(),
-                "end": trial_info["end"].isoformat(),
-            }
-        with open(self.trial_file, "w", encoding="utf-8") as fp:
-            json.dump(serialisable, fp, indent=4)
+        self.check_expiry.start()
 
     # ------------------------------------------------------------------
     # Lifecycle hook
     # ------------------------------------------------------------------
     def cog_unload(self) -> None:
         """Stop the background task when the cog is unloaded."""
-        self.check_trials.cancel()
+        self.check_expiry.cancel()
 
     # ------------------------------------------------------------------
     # Slash command implementations
@@ -160,8 +103,6 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        # Check permission: the invoking user must have the manager role
         manager_role = guild.get_role(self.trial_manager_role_id)
         if manager_role is None or manager_role not in interaction.user.roles:
             await interaction.response.send_message(
@@ -169,8 +110,6 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        # Ensure the bot itself has permission to manage roles
         bot_member = guild.get_member(self.bot.user.id) if self.bot.user else None
         if bot_member is None or not bot_member.guild_permissions.manage_roles:
             await interaction.response.send_message(
@@ -178,8 +117,6 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        # Resolve the trial role
         role = guild.get_role(self.trial_role_id)
         if role is None:
             await interaction.response.send_message(
@@ -187,23 +124,23 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        # If the user already has an active trial, inform the caller
-        if str(user.id) in self.active_trials:
+        # Use bot.active_paid as the unified store
+        if str(user.id) in self.bot.active_paid:
             await interaction.response.send_message(
-                f"{user.display_name} already has an active trial.",
+                f"{user.display_name} already has an active membership or trial.",
                 ephemeral=True,
             )
             return
-
-        # Attempt to add the role and notify the user via DM
         try:
             await user.add_roles(role, reason="Started 7‑day trial")
             embed = discord.Embed(
                 description=(
-                    "# Jouw 7 dagen proefperiode is gestart!\n\n"
-                    "- Je hebt nu toegang tot exclusieve kanalen en functies.\n"
-                    "- Geniet van je proefperiode en ontdek wat onze community te bieden heeft.\n\n"
+                    "# Jouw 7 dagen proefperiode is gestart!\n"
+                    "Jouw proefperiode geeft je toegang tot het pakket **The System Basis** voor een periode van 7 dagen.\n\n"
+                    "The System Basis geeft je de volgende voordelen:\n"
+                    "- Toegang tot verschillende kanalen op de Discord-server.\n"
+                    "- Deelname aan de dagcheck en de weekuitdaging.\n\n"
+                    "Geniet van je proefperiode van The System Basis en ontdek wat onze community te bieden heeft.\n\n"
                     "-# De proefperiode wordt automatisch beëindigd na 7 dagen. Je hoeft hier niets voor te doen.\n"
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
@@ -212,7 +149,6 @@ class Trials(commands.Cog):
             try:
                 await user.send(embed=embed)
             except discord.Forbidden:
-                # User has DMs disabled; silently ignore
                 pass
         except discord.Forbidden:
             await interaction.response.send_message(
@@ -226,19 +162,17 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        # Record the trial
         start_time = datetime.now(timezone.utc)
-        # end_time = start_time + timedelta(seconds=10) # For testing purposes
         end_time = start_time + timedelta(days=7)
-        self.active_trials[str(user.id)] = {
+        self.bot.active_paid[str(user.id)] = {
             "role_id": role.id,
+            "role_name": role.name if role else "Basis",
+            "tier": "trial",
             "username": user.name,
             "start": start_time,
             "end": end_time,
         }
-        self._save_trials()
-
+        save_paid(self.bot)
         await interaction.response.send_message(
             f"7 dagen proefperiode gestart voor {user.mention}.",
             suppress_embeds=True,
@@ -256,8 +190,6 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        # Permission check
         manager_role = guild.get_role(self.trial_manager_role_id)
         if manager_role is None or manager_role not in interaction.user.roles:
             await interaction.response.send_message(
@@ -265,8 +197,6 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        # Bot must be able to manage roles
         bot_member = guild.get_member(self.bot.user.id) if self.bot.user else None
         if bot_member is None or not bot_member.guild_permissions.manage_roles:
             await interaction.response.send_message(
@@ -274,25 +204,20 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        # Check if the user actually has a trial
-        if str(user.id) not in self.active_trials:
+        if str(user.id) not in self.bot.active_paid or self.bot.active_paid[str(user.id)].get("tier") != "trial":
             await interaction.response.send_message(
                 f"{user.display_name} does not have an active trial.",
                 ephemeral=True,
             )
             return
-
-        trial_info = self.active_trials[str(user.id)]
-        role = guild.get_role(trial_info["role_id"])
+        member_info = self.bot.active_paid[str(user.id)]
+        role = guild.get_role(member_info["role_id"])
         if role is None:
             await interaction.response.send_message(
-                "Trial role not found. Please check the trial data.",
+                "Trial role not found. Please check the data.",
                 ephemeral=True,
             )
             return
-
-        # Attempt to remove the role and DM the user
         try:
             await user.remove_roles(role, reason="Trial ended manually")
             embed = discord.Embed(
@@ -318,18 +243,15 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        # Remove from active trials and persist
-        del self.active_trials[str(user.id)]
-        self._save_trials()
-
+        del self.bot.active_paid[str(user.id)]
+        save_paid(self.bot)
         await interaction.response.send_message(
             f"Proefperiode beëindigd voor {user.mention}.",
             suppress_embeds=True,
         )
 
     async def _send_trial_list(self, interaction: discord.Interaction) -> None:
-        """Helper to send a list of active trials and their remaining time."""
+        """Helper to send a list of members with expiry (trials only) and their remaining time."""
         guild = interaction.guild
         if guild is None:
             await interaction.response.send_message(
@@ -337,39 +259,35 @@ class Trials(commands.Cog):
                 ephemeral=True,
             )
             return
-
-        if not self.active_trials:
+        # Only show members whose tier is "trial"
+        trials = {uid: info for uid, info in self.bot.active_paid.items() if info.get("tier") == "trial"}
+        if not trials:
             await interaction.response.send_message(
                 "Er zijn momenteel geen actieve trials.",
                 ephemeral=True,
             )
             return
-
         lines: list[str] = []
         now = datetime.now(timezone.utc)
-        for user_id, trial_info in self.active_trials.items():
+        for user_id, info in trials.items():
             member = guild.get_member(int(user_id))
             if member is None:
-                # Member left the server or cannot be found; skip
                 continue
-            end_time: datetime = trial_info["end"]
+            end_time: datetime = info["end"]
             remaining = end_time - now
             if remaining.total_seconds() < 0:
-                # Already expired; will be cleaned up by background task
                 continue
             days = remaining.days
             hours, rem = divmod(remaining.seconds, 3600)
             minutes = rem // 60
             nickname = member.nick if member.nick else member.display_name
             lines.append(f"@{nickname}: {days} dagen {hours} uur en {minutes} minuten")
-
         if not lines:
             await interaction.response.send_message(
                 "Er zijn momenteel geen actieve trials.",
                 ephemeral=True,
             )
             return
-
         await interaction.response.send_message("\n".join(lines), suppress_embeds=True)
 
     @app_commands.command(name="triallist", description="Toon alle actieve trials met resterende tijd")
@@ -387,23 +305,21 @@ class Trials(commands.Cog):
     # ------------------------------------------------------------------
     # Background task
     # ------------------------------------------------------------------
-    # @tasks.loop(seconds=20) # For testing purposes
     @tasks.loop(minutes=30)
-    async def check_trials(self) -> None:
-        """Periodically check for expired trials and remove roles accordingly."""
-        # Acquire the guild object; if None (e.g. bot not yet connected), do nothing
+    async def check_expiry(self) -> None:
+        """Periodically check for expired memberships (trials) and remove roles accordingly."""
         guild = self.bot.get_guild(self.guild_id) if self.guild_id else None
         if guild is None:
             return
-
         channel = guild.get_channel(self.channel_id) if self.channel_id else None
         now = datetime.now(timezone.utc)
         to_remove: list[str] = []
-
-        for user_id, trial_info in list(self.active_trials.items()):
-            if now >= trial_info["end"]:
+        for user_id, info in list(self.bot.active_paid.items()):
+            if info.get("tier") != "trial":
+                continue
+            if now >= info["end"]:
                 member = guild.get_member(int(user_id))
-                role = guild.get_role(trial_info["role_id"])
+                role = guild.get_role(info["role_id"])
                 if member is not None and role is not None and role in member.roles:
                     try:
                         await member.remove_roles(role, reason="Trial period ended")
@@ -420,23 +336,18 @@ class Trials(commands.Cog):
                             await member.send(embed=embed)
                         except discord.Forbidden:
                             pass
-                        # Optionally announce in a specific channel
                         if channel is not None:
                             await channel.send(f"Proefperiode automatisch beëindigd voor {member.display_name}.")
                     except discord.Forbidden:
-                        # Cannot modify roles; skip silently
                         pass
                 to_remove.append(user_id)
-
-        # Clean up expired trials and persist
         for user_id in to_remove:
-            self.active_trials.pop(user_id, None)
+            self.bot.active_paid.pop(user_id, None)
         if to_remove:
-            self._save_trials()
+            save_paid(self.bot)
 
-    @check_trials.before_loop
-    async def before_check_trials(self) -> None:
-        """Ensure the bot is ready before starting the background task."""
+    @check_expiry.before_loop
+    async def before_check_expiry(self) -> None:
         await self.bot.wait_until_ready()
 
 

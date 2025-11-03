@@ -12,7 +12,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FacebookController;
 use Illuminate\Http\Request;
 
-
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
 Route::get('/callback', [DiscordController::class, 'handleDiscordCallback']);
 

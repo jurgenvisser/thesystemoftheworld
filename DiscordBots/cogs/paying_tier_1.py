@@ -12,12 +12,10 @@ can be provided via environment variables. If not set, the defaults mirror
 those used in the trial system:
 
 * ``DISCORD_GUILD_ID`` – the guild in which commands are registered.
-* ``PAID_ROLE_ID`` – role assigned to paying customers (default: 1429883911839809599).
-* ``PAID_MANAGER_ROLE_ID`` – role allowed to invoke paid commands (falls back to
-  ``TRIAL_MANAGER_ROLE_ID`` if set, or 1377620953135190127).
+* ``PAID_TIER_1_ROLE_ID`` – role assigned to paying customers (default: 1429883911839809599).
+* ``MANAGER_ROLE_ID`` – role allowed to invoke paid commands
 * ``TRIAL_CHANNEL_ID`` – channel for notifications; used for both trials and paid lists.
-* ``PAID_CHANNEL_ID`` – optional override for paid notifications; if unset,
-  ``TRIAL_CHANNEL_ID`` or the default is used.
+* ``BOT_MESSAGES_CHANNEL_ID`` – optional override for paid notifications; if unset, falls back to hardcoded default.
 """
 
 from __future__ import annotations
@@ -44,8 +42,8 @@ except (TypeError, ValueError):
 _GUILD = discord.Object(id=_GUILD_ID) if _GUILD_ID else None
 
 
-class Paying(commands.Cog):
-    """Cog providing commands to manage paid members."""
+class PayingTier1(commands.Cog):
+    """Cog providing commands to manage paid Tier 1 members."""
 
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
@@ -57,9 +55,9 @@ class Paying(commands.Cog):
         except (TypeError, ValueError):
             self.guild_id = 0
 
-        # Channel for notifications; use PAID_CHANNEL_ID if provided, else fall back to
-        # TRIAL_CHANNEL_ID or a hardcoded default.
-        channel_env = os.getenv("PAID_CHANNEL_ID") or os.getenv("TRIAL_CHANNEL_ID")
+        # Channel for notifications; use BOT_MESSAGES_CHANNEL_ID if provided, else fall back to
+        # a hardcoded default.
+        channel_env = os.getenv("BOT_MESSAGES_CHANNEL_ID")
         if channel_env:
             try:
                 self.channel_id: int = int(channel_env)
@@ -69,15 +67,15 @@ class Paying(commands.Cog):
             self.channel_id = 1410397459326439455
 
         # Role ID for paid members; default provided by the user.
-        paid_role_env = os.getenv("PAID_ROLE_ID")
+        paid_tier_1_role_env = os.getenv("PAID_TIER_1_ROLE_ID")
         try:
-            self.paid_role_id: int = int(paid_role_env) if paid_role_env else 1429883911839809599
+            self.paid_tier_1_role_id: int = int(paid_tier_1_role_env) if paid_tier_1_role_env else 1429883911839809599
         except ValueError:
-            self.paid_role_id = 1429883911839809599
+            self.paid_tier_1_role_id = 1429883911839809599
 
         # Manager role allowed to run paid commands; fall back to TRIAL_MANAGER_ROLE_ID
         # if specified, else the default used in trials.
-        manager_env = os.getenv("PAID_MANAGER_ROLE_ID") or os.getenv("TRIAL_MANAGER_ROLE_ID")
+        manager_env = os.getenv("MANAGER_ROLE_ID")
         try:
             self.manager_role_id: int = int(manager_env) if manager_env else 1377620953135190127
         except ValueError:
@@ -85,63 +83,43 @@ class Paying(commands.Cog):
 
         # Path to JSON file storing active paid members
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.paid_file: str = os.path.join(base_dir, "paid.json")
+        self.paid_file: str = os.path.join(base_dir, "registered_members.json")
 
-        # Dictionary of active paid memberships keyed by user ID as string. Each entry
-        # contains role_id, username, start and end times. End time is not used for
-        # paid subscriptions but is kept for structural consistency.
-        self.active_paid: Dict[str, Dict[str, Any]] = {}
-        self._load_paid()
+        # Dictionary of active paid memberships keyed by user ID as string.
+        # This is loaded by the bot on startup and shared across cogs.
+        if not hasattr(self.bot, "active_paid"):
+            self.bot.active_paid: Dict[str, Dict[str, Any]] = {}
+        # Provide a save_paid method for convenience
+        from discordbot import save_paid
+        self.save_paid = lambda: save_paid(self.bot)
 
     # ------------------------------------------------------------------
-    # Persistence helpers
+    # Persistence helpers (now handled by shared bot.active_paid and save_paid)
     # ------------------------------------------------------------------
-    def _load_paid(self) -> None:
-        """Load paid membership data from JSON file into memory."""
-        if not os.path.exists(self.paid_file):
-            self.active_paid = {}
-            return
-        try:
-            with open(self.paid_file, "r", encoding="utf-8") as fp:
-                data = json.load(fp)
-            for user_id, info in data.items():
-                try:
-                    start = datetime.fromisoformat(info["start"])
-                    # End time is not meaningful for paid members; parse but ignore
-                    end = datetime.fromisoformat(info["end"]) if info.get("end") else start
-                    self.active_paid[user_id] = {
-                        "role_id": info["role_id"],
-                        "username": info["username"],
-                        "start": start,
-                        "end": end,
-                    }
-                except Exception:
-                    continue
-        except Exception:
-            self.active_paid = {}
-
-    def _save_paid(self) -> None:
-        """Persist the current paid membership state to JSON."""
-        serialisable: Dict[str, Dict[str, Any]] = {}
-        for user_id, info in self.active_paid.items():
-            serialisable[user_id] = {
-                "role_id": info["role_id"],
-                "username": info["username"],
-                "start": info["start"].isoformat(),
-                # Store end equal to start for structural compatibility
-                "end": info["end"].isoformat() if isinstance(info["end"], datetime) else info["start"].isoformat(),
-            }
-        with open(self.paid_file, "w", encoding="utf-8") as fp:
-            json.dump(serialisable, fp, indent=4)
 
     # ------------------------------------------------------------------
     # Slash command implementations
     # ------------------------------------------------------------------
-    @app_commands.command(name="paid", description="Mark a user as a paid customer")
+    def assign_tier(self, guild: discord.Guild, user: discord.Member, tier: str = "1") -> dict:
+        """
+        Helper to assign the appropriate paid tier role and return info for storage.
+        In future, this can be extended to support more tiers.
+        """
+        # For now, only tier "1" is supported, but this can be expanded.
+        if tier == "1":
+            role = guild.get_role(self.paid_tier_1_role_id)
+            role_name = role.name if role else "Basis"
+        else:
+            # Placeholder for additional tiers
+            role = None
+            role_name = f"Tier {tier}"
+        return {"role": role, "role_name": role_name, "tier": tier}
+
+    @app_commands.command(name="basis", description="Mark a user as a tier 1 customer")
     @app_commands.guilds(_GUILD)
-    @app_commands.describe(user="The user to give paid customer status")
-    async def paid(self, interaction: discord.Interaction, user: discord.Member) -> None:
-        """Assign the paid role to a user and record their membership."""
+    @app_commands.describe(user="The user to give tier 1 customer status")
+    async def basis(self, interaction: discord.Interaction, user: discord.Member) -> None:
+        """Assign the tier 1 role to a user and record their membership."""
         guild = interaction.guild
         if guild is None:
             await interaction.response.send_message(
@@ -168,35 +146,51 @@ class Paying(commands.Cog):
             )
             return
 
-        # Resolve the paid role
-        role = guild.get_role(self.paid_role_id)
+        # Assign tier and role
+        tier = "1"
+        tier_info = self.assign_tier(guild, user, tier)
+        role = tier_info["role"]
+        role_name = tier_info["role_name"]
         if role is None:
             await interaction.response.send_message(
-                "Paid role not found. Please check the PAID_ROLE_ID.",
+                f"Tier {tier} role not found. Please check the configuration.",
                 ephemeral=True,
             )
             return
 
         # If user already has paid membership
-        if str(user.id) in self.active_paid:
+        if str(user.id) in self.bot.active_paid:
             await interaction.response.send_message(
-                f"{user.display_name} is already marked as a paid customer.",
+                f"{user.display_name} is already marked as a tier {tier} customer.",
                 ephemeral=True,
             )
             return
 
         # Assign the role
         try:
-            await user.add_roles(role, reason="Granted paid membership")
+            await user.add_roles(role, reason=f"Granted tier {tier} membership")
             # DM the user to thank them
+            indent = "\u00A0" * 4  # non-breaking spaces (echte spaties die blijven staan)
             embed = discord.Embed(
                 description=(
-                    "# Je bent nu lid van The System Premium!\n\n"
-                    "- Je hebt nu volledige toegang tot onze community en exclusieve functies.\n"
-                    "- Als je vragen hebt of ondersteuning nodig hebt, laat het ons dan weten.\n\n"
+                    "# Je bent nu lid van The System Basis!\n\n"
+
+                    "The System Basis geeft je de volgende voordelen:\n"
+                    "- Toegang tot informatieve en motiverende kanalen zoals:\n"
+                    f"{indent}- <#1382001389907087390>\n" #dagtips
+                    f"{indent}- <#1382009838036455516>\n" #dagqouto
+                    "- Deelname aan de kanalen:\n"
+                    f"{indent}- <#1397302060139020309>\n" #dagcheck
+                    f"{indent}- <#1390407711757303808>\n" #uitdaging-van-de-week
+                    "- De kans om gratis deel uit te maken van de 1% groep!\n"
+                    "- 2 afspraken met <@1282862220631478454> per week om je voortgang te bespreken en doelen te stellen.\n\n"
+
+                    "Geniet van The System Basis en ontdek wat onze community te bieden heeft.\n"
+                    "Als je vragen hebt of ondersteuning nodig hebt, laat het ons dan weten.\n\n"
+
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
-                color=discord.Color(int("D9AF5C", 16)),  # LimeGreen colour as a nice contrast
+                color=discord.Color(int("D9AF5C", 16)),
             )
             try:
                 await user.send(embed=embed)
@@ -217,33 +211,26 @@ class Paying(commands.Cog):
 
         # Record membership
         start_time = datetime.now(timezone.utc)
-        # For consistency, set end equal to start; not meaningful for paid
-        self.active_paid[str(user.id)] = {
+        self.bot.active_paid[str(user.id)] = {
             "role_id": role.id,
+            "role_name": role_name,
+            "tier": tier,
             "username": user.name,
             "start": start_time,
             "end": start_time,
         }
-        self._save_paid()
-
-        # # Notify channel that a new paid customer has been added
-        # channel = guild.get_channel(self.channel_id)
-        # if channel is not None:
-        #     try:
-        #         await channel.send(f"{user.display_name} is now a paid customer!")
-        #     except Exception:
-        #         pass
+        self.save_paid()
 
         await interaction.response.send_message(
-            f"Betaalde klant status toegekend aan {user.mention}.",
+            f"The System Basis status toegekend aan {user.mention}.",
             suppress_embeds=True,
         )
 
-    @app_commands.command(name="endpaid", description="Revoke paid customer status from a user")
+    @app_commands.command(name="endbasis", description="Revoke tier 1 customer status from a user")
     @app_commands.guilds(_GUILD)
-    @app_commands.describe(user="The user whose paid status should be removed")
-    async def endpaid(self, interaction: discord.Interaction, user: discord.Member) -> None:
-        """Remove the paid role from a user and delete their membership record."""
+    @app_commands.describe(user="The user whose tier 1 status should be removed")
+    async def endbasis(self, interaction: discord.Interaction, user: discord.Member) -> None:
+        """Remove the tier 1 role from a user and delete their membership record."""
         guild = interaction.guild
         if guild is None:
             await interaction.response.send_message(
@@ -270,29 +257,29 @@ class Paying(commands.Cog):
             return
 
         # Ensure user is currently marked as paid
-        if str(user.id) not in self.active_paid:
+        if str(user.id) not in self.bot.active_paid:
             await interaction.response.send_message(
-                f"{user.display_name} is not currently marked as a paid customer.",
+                f"{user.display_name} is not currently marked as a tier 1 customer.",
                 ephemeral=True,
             )
             return
 
-        info = self.active_paid[str(user.id)]
+        info = self.bot.active_paid[str(user.id)]
         role = guild.get_role(info["role_id"])
         if role is None:
             await interaction.response.send_message(
-                "Paid role not found. Please check the PAID_ROLE_ID.",
+                "Tier 1 role not found. Please check the TIER_1_ROLE_ID.",
                 ephemeral=True,
             )
             return
 
         # Remove the role and DM the user
         try:
-            await user.remove_roles(role, reason="Revoked paid membership")
+            await user.remove_roles(role, reason="Revoked tier 1 membership")
             embed = discord.Embed(
                 description=(
-                    "## Je betaalde lidmaatschap is beëindigd.\n\n"
-                    "- Je hebt geen toegang meer tot de betaalde functies.\n"
+                    "## Je The System Basis lidmaatschap is beëindigd.\n\n"
+                    "- Je hebt geen toegang meer tot de voordelen van The System Basis.\n"
                     "- Als je denkt dat dit een vergissing is, neem dan contact op met een beheerder.\n\n"
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
@@ -316,8 +303,8 @@ class Paying(commands.Cog):
             return
 
         # Remove from records
-        del self.active_paid[str(user.id)]
-        self._save_paid()
+        del self.bot.active_paid[str(user.id)]
+        self.save_paid()
 
         # # Notify channel
         # channel = guild.get_channel(self.channel_id)
@@ -328,49 +315,12 @@ class Paying(commands.Cog):
         #         pass
 
         await interaction.response.send_message(
-            f"Betaalde klant status verwijderd voor {user.mention}.",
+            f"The System Basis status verwijderd voor {user.mention}.",
             suppress_embeds=True,
         )
         
-    @app_commands.command(name="plist", description="List all paid customers")
-    @app_commands.guilds(_GUILD)
-    async def plist(self, interaction: discord.Interaction) -> None:
-        """Send a message to the notification channel listing all current paid customers."""
-        guild = interaction.guild
-        if guild is None:
-            await interaction.response.send_message(
-                "This command can only be used in a guild.",
-                ephemeral=True,
-            )
-            return
-
-        channel = guild.get_channel(self.channel_id)
-        if channel is None:
-            await interaction.response.send_message(
-                "The notification channel could not be found.",
-                ephemeral=True,
-            )
-            return
-
-        if not self.active_paid:
-            await channel.send("Er zijn momenteel geen betaalde klanten.")
-            await interaction.response.send_message(
-                "Er zijn momenteel geen betaalde klanten.",
-                ephemeral=True,
-            )
-            return
-
-        lines = []
-        for user_id, info in self.active_paid.items():
-            member = guild.get_member(int(user_id))
-            nickname = member.nick if member.nick else member.display_name
-            display_name = member.display_name if member else info.get("username", user_id) # This doesnt get used but is breaks if this isnt here. Need to fix this later!
-            lines.append(f"@{nickname}")
-
-        await interaction.response.send_message("\n".join(lines), suppress_embeds=True)
-
 
 async def setup(bot: commands.Bot) -> None:
-    """Load the Paying cog."""
-    await bot.add_cog(Paying(bot))
-    print("Paying cog loaded")
+    """Load the PayingTier1 cog."""
+    await bot.add_cog(PayingTier1(bot))
+    print("PayingTier1 cog loaded")

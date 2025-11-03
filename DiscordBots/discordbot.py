@@ -28,6 +28,9 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
+import json
+import os
+from datetime import datetime, timezone
 
 # Load environment variables from .env. This is idempotent and safe to call
 # multiple times across modules.
@@ -52,6 +55,49 @@ intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
+def load_paid_data(bot):
+    """Load registered_members.json and store it on the bot for sharing between cogs."""
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    paid_file = os.path.join(base_dir, "registered_members.json")
+    bot.active_paid = {}
+    if not os.path.exists(paid_file):
+        return
+    try:
+        with open(paid_file, "r", encoding="utf-8") as fp:
+            data = json.load(fp)
+        for user_id, info in data.items():
+            try:
+                start = datetime.fromisoformat(info["start"])
+                end = datetime.fromisoformat(info["end"]) if info.get("end") else start
+                bot.active_paid[user_id] = {
+                    "role_id": info["role_id"],
+                    "role_name": info.get("role_name", "Basis"),
+                    "tier": info.get("tier", "1"),
+                    "username": info["username"],
+                    "start": start,
+                    "end": end,
+                }
+            except Exception:
+                continue
+    except Exception as exc:
+        print(f"Failed to load registered_members.json: {exc}")
+
+def save_paid(bot):
+    """Write bot.active_paid to registered_members.json (shared for all cogs)."""
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    paid_file = os.path.join(base_dir, "registered_members.json")
+    serializable = {}
+    for user_id, info in bot.active_paid.items():
+        serializable[user_id] = {
+            "role_id": info["role_id"],
+            "role_name": info.get("role_name", "Basis"),
+            "tier": info.get("tier", "1"),
+            "username": info["username"],
+            "start": info["start"].isoformat(),
+            "end": info["end"].isoformat() if isinstance(info["end"], datetime) else info["start"].isoformat(),
+        }
+    with open(paid_file, "w", encoding="utf-8") as fp:
+        json.dump(serializable, fp, indent=4)
 
 @bot.event
 async def on_ready() -> None:
@@ -106,10 +152,10 @@ async def load_cogs() -> None:
     also be ``async`` and awaited before starting the bot.
     """
     # Load the ping cog if present
-    try:
-        await bot.load_extension("cogs.ping")
-    except Exception as exc:
-        print(f"Failed to load ping cog: {exc}")
+    # try:
+    #     await bot.load_extension("cogs.ping")
+    # except Exception as exc:
+    #     print(f"Failed to load ping cog: {exc}")
 
     # Load the trials cog which provides /trial, /endtrial, /triallist and /tlist
     try:
@@ -118,22 +164,40 @@ async def load_cogs() -> None:
         print(f"Failed to load trials cog: {exc}")
 
     # Load the AutoMod DM cog for sending direct messages when AutoMod triggers
-    try:
-        await bot.load_extension("cogs.automod")
-    except Exception as exc:
-        print(f"Failed to load AutoModDM cog: {exc}")
+    # try:
+    #     await bot.load_extension("cogs.automod")
+    # except Exception as exc:
+    #     print(f"Failed to load AutoModDM cog: {exc}")
 
-    # Load the paying cog for managing paid customer memberships
+    # Load the paying_tier_1 cog for managing paid customer memberships
     try:
-        await bot.load_extension("cogs.paying")
+        await bot.load_extension("cogs.paying_tier_1")
     except Exception as exc:
-        print(f"Failed to load paying cog: {exc}")
+        print(f"Failed to load PayingTier1 cog: {exc}")
+
+    # Load the paying_tier_2 cog for managing paid customer memberships
+    try:
+        await bot.load_extension("cogs.paying_tier_2")
+    except Exception as exc:
+        print(f"Failed to load PayingTier2 cog: {exc}")
+
+    # Load the paying_tier_3 cog for managing paid customer memberships
+    try:
+        await bot.load_extension("cogs.paying_tier_3")
+    except Exception as exc:
+        print(f"Failed to load PayingTier3 cog: {exc}")
+
+    # Load the list_paying cog for listing paid customers
+    try:
+        await bot.load_extension("cogs.list_registered")
+    except Exception as exc:
+        print(f"Failed to load ListPaying cog: {exc}")
     
     # Load the server cog if present
-    try:
-        await bot.load_extension("cogs.server")
-    except Exception as exc:
-        print(f"Failed to load server cog: {exc}")
+    # try:
+    #     await bot.load_extension("cogs.server")
+    # except Exception as exc:
+    #     print(f"Failed to load server cog: {exc}")
 
 
 async def main() -> None:
@@ -144,6 +208,7 @@ async def main() -> None:
     async with bot:
         # Load cogs before starting the bot. Slash commands defined in cogs
         # are registered at this point.
+        load_paid_data(bot)
         await load_cogs()
         # Start the bot. This call blocks until the bot is shut down.
         await bot.start(TOKEN)
