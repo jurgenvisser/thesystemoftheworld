@@ -21,8 +21,8 @@ const themeImages = {
         primary: '/images/logos/BlueprintCrypto.svg',
     },
     'theme-image-homepage-logo-full': {
-        secondary: '/images/logos/BlueprintFull.svg',
-        primary: '/images/logos/TheSystemFull.svg',
+        secondary: '/images/TheSystemProfilePicture.jpeg',
+        primary: '/images/TheSystemProfilePicture.jpeg',
     },
     'theme-image-contact-logo-full': {
         secondary: '/images/logos/BlueprintFull.svg',

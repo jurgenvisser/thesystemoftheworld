@@ -178,7 +178,7 @@ class PayingTier1(commands.Cog):
                     "The System Basis geeft je de volgende voordelen:\n"
                     "- Toegang tot informatieve en motiverende kanalen zoals:\n"
                     f"{indent}- <#1382001389907087390>\n" #dagtips
-                    f"{indent}- <#1382009838036455516>\n" #dagqouto
+                    f"{indent}- <#1382009838036455516>\n" #dagquote
                     "- Deelname aan de kanalen:\n"
                     f"{indent}- <#1397302060139020309>\n" #dagcheck
                     f"{indent}- <#1390407711757303808>\n" #uitdaging-van-de-week

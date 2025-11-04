@@ -78,9 +78,9 @@ Route::get('/over-ons', function () {
     return view('about-us'); // Refer to team-and-origin.blade.php
 });
 
-// Route for the 'Kennis Maken' page
-Route::get('/kennis-maken', function () {
-    return view('kennis-maken'); // Refer to kennis-maken.blade.php
+// Route for the 'Coaching' page
+Route::get('/coaching', function () {
+    return view('coaching'); // Refer to coaching.blade.php
 });
 
 // Route for the 'Contact' page
