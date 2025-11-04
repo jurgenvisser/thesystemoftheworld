@@ -39,89 +39,10 @@
             </div>
         </div>
 
-        <!-- Pakketoverzicht Section -->
-        <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify shadow-md">
-                <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6">Pakketoverzicht</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <div>
-                        <h3 class="text-xl lg:text-2xl font-bold mb-4">Gratis</h3>
-                        <ul class="list-disc list-inside text-base lg:text-lg space-y-2">
-                            <li>Introductiesessie</li>
-                            <li>Gelimiteerde Discord Community ervaring</li>
-                            <ul class="list-disc list-inside ml-12">
-                                <li>#stel-jezelf-voor</li>
-                                <li>#gesprekken</li>
-                                <li>#het-systeem</li>
-                                <li>#off-topic</li>
-                            </ul>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl lg:text-2xl font-bold mb-4">Basis</h3>
-                        <ul class="list-disc list-inside text-base lg:text-lg space-y-2">
-                            {{-- <li>Introductiesessie</li> --}}
-                            <li>Alles van Gratis</li>
-                            <li>Basis coaching tools</li>
-                            <li>Basis Discord Community ervaring</li>
-                            <ul class="list-disc list-inside ml-12">
-                                <li><span class="font-bold">Basis</span> Discord Role</li>
-                                <li>#dagtips</li>
-                                <li>#dagquote</li>
-                                <li>#dagcheck</li>
-                                <li>#uitdaging-van-de-week</li>
-                                <li>Kans om gratis mee te doen met 1%</li>
-                            </ul>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl lg:text-2xl font-bold mb-4">Groei</h3>
-                        <ul class="list-disc list-inside text-base lg:text-lg space-y-2">
-                            <li>Alles van Basis</li>
-                            <li>Uitgebreide coaching tools</li>
-                            <li>Persoonlijke voortgangsmonitor</li>
-                            <li>Wekelijkse coachgesprekken</li>
-                            <li>Spoed tot 2 uur 's nachts</li>
-                            <li>Uitgebreide Discord Community ervaring</li>
-                            <ul class="list-disc list-inside ml-12">
-                                <li>Alle voordelen van Basis +</li>
-                                <li><span class="font bold">Groei</span> Discord Role</li>
-                                <li><span class="font bold">1%</span> Discord Role</li>
-                                <li>#wekelijks-groepsgesprek</li>
-                                <li>(voice) Groepsgesprek</li>
-                                <li>(voice) Off Topic</li>
-                            </ul>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl lg:text-2xl font-bold mb-4">Elite</h3>
-                        <ul class="list-disc list-inside text-base lg:text-lg space-y-2">
-                            <li>Alles van Basis en Groei</li>
-                            <li>Volledige coaching tools</li>
-                            <li>Dagelijkse check-ins</li>
-                            <li>24/7 Spoed (in overleg)</li>
-                            <li>Exclusieve workshops en events</li>
-                            <li>Volledige Discord Community ervaring</li>
-                            <ul class="list-disc list-inside ml-12">
-                                <li>Alle voordelen van Basis en Groei +</li>
-                                <li><span class="font-bold">Elite</span> Discord Role</li>
-                                <li>#De-kern</li>
-                                <li>(voice) Voice Kanaal</li>
-                            </ul>
-                        </ul>
-                    </div>
-                </div>
-                <p class="text-base lg:text-lg mb-6 mt-">Als dit iets is dat jou aanspreekt? Vertel ons hoe we je kunnen bereiken en Quinn plant zo snel mogelijk een kennismaking met je in.</p>
-                <div class="mb-6">
-                    <a href="{{ $brevoFormLink }}" class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800">Laat je gegevens achter!</a>
-                </div>
-            </div>
-        </div>
-
-        {{-- @include('layouts.coaching-table') --}}
+        @include('layouts.coaching-table')
 
         <!-- Resultaten / Reviews Section -->
-        <div class="h-auto lg:h-full col-span-6">
+        <div class="h-auto lg:h-full col-span-6 mt-10"> <!-- Added margin-top for spacing NEEDS TO BE FIXED-->
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6">Resultaten / Reviews</h2>
                 <p class="text-base lg:text-lg mb-6">Onze leden behalen indrukwekkende resultaten met The System. Hieronder enkele ervaringen en reviews van mensen die jou voorgingen.</p>

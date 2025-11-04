@@ -63,18 +63,13 @@ o
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Updated Call-To-Action Content -->
                 <div class="">
-                    @if(session('facebook_data'))
-                        <div class="p-4 bg-gray-900 text-white rounded-lg mt-4">
-                            <h3>Facebook Auth Data</h3>
-                            <pre>{{ json_encode(session('facebook_data'), JSON_PRETTY_PRINT) }}</pre>
-                        </div>
-                    @endif
                     <h2 class="mb-8 lg:mb-16 px-4 lg:px-0 text-4xl lg:text-5xl uppercase">
                         Jouw vaste platform voor <span class="font-bold">mentale gezondheid</span>
                         <span class="clover-chess"></span>
                     </h2>
                     <p class="text-base lg:text-lg mb-2 px-4 lg:px-0">
                         — structuur, discipline en groei voor de lange termijn.
+                    </p>
                     <p class="text-base lg:text-lg mb-8 lg:mb-16 px-4 lg:px-0">
                         Geen vluchtige motivatie, maar een systeem dat werkt. Vanaf €50 per maand bouw je aan blijvende rust, helderheid en controle.
                     </p>
