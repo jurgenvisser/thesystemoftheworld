@@ -144,6 +144,18 @@
                                 <p class="mt-2 text-base">Output: <span class="text-green-500">{{ session('discord_output') }}</span></p>
                             @endif
                         </form>
+
+                        
+                        <form method="POST" action="{{ route('admin.generate-discord-invite') }}">
+                            @csrf
+                            <button type="submit" class="w-full bg-black text-white rounded hover:ring hover:ring-colorPrimary py-3 px-6 hover:bg-gray-800 text-lg lg:text-xl">
+                                Discord Generate New Invite
+                            </button>
+                            @if(session('discord_invite_status') && session('discord_invite_output'))
+                                <p class="mt-2 text-base">Status: {{ session('discord_invite_status') }}</p>
+                                <p class="mt-2 text-base">Output: <span class="text-green-500">{{ session('discord_invite_output') }}</span></p>
+                            @endif
+                        </form>
                     </div>
                 </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -75,5 +76,16 @@ class AdminController extends Controller
 
         return back()->with('discord_status', '✅ Succes')
                      ->with('discord_output', $output);
+    }
+
+    public function generateDiscordInvite(Request $request)
+    {
+        Artisan::call('discord:generate-invite');
+        $inviteLink = trim(Artisan::output());
+
+        return redirect()->back()->with([
+            'discord_invite_status' => '✅ Succes',
+            'discord_invite_output' => $inviteLink,
+        ]);
     }
 }

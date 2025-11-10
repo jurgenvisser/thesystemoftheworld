@@ -12,6 +12,7 @@ class Kernel extends ConsoleKernel
         \App\Console\Commands\UpdateTikTokFollowers::class,
         \App\Console\Commands\UpdateDiscordStats::class,
         \App\Console\Commands\UpdateMetaFollowers::class,
+        \App\Console\Commands\GenerateDiscordInvite::class,
     ];
 
     protected function schedule(Schedule $schedule): void
