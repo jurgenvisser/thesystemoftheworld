@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('tiktok_follower_count');
+            // $table->dropColumn('tiktok_follower_count');
             $table->dropColumn('tiktok_last_updated');
-            $table->string('facebook_access_token')->nullable();
+            // $table->string('facebook_access_token')->nullable();
         });
     }
 
@@ -24,9 +24,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('tiktok_follower_count')->nullable();
+            // $table->integer('tiktok_follower_count')->nullable();
             $table->timestamp('tiktok_last_updated')->nullable();
-            $table->dropColumn('facebook_access_token');
+            // $table->dropColumn('facebook_access_token');
         });
     }
 };

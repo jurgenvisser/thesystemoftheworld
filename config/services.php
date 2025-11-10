@@ -40,6 +40,11 @@ return [
         'page_id' => env('INSTAGRAM_PAGE_ID'),
     ],
 
+    'youtube' => [
+        'api_key' => env('YOUTUBE_API_KEY'),
+        'channel_id' => env('YOUTUBE_CHANNEL_ID'),
+    ],
+
     'socials_log_all' => env('SOCIALS_LOG_ALL', false),
 
     'postmark' => [

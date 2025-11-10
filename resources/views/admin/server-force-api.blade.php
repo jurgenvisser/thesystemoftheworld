@@ -35,6 +35,7 @@
                         <div class="h-full flex flex-col justify-center items-center  p-8 lg:p-20 py-20">
                             <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">API Informatie</h1>
                             <p class="text-base lg:text-lg">TikTok volgers: {{ $tiktokFollowerCount }}</p>
+                            <p class="text-base lg:text-lg">YouTube subscribers: {{ $youtubeSubscriberCount }}</p>
                             <p class="text-base lg:text-lg">Discord leden: {{ $discordMemberCount }}</p>
                             <p class="text-base lg:text-lg">Facebook volgers: {{ $facebookFollowerCount }}</p>
                             <p class="text-base lg:text-lg">Instagram volgers: {{ $instagramFollowerCount }}</p>
@@ -45,11 +46,6 @@
                                     {{ $discordInviteLink }}
                                 </a>
                             </p>
-                            {{-- <p class="text-base lg:text-lg text-center leading-snug">App Versie</p>
-                            <p class="text-base lg:text-lg text-center leading-snug">
-                                {{ $appVersion }}
-                            </p> --}}
-
                         </div>
                     </div>
                 </div>
@@ -121,6 +117,18 @@
                             @endif
                         </form>
 
+                        <!-- YouTube -->
+                        <form method="POST" action="{{ route('admin.update-youtube-followers') }}" class="mb-4">
+                            @csrf
+                            <button type="submit" class="w-full bg-black text-white rounded hover:ring hover:ring-colorPrimary py-3 px-6 hover:bg-gray-800 text-lg lg:text-xl">
+                                YouTube Subscriber Count ophalen
+                            </button>
+                            @if(session('youtube_status') && session('youtube_output'))
+                                <p class="mt-2 text-base">Status: {{ session('youtube_status') }}</p>
+                                <p class="mt-2 text-base">Output: <span class="text-green-500">{{ session('youtube_output') }}</span></p>
+                            @endif
+                        </form>
+
                         <!-- Meta -->
                         <form method="POST" action="{{ route('admin.update-meta-followers') }}" class="mb-4">
                             @csrf
@@ -145,7 +153,7 @@
                             @endif
                         </form>
 
-                        
+                        <!-- Discord New Unique Invite -->
                         <form method="POST" action="{{ route('admin.generate-discord-invite') }}">
                             @csrf
                             <button type="submit" class="w-full bg-black text-white rounded hover:ring hover:ring-colorPrimary py-3 px-6 hover:bg-gray-800 text-lg lg:text-xl">

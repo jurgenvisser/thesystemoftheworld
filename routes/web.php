@@ -120,7 +120,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/admin/refresh-meta-token', [AdminController::class, 'refreshMetaToken'])->name('admin.refresh-meta-token');
 
     Route::post('/admin/update-followers', [AdminController::class, 'updateTikTokFollowers'])->name('admin.update-followers');
-    Route::post('/admin/update-meta-followers', [AdminController::class, 'updateMetaFollowers'])->name('admin.update-meta-followers');
+    Route::post('/admin/update-youtube-followers', [AdminController::class, 'updateYoutubeFollowers'])->name('admin.update-youtube-followers');    Route::post('/admin/update-meta-followers', [AdminController::class, 'updateMetaFollowers'])->name('admin.update-meta-followers');
     Route::post('/admin/update-discord-followers', [AdminController::class, 'updateDiscordFollowers'])->name('admin.update-discord-followers');
     Route::post('/admin/generate-discord-invite', [AdminController::class, 'generateDiscordInvite'])->name('admin.generate-discord-invite');
 });

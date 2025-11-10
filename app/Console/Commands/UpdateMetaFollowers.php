@@ -15,18 +15,19 @@ class UpdateMetaFollowers extends Command
 
     public function handle()
     {
-        // Pak gebruiker waar token in zit
         $user = User::where('email', 'jurgenbv@gmail.com')->first();
 
         if (!$user || !$user->facebook_access_token) {
-            $this->error('Geen gebruiker met geldige Facebook access token gevonden.');
+            $msg = '❌ Geen gebruiker met geldige Facebook access token gevonden.';
+            $this->error($msg);
+            $this->info($msg);
             return;
         }
 
         $accessToken = $user->facebook_access_token;
 
         // --- Facebook Followers ophalen ---
-        $pageId = config('services.facebook.page_id'); // of haal uit database
+        $pageId = config('services.facebook.page_id');
 
         try {
             $fbResponse = Http::get("https://graph.facebook.com/{$pageId}?fields=followers_count&access_token={$accessToken}");
@@ -43,33 +44,45 @@ class UpdateMetaFollowers extends Command
                         $socialStat->updated_at = Carbon::now();
                         $socialStat->save();
 
-                        $this->info("✅ Facebook volgers geüpdatet naar: {$fbFollowers}");
-                        return 0;
+                        $msg = "✅ Facebook volgers geüpdatet naar: {$fbFollowers}";
+                        $this->info($msg);
                     } else {
                         if (config('services.socials_log_all')) {
-                            $this->info("ℹ️ Facebook volgers zijn niet veranderd.");
-                            return 1;
+                            $msg = "ℹ️ Facebook volgers zijn niet veranderd.";
+                            $this->info($msg);
                         }
                     }
                 } else {
-                    $this->error('❌ Facebook followers_count niet gevonden in response.');
+                    $msg = '❌ Facebook followers_count niet gevonden in response.';
+                    $this->error($msg);
+                    $this->info($msg);
                 }
             } else {
-                $this->error('❌ Fout bij ophalen Facebook data: ' . $fbResponse->body());
+                $msg = '❌ Fout bij ophalen Facebook data: ' . $fbResponse->body();
+                $this->error($msg);
+                $this->info($msg);
             }
         } catch (\Illuminate\Http\Client\ConnectionException $e) {
-            $this->error('❌ Verbindingsfout met Facebook API: ' . $e->getMessage());
+            $msg = '❌ Verbindingsfout met Facebook API: ' . $e->getMessage();
+            $this->error($msg);
+            $this->info($msg);
         } catch (\Illuminate\Http\Client\RequestException $e) {
-            $this->error('❌ Facebook API request exception: ' . $e->getMessage());
-        } catch (\Illuminate\Http\Client\ServerException $e) {
-            $this->error('❌ Onverwachte fout bij ophalen Facebook data: ' . $e->getMessage());
+            $msg = '❌ Facebook API request exception: ' . $e->getMessage();
+            $this->error($msg);
+            $this->info($msg);
+        } catch (\Exception $e) {
+            $msg = '❌ Onverwachte fout bij ophalen Facebook data: ' . $e->getMessage();
+            $this->error($msg);
+            $this->info($msg);
         }
 
         // --- Instagram Followers ophalen ---
-        $instaAccountId = config('services.instagram.page_id'); // vul dit in
+        $instaAccountId = config('services.instagram.page_id');
 
         if (!$instaAccountId) {
-            $this->error('❌ Geen Instagram Page ID ingesteld.');
+            $msg = '❌ Geen Instagram Page ID ingesteld.';
+            $this->error($msg);
+            $this->info($msg);
             return;
         }
 
@@ -88,24 +101,36 @@ class UpdateMetaFollowers extends Command
                         $socialStat->updated_at = Carbon::now();
                         $socialStat->save();
 
-                        $this->info("✅ Instagram volgers geüpdatet naar: {$instaFollowers}");
+                        $msg = "✅ Instagram volgers geüpdatet naar: {$instaFollowers}";
+                        $this->info($msg);
                     } else {
                         if (config('services.socials_log_all')) {
-                            $this->info("ℹ️ Instagram volgers zijn niet veranderd.");
+                            $msg = "ℹ️ Instagram volgers zijn niet veranderd.";
+                            $this->info($msg);
                         }
                     }
                 } else {
-                    $this->error('❌ Instagram followers_count niet gevonden in response.');
+                    $msg = '❌ Instagram followers_count niet gevonden in response.';
+                    $this->error($msg);
+                    $this->info($msg);
                 }
             } else {
-                $this->error('❌ Fout bij ophalen Instagram data: ' . $instaResponse->body());
+                $msg = '❌ Fout bij ophalen Instagram data: ' . $instaResponse->body();
+                $this->error($msg);
+                $this->info($msg);
             }
         } catch (\Illuminate\Http\Client\ConnectionException $e) {
-            $this->error('❌ Verbindingsfout met Instagram API: ' . $e->getMessage());
+            $msg = '❌ Verbindingsfout met Instagram API: ' . $e->getMessage();
+            $this->error($msg);
+            $this->info($msg);
         } catch (\Illuminate\Http\Client\RequestException $e) {
-            $this->error('❌ Instagram API request exception: ' . $e->getMessage());
+            $msg = '❌ Instagram API request exception: ' . $e->getMessage();
+            $this->error($msg);
+            $this->info($msg);
         } catch (\Exception $e) {
-            $this->error('❌ Onverwachte fout bij ophalen Instagram data: ' . $e->getMessage());
+            $msg = '❌ Onverwachte fout bij ophalen Instagram data: ' . $e->getMessage();
+            $this->error($msg);
+            $this->info($msg);
         }
     }
 }

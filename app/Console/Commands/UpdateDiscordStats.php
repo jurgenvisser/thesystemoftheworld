@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use App\Models\SocialStat;
+use Carbon\Carbon;
 
 class UpdateDiscordStats extends Command
 {
@@ -33,54 +34,70 @@ class UpdateDiscordStats extends Command
                 $inviteLink = $widgetData['instant_invite'] ?? null;
 
                 if ($memberCount === null) {
-                    $this->error('❌ Geen member_count gevonden in API response.');
+                    $msg = '❌ Geen member_count gevonden in API response.';
+                    $this->error($msg);
+                    $this->info($msg);
                     return 1;
                 }
 
                 $socialStat = SocialStat::firstOrNew(['platform' => 'discord']);
 
-                $hasFollowerChange = $socialStat->follower_count !== $memberCount;
-                $hasLinkChange = $socialStat->invite_link !== $inviteLink;
-                $hasChanges = $hasFollowerChange || $hasLinkChange;
+                $logMessages = [];
+                $hasChanges = false;
+
+                if ($socialStat->follower_count !== $memberCount) {
+                    $socialStat->follower_count = $memberCount;
+                    $logMessages[] = "✅ Discord member count geüpdatet naar: {$memberCount}";
+                    $hasChanges = true;
+                }
+
+                if ($socialStat->invite_link !== $inviteLink) {
+                    $socialStat->invite_link = $inviteLink;
+                    $logMessages[] = "✅ Discord invite link geüpdatet naar: " . ($inviteLink ?? 'niet gevonden');
+                    $hasChanges = true;
+                }
 
                 if ($hasChanges) {
-                    if ($hasFollowerChange) {
-                        $socialStat->follower_count = $memberCount;
-                        $this->info("✅ Discord member count geüpdatet naar: {$memberCount}");
-                        return 0;
-                    }
-
-                    if ($hasLinkChange) {
-                        $socialStat->invite_link = $inviteLink;
-                        $this->info("✅ Discord invite link geüpdatet naar: " . ($inviteLink ?? 'niet gevonden'));
-                        return 0;
-                    }
-
-                    $socialStat->updated_at = now();
+                    $socialStat->updated_at = Carbon::now();
                     $socialStat->save();
+                    foreach ($logMessages as $msg) {
+                        $this->info($msg);
+                    }
                 } elseif (config('services.socials_log_all')) {
-                    $this->info("ℹ️ Discord member count en invite link zijn niet veranderd.");
-                    return 1;
+                    $msg = "ℹ️ Discord member count en invite link zijn niet veranderd.";
+                    $this->info($msg);
                 }
 
                 return 0;
             } else {
-                $this->error('❌ Fout bij ophalen Discord data.');
+                $msg = '❌ Fout bij ophalen Discord data.';
+                $this->error($msg);
+                $this->info($msg);
                 if (!$guildResponse->successful()) {
-                    $this->error('❌ Guild API response: ' . $guildResponse->body());
+                    $msg = '❌ Guild API response: ' . $guildResponse->body();
+                    $this->error($msg);
+                    $this->info($msg);
                 }
                 if (!$widgetResponse->successful()) {
-                    $this->error('❌ Widget API response: ' . $widgetResponse->body());
+                    $msg = '❌ Widget API response: ' . $widgetResponse->body();
+                    $this->error($msg);
+                    $this->info($msg);
                 }
 
                 return 1;
             }
         } catch (\Illuminate\Http\Client\ConnectionException $e) {
-            $this->error('❌ Verbindingsfout met Discord API: ' . $e->getMessage());
+            $msg = '❌ Verbindingsfout met Discord API: ' . $e->getMessage();
+            $this->error($msg);
+            $this->info($msg);
         } catch (\Illuminate\Http\Client\RequestException $e) {
-            $this->error('❌ Discord API request exception: ' . $e->getMessage());
+            $msg = '❌ Discord API request exception: ' . $e->getMessage();
+            $this->error($msg);
+            $this->info($msg);
         } catch (\Exception $e) {
-            $this->error('❌ Onverwachte fout: ' . $e->getMessage());
+            $msg = '❌ Onverwachte fout: ' . $e->getMessage();
+            $this->error($msg);
+            $this->info($msg);
         }
 
         return 1;

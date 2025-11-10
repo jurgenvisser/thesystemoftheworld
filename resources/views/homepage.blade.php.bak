@@ -4,6 +4,11 @@
 
 @section('content')
 
+{{-- #Dump Session Data for API token retrieval debugging --}}
+{{-- @php
+    dd(session()->all());
+@endphp --}}
+
 <!-- Hero Content Section -->
 <div class="h-[calc(100vh-4rem)] bg-v-backdrop-9 lg:bg-h-backdrop-4 bg-cover relative m-0">
     <div class="h-full flex flex-col">
@@ -24,17 +29,33 @@
 </div>
 o
 <!-- Scroll Banner Section -->
-@include('layouts.discord-scroll-banner')
+{{-- @include('layouts.discord-scroll-banner') --}}
+@include('layouts.homepage-scroll-banner')
 
 <!-- Main Content Section -->
 <div class="bg-colorPrimary/20 h-auto m-0 responsive-height flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10 items-stretch">
        
-        <!-- Image Section (2/6) -->
+        {{-- <!-- Image Section (2/6) -->
         <div class="bg-black col-span-2 hidden lg:block h-full">
             <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-                <image id="theme-image-homepage-logo-full" href="{{ asset('images/logos/TheSystemFull.svg') }}" class="w-full h-full object-cover" />
+                <image id="theme-image-homepage-logo-full" href="{{ asset('images/TheSystemProfilePicture.jpeg') }}" class="w-full h-full object-cover" />
             </svg>
+        </div> --}}
+       
+        <!-- Image Section (2/6) -->
+        <div class="relative bg-black col-span-2 hidden lg:block h-full overflow-hidden">
+            <!-- Blurred Background -->
+            <img src="{{ asset('images/TheSystemProfilePicture.jpeg') }}" 
+                 alt="The System Quinn Background"
+                 class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-50 scale-110">
+            
+            <!-- Main Square Image -->
+            <div class="absolute inset-0 flex justify-center items-center">
+                <img src="{{ asset('images/TheSystemProfilePicture.jpeg') }}" 
+                     alt="The System Quinn Main" 
+                     class="object-cover aspect-square max-h-[100%] max-w-[100%] shadow-2xl">
+            </div>
         </div>
 
         <!-- Call-To-Action Section (6/6) -->
@@ -43,19 +64,19 @@ o
                 <!-- Updated Call-To-Action Content -->
                 <div class="">
                     <h2 class="mb-8 lg:mb-16 px-4 lg:px-0 text-4xl lg:text-5xl uppercase">
-                        Ben jij de volgende die <span class="font-bold">doorbreekt</span>?
+                        Jouw vaste platform voor <span class="font-bold">mentale gezondheid</span>
                         <span class="clover-chess"></span>
                     </h2>
                     <p class="text-base lg:text-lg mb-2 px-4 lg:px-0">
-                        Bij The System helpen we mensen uit twijfel en chaos naar structuur, discipline en echte groei.
+                        — structuur, discipline en groei voor de lange termijn.
                     </p>
                     <p class="text-base lg:text-lg mb-8 lg:mb-16 px-4 lg:px-0">
-                        Geen quick fixes. Wel blijvende verandering. Honderden gingen je voor. Word jij de volgende?
+                        Geen vluchtige motivatie, maar een systeem dat werkt. Vanaf €50 per maand bouw je aan blijvende rust, helderheid en controle.
                     </p>
                     <a
-                        href="/kennis-maken"
+                        href="/coaching"
                         class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-3 px-6 mx-4 lg:mx-0 hover:bg-gray-800 text-lg lg:text-xl">
-                        Sluit je nu aan!
+                        Ontdek jouw traject!
                     </a>
                 </div>
             </div>

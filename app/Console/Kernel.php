@@ -10,6 +10,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         // Register je artisan commands hier
         \App\Console\Commands\UpdateTikTokFollowers::class,
+        \App\Console\Commands\UpdateYoutubeSubscribers::class,
         \App\Console\Commands\UpdateDiscordStats::class,
         \App\Console\Commands\UpdateMetaFollowers::class,
         \App\Console\Commands\GenerateDiscordInvite::class,

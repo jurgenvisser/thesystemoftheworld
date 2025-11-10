@@ -25,6 +25,10 @@ Schedule::command('tiktok:update-followers')
     ->everyFiveMinutes()
     ->appendOutputTo(storage_path('logs/socials_update.log'));
 
+Schedule::command('youtube:update-subscribers')
+    ->everyFiveMinutes()
+    ->appendOutputTo(storage_path('logs/socials_update.log'));
+
 Schedule::command('meta:update-followers')
     ->everyFiveMinutes()
     ->appendOutputTo(storage_path('logs/socials_update.log'));

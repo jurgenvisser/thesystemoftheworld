@@ -52,6 +52,25 @@ class AdminController extends Controller
                      ->with('tiktok_output', $output);
     }
 
+    public function updateYoutubeFollowers()
+    {
+        try {
+            Artisan::call('youtube:update-subscribers');
+
+            $output = Artisan::output();
+
+            return redirect()->back()->with([
+                'youtube_status' => 'Success',
+                'youtube_output' => $output
+            ]);
+        } catch (\Exception $e) {
+            return redirect()->back()->with([
+                'youtube_status' => 'Error',
+                'youtube_output' => $e->getMessage()
+            ]);
+        }
+    }
+
     public function updateMetaFollowers(): RedirectResponse
     {
         Artisan::call('meta:update-followers');
