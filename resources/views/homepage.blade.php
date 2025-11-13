@@ -53,7 +53,7 @@ o
 
         <!-- Call-To-Action Section (6/6) -->
         <div class="h-auto lg:h-full col-span-4 flex items-stretch">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Updated Call-To-Action Content -->
                 <div class="">
                     <h2 class="mb-6 lg:mb-8 px-4 lg:px-0 text-4xl lg:text-5xl uppercase">
@@ -81,7 +81,7 @@ o
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 h-full text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <div class="">
                     {{-- <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Je mentale onderhoud begint hier</h1> --}}
                     <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Jouw verhaal, jouw kracht</h1>
@@ -97,7 +97,7 @@ o
                     <p class="text-base font-bold lg:text-lg mb-2 px-4 lg:px-0">
                         Waarom dit werkt:
                     </p>
-                    <ul class="list-disc list-inside mb-4 text-base lg:text-lg px-4 lg:px-0">
+                    <ul class="list-disc list-outside ml-5 mb-4 text-base lg:text-lg px-4 lg:px-0">
                         <li>Geen masker, geen oordeel — alleen echte groei</li>
                         <li>Concrete modules en dagelijkse routines die je mentale kracht vergroten</li>
                         <li>Community die je ondersteunt en scherp houdt</li>
@@ -117,7 +117,7 @@ o
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 h-full text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <div class="">
                     <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">Jou mentale voorsprong</h1>
                     <p class="text-base lg:text-lg mb-4 px-4 lg:px-0">
@@ -145,7 +145,7 @@ o
 
         <!-- BText Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 h-full text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <div class="">
                     <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">The System Blueprint?</h1>
                     <p class="text-base lg:text-lg mb-4 px-4 lg:px-0">
@@ -168,7 +168,7 @@ o
         
         <!-- Quote Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <h2 class="mb-4 px-4 lg:px-0 text-2xl lg:text-4xl uppercase">

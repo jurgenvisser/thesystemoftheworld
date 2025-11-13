@@ -16,7 +16,8 @@ if (!window.popupInitialized) {
 
         if (popup && closePopup) {
             const popupKey = "popupLastShown";
-            const popupDisplayDelay = 15000; // 15 seconds for development
+            const developmentMode = false; //. true = altijd tonen, false = normale cookie-check
+            const popupDisplayDelay = developmentMode ? 1000 : 15000; // 1 sec in dev, 15 sec normaal
             const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
 
             // Function to get a cookie value by name
@@ -46,10 +47,12 @@ if (!window.popupInitialized) {
             }
 
             // Show the popup after delay if conditions are met
-            if (shouldShowPopup()) {
+            if (developmentMode || shouldShowPopup()) {
                 setTimeout(() => {
                     popup.classList.remove('hidden');
-                    setCookie(popupKey, new Date().toISOString(), 1); // Store for 1 day
+                    if (!developmentMode) {
+                        setCookie(popupKey, new Date().toISOString(), 1); // Alleen cookies gebruiken als niet in dev
+                    }
                 }, popupDisplayDelay);
             }
 

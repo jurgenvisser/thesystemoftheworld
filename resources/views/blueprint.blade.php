@@ -23,10 +23,24 @@
 <div data-theme-fixed class="bg-colorSecondary/20 h-auto m-0 responsive-height flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
 
+        <!-- Image Section (2/6) -->
+        <div class="relative bg-black col-span-2 hidden lg:block h-full overflow-hidden">
+            <!-- Blurred Background -->
+            <img src="{{ asset('images/logos/BlueprintFull.svg') }}" 
+                 alt="The System Blueprint Background"
+                 class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-50 scale-110">
+            
+            <!-- Main Square Image -->
+            <div class="absolute inset-0 flex justify-center items-center">
+                <img src="{{ asset('images/logos/BlueprintFull.svg') }}" 
+                     alt="The System Blueprint Main" 
+                     class="object-cover aspect-square max-h-[100%] max-w-[100%] shadow-2xl">
+            </div>
+        </div>
 
-        <!-- First Section (6/6) -->
-        <div class="h-auto lg:h-full col-span-6">
-            <div data-theme-fixed class="bg-colorSecondary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+        <!-- First Section (4/6) -->
+        <div class="h-auto lg:h-full col-span-4">
+            <div data-theme-fixed class="bg-colorSecondary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Jouw Mentale Community</h1>
@@ -46,9 +60,15 @@
                     <p class="text-base lg:text-lg mb-4 px-4 lg:px-0">
                         <span class="font-bold">Uniek leerplatform</span>: alles is digitaal, praktisch en direct toepasbaar
                     </p>
-                    <p class="text-base lg:text-lg px-4 lg:px-0">
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                         Bouw discipline. Vergroot je mentale kracht. Word onderdeel van een beweging die levens verandert.
                     </p>
+                    <a
+                        href="{{ $brevoFormLink }}"
+                        data-theme-fixed
+                        class="bg-black text-colorLight rounded hover:ring hover:ring-colorSecondary py-3 px-6 mx-4 lg:mx-0 hover:bg-gray-800 text-lg lg:text-xl">
+                        Word lid van The System
+                    </a>
                 </div>
 
             </div>
@@ -56,7 +76,7 @@
 
         <!-- First Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Stap-voor-Stap Blueprint</h1>
@@ -77,7 +97,7 @@
 
         <!-- First Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Privé Netwerk & Community</h1>
@@ -98,7 +118,7 @@
 
         <!-- First Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Persoonlijk Mentorschap</h1>
@@ -119,7 +139,7 @@
 
         <!-- First Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Wat je leert bij The System?</h1>
@@ -146,7 +166,7 @@
         
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Wat staat je te wachten?</h1>
@@ -177,7 +197,7 @@
         
         <!-- Quote Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div data-theme-fixed class="bg-colorSecondary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <h2 class="mb-4 px-4 lg:px-0 text-2xl lg:text-2xl lg:text-4xl uppercase">

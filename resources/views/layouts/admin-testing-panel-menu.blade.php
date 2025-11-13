@@ -12,6 +12,11 @@
     </a>
 </div>
 <div class="w-full xl:w-auto border-b border-colorPrimary/90 xl:border-none flex justify-center">
+    <a href="/admin/new-coaching" class="xl:animate-underline animate-text-color text-lg font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
+        New Coaching
+    </a>
+</div>
+<div class="w-full xl:w-auto border-b border-colorPrimary/90 xl:border-none flex justify-center">
     <a href="/admin/test" class="xl:animate-underline animate-text-color text-lg font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
         Test
     </a>
@@ -19,11 +24,6 @@
 <div class="w-full xl:w-auto border-b border-colorPrimary/80 xl:border-none flex justify-center">
     <a href="/admin/html-css-footer-for-payhip" class="xl:animate-underline animate-text-color text-lg font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
         Footer for Payhip
-    </a>
-</div>
-<div class="w-full xl:w-auto border-b border-colorPrimary/70 xl:border-none flex justify-center">
-    <a href="/kennis-maken" class="xl:animate-underline animate-text-color text-lg font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
-        Kennis Maken
     </a>
 </div>
 {{-- <div class="w-full xl:w-auto border-b border-colorPrimary/30 xl:border-none flex justify-center">

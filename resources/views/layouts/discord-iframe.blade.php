@@ -1,5 +1,5 @@
 <!-- Discord iframe (3/6) -->
-<div class="min-h-[20rem] h-[20rem] bg-red-500 lg:h-full col-span-3">
+<div class="min-h-[20rem] h-[20rem] bg-red-500 lg:h-full col-span-2">
     <div class="h-full flex flex-col justify-center items-center text-colorLight text-sm lg:text-2xl text-left lg:text-justify overflow-hidden rounded-none">
 
         <!-- Background Layer with top and bottom color split -->

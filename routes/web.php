@@ -140,6 +140,11 @@ Route::get('/admin/test', function () {
     return view('admin.test');
 })->middleware('auth');
 
+// Route for the 'New Coaching' page
+Route::get('/admin/new-coaching', function () {
+    return view('new-coaching');
+})->middleware('auth');
+
 // Route for the 'HTML/CSS Footer for Payhip' page
 Route::get('/admin/html-css-footer-for-payhip', function () {
     return view('admin.html-css-footer-for-payhip');
