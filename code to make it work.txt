@@ -14,6 +14,7 @@ composer require sendinblue/api-v3-sdk
 # Install all NPM dependencies
 npm install
 npm install crypto-js
+npm install internal-ip --save-dev
 
 # Generate the application key
 php artisan key:generate
