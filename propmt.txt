@@ -1,0 +1,69 @@
+Decide if a text passage contains advice that is either direct (given as instructions to the reader) or advice attributed to a relative where the advice is clearly directed at the reader. Always output 0 if the advice is referenced from Quinn, Jurgen, Charissa, Social Media, or The System.
+
+Review and analyze the passage step-by-step:
+- Look for language that indicates advice or instructions, such as "should", "must", imperatives, or phrases like "my mother told me...".
+- Determine if the advice is instructed to the reader (for example: "You should..." or "Always do this..."):
+  - Direct (explicit instructions, recommendations, or commands given to the reader), or
+  - Attributed to a relative, BUT only if the advice is instructed to the reader, not if it is advice given about or to the speaker themselves.
+- Exception: If the advice is given, referenced, or recommended by Quinn, Jurgen, Charissa, Social Media, or The System, you must ignore it and output 0, even if it otherwise meets the criteria above.
+
+Do not count advice if the speaker is the one being advised or recommended to do something (e.g. "I achieved my goal because my grandfather told me to walk more often"). Only output 1 if advice is present and is directly addressed or instructed to the reader.
+
+Finalize with a single output digit:
+- Output '1' if direct advice or advice from a relative is clearly instructed to the reader and does NOT come from the excluded sources above.
+- Output '0' if no qualifying advice is present, any advice is from Quinn, Jurgen, Charissa, Social Media, or The System, or the advice is only given to/about the speaker (not instructed to the reader).
+
+Output Format: Respond with only the single character '1' or '0'. Absolutely no explanation or extra text.
+
+# Steps
+
+1. Carefully examine the passage for any advice, looking for indicative language (such as "should", "must", suggestions, or family-member attributions).
+2. Check to whom the advice is instructed:
+   - If it is to the reader, proceed; if about or to the speaker, output 0.
+3. Check the source of the advice:
+   - If it comes from Quinn, Jurgen, Charissa, Social Media, or The System (even indirectly or referenced), output 0.
+   - If it comes directly or from a relative to the reader (not from the excluded sources), output 1.
+4. If no qualifying advice is found, output 0.
+5. Output only the digit; do not write any reasoning or notes.
+
+# Output Format
+
+Return only a single digit: '1' or '0' (no extra explanation, no punctuation).
+
+# Examples
+
+Example 1  
+Input: You should always eat breakfast.  
+Reasoning: This is direct advice to the reader, not from an excluded source.  
+Output: 1
+
+Example 2  
+Input: My grandmother always told me to look both ways before crossing the street.  
+Reasoning: The advice is about what was told to the speaker, not instructed to the reader.  
+Output: 0
+
+Example 2a  
+Input: I achieved my goal because my grandfather told me to walk more often.  
+Reasoning: This advice was given to the speaker, not the reader, so output: 0
+
+Example 3  
+Input: I went to the store yesterday.  
+Reasoning: No advice is present.  
+Output: 0
+
+Example 4  
+Input: My father said, "Work hard and you'll succeed."  
+Reasoning: This is advice attributed to a relative, but unless it is directly instructed to the reader, output: 0
+
+Example 4a  
+Input: My mother advised me to save money, so I did.  
+Reasoning: Advice is addressed to the speaker, so output: 0
+
+Example 5  
+Input: Quinn advised me to always trust my instincts.  
+Reasoning: Although this is advice, it is from Quinn (an excluded source), so you must output 0.  
+Output: 0
+
+(For realistic use, passages may be much longer or more complex; apply these instructions to each passage. Remember: advice from Quinn, Jurgen, Charissa, Social Media, or The System is NEVER counted, and advice given only to the speaker is NOT counted.)
+
+REMINDER: Output '1' only if advice is present (direct or from a relative) AND directly instructed to the reader, and NOT if the advice is from Quinn, Jurgen, Charissa, Social Media, The System, or only directed to/about the speaker. Otherwise, output '0'. Return only the digit—no explanation or extra text.

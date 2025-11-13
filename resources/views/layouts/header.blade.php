@@ -1,4 +1,4 @@
-<div class="bg-black h-16 flex items-center justify-between px-4 sm:px-8 text-white sticky top-0 z-50">
+<div class="bg-black h-16 flex items-center justify-between px-4 sm:px-8 text-colorLight sticky top-0 z-50">
     <!-- Left Logo Section -->
     <a href="/" aria-label="Go to the homepage via the logo" class="flex items-center">
         <svg class="h-12 xl:h-10 2xl:h-12 w-12 xl:w-10 2xl:w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"> 
@@ -32,7 +32,7 @@
 
 {{-- # Mobile Menu is outside of the parent div from the navbar. This is intended and needs to stay this way. --}}
 <!-- Mobile Menu (Hidden by default, toggled by hamburger) -->
-<div id="mobile-menu" class="xl:hidden w-full bg-black text-white fixed top-16 left-0 hidden max-h-screen overflow-y-auto z-40">
+<div id="mobile-menu" class="xl:hidden w-full bg-black text-colorLight fixed top-16 left-0 hidden max-h-screen overflow-y-auto z-40">
     <div class="flex flex-col space-y-0 py-4">
         @include('layouts.header-menu')
     </div>

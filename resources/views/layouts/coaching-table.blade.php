@@ -1,7 +1,7 @@
 <!-- Pakketoverzicht Section -->
 <div class="overflow-x-auto mx-auto w-full max-w-none">
 <table class="min-w-[800px] w-full border-collapse text-center text-base lg:text-lg table-fixed lg:table-auto">
-    <thead class="sticky top-0 bg-colorPrimary/90 backdrop-blur-md z-20 text-white">
+    <thead class="sticky top-0 bg-colorPrimary/90 backdrop-blur-md z-20 text-colorLight">
         <tr>
             <th class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1 lg:py-2 font-bold uppercase text-left lg:truncate">Pakket</th>
             <th class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1 lg:py-2 font-bold uppercase">Instap</th>
@@ -110,7 +110,7 @@
         </tr>
     </tbody>
     
-    <thead class="sticky top-0 bg-colorPrimary/90 backdrop-blur-md z-20 text-white">
+    <thead class="sticky top-0 bg-colorPrimary/90 backdrop-blur-md z-20 text-colorLight">
         <tr>
             <th class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1 lg:py-2 font-bold uppercase text-left lg:truncate">Discord Kanalen</th>
             <th class="w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1 lg:py-2 font-bold uppercase"></th>
@@ -122,10 +122,10 @@
     <tbody>
         <tr class="odd:bg-colorPrimary/40 even:bg-colorPrimary/20">
             <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1 lg:py-2 text-left lg:truncate">Discord Abonnement Role</td>
-            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#008000] bg-[#00800050] text-white">Instap</span></td>
-            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#0066ff] bg-[#0066ff50] text-white">Basis</span></td>
-            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#dc143c] bg-[#dc143c50] text-white">Groei</span></td>
-            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#d2691e] bg-[#d2691e50] text-white">Elite</span></td>
+            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#008000] bg-[#00800050] text-colorLight">Instap</span></td>
+            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#0066ff] bg-[#0066ff50] text-colorLight">Basis</span></td>
+            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#dc143c] bg-[#dc143c50] text-colorLight">Groei</span></td>
+            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#d2691e] bg-[#d2691e50] text-colorLight">Elite</span></td>
         </tr>
 
         <!-- Discord Channels -->
@@ -191,8 +191,8 @@
             <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1 lg:py-2 text-left lg:truncate">#wekelijks-groepsgesprek + Role</td>
             <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1 lg:py-2">❌</td>
             <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="block lg:hidden">Inzet<span class="text-xs align-super text-colorPrimary/50">***</span></span><span class="hidden lg:block">Op basis van inzet<span class="text-xs align-super text-colorPrimary/50">***</span></span></td>
-            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#a300a3] bg-[#a300a350] text-white font-normal">1%</span></td>
-            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#a300a3] bg-[#a300a350] text-white font-normal">1%</span></td>
+            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#a300a3] bg-[#a300a350] text-colorLight font-normal">1%</span></td>
+            <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1"><span class="inline-block px-3 rounded-full border-[2px] border-[#a300a3] bg-[#a300a350] text-colorLight font-normal">1%</span></td>
         </tr>
         <tr class="odd:bg-colorPrimary/40 even:bg-colorPrimary/20">
             <td class="border border-white w-[90px] min-w-0 lg:w-auto px-1 lg:px-4 py-1 lg:py-2 text-left lg:truncate">Groepsgesprek (voice)</td>

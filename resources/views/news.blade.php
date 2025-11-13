@@ -11,7 +11,7 @@
 
             <!-- Title Section -->
             <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
-                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Nieuws</h1>
+                <h1 class="text-4xl lg:text-9xl text-colorLight font-bold uppercase font-times">Nieuws</h1>
             </div>
 
         </div>
@@ -24,7 +24,7 @@
 
         <!-- Quote Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <div class="">

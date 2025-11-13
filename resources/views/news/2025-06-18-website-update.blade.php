@@ -1,6 +1,6 @@
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full mb-6">
@@ -14,7 +14,7 @@
                     <p class="text-base lg:text-lg mb-6">
                         De vragenlijst stelt ons in staat om inzicht te krijgen in jouw specifieke uitdagingen en behoeften. Dit helpt ons bij het samenstellen van een coachingplan dat perfect aansluit bij jouw situatie. Mocht de pop-up niet verschijnen, dan kun je de vragenlijst ook altijd vinden via de knop hieronder.
                     </p>
-                    <a href="{{ $brevoFormLink }}" class="bg-colorPrimary text-white text-base md:text-lg lg:text-xl px-6 py-2 rounded-lg shadow hover:bg-colorPrimary/40 w-full">
+                    <a href="{{ $brevoFormLink }}" class="bg-colorPrimary text-colorLight text-base md:text-lg lg:text-xl px-6 py-2 rounded-lg shadow hover:bg-colorPrimary/40 w-full">
                         📋 Klik hier en meld je aan ✍️
                     </a>
                 </div>

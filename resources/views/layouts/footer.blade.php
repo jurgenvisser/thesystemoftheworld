@@ -1,4 +1,4 @@
-<footer class="bg-black text-white py-8 flex justify-center items-center">
+<footer class="bg-black text-colorLight py-8 flex justify-center items-center">
     <!-- Footer content container -->
     <div class="responsive-width flex flex-col xl:flex-row justify-between items-center">
 
@@ -14,7 +14,7 @@
         <!-- Section 2: Social media links -->
         <div class="2xl:w-2/4 flex flex-col 2xl:flex-row justify-center items-center text-center 2xl:text-left space-y-6 2xl:space-y-0">
             <div class="text-base xl:text-lg 3xl:text-xl flex flex-col justify-between items-center">
-                <p class="mb-2 font-semibold">Follow <span class="text-colorPrimary">The System</span> for more</p>
+                {{-- <p class="mb-2 font-semibold">Volg <span class="text-colorPrimary">The System</span> voor meer</p> --}}
                 <div class="2xl:flex justify-center 2xl:justify-start 2xl:space-x-4 3xl:space-x-8 space-y-2 2xl:space-y-0 font-semibold">
                     <div class="grid 2xl:flex grid-cols-6 gap-4 xl:gap-16 2xl:gap-8">
                         {{-- <span class="col-span-1 block 2xl:hidden"></span> --}}
@@ -63,14 +63,30 @@
                         {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                     {{-- </div> --}}
                 </div>
-                <div class="border-t border-gray-800 w-full mt-4 2xl:mt-2 pt-2 2xl:pt-0 2xl:flex justify-center 2xl:space-x-8 space-y-2 2xl:space-y-0 font-semibold">
+                <div class="border-t border-gray-800 w-full mt-4 2xl:mt-2 pt-4 2xl:pt-2 2xl:flex justify-center 2xl:space-x-8 space-y-2 2xl:space-y-0 font-semibold">
                     <div class="grid 2xl:flex grid-cols-6 gap-4 2xl:gap-8">
-                        <span class="col-span-2 block 2xl:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                        <span class="col-span-1 block 2xl:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                        <!-- Missie & Visie -->
+                        <a href="/missie-visie" class="col-span-2 animate-underline animate-text-color theme-primary text-gray-400">
+                            Missie & Visie
+                        </a>
+                        <!-- Over Ons -->
+                        <a href="/over-ons" class="col-span-2 animate-underline animate-text-color theme-primary text-gray-400">
+                            Over Ons
+                        </a>
+                        <span class="col-span-1 block 2xl:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                    </div>
+                    <div class="grid 2xl:flex grid-cols-6 gap-4 xl:gap-16 2xl:gap-8">
+                        <span class="col-span-1 block 2xl:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                        <!-- Contact -->
+                        <a href="/contact" class="col-span-2 animate-underline animate-text-color theme-primary text-gray-400">
+                            Contact
+                        </a>
                         <!-- Business -->
                         <a href="/bedrijven" class="col-span-2 animate-underline animate-text-color theme-primary text-gray-800">
                             Business
                         </a>
-                        <span class="col-span-2 block 2xl:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
+                        <span class="col-span-1 block 2xl:hidden"></span> {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                     </div>
                 </div>
             </div>
@@ -85,14 +101,14 @@
 
         <!-- Section 3: Copyright -->
         <div class="xl:w-1/4 text-sm xl:mt-0 text-center xl:text-right">
-            <p>&copy; <span id="current-year"></span> <span class="text-colorPrimary">The System</span>. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> <span class="text-colorPrimary">The System</span>. Alle rechten voorbehouden.</p>
             <p>
                 <a href="/privacy-policy" class="animate-underline animate-text-color theme-primary text-gray-600">Privacy Policy</a>
                 <span class="text-gray-600"> | </span>
                 <a href="/terms-and-conditions" class="animate-underline animate-text-color theme-primary text-gray-600">Terms & Conditions</a>
                 {{-- <span class="text-gray-600"> | KVK: 12345678 | BTW: NL123456789B01</span> --}}
             </p>
-            <p class="text-gray-800">Website Version: TSotW.2.1.9p</p>
+            <p class="text-gray-800">Website Version: TSotW.2.1.10p</p>
         </div>
 
 

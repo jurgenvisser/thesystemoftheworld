@@ -1,6 +1,6 @@
 <!-- Form Section (6/6) -->
 <div class="h-auto lg:h-full col-span-6">
-    <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+    <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
 
         <!-- Introductory Text -->
         <div class="text-justify">
@@ -54,7 +54,7 @@
             <div class="flex items-center gap-4">
                 <button
                     type="submit"
-                    class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800"
+                    class="bg-black text-colorLight rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800"
                     >
                     Verstuur
                 </button>

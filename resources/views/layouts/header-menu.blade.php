@@ -9,17 +9,27 @@
         Webshop
     </a>
 </div>
-<div class="w-full xl:w-auto border-b border-colorPrimary/60 xl:border-none flex justify-center">
-    <a href="/nieuws" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
-        Nieuws
+<div class="w-full xl:w-auto border-b border-colorPrimary/70 xl:border-none flex justify-center">
+    <a href="/coaching" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
+        Coaching
     </a>
 </div>
-<div class="w-full xl:w-auto border-b border-colorPrimary/50 xl:border-none flex justify-center">
+<div class="w-full xl:w-auto border-b border-colorPrimary/60 xl:border-none flex justify-center">
     <a href="/community" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
         Community
     </a>
 </div>
+<div class="w-full xl:w-auto border-b border-colorPrimary/50 xl:border-none flex justify-center">
+    <a data-theme-fixed href="/blueprint" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base font-semibold uppercase py-2 xl:py-0 theme-secondary text-center text-colorSecondary xl:text-colorLight">
+        Blueprint
+    </a>
+</div>
 <div class="w-full xl:w-auto border-b border-colorPrimary/40 xl:border-none flex justify-center">
+    <a href="/nieuws" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
+        Nieuws
+    </a>
+</div>
+{{-- <div class="w-full xl:w-auto border-b border-colorPrimary/40 xl:border-none flex justify-center">
     <a href="/missie-visie" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
         Missie & Visie
     </a>
@@ -28,9 +38,9 @@
     <a href="/over-ons" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
         Over Ons
     </a>
-</div>
-<div class="w-full xl:w-auto border-b border-colorPrimary/20 xl:border-none flex justify-center">
+</div> --}}
+{{-- <div class="w-full xl:w-auto border-b border-colorPrimary/20 xl:border-none flex justify-center">
     <a href="/contact" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base font-semibold uppercase py-2 xl:py-0 theme-primary text-center">
         Contact
     </a>
-</div>
+</div> --}}

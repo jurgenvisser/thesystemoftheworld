@@ -11,7 +11,7 @@
 
             <!-- Title Section -->
             <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
-                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Over Ons</h1>
+                <h1 class="text-4xl lg:text-9xl text-colorLight font-bold uppercase font-times">Over Ons</h1>
             </div>
 
         </div>
@@ -25,7 +25,7 @@
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Het Team van The System – Jouw Steun en Begeleiding</h1>
                     <p class="text-base lg:text-lg mb-6">
@@ -60,23 +60,23 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">De Teams van The System</h1>
 
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Social Media Team</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-colorLight font-bold uppercase font-times">Social Media Team</h2>
                     <p class="text-base lg:text-lg mb-8">
                         Ons team deelt dagelijks content om je te inspireren en motiveren. Ze bouwen een community op Discord die je helpt gefocust te blijven en vooruit te gaan door interactie te bevorderen.
                 </p>
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Webdevelopment Team</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-colorLight font-bold uppercase font-times">Webdevelopment Team</h2>
                     <p class="text-base lg:text-lg mb-8">
                         Onze tech-experts zorgen dat de website soepel werkt, zodat jij makkelijk toegang hebt tot alle tools en info die je nodig hebt. Ze beheren ook de Discord-server en zorgen voor een fijne ervaring voor onze community.
                     </p>
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Klantenservice Team</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-colorLight font-bold uppercase font-times">Klantenservice Team</h2>
                     <p class="text-base lg:text-lg mb-8">
                         Ons supportteam staat klaar om je snel en persoonlijk te helpen via direct message of e-mail. Jij hoeft je geen zorgen te maken – we zorgen voor je.
                     </p>
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Coaching Team</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-colorLight font-bold uppercase font-times">Coaching Team</h2>
                     <p class="text-base lg:text-lg">
                         Onze coaches bieden maatwerkbegeleiding en helpen je door middel van persoonlijke coaching om je doelen te bereiken en obstakels te overwinnen.
                     </p>
@@ -87,7 +87,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Quinn – het gezicht van The System</h1>
 
@@ -98,7 +98,7 @@
                         Elke video, elke boodschap komt recht uit zijn eigen proces. Geen show. Geen scripts. Alleen echte verhalen en harde waarheden. Want verandering begint pas als iemand je durft te confronteren.
                     </p>
 
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times">Wat doet Quinn?</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-colorLight font-bold uppercase font-times">Wat doet Quinn?</h2>
                     <ul class="list-disc mb-2 list-inside">
                         <li class="text-base lg:text-lg mb-2">Hij spreekt de taal van de community, omdat hij zelf één van hen was</li>
                         <li class="text-base lg:text-lg mb-2">Hij zet je stil met simpele waarheden die je wakker schudden</li>
@@ -113,15 +113,15 @@
                         AI-stem ‘Lior’ blijft beschikbaar op aanvraag, maar The System wordt nu geleid door een echte stem, echt verhaal, echte mens.
                     </p>
 
-                    <h2 class="mb-1 text-xl lg:text-2xl text-white uppercase">Quinn is er om jou te helpen bouwen.</h2>
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white uppercase">Stap in. Word wakker. </h2>
+                    <h2 class="mb-1 text-xl lg:text-2xl text-colorLight uppercase">Quinn is er om jou te helpen bouwen.</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-colorLight uppercase">Stap in. Word wakker. </h2>
                 </div>
             </div>
         </div>
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <div class="">

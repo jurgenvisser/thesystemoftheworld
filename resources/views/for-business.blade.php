@@ -11,7 +11,7 @@
 
             <!-- Title Section -->
             <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
-                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Voor Bedrijven</h1>
+                <h1 class="text-4xl lg:text-9xl text-colorLight font-bold uppercase font-times">Voor Bedrijven</h1>
             </div>
 
         </div>
@@ -25,7 +25,7 @@
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6 flex">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Mentale veerkracht & structuur voor jouw team</h1>
                     <p class="text-base lg:text-lg mb-6">
@@ -45,7 +45,7 @@
         <div class="h-auto lg:h-full col-span-3 flex flex-col gap-10">
             
             <!-- Eerste blok -->
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Waarom kiezen voor The System?</h1>
                     <p class="text-base lg:text-lg mb-6">
@@ -58,7 +58,7 @@
             </div>
             
             <!-- Tweede blok -->
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Waarom bedrijven voor The System kiezen</h1>
                     <ul class="list-disc pl-8 list-outside">
@@ -73,11 +73,11 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Wat wij voor jouw organisatie doen</h1>
 
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times text-start">Mentale hersteltrajecten voor werknemers</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-colorLight font-bold uppercase font-times text-start">Mentale hersteltrajecten voor werknemers</h2>
                     <p class="text-base lg:text-lg mb-6">
                         Wij helpen je medewerkers hun mentale balans en veerkracht te herstellen met concrete tools zoals:
                     </p>
@@ -87,7 +87,7 @@
                         <li class="text-base lg:text-lg"><span class="font-bold">Dagelijkse actieplannen:</span> Voor focus en effectiviteit op het werk én rust en structuur in het privéleven.</li>
                     </ul>
 
-                    <h2 class="mb-2 text-xl lg:text-2xl text-white font-bold uppercase font-times text-start">Structurele ondersteuning voor dagelijks werk</h2>
+                    <h2 class="mb-2 text-xl lg:text-2xl text-colorLight font-bold uppercase font-times text-start">Structurele ondersteuning voor dagelijks werk</h2>
                     <p class="text-base lg:text-lg mb-6">
                         Wij zorgen voor een aanpak die medewerkers in hun dagelijkse taken ondersteunt:
                     </p>
@@ -101,7 +101,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/60 w-full text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 w-full text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Wat kost het om niets te doen?</h1>
                     <ul class="list-disc pl-8 list-outside">
@@ -115,7 +115,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Plan een kennismaking met ons team</h1>
                     <p class="text-base lg:text-lg mb-6">
@@ -130,7 +130,7 @@
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <div class="">

@@ -11,8 +11,8 @@
 
             <!-- Title Section -->
             <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-4 lg:p-20 h-auto w-[85vw] lg:w-auto">
-                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Contact</h1>
-                {{-- <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times">Support is dichtbij</h2> --}}
+                <h1 class="text-4xl lg:text-9xl text-colorLight font-bold uppercase font-times">Contact</h1>
+                {{-- <h2 class="text-xl lg:text-4xl text-colorLight font-bold uppercase font-times">Support is dichtbij</h2> --}}
             </div>
 
         </div>
@@ -26,7 +26,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Contact The System</h1>
@@ -46,7 +46,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
 
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Word deel van onze community</h1>
@@ -60,7 +60,7 @@
                         Deelname aan onze community betekent niet dat je verplicht bent om actief te posten. Je bent ook welkom om alleen te kijken, te leren van anderen en inspiratie op te doen.
                     </p>
                     <p class="text-base lg:text-lg mb-6">
-                        <button onclick="window.location.href='{{ $discordInviteLink }}'" class="bg-colorPrimary text-white py-2 px-4 rounded hover:bg-colorPrimary/80 transition">
+                        <button onclick="window.location.href='{{ $discordInviteLink }}'" class="bg-colorPrimary text-colorLight py-2 px-4 rounded hover:bg-colorPrimary/80 transition">
                             Join de Discord Community
                         </button>
                     </p>

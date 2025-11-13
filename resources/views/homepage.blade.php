@@ -4,6 +4,11 @@
 
 @section('content')
 
+{{-- #Dump Session Data for API token retrieval debugging --}}
+{{-- @php
+    dd(session()->all());
+@endphp --}}
+
 <!-- Hero Content Section -->
 <div class="h-[calc(100vh-4rem)] bg-v-backdrop-9 lg:bg-h-backdrop-4 bg-cover relative m-0">
     <div class="h-full flex flex-col">
@@ -11,12 +16,12 @@
 
             <!-- Title Section -->
             <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-4 lg:p-20 h-auto w-[85vw] lg:w-auto">
-                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times hidden lg:block">The System</h1>
-                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times block lg:hidden">Jouw verhaal</h1>
-                <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center hidden lg:block">Jouw Verhaal, Jouw Kracht</h2>
-                <h2 class="text-4xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center block lg:hidden">Jouw Kracht</h2>
-                <h2 class="text-xl lg:text-4xl text-white uppercase text-balance text-center block">Samen met nog <span class="font-bold">{{ $totalFollowerCount }}</span> anderen.</h2>
-                {{-- <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times text-balance text-center block">{{ json_encode($tiktokDebugHeaders, JSON_PRETTY_PRINT) }}</h2> --}}
+                <h1 class="text-4xl lg:text-9xl text-colorLight font-bold uppercase font-times hidden lg:block">The System</h1>
+                <h1 class="text-4xl lg:text-9xl text-colorLight font-bold uppercase font-times block lg:hidden">Jouw verhaal</h1>
+                <h2 class="text-xl lg:text-4xl text-colorLight font-bold uppercase font-times text-balance text-center hidden lg:block">Jouw Verhaal, Jouw Kracht</h2>
+                <h2 class="text-4xl lg:text-4xl text-colorLight font-bold uppercase font-times text-balance text-center block lg:hidden">Jouw Kracht</h2>
+                <h2 class="text-xl lg:text-4xl text-colorLight uppercase text-balance text-center block">Samen met nog <span class="font-bold">{{ $totalFollowerCount }}</span> anderen.</h2>
+                {{-- <h2 class="text-xl lg:text-4xl text-colorLight font-bold uppercase font-times text-balance text-center block">{{ json_encode($tiktokDebugHeaders, JSON_PRETTY_PRINT) }}</h2> --}}
             </div>
 
         </div>
@@ -24,38 +29,87 @@
 </div>
 o
 <!-- Scroll Banner Section -->
-@include('layouts.discord-scroll-banner')
+{{-- @include('layouts.discord-scroll-banner') --}}
+@include('layouts.homepage-scroll-banner')
 
 <!-- Main Content Section -->
 <div class="bg-colorPrimary/20 h-auto m-0 responsive-height flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10 items-stretch">
        
         <!-- Image Section (2/6) -->
-        <div class="bg-black col-span-2 hidden lg:block h-full">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-                <image id="theme-image-homepage-logo-full" href="{{ asset('images/logos/TheSystemFull.svg') }}" class="w-full h-full object-cover" />
-            </svg>
+        <div class="relative bg-black col-span-2 hidden lg:block h-full overflow-hidden">
+            <!-- Blurred Background -->
+            <img src="{{ asset('images/TheSystemProfilePicture.jpeg') }}" 
+                 alt="The System Quinn Background"
+                 class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-50 scale-110">
+            
+            <!-- Main Square Image -->
+            <div class="absolute inset-0 flex justify-center items-center">
+                <img src="{{ asset('images/TheSystemProfilePicture.jpeg') }}" 
+                     alt="The System Quinn Main" 
+                     class="object-cover aspect-square max-h-[100%] max-w-[100%] shadow-2xl">
+            </div>
         </div>
 
         <!-- Call-To-Action Section (6/6) -->
         <div class="h-auto lg:h-full col-span-4 flex items-stretch">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Updated Call-To-Action Content -->
                 <div class="">
-                    <h2 class="mb-8 lg:mb-16 px-4 lg:px-0 text-4xl lg:text-5xl uppercase">
-                        Ben jij de volgende die <span class="font-bold">doorbreekt</span>?
+                    <h2 class="mb-6 lg:mb-8 px-4 lg:px-0 text-4xl lg:text-5xl uppercase">
+                        Jouw vaste platform voor <span class="font-bold">mentale gezondheid</span>
                         <span class="clover-chess"></span>
                     </h2>
-                    <p class="text-base lg:text-lg mb-2 px-4 lg:px-0">
-                        Bij The System helpen we mensen uit twijfel en chaos naar structuur, discipline en echte groei.
+                    <p class="text-base lg:text-lg mb-4 px-4 lg:px-0">
+                        We onderhouden alles… behalve ons hoofd. 
+                        The System is jouw maandelijkse mentale onderhoud. 
+                        Niet praten over verandering maar dóen.
                     </p>
-                    <p class="text-base lg:text-lg mb-8 lg:mb-16 px-4 lg:px-0">
-                        Geen quick fixes. Wel blijvende verandering. Honderden gingen je voor. Word jij de volgende?
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Jij traint je lichaam, betaalt je huur, zorgt voor stroom maar wanneer onderhoud je je hoofd? 
+                        The System leert je structuur, rust en mentale discipline. 
+                        Elke maand. Voor altijd.
                     </p>
                     <a
-                        href="/kennis-maken"
-                        class="bg-black text-white rounded hover:ring hover:ring-colorPrimary py-3 px-6 mx-4 lg:mx-0 hover:bg-gray-800 text-lg lg:text-xl">
-                        Sluit je nu aan!
+                        href="/coaching"
+                        class="bg-black text-colorLight rounded hover:ring hover:ring-colorPrimary py-3 px-6 mx-4 lg:mx-0 hover:bg-gray-800 text-lg lg:text-xl">
+                        Ontdek jouw traject!
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Section (3/6) -->
+        <div class="h-auto lg:h-full col-span-6">
+            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+                <div class="">
+                    {{-- <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Je mentale onderhoud begint hier</h1> --}}
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Jouw verhaal, jouw kracht</h1>
+                    <p class="text-base lg:text-lg mb-4 px-4 lg:px-0">
+                        Je voelt je leeg, moe of vast in je eigen gedachten. Dat is niet zwak — het is een signaal dat je hoofd onderhoud nodig heeft.
+                    </p>
+                    <p class="text-base font-bold lg:text-lg mb-2 px-4 lg:px-0">
+                        Wat The System doet:
+                    </p>
+                    <p class="text-base lg:text-lg mb-4 px-4 lg:px-0">
+                        Bij The System leer je je hoofd onderhouden, net zoals je je lichaam onderhoudt. Elke maand, elke dag, helpen we je stap voor stap rust, structuur en discipline terug te krijgen — samen met anderen die hetzelfde pad lopen.
+                    </p>
+                    <p class="text-base font-bold lg:text-lg mb-2 px-4 lg:px-0">
+                        Waarom dit werkt:
+                    </p>
+                    <ul class="list-disc list-inside mb-4 text-base lg:text-lg px-4 lg:px-0">
+                        <li>Geen masker, geen oordeel — alleen echte groei</li>
+                        <li>Concrete modules en dagelijkse routines die je mentale kracht vergroten</li>
+                        <li>Community die je ondersteunt en scherp houdt</li>
+                        <li>Persoonlijke check-ins en begeleiding van Quinn en ons coaching-team</li>
+                    </ul>
+                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
+                        Jij hoeft dit niet alleen te dragen. Start vandaag je mentale onderhoud en bouw een systeem dat bij je blijft.
+                    </p>
+                    <a
+                        href="{{ $brevoFormLink }}"
+                        class="text-base lg:text-lg text-colorLight animate-underline animate-text-color theme-primary">
+                        Meld je aan bij The System
                     </a>
                 </div>
             </div>
@@ -63,72 +117,27 @@ o
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <div class="">
-                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Jouw verhaal, jouw kracht</h1>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Je voelt je alleen. Ongezien. Alsof niemand jou echt begrijpt.
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">Jou mentale voorsprong</h1>
+                    <p class="text-base lg:text-lg mb-4 px-4 lg:px-0">
+                        Voel je je vast of leeg in je hoofd? Niks doen verandert niks. Met The System krijg je structuur, coaching en een community die je echt vooruit helpt.
                     </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        The System is er voor mensen die vastzitten, het niet meer weten, of bijna opgeven.
+                    <p class="text-base lg:text-lg font-bold mb-4 px-4 lg:px-0">
+                        Zo ga je vooruit:
                     </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Geen masker. Geen oordeel. Alleen een plek waar je écht jezelf mag zijn.
-                    </p>
-                    <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Sluit je aan bij onze community. Je hoeft dit niet alleen te doen.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Text Section (3/6) -->
-        <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
-                <div class="">
-                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">Persoonlijk Mentorschap & Coaching</h1>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Mentorschap van iemand die het zelf overleefde.
-                    </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Geen theorie, maar structuur, gesprekken en begeleiding die je echt verder brengen.
-                    </p>
-                    <p class="text-base lg:text-lg mb-2 px-4 lg:px-0">
-                        Wat je leert:
-                    </p>
-                    <ul class="list-disc list-inside mb-6 text-base lg:text-lg px-4 lg:px-0">
-                        <li>Discipline opbouwen</li>
-                        <li>Je hoofd structureren</li>
-                        <li>Obstakels doorbreken</li>
+                    <ul class="list-disc list-outside ml-5 mb-4 text-base lg:text-lg px-4 lg:px-0 text-left">
+                        <li><span class="font-bold">Modules</span>: Academy-style plannen om zelf de macht weer terug in handen te nemen.</li>
+                        <li><span class="font-bold">Coaching</span>: Mentorship van iemand die het zelf heeft doorleefd</li>
+                        <li><span class="font-bold">Community</span>: Samen groeien, feedback en inspiratie</li>
                     </ul>
-                    <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Wil jij dat echt? Vraag vandaag een gesprek aan.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Text Section (3/6) -->
-        <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
-                <div class="">
-                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">Vertrouwen, Veiligheid & Privacy</h1>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Ik weet dat vertrouwen moeilijk is. Zeker als je vaak gekwetst bent.
-                    </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Daarom is The System een plek waar je niks hoeft te spelen.
-                    </p>
-                    <ul class="list-disc list-inside mb-6 text-base lg:text-lg px-4 lg:px-0">
-                        <li>Wat je deelt, blijft tussen ons.</li>
-                        <li>Geen oordeel. Geen druk.</li>
-                        <li>Jij bepaalt wat je vertelt – en wanneer.</li>
-                    </ul>
-                    <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Je bent veilig hier.
+                    <p class="text-base lg:text-lg font-bold px-4 lg:px-0">
+                        Resultaat
                     </p>
                     <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Eindelijk een plek waar je mag vallen, en weer op mag staan
+                        Stop met vastzitten in stress, twijfel en uitstel.
+                        Herstel controle over je hoofd, bouw een leven met structuur en kracht, en word mentaal sterker.
+                        Wij redden levens door mensen te leren hoe ze zichzelf écht kunnen redden.
                     </p>
                 </div>
             </div>
@@ -136,40 +145,40 @@ o
 
         <!-- BText Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 h-full text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <div class="">
-                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">Blijf geïnspireerd</h1>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Soms heb je alleen maar één zin nodig om niet op te geven.
+                    <h1 class="mb-6 lg:mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-balance">The System Blueprint?</h1>
+                    <p class="text-base lg:text-lg mb-4 px-4 lg:px-0">
+                        Dit is geen standaard theorie. Dit is je eigen leerboek voor je hoofd. 
+                        Elke module is een les in mentale kracht, discipline en groei. 
+                        Stap voor stap leer je je hoofd onderhouden en bouw je skills die je écht vooruit helpen voor nu én voor de rest van je leven.
                     </p>
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Daarom deel ik elke dag iets dat raakt, of jou wakker schudt.
+                    <p class="text-base lg:text-lg font-bold mb-4 px-4 lg:px-0">
+                        Wat je gaat leren:
                     </p>
-                    <p class="text-base lg:text-lg mb-6 mt-12 px-4 lg:px-0">
-                        Volg The System op TikTok & Instagram en word lid van onze Discord community.
-                    </p>
-                    <p class="text-base lg:text-lg px-4 lg:px-0">
-                        Bouw. Groei. Val. Sta op. Samen.
-                    </p>
+                    <ul class="list-disc list-outside ml-5 mb-4 text-base lg:text-lg px-4 lg:px-0 text-left">
+                        <li><span class="font-bold">Gedachten & Emoties</span>: grip op je hoofd, rust en zelfvertrouwen.</li>
+                        <li><span class="font-bold">Discipline & Structuur</span>: routines, focus en doorzettingsvermogen</li>
+                        <li><span class="font-bold">Stress & Mentale Rust</span>: omgaan met druk, burn-out en moeilijke dagen</li>
+                        <li><span class="font-bold">Relaties & Groei</span>: sociale kracht, zelfreflectie en persoonlijke ontwikkeling</li>
+                    </ul>
                 </div>
             </div>
         </div>
         
         <!-- Quote Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
-                <div class="">
-                    <h2 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl uppercase">
-                        De <span class="font-bold">keuze</span> is aan jou. Blijf hangen, of bouw je leven?
-                        <span class="clover-chess"></span>
-                    </h2>
-                    <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
-                        Volg The System. Geen onzin. <span class="block lg:inline"> Alleen resultaat.</span><br>
-                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
-                    </p>
-                </div>
+                <h2 class="mb-4 px-4 lg:px-0 text-2xl lg:text-4xl uppercase">
+                    De <span class="font-bold">keuze</span> is aan jou. Blijf hangen, of bouw je leven?
+                    <span class="clover-chess"></span>
+                </h2>
+                <p class="text-base lg:text-lg mt-4 px-4 lg:px-0">
+                    Volg The System. Geen onzin. <span class="block lg:inline"> Alleen resultaat.</span><br>
+                    TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
+                </p>
 
             </div>
         </div>

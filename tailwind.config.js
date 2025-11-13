@@ -28,6 +28,7 @@ export default {
                 colorDocument: '#946900', // Add colorDocument as a custom color
                 blurple: '#5865F2', // Add Discord Blurple color
                 lightBlurple: '#E0E3FF', // Add Discord Light Blurple color
+                colorLight: '#e5e7eb', // Add colorLight as near white color for text
             },
             screens: {
                 // 'sm': '640px', // Small screens

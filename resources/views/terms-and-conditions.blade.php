@@ -7,7 +7,7 @@
 {{-- !! Let erop dat als deze informatie verandert dat de terms-and-conditions.js ook aangepast wordt zodat de download klopt! --}}
 
 <div class="bg-colorPrimary/20 h-auto m-0 py-24 flex justify-center items-center">
-  <div class="bg-colorPrimary/60 max-w-4xl mx-auto p-6 text-white">
+  <div class="bg-colorPrimary/60 max-w-4xl mx-auto p-6 text-colorLight">
     <h1 class="text-3xl font-bold text-center mb-6">Terms & Conditions</h1>
     <p class="text-sm text-center">thesystemoftheworld.com</p>
     <p class="text-sm text-center">Laatste bijwerking: 27 augustus 2025</p>

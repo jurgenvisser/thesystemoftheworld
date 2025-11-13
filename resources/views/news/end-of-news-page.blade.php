@@ -1,6 +1,6 @@
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-8 text-2xl lg:text-4xl uppercase font-roboto">Einde van de Nieuws-pagina</h1>

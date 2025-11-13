@@ -10,6 +10,7 @@ export function setTheme(theme) {
     ];
 
     elementsToToggle.forEach((el) => {
+        if (el.hasAttribute('data-theme-fixed')) return; // skip elements marked as fixed
         // Loop through each of the dynamic color classes and element types
         defaultColorClasses.forEach((colorClass) => {
             defaultElementTypes.forEach((elementType) => {

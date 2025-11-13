@@ -83,6 +83,11 @@ Route::get('/coaching', function () {
     return view('coaching'); // Refer to coaching.blade.php
 });
 
+// Route for the 'Blueprint' page
+Route::get('/blueprint', function () {
+    return view('blueprint'); // Refer to blueprint.blade.php
+});
+
 // Route for the 'Contact' page
 Route::get('/contact', function () {
     return view('contact'); // Refer to contact.blade.php

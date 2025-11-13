@@ -28,6 +28,10 @@ const themeImages = {
         secondary: '/images/logos/BlueprintFull.svg',
         primary: '/images/logos/TheSystemFull.svg',
     },
+    'theme-image-scroll-banner-logo': {
+        secondary: '/images/logos/BlueprintHorseFilled.svg',
+        primary: '/images/logos/TheSystemHorse.svg',
+    },
     // Add more images as needed
 };
 

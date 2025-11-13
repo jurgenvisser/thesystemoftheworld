@@ -11,8 +11,8 @@
 
             <!-- Title Section -->
             <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-4 lg:p-20 h-auto w-[85vw] lg:w-auto">
-                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times ">Misie & Visie</h1>
-                {{-- <h2 class="text-xl lg:text-4xl text-white font-bold uppercase font-times">Begin vandaag met het nemen van actie</h2> --}}
+                <h1 class="text-4xl lg:text-9xl text-colorLight font-bold uppercase font-times ">Misie & Visie</h1>
+                {{-- <h2 class="text-xl lg:text-4xl text-colorLight font-bold uppercase font-times">Begin vandaag met het nemen van actie</h2> --}}
 
             </div>
 
@@ -27,7 +27,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
             
                 <div class="">
@@ -64,7 +64,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-start items-left text-white p-4 lg:p-20 responsive-height text-left lg:text-left ">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-start items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-left ">
             <!-- Content goes here -->
     
                 <div class="">
@@ -100,7 +100,7 @@
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-8 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Platform</h1>
