@@ -39,6 +39,35 @@ export function setTheme(theme) {
                     if (el.classList.contains(`border-${colorClass}`)) {
                         el.classList.replace(`border-${colorClass}`, `border-colorPrimary`);
                     }
+                    if (el.classList.contains(`ring-${colorClass}`)) {
+                        el.classList.replace(`ring-${colorClass}`, `ring-colorPrimary`);
+                    }
+                    if (el.classList.contains(`hover:ring-${colorClass}`)) {
+                        el.classList.replace(`hover:ring-${colorClass}`, `hover:ring-colorPrimary`);
+                    }
+                    if (el.classList.contains(`focus:ring-${colorClass}`)) {
+                        el.classList.replace(`focus:ring-${colorClass}`, `focus:ring-colorPrimary`);
+                    }
+                    defaultOpacities.forEach((opacity) => {
+                        if (el.classList.contains(`ring-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`ring-${colorClass}/${opacity}`, `ring-colorPrimary/${opacity}`);
+                        }
+                        if (el.classList.contains(`hover:ring-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`hover:ring-${colorClass}/${opacity}`, `hover:ring-colorPrimary/${opacity}`);
+                        }
+                        if (el.classList.contains(`focus:ring-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`focus:ring-${colorClass}/${opacity}`, `focus:ring-colorPrimary/${opacity}`);
+                        }
+                    });
+                    if (el.classList.contains('ring-colorSecondary')) {
+                        el.classList.replace('ring-colorSecondary', 'ring-colorPrimary');
+                    }
+                    if (el.classList.contains('hover:ring-colorSecondary')) {
+                        el.classList.replace('hover:ring-colorSecondary', 'hover:ring-colorPrimary');
+                    }
+                    if (el.classList.contains('focus:ring-colorSecondary')) {
+                        el.classList.replace('focus:ring-colorSecondary', 'focus:ring-colorPrimary');
+                    }
                     if (el.classList.contains(`decoration-${colorClass}`)) {
                         el.classList.replace(`decoration-${colorClass}`, 'decoration-colorPrimary');
                     }
@@ -69,6 +98,35 @@ export function setTheme(theme) {
                     }
                     if (el.classList.contains(`border-${colorClass}`)) {
                         el.classList.replace(`border-${colorClass}`, `border-colorSecondary`);
+                    }
+                    if (el.classList.contains(`ring-${colorClass}`)) {
+                        el.classList.replace(`ring-${colorClass}`, `ring-colorSecondary`);
+                    }
+                    if (el.classList.contains(`hover:ring-${colorClass}`)) {
+                        el.classList.replace(`hover:ring-${colorClass}`, `hover:ring-colorSecondary`);
+                    }
+                    if (el.classList.contains(`focus:ring-${colorClass}`)) {
+                        el.classList.replace(`focus:ring-${colorClass}`, `focus:ring-colorSecondary`);
+                    }
+                    defaultOpacities.forEach((opacity) => {
+                        if (el.classList.contains(`ring-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`ring-${colorClass}/${opacity}`, `ring-colorSecondary/${opacity}`);
+                        }
+                        if (el.classList.contains(`hover:ring-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`hover:ring-${colorClass}/${opacity}`, `hover:ring-colorSecondary/${opacity}`);
+                        }
+                        if (el.classList.contains(`focus:ring-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`focus:ring-${colorClass}/${opacity}`, `focus:ring-colorSecondary/${opacity}`);
+                        }
+                    });
+                    if (el.classList.contains('ring-colorPrimary')) {
+                        el.classList.replace('ring-colorPrimary', 'ring-colorSecondary');
+                    }
+                    if (el.classList.contains('hover:ring-colorPrimary')) {
+                        el.classList.replace('hover:ring-colorPrimary', 'hover:ring-colorSecondary');
+                    }
+                    if (el.classList.contains('focus:ring-colorPrimary')) {
+                        el.classList.replace('focus:ring-colorPrimary', 'focus:ring-colorSecondary');
                     }
                     if (el.classList.contains(`decoration-${colorClass}`)) {
                         el.classList.replace(`decoration-${colorClass}`, 'decoration-colorSecondary');

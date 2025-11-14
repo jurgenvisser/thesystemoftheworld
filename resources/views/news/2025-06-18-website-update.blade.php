@@ -14,7 +14,7 @@
                     <p class="text-base lg:text-lg mb-6">
                         De vragenlijst stelt ons in staat om inzicht te krijgen in jouw specifieke uitdagingen en behoeften. Dit helpt ons bij het samenstellen van een coachingplan dat perfect aansluit bij jouw situatie. Mocht de pop-up niet verschijnen, dan kun je de vragenlijst ook altijd vinden via de knop hieronder.
                     </p>
-                    <a href="{{ $brevoFormLink }}" class="bg-colorPrimary text-colorLight text-base md:text-lg lg:text-xl px-6 py-2 rounded-lg shadow hover:bg-colorPrimary/40 w-full">
+                    <a href="{{ $brevoFormLink }}" class="bg-colorPrimary/60 text-colorLight text-base md:text-lg lg:text-xl px-6 py-2 rounded-lg shadow hover:bg-colorPrimary/80 w-full">
                         📋 Klik hier en meld je aan ✍️
                     </a>
                 </div>

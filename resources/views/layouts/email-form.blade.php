@@ -54,7 +54,7 @@
             <div class="flex items-center gap-4">
                 <button
                     type="submit"
-                    class="bg-black text-colorLight rounded hover:ring hover:ring-colorPrimary py-2 px-4 hover:bg-gray-800"
+                    class="bg-black text-colorLight rounded hover:ring hover:ring-colorPrimary py-3 px-6 hover:bg-gray-800 text-lg lg:text-xl"
                     >
                     Verstuur
                 </button>

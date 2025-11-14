@@ -140,7 +140,7 @@
                     </h2>
                     <p class="text-base lg:text-lg mt-12 px-4 lg:px-0">
                         Neem vandaag nog contact op!<br>
-                        Email: <a href="mailto:contact@thesystemoftheworld.com" target="_blank" class="underline decoration-colorPrimary">contact@thesystemoftheworld.com</a>
+                        Email: <a href="mailto:business@thesystemoftheworld.com" target="_blank" class="underline decoration-colorPrimary">business@thesystemoftheworld.com</a>
                     </p>
                 </div>
 

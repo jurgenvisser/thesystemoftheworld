@@ -60,7 +60,7 @@
                         Deelname aan onze community betekent niet dat je verplicht bent om actief te posten. Je bent ook welkom om alleen te kijken, te leren van anderen en inspiratie op te doen.
                     </p>
                     <p class="text-base lg:text-lg mb-6">
-                        <button onclick="window.location.href='{{ $discordInviteLink }}'" class="bg-colorPrimary text-colorLight py-2 px-4 rounded hover:bg-colorPrimary/80 transition">
+                        <button onclick="window.location.href='{{ $discordInviteLink }}'" class="bg-colorPrimary/60 text-colorLight py-2 px-4 rounded hover:bg-colorPrimary/80 transition">
                             Join de Discord Community
                         </button>
                     </p>
