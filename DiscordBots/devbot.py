@@ -102,31 +102,27 @@ def save_paid(bot):
 @bot.event
 async def on_ready() -> None:
     """Called when the bot has successfully connected to Discord."""
-    print(f"Logged in as {bot.user}")
-    # Sync application (slash) commands for the configured guild. This makes
-    # changes propagate much more quickly during development. Remove the
-    # guild argument to sync globally.
+    print(f"Logged in als {bot.user}")
+
     try:
-        if GUILD_ID is not None:
-            # Register slash commands directly to the specified guild. Commands are decorated with
-            # ``app_commands.guilds`` in their respective cogs, so there is no need to copy global
-            # commands. Syncing the guild ensures commands show up immediately.
+        # --- Sync guild-only commands ---
+        if GUILD_ID:
             guild = discord.Object(id=GUILD_ID)
             try:
-                synced = await bot.tree.sync(guild=guild)
-                print(f"Synced {len(synced)} command(s) to guild {GUILD_ID}")
+                synced_guild = await bot.tree.sync(guild=guild)
+                print(f"Synced {len(synced_guild)} guild command(s) naar guild {GUILD_ID}")
             except Exception as exc:
-                print(f"Failed to sync commands to guild {GUILD_ID}: {exc}")
-        else:
-            # If no guild ID is specified, sync global commands. This may take up to an hour to
-            # propagate across all guilds.
-            try:
-                synced = await bot.tree.sync()
-                print(f"Synced {len(synced)} global command(s)")
-            except Exception as exc:
-                print(f"Failed to sync global commands: {exc}")
+                print(f"Failed to sync guild commands to guild {GUILD_ID}: {exc}")
+
+        # --- Sync globale commands (incl. cognitive_reset) ---
+        try:
+            synced_global = await bot.tree.sync()
+            print(f"Synced {len(synced_global)} globale command(s)")
+        except Exception as exc:
+            print(f"Failed to sync global commands: {exc}")
+
     except Exception as exc:
-        print(f"Failed to sync commands: {exc}")
+        print(f"Unexpected error during command sync: {exc}")
 
 
 @bot.tree.error
@@ -152,59 +148,16 @@ async def load_cogs() -> None:
     also be ``async`` and awaited before starting the bot.
     """
     # Load the ping cog if present
-    try:
-        await bot.load_extension("cogs.ping")
-    except Exception as exc:
-        print(f"Failed to load ping cog: {exc}")
-
-    # Load the trials cog which provides /trial, /endtrial, /triallist and /tlist
-    try:
-        await bot.load_extension("cogs.trials")
-    except Exception as exc:
-        print(f"Failed to load trials cog: {exc}")
-
-    # Load the AutoMod DM cog for sending direct messages when AutoMod triggers
-    try:
-        await bot.load_extension("cogs.automod")
-    except Exception as exc:
-        print(f"Failed to load AutoModDM cog: {exc}")
-
-    # Load the paying_tier_1 cog for managing paid customer memberships
-    try:
-        await bot.load_extension("cogs.paying_tier_1")
-    except Exception as exc:
-        print(f"Failed to load PayingTier1 cog: {exc}")
-
-    # Load the paying_tier_2 cog for managing paid customer memberships
-    try:
-        await bot.load_extension("cogs.paying_tier_2")
-    except Exception as exc:
-        print(f"Failed to load PayingTier2 cog: {exc}")
-
-    # Load the paying_tier_3 cog for managing paid customer memberships
-    try:
-        await bot.load_extension("cogs.paying_tier_3")
-    except Exception as exc:
-        print(f"Failed to load PayingTier3 cog: {exc}")
-
-    # Load the list_paying cog for listing paid customers
-    try:
-        await bot.load_extension("cogs.list_registered")
-    except Exception as exc:
-        print(f"Failed to load ListPaying cog: {exc}")
-    
-    # Load the server cog if present
-    try:
-        await bot.load_extension("cogs.server")
-    except Exception as exc:
-        print(f"Failed to load server cog: {exc}")
+    # try:
+    #     await bot.load_extension("cogs.ping")
+    # except Exception as exc:
+    #     print(f"Failed to load ping cog: {exc}")
 
     # Load the cognitive_reset cog if present
-    try:
-        await bot.load_extension("cogs.cognitive_reset")
-    except Exception as exc:
-        print(f"Failed to load cognitive-reset cog: {exc}")
-
+    # try:
+    #     await bot.load_extension("cogs.cognitive_reset")
+    # except Exception as exc:
+    #     print(f"Failed to load cognitive-reset cog: {exc}")
 
 async def main() -> None:
     """Main entry point for running the bot."""
