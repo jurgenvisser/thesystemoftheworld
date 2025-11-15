@@ -44,61 +44,61 @@ export default {
                 18: '4.5rem', // This is 72px (18 * 4px, assuming the default base unit)
             },
             backgroundImage: {
-                'h-backdrop-1': "url('/public/images/backdrop/horizontal/h_backdrop_1.jpg')",
-                'h-backdrop-2': "url('/public/images/backdrop/horizontal/h_backdrop_2.jpg')",
-                'h-backdrop-3': "url('/public/images/backdrop/horizontal/h_backdrop_3.jpg')",
-                'h-backdrop-4': "url('/public/images/backdrop/horizontal/h_backdrop_4.jpg')",
+                'h-backdrop-1': "url('/images/backdrop/horizontal/h_backdrop_1.jpg')",
+                'h-backdrop-2': "url('/images/backdrop/horizontal/h_backdrop_2.jpg')",
+                'h-backdrop-3': "url('/images/backdrop/horizontal/h_backdrop_3.jpg')",
+                'h-backdrop-4': "url('/images/backdrop/horizontal/h_backdrop_4.jpg')",
 
-                'v-backdrop-1': "url('/public/images/backdrop/vertical/v_backdrop_1.jpg')",
-                'v-backdrop-2': "url('/public/images/backdrop/vertical/v_backdrop_2.jpg')",
-                'v-backdrop-3': "url('/public/images/backdrop/vertical/v_backdrop_3.jpg')",
-                'v-backdrop-4': "url('/public/images/backdrop/vertical/v_backdrop_4.jpg')",
-                'v-backdrop-5': "url('/public/images/backdrop/vertical/v_backdrop_5.jpg')",
-                'v-backdrop-6': "url('/public/images/backdrop/vertical/v_backdrop_6.PNG')",
-                'v-backdrop-7': "url('/public/images/backdrop/vertical/v_backdrop_7.jpg')",
-                'v-backdrop-8': "url('/public/images/backdrop/vertical/v_backdrop_8.jpg')",
-                'v-backdrop-9': "url('/public/images/backdrop/vertical/v_backdrop_9.jpg')",
+                'v-backdrop-1': "url('/images/backdrop/vertical/v_backdrop_1.jpg')",
+                'v-backdrop-2': "url('/images/backdrop/vertical/v_backdrop_2.jpg')",
+                'v-backdrop-3': "url('/images/backdrop/vertical/v_backdrop_3.jpg')",
+                'v-backdrop-4': "url('/images/backdrop/vertical/v_backdrop_4.jpg')",
+                'v-backdrop-5': "url('/images/backdrop/vertical/v_backdrop_5.jpg')",
+                'v-backdrop-6': "url('/images/backdrop/vertical/v_backdrop_6.PNG')",
+                'v-backdrop-7': "url('/images/backdrop/vertical/v_backdrop_7.jpg')",
+                'v-backdrop-8': "url('/images/backdrop/vertical/v_backdrop_8.jpg')",
+                'v-backdrop-9': "url('/images/backdrop/vertical/v_backdrop_9.jpg')",
 
-                'the-system-quinn': "url('/public/images/TheSystemProfilePicture.jpeg')",
-                'the-system-full': "url('/public/images/logos/TheSystemFull.svg')",
-                'blueprint-full': "url('/public/images/logos/BlueprintFull.svg')",
-                'the-system-horse': "url('/public/images/logos/TheSystemHorse.svg')",
-                'blueprint-horse': "url('/public/images/logos/BlueprintHorse.svg')",
+                'the-system-quinn': "url('/images/TheSystemProfilePicture.jpeg')",
+                'the-system-full': "url('/images/logos/TheSystemFull.svg')",
+                'blueprint-full': "url('/images/logos/BlueprintFull.svg')",
+                'the-system-horse': "url('/images/logos/TheSystemHorse.svg')",
+                'blueprint-horse': "url('/images/logos/BlueprintHorse.svg')",
                 
-                'tiktok-white': "url('/public/images/icons/TikTok_Glyph_White.svg')",
-                'tiktok-black': "url('/public/images/icons/TikTok_Glyph_Black.svg')",
-                'tiktok-color-white': "url('/public/images/icons/TikTok_Glyph_Color_White.svg')",
-                'tiktok-color-black': "url('/public/images/icons/TikTok_Glyph_Color_Black.svg')",
-                'youtube-color': "url('/public/images/icons/youtube_red.svg')",
-                'youtube-black': "url('/public/images/icons/youtube_black.svg')",
-                'youtube-white': "url('/public/images/icons/youtube_white.svg')",
-                'telegram-color': "url('/public/images/icons/telegram_color.svg')",
-                'telegram-black': "url('/public/images/icons/telegram_black.svg')",
-                'telegram-white': "url('/public/images/icons/telegram_white.svg')",
-                'discord-blurple': "url('/public/images/icons/Discord_Symbol_Blurple.svg')",
-                'discord-black': "url('/public/images/icons/Discord_Symbol_Black.svg')",
-                'discord-white': "url('/public/images/icons/Discord_Symbol_White.svg')",
-                'discord-light-blurple': "url('/public/images/icons/Discord_Symbol_Light_Blurple.svg')",
+                'tiktok-white': "url('/images/icons/TikTok_Glyph_White.svg')",
+                'tiktok-black': "url('/images/icons/TikTok_Glyph_Black.svg')",
+                'tiktok-color-white': "url('/images/icons/TikTok_Glyph_Color_White.svg')",
+                'tiktok-color-black': "url('/images/icons/TikTok_Glyph_Color_Black.svg')",
+                'youtube-color': "url('/images/icons/youtube_red.svg')",
+                'youtube-black': "url('/images/icons/youtube_black.svg')",
+                'youtube-white': "url('/images/icons/youtube_white.svg')",
+                'telegram-color': "url('/images/icons/telegram_color.svg')",
+                'telegram-black': "url('/images/icons/telegram_black.svg')",
+                'telegram-white': "url('/images/icons/telegram_white.svg')",
+                'discord-blurple': "url('/images/icons/Discord_Symbol_Blurple.svg')",
+                'discord-black': "url('/images/icons/Discord_Symbol_Black.svg')",
+                'discord-white': "url('/images/icons/Discord_Symbol_White.svg')",
+                'discord-light-blurple': "url('/images/icons/Discord_Symbol_Light_Blurple.svg')",
                 
-                'instagram-color': "url('/public/images/icons/Instagram_Glyph_Gradient.svg')",
-                'instagram-black': "url('/public/images/icons/Instagram_Glyph_Black.svg')",
-                'instagram-white': "url('/public/images/icons/Instagram_Glyph_White.svg')",
-                'facebook-color': "url('/public/images/icons/Facebook_Logo_Primary.png')",
-                'facebook-white': "url('/public/images/icons/Facebook_Logo_Secondary.png')",
-                'whatsapp-green': "url('/public/images/icons/WhatsApp_Green.svg')",
-                'whatsapp-black': "url('/public/images/icons/WhatsApp_Black.svg')",
-                'whatsapp-white': "url('/public/images/icons/WhatsApp_White.svg')",
-                'whatsapp-dark-green': "url('/public/images/icons/WhatsApp_Dark_green.svg')",
-                'x-black': "url('/public/images/icons/x_logo_black.svg')",
-                'x-white': "url('/public/images/icons/x_logo_white.svg')",
+                'instagram-color': "url('/images/icons/Instagram_Glyph_Gradient.svg')",
+                'instagram-black': "url('/images/icons/Instagram_Glyph_Black.svg')",
+                'instagram-white': "url('/images/icons/Instagram_Glyph_White.svg')",
+                'facebook-color': "url('/images/icons/Facebook_Logo_Primary.png')",
+                'facebook-white': "url('/images/icons/Facebook_Logo_Secondary.png')",
+                'whatsapp-green': "url('/images/icons/WhatsApp_Green.svg')",
+                'whatsapp-black': "url('/images/icons/WhatsApp_Black.svg')",
+                'whatsapp-white': "url('/images/icons/WhatsApp_White.svg')",
+                'whatsapp-dark-green': "url('/images/icons/WhatsApp_Dark_green.svg')",
+                'x-black': "url('/images/icons/x_logo_black.svg')",
+                'x-white': "url('/images/icons/x_logo_white.svg')",
             },
         },
     },
     plugins: [
-        plugin(function ({ addUtilities, theme }) {
+        plugin(function ({ addUtilities, addBase, theme }) {
+            // ---- bestaande utilities van jou ----
             addUtilities(
                 {
-                    /* Existing utilities */
                     '.clover-chess': {
                         display: 'inline-flex',
                         alignItems: 'center',
@@ -109,7 +109,7 @@ export default {
                         display: 'inline-block',
                         width: '1em',
                         height: '1em',
-                        backgroundImage: "url('/public/images/emojis/clover.png')",
+                        backgroundImage: "url('/images/emojis/clover.png')",
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         verticalAlign: 'middle',
@@ -119,7 +119,7 @@ export default {
                         display: 'inline-block',
                         width: '1em',
                         height: '1em',
-                        backgroundImage: "url('/public/images/emojis/chess.png')",
+                        backgroundImage: "url('/images/emojis/chess.png')",
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         verticalAlign: 'middle',
@@ -129,7 +129,7 @@ export default {
                     },
                     '@screen lg': {
                         '.responsive-width': {
-                        width: '80vw',
+                            width: '80vw',
                         },
                     },
                     '.responsive-height': {
@@ -142,9 +142,7 @@ export default {
                             paddingBottom: '6rem',
                         },
                     },
-                    /* New utilities */
                     '.animate-text-color': {
-                        // // color: 'white',
                         transition: 'color 0.3s ease',
                     },
                     '.theme-primary.animate-text-color:hover': {
@@ -178,22 +176,33 @@ export default {
                         width: '100%',
                     },
                     '.theme-primary, .theme-secondary': {
-                        // // color: 'white', /* Keep links white by default */
-                        textDecoration: 'none', /* No underline by default */
-                        position: 'relative', /* So we can position the underline */
-                        overflow: 'hidden', /* Hide the underline by default */
-                        transition: 'color 0.3s ease', /* Smooth transition for text color */
+                        textDecoration: 'none',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        transition: 'color 0.3s ease',
                     },
                     '.scrolling-banner': {
-                        willChange: 'transform', // Enables GPU acceleration
-                        backfaceVisibility: 'hidden', // Prevents flickering during animation
-                        transformStyle: 'preserve-3d', // Ensures smoother animations
+                        willChange: 'transform',
+                        backfaceVisibility: 'hidden',
+                        transformStyle: 'preserve-3d',
                     },
                 },
                 ['responsive', 'hover']
             );
+
+            // ---- NIEUWE PLUGIN: auto-generatie van bg-classes ----
+            const bgImages = theme('backgroundImage') || {};
+            const bgUtilities = {};
+
+            for (const key in bgImages) {
+                bgUtilities[`.bg-${key}`] = {
+                    backgroundImage: bgImages[key],
+                };
+            }
+
+            addUtilities(bgUtilities);
         }),
-    ],
+    ]
 };
 
 // !! This is for serious warnings or depricated methods
