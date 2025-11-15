@@ -25,7 +25,7 @@
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6 flex">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-start items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times">Mentale veerkracht & structuur voor jouw team</h1>
                     <p class="text-base lg:text-lg mb-6">
@@ -45,7 +45,7 @@
         <div class="h-auto lg:h-full col-span-3 flex flex-col gap-10">
             
             <!-- Eerste blok -->
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-start items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Waarom kiezen voor The System?</h1>
                     <p class="text-base lg:text-lg mb-6">
@@ -58,7 +58,7 @@
             </div>
             
             <!-- Tweede blok -->
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-start items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Waarom bedrijven voor The System kiezen</h1>
                     <ul class="list-disc pl-8 list-outside">
@@ -73,7 +73,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-start items-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Wat wij voor jouw organisatie doen</h1>
 
@@ -101,7 +101,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/60 w-full text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 w-full text-sm lg:text-2xl flex flex-col justify-start items-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Wat kost het om niets te doen?</h1>
                     <ul class="list-disc pl-8 list-outside">
@@ -115,7 +115,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-center items-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm lg:text-2xl flex flex-col justify-start items-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <div>
                     <h1 class="mb-8 text-2xl lg:text-4xl font-bold uppercase font-times text-start">Plan een kennismaking met ons team</h1>
                     <p class="text-base lg:text-lg mb-6">
@@ -130,7 +130,7 @@
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-start items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <div class="">

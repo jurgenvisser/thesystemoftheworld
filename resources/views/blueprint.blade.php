@@ -40,7 +40,7 @@
 
         <!-- First Section (4/6) -->
         <div class="h-auto lg:h-full col-span-4">
-            <div data-theme-fixed class="bg-colorSecondary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start items-center text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Jouw Mentale Community</h1>
@@ -76,7 +76,7 @@
 
         <!-- First Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Stap-voor-Stap Blueprint</h1>
@@ -97,7 +97,7 @@
 
         <!-- First Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Privé Netwerk & Community</h1>
@@ -118,7 +118,7 @@
 
         <!-- First Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Persoonlijk Mentorschap</h1>
@@ -139,7 +139,7 @@
 
         <!-- First Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times text-left">Wat je leert bij The System?</h1>
@@ -166,7 +166,7 @@
         
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start items-left text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-6 px-4 lg:px-0 text-2xl lg:text-4xl font-bold uppercase font-times">Wat staat je te wachten?</h1>
@@ -197,7 +197,7 @@
         
         <!-- Quote Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div data-theme-fixed class="bg-colorSecondary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
+            <div data-theme-fixed class="bg-colorSecondary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start items-start text-colorLight p-4 lg:p-20 responsive-height text-left lg:text-justify">
                 <!-- Content goes here -->
                 
                 <h2 class="mb-4 px-4 lg:px-0 text-2xl lg:text-2xl lg:text-4xl uppercase">

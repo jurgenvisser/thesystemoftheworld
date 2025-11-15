@@ -25,7 +25,7 @@
 
         <!-- Text Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6 text-left">Waarom je hier bent</h2>
                 <p class="text-base lg:text-lg">Je bent hier omdat je voelt dat het niet langer zo kan.</p>
                 <p class="text-base lg:text-lg mb-4">Je hoofd is vol. Je richting is weg. Je weet dat er meer in je zit maar je komt er niet alleen uit.</p>
@@ -40,7 +40,7 @@
         
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify shadow-md">
+            <div class="bg-colorPrimary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify shadow-md">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6">Dit is waar je begint</h2>
                 <p class="text-base lg:text-lg mb-4">
                     Als je echt wilt veranderen, begint het hier klein, simpel, maar eerlijk.
@@ -62,7 +62,7 @@
 
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6">Kies je eigen weg naar mentale kracht</h2>
                 <p class="text-base lg:text-lg mb-4">
                     Bij The System krijg je begeleiding die past bij jouw situatie.
@@ -81,7 +81,7 @@
         
         <!-- Text Section (3/6) -->
         <div class="h-auto lg:h-full col-span-3 flex">
-            <div class="bg-colorPrimary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify shadow-md">
+            <div class="bg-colorPrimary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start text-colorLight p-8 lg:p-20 responsive-height text-left lg:text-justify shadow-md">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase font-times mb-6">De pijn waar je tegenaan loopt</h2>
                 <ul class="list-disc list-outside ml-5 mb-4 text-base lg:text-lg px-4 lg:px-0">
                     <li><span class="font-bold">Chaos in je hoofd</span>: je gedachten racen, je voelt je overweldigd en weet niet waar te beginnen.</li>

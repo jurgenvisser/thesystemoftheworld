@@ -1,6 +1,6 @@
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-start text-colorLight p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/60 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start items-start text-colorLight p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-8 text-2xl lg:text-4xl uppercase font-roboto">Einde van de Nieuws-pagina</h1>
@@ -12,7 +12,7 @@
                     </p>
                     <p class="text-base lg:text-lg px-4 lg:px-0">
                         Volg The System voor meer! <br>
-                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="underline decoration-colorPrimary">@thesystemoftheworld</a>.
+                        TikTok: <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" class="!underline !decoration-colorPrimary animate-text-color theme-primary">@thesystemoftheworld</a>.
                     </p>
                 </div>
 

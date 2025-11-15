@@ -1,6 +1,6 @@
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-center items-center text-colorLight p-8 lg:p-20 py-20 text-left lg:text-justify">
+            <div class="bg-colorPrimary/20 text-sm flex-1 w-full lg:text-2xl flex flex-col justify-start items-center text-colorLight p-8 lg:p-20 py-20 text-left lg:text-justify">
                 <!-- Content goes here -->
                 <div class="">
                     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full mb-6">
