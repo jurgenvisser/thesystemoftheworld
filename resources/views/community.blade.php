@@ -50,7 +50,7 @@
             <!-- Waarde 4: AFSLUITING -->
             <div class="p-6 border border-zinc-800 bg-zinc-900/40 text-center hover:border-colorPrimary transition-colors card-shadow">
                 <x-lucide-shield-off class="w-12 h-12 text-colorPrimary mx-auto mb-4" />
-                <h3 class="text-lg font-mono text-colorLight mb-2 uppercase tracking-wider">Zonder Oorder</h3>
+                <h3 class="text-lg font-mono text-colorLight mb-2 uppercase tracking-wider">Zonder Oordeel</h3>
                 <p class="text-zinc-400 text-sm">Wat hier gebeurt, blijft hier. Je bent veilig.</p>
             </div>
 
