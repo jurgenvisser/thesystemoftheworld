@@ -13,10 +13,10 @@
             Ben jij klaar om:
         </p>
         <ul class="text-left text-colorLight text-base md:text-lg lg:text-xl space-y-2 mb-6 lg:md-12">
-            <li class="pl-6 -indent-6 md:pl-0 md:indent-0 flex items-center justify-start gap-4"><x-lucide-flame class="w-6 h-6 text-white" /> <span class="font-medium">Je angsten te stoppen</span></li>
-            <li class="pl-6 -indent-6 md:pl-0 md:indent-0 flex items-center justify-start gap-4"><x-lucide-brain class="w-6 h-6 text-white" /> <span class="font-medium">Rust in je hoofd te krijgen</span></li>
-            <li class="pl-6 -indent-6 md:pl-0 md:indent-0 flex items-center justify-start gap-4"><x-lucide-bow-arrow class="w-6 h-6 text-white" /> <span class="font-medium">Discipline en structuur op te bouwen</span></li>
-            <li class="pl-6 -indent-6 md:pl-0 md:indent-0 flex items-center justify-start gap-4"><x-lucide-ban class="w-6 h-6 text-white" /> <span class="font-medium">Eindelijk te stoppen met excuses</span></li>
+            <li class="flex items-center justify-start gap-4 flex-shrink-0"><x-lucide-flame class="w-6 h-6 min-w-6 min-h-6 flex-shrink-0 text-white" /> <span class="font-medium">Je angsten te stoppen</span></li>
+            <li class="flex items-center justify-start gap-4 flex-shrink-0"><x-lucide-brain class="w-6 h-6 min-w-6 min-h-6 flex-shrink-0 text-white" /> <span class="font-medium">Rust in je hoofd te krijgen</span></li>
+            <li class="flex items-center justify-start gap-4 flex-shrink-0"><x-lucide-bow-arrow class="w-6 h-6 min-w-6 min-h-6 flex-shrink-0 text-white" /> <span class="font-medium">Discipline en structuur op te bouwen</span></li>
+            <li class="flex items-center justify-start gap-4 flex-shrink-0"><x-lucide-ban class="w-6 h-6 min-w-6 min-h-6 flex-shrink-0 text-white" /> <span class="font-medium">Eindelijk te stoppen met excuses</span></li>
         </ul>
         <p class="text-colorLight text-base md:text-lg lg:text-xl mb-4 lg:mb-8">
             Dit is geen praat. Dit is een systeem dat levens red. <br>

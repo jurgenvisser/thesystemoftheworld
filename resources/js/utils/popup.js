@@ -16,7 +16,7 @@ if (!window.popupInitialized) {
 
         if (popup && closePopup) {
             const popupKey = "popupLastShown";
-            const developmentMode = false; //. true = altijd tonen, false = normale cookie-check
+            const developmentMode = true; //. true = altijd tonen, false = normale cookie-check
             const popupDisplayDelay = developmentMode ? 1000 : 15000; // 1 sec in dev, 15 sec normaal
             const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
 

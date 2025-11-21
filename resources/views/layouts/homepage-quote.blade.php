@@ -4,7 +4,7 @@
     $quotes = [
         'JE HEBT GEEN MOTIVATIE NODIG. JE HEBT EEN SYSTEEM NODIG.',
         'DISCIPLINE IS WAT OVERBLIJFT ALS MOTIVATIE WEGVALT.',
-        'DE MAN DIE JE WILT WORDEN, WACHT NIET OP GEVOEL. HIJ DOET.',
+        'Wachten verandert niets. Begin vandaag.',
     ];
 @endphp
 
@@ -17,7 +17,7 @@
 
             @foreach ($quotes as $quote)
                 <div class="flex-shrink-0 w-full px-6">
-                    <h2 class="text-3xl md:text-5xl leading-tight mb-8">
+                    <h2 class="text-3xl md:text-5xl leading-tight mb-8 uppercase">
                         "{{ $quote }}"
                     </h2>
                 </div>
