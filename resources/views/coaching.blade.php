@@ -7,7 +7,7 @@
 <x-standard-hero 
     label="Het Protocol"
     title="Coaching" 
-    subtitle="Dit is geen advies. Dit is een gestructureerd systeem voor jouw onvermijdelijke transformatie."
+    subtitle="Mentaal onderhoud is geen keuze. Het is je maandelijkse overleving. Je onderhoudt je huis, waarom niet je hoofd?"
     background="bg-v-backdrop-8 lg:bg-h-backdrop-3"
 />
 
