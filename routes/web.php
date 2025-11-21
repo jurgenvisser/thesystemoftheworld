@@ -12,6 +12,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FacebookController;
 use Illuminate\Http\Request;
 
+View::share([
+    'appVersion' => 'TSotW.3.0.0p',
+]);
+
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
 Route::get('/callback', [DiscordController::class, 'handleDiscordCallback']);
 
@@ -58,25 +62,25 @@ Route::get('/', function () {
 // Redirect for intake form
 Route::redirect('/intake', env('BREVO_FORM_LINK'), 301);
 
-// Route for the 'Nieuws' page
-Route::get('/nieuws', function () {
-    return view('news'); // Refer to news.blade.php
-});
+// // Route for the 'Nieuws' page
+// Route::get('/nieuws', function () {
+//     return view('news'); // Refer to news.blade.php
+// });
 
 // Route for the 'Community' page
 Route::get('/community', function () {
     return view('community'); // Refer to community.blade.php
 });
 
-// Route for the 'Missie & Visie' page
-Route::get('/missie-visie', function () {
-    return view('missie-visie'); // Refer to missie-visie.blade.php
-});
+// // Route for the 'Missie & Visie' page
+// Route::get('/missie-visie', function () {
+//     return view('missie-visie'); // Refer to missie-visie.blade.php
+// });
 
-// Route for the 'Over Ons' page
-Route::get('/over-ons', function () {
-    return view('about-us'); // Refer to team-and-origin.blade.php
-});
+// // Route for the 'Over Ons' page
+// Route::get('/over-ons', function () {
+//     return view('about-us'); // Refer to team-and-origin.blade.php
+// });
 
 // Route for the 'Coaching' page
 Route::get('/coaching', function () {
@@ -92,11 +96,15 @@ Route::get('/blueprint', function () {
 Route::get('/contact', function () {
     return view('contact'); // Refer to contact.blade.php
 });
-
-// Route for the 'For Business' page
-Route::get('/bedrijven', function () {
-    return view('for-business'); // Refer to for-business.blade.php
+// Route for the 'Bedankt voor je bericht' page
+Route::get('/bedankt-voor-je-bericht', function () {
+    return view('thanks-for-contacting'); // Refer to thanks-for-contacting.blade.php
 });
+
+// // Route for the 'For Business' page
+// Route::get('/bedrijven', function () {
+//     return view('for-business'); // Refer to for-business.blade.php
+// });
 
 // Route for the 'Privacy Policy' page
 Route::get('/privacy-policy', function () {
@@ -125,7 +133,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/admin/refresh-meta-token', [AdminController::class, 'refreshMetaToken'])->name('admin.refresh-meta-token');
 
     Route::post('/admin/update-followers', [AdminController::class, 'updateTikTokFollowers'])->name('admin.update-followers');
-    Route::post('/admin/update-youtube-followers', [AdminController::class, 'updateYoutubeFollowers'])->name('admin.update-youtube-followers');    Route::post('/admin/update-meta-followers', [AdminController::class, 'updateMetaFollowers'])->name('admin.update-meta-followers');
+    Route::post('/admin/update-youtube-followers', [AdminController::class, 'updateYoutubeFollowers'])->name('admin.update-youtube-followers');    
+    Route::post('/admin/update-meta-followers', [AdminController::class, 'updateMetaFollowers'])->name('admin.update-meta-followers');
     Route::post('/admin/update-discord-followers', [AdminController::class, 'updateDiscordFollowers'])->name('admin.update-discord-followers');
     Route::post('/admin/generate-discord-invite', [AdminController::class, 'generateDiscordInvite'])->name('admin.generate-discord-invite');
 });

@@ -71,6 +71,15 @@ export function setTheme(theme) {
                     if (el.classList.contains(`decoration-${colorClass}`)) {
                         el.classList.replace(`decoration-${colorClass}`, 'decoration-colorPrimary');
                     }
+                    // Added shadow color replacements
+                    if (el.classList.contains(`shadow-${colorClass}`)) {
+                        el.classList.replace(`shadow-${colorClass}`, 'shadow-colorPrimary');
+                    }
+                    defaultOpacities.forEach((opacity) => {
+                        if (el.classList.contains(`shadow-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`shadow-${colorClass}/${opacity}`, `shadow-colorPrimary/${opacity}`);
+                        }
+                    });
                     if (el.classList.contains('theme-secondary')) {
                         el.classList.replace('theme-secondary', 'theme-primary');
                     }
@@ -131,6 +140,15 @@ export function setTheme(theme) {
                     if (el.classList.contains(`decoration-${colorClass}`)) {
                         el.classList.replace(`decoration-${colorClass}`, 'decoration-colorSecondary');
                     }
+                    // Added shadow color replacements
+                    if (el.classList.contains(`shadow-${colorClass}`)) {
+                        el.classList.replace(`shadow-${colorClass}`, 'shadow-colorSecondary');
+                    }
+                    defaultOpacities.forEach((opacity) => {
+                        if (el.classList.contains(`shadow-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`shadow-${colorClass}/${opacity}`, `shadow-colorSecondary/${opacity}`);
+                        }
+                    });
                     if (el.classList.contains('theme-primary')) {
                         el.classList.replace('theme-primary', 'theme-secondary');
                     }

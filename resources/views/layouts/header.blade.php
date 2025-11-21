@@ -10,7 +10,7 @@
     </a>
 
     <!-- Links (Desktop) -->
-    <div class="hidden xl:flex justify-center items-center space-x-8 lg:space-x-4 2xl:space-x-6 3xl:space-x-10 mx-4 flex-1">
+    <div class="hidden xl:flex justify-center items-center space-x-8 lg:space-x-4 2xl:space-x-6 3xl:space-x-10 mx-4 flex-1 font-mono font-light uppercase">
         @include('layouts.header-menu')
     </div>
 

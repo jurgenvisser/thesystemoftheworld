@@ -14,6 +14,57 @@ export default {
     ],
     safelist: [// Add the class you want to safelist here
         ...generateSafelist(),
+
+        'h-8', 'w-8', 'mb-6',
+
+        'bg-h-backdrop-1',
+        'bg-h-backdrop-2',
+        'bg-h-backdrop-3',
+        'bg-h-backdrop-4',
+
+        'bg-v-backdrop-1',
+        'bg-v-backdrop-2',
+        'bg-v-backdrop-3',
+        'bg-v-backdrop-4',
+        'bg-v-backdrop-5',
+        'bg-v-backdrop-6',
+        'bg-v-backdrop-7',
+        'bg-v-backdrop-8',
+        'bg-v-backdrop-9',
+
+        'bg-the-system-quinn',
+        'bg-the-system-full',
+        'bg-blueprint-full',
+        'bg-the-system-horse',
+        'bg-blueprint-horse',
+
+        'bg-tiktok-white',
+        'bg-tiktok-black',
+        'bg-tiktok-color-white',
+        'bg-tiktok-color-black',
+        'bg-youtube-color',
+        'bg-youtube-black',
+        'bg-youtube-white',
+        'bg-telegram-color',
+        'bg-telegram-black',
+        'bg-telegram-white',
+        'bg-discord-blurple',
+        'bg-discord-black',
+        'bg-discord-white',
+        'bg-discord-light-blurple',
+
+        'bg-instagram-color',
+        'bg-instagram-black',
+        'bg-instagram-white',
+        'bg-facebook-color',
+        'bg-facebook-white',
+        'bg-whatsapp-green',
+        'bg-whatsapp-black',
+        'bg-whatsapp-white',
+        'bg-whatsapp-dark-green',
+
+        'bg-x-black',
+        'bg-x-white',
     ],
     theme: {
         extend: {
@@ -21,6 +72,7 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 roboto: ['Roboto Slab', 'serif'],
                 times: ['"Times New Roman"', 'serif'], // Add Times New Roman as a custom font
+                mono: ['"Fira Code"', 'Menlo', 'Monaco', 'Courier New', 'monospace'],
             },
             colors: {
                 colorPrimary: '#D9AF5C', // Add colorPrimary as a custom color
@@ -185,6 +237,23 @@ export default {
                         willChange: 'transform',
                         backfaceVisibility: 'hidden',
                         transformStyle: 'preserve-3d',
+                    },
+                    '.module-card': {
+                        boxShadow: '0 0 30px rgba(98, 223, 230, 0.1)',
+                        transition: 'all 0.4s ease-in-out',
+                    },
+                    '.module-card:hover': {
+                        borderColor: '#62DFE6',
+                        transform: 'translateY(-5px)',
+                        boxShadow: '0 10px 40px rgba(98, 223, 230, 0.3)',
+                    },
+                    '.pakket-card': {
+                        boxShadow: '0 0 30px rgba(217, 175, 92, 0.1)',
+                        transition: 'all 0.4s ease-in-out',
+                    },
+                    '.pakket-card:hover': {
+                        borderColor: '#D9AF5C',
+                        boxShadow: '0 10px 40px rgba(217, 175, 92, 0.4)',
                     },
                 },
                 ['responsive', 'hover']

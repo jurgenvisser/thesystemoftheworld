@@ -1,4 +1,4 @@
-<div class="bg-colorPrimary/20 pt-12 lg:pt-24">
+<div class="bg-black pt-12 lg:pt-24">
     <a href="{{ $discordInviteLink }}" target="_blank" class="block">
         <div class="relative h-16 lg:h-32 bg-black/30 lg:bg-black/40 text-colorLight flex items-center overflow-hidden">
             <!-- Fading edges -->

@@ -12,7 +12,13 @@ export default defineConfig(async () => {
                 input: ['resources/css/app.css', 'resources/js/app.js'],
                 refresh: true,
             }),
+            
         ],
+        resolve: {
+            alias: process.env.NODE_ENV === 'development'
+                ? { '/images': '/public/images' }
+                : {}
+        },
         server: {
             host: '0.0.0.0',   // luister op alle netwerkinterfaces
             port: 5173,
