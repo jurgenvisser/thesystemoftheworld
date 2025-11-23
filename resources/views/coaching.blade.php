@@ -209,7 +209,7 @@
 
     {{-- QUOTE BOX MET ALLEEN INNERLIJKE GLOED --}}
     {{-- Verwijderde 'rounded-xl' om scherpe hoeken te behouden. --}}
-    <div class="glow-card absolute bottom-6 -left-6 bg-black !border-2 !border-colorPrimary p-6 max-w-xs transition-all duration-300 z-30" 
+    <div class="glow-card absolute bottom-6 -left-6 bg-black outline outline-2 -outline-offset-1 outline-colorPrimary p-6 max-w-xs transition-all duration-300 z-30" 
          style="--disable-border-glow: 1;">
         
         {{-- De Glow Blob (innerlijke gloed) --}}

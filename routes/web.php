@@ -13,7 +13,7 @@ use App\Http\Controllers\FacebookController;
 use Illuminate\Http\Request;
 
 View::share([
-    'appVersion' => 'TSotW.3.0.5p',
+    'appVersion' => 'TSotW.3.0.6p',
 ]);
 
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
