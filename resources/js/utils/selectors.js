@@ -3,7 +3,7 @@
 // Default values for opacities, color classes, and element types
 const defaultOpacities = ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80', '85', '90', '95', '100'];
 const defaultColorClasses = ['colorPrimary', 'colorSecondary'];
-const defaultElementTypes = ['bg', 'border', 'text', 'decoration', 'ring', 'shadow'];
+const defaultElementTypes = ['bg', 'border', 'text', 'decoration', 'ring', 'shadow', 'outline'];
 
 // Function to dynamically generate class selectors based on color, opacity, and element types
 const generateSelectors = (colorClasses = defaultColorClasses, opacities = defaultOpacities, elementTypes = defaultElementTypes) => {
@@ -20,7 +20,7 @@ const generateSelectors = (colorClasses = defaultColorClasses, opacities = defau
             selectors.push(`.hover\\:${type}-${color}`);
 
             // Add the opacity variations for bg and border classes (e.g. .bg-colorPrimary/20)
-            if (type === 'bg' || type === 'border' || type === 'ring' || type === 'shadow') {
+            if (type === 'bg' || type === 'border' || type === 'ring' || type === 'shadow' || type === 'outline') {
                 opacities.forEach(opacity => {
                     selectors.push(`.${type}-${color}\\/${opacity}`);
                     selectors.push(`.hover\\:${type}-${color}\\/${opacity}`);
@@ -48,7 +48,7 @@ function generateSafelist(colorClasses = defaultColorClasses, opacities = defaul
             selectors.push(`hover:${type}-${color}`);
 
             // Add the opacity variations for bg and border classes (e.g. .bg-colorPrimary/20)
-            if (type === 'bg' || type === 'border' || type === 'ring' || type === 'shadow') {
+            if (type === 'bg' || type === 'border' || type === 'ring' || type === 'shadow' || type === 'outline') {
                 opacities.forEach(opacity => {
                     selectors.push(`${type}-${color}/${opacity}`);
                     selectors.push(`hover:${type}-${color}/${opacity}`);

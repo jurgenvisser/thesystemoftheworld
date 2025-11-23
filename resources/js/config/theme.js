@@ -16,6 +16,10 @@ export function setTheme(theme) {
             defaultElementTypes.forEach((elementType) => {
                 if (theme === "primary") {
                     // Switching to primary theme
+                    document.querySelectorAll(".card-glow").forEach(card => {
+                        card.classList.remove("card-glow-secondary");
+                        card.classList.add("card-glow-primary");
+                    });
                     if (el.classList.contains(`bg-${colorClass}`)) {
                         el.classList.replace(`bg-${colorClass}`, `bg-colorPrimary`);
                     }
@@ -32,12 +36,18 @@ export function setTheme(theme) {
                         if (el.classList.contains(`border-${colorClass}/${opacity}`)) {
                             el.classList.replace(`border-${colorClass}/${opacity}`, `border-colorPrimary/${opacity}`);
                         }
+                        if (el.classList.contains(`hover:border-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`hover:border-${colorClass}/${opacity}`, `hover:border-colorPrimary/${opacity}`);
+                        }
                     });
                     if (el.classList.contains(`text-${colorClass}`)) {
                         el.classList.replace(`text-${colorClass}`, `text-colorPrimary`);
                     }
                     if (el.classList.contains(`border-${colorClass}`)) {
                         el.classList.replace(`border-${colorClass}`, `border-colorPrimary`);
+                    }
+                    if (el.classList.contains(`outline-${colorClass}`)) {
+                        el.classList.replace(`outline-${colorClass}`, `outline-colorPrimary`);
                     }
                     if (el.classList.contains(`ring-${colorClass}`)) {
                         el.classList.replace(`ring-${colorClass}`, `ring-colorPrimary`);
@@ -83,8 +93,13 @@ export function setTheme(theme) {
                     if (el.classList.contains('theme-secondary')) {
                         el.classList.replace('theme-secondary', 'theme-primary');
                     }
+                    
                 } else {
                     // Switching to secondary theme
+                    document.querySelectorAll(".card-glow").forEach(card => {
+                        card.classList.remove("card-glow-primary");
+                        card.classList.add("card-glow-secondary");
+                    });
                     if (el.classList.contains(`bg-${colorClass}`)) {
                         el.classList.replace(`bg-${colorClass}`, `bg-colorSecondary`);
                     }
@@ -101,12 +116,18 @@ export function setTheme(theme) {
                         if (el.classList.contains(`border-${colorClass}/${opacity}`)) {
                             el.classList.replace(`border-${colorClass}/${opacity}`, `border-colorSecondary/${opacity}`);
                         }
+                        if (el.classList.contains(`hover:border-${colorClass}/${opacity}`)) {
+                            el.classList.replace(`hover:border-${colorClass}/${opacity}`, `hover:border-colorSecondary/${opacity}`);
+                        }
                     });
                     if (el.classList.contains(`text-${colorClass}`)) {
                         el.classList.replace(`text-${colorClass}`, `text-colorSecondary`);
                     }
                     if (el.classList.contains(`border-${colorClass}`)) {
                         el.classList.replace(`border-${colorClass}`, `border-colorSecondary`);
+                    }
+                    if (el.classList.contains(`outline-${colorClass}`)) {
+                        el.classList.replace(`outline-${colorClass}`, `outline-colorSecondary`);
                     }
                     if (el.classList.contains(`ring-${colorClass}`)) {
                         el.classList.replace(`ring-${colorClass}`, `ring-colorSecondary`);

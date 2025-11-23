@@ -13,7 +13,7 @@ use App\Http\Controllers\FacebookController;
 use Illuminate\Http\Request;
 
 View::share([
-    'appVersion' => 'TSotW.3.0.4p',
+    'appVersion' => 'TSotW.3.0.5p',
 ]);
 
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
@@ -149,10 +149,6 @@ Route::get('/admin/test', function () {
     return view('admin.test');
 })->middleware('auth');
 
-// Route for the 'New Coaching' page
-Route::get('/admin/new-coaching', function () {
-    return view('new-coaching');
-})->middleware('auth');
 
 // Route for the 'HTML/CSS Footer for Payhip' page
 Route::get('/admin/html-css-footer-for-payhip', function () {

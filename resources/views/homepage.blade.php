@@ -63,20 +63,34 @@
 
         <div class="grid gap-6">
             @foreach ($features as $feature)
-                <div class="group p-8 border border-zinc-800 hover:border-colorPrimary hover:bg-zinc-900 transition-all duration-500">
-                    @switch($feature['icon'])
-                        @case('Lock')
-                            <x-lucide-lock-open class="h-8 w-8 text-colorPrimary mb-6 flex-shrink-0" />
-                            @break
-                        @case('Activity')
-                            <x-lucide-brain-circuit class="h-8 w-8 text-colorPrimary mb-6 flex-shrink-0" />
-                            @break
-                        @case('Zap')
-                            <x-lucide-unlink class="h-8 w-8 text-colorPrimary mb-6 flex-shrink-0" />
-                            @break
-                    @endswitch
-                    <h3 class="text-xl font-bold text-colorLight mb-3 uppercase tracking-wide">{{ $feature['title'] }}</h3>
-                    <p class="text-zinc-400">{{ $feature['desc'] }}</p>
+    
+                {{-- 1. Maak dit de Glow Card --}}
+                <div class="glow-card relative p-8 transition-all duration-300">
+                    
+                    {{-- 2. De Glow Blob MOET het eerste element zijn --}}
+                    <div class="glow-blob"></div>
+
+                    {{-- 3. Wrap de inhoud in glow-content --}}
+                    <div class="glow-content">
+                        @switch($feature['icon'])
+                            @case('Lock')
+                                <x-lucide-lock-open class="h-8 w-8 text-colorPrimary mb-6 flex-shrink-0" />
+                                @break
+                            @case('Activity')
+                                <x-lucide-brain-circuit class="h-8 w-8 text-colorPrimary mb-6 flex-shrink-0" />
+                                @break
+                            @case('Zap')
+                                <x-lucide-unlink class="h-8 w-8 text-colorPrimary mb-6 flex-shrink-0" />
+                                @break
+                            @default
+                                {{-- Optionele fallback icon --}}
+                                <x-lucide-help-circle class="h-8 w-8 text-colorPrimary mb-6 flex-shrink-0" />
+                        @endswitch
+                        
+                        <h3 class="text-xl font-bold text-colorLight mb-3 uppercase tracking-wide">{{ $feature['title'] }}</h3>
+                        <p class="text-zinc-400">{{ $feature['desc'] }}</p>
+                    </div>
+                    {{-- Einde glow-content --}}
                 </div>
             @endforeach
         </div>
@@ -124,26 +138,29 @@
         @endphp
 
         @foreach ($plans as $i => $plan)
-            <div class="pakket-card relative p-8 border {{ $i === 2 ? 'border-colorPrimary bg-zinc-900' : 'border-zinc-800 hover:border-zinc-700' }} flex flex-col transition-all duration-300">
+            <div class="glow-card relative p-8 border {{ $i === 2 ? 'outline outline-2 -outline-offset-1 outline-colorPrimary bg-zinc-900' : 'border-zinc-800 hover:border-zinc-700' }} flex flex-col transition-all duration-300"
+            style="{{ $i === 2 ? '--default-opacity: 0.3; --disable-border-glow: 1;' : '' }}">
+                <div class="glow-blob"></div>
+                
                 @if ($i === 2)
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-colorPrimary text-black px-3 py-1 text-xs font-bold uppercase tracking-widest">Aanbevolen</div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-colorPrimary text-black px-3 py-1 text-xs font-bold uppercase tracking-widest">Aanbevolen</div>
                 @endif
 
-                <h3 class="text-2xl font-bold text-colorLight mb-2">{{ $plan['title'] }}</h3>
-                <div class="text-sm font-mono text-zinc-500 uppercase mb-8">{{ $plan['price'] }}</div>
-
-                <ul class="flex-1 space-y-4 mb-8">
-                    @foreach ($plan['features'] as $feature)
-                        <li class="flex items-center gap-3 text-sm text-zinc-300">
-                            <div class="w-1.5 h-1.5 rounded-full {{ $i === 2 ? 'bg-colorPrimary' : 'bg-white' }}"></div>
-                            {{ $feature }}
-                        </li>
-                    @endforeach
-                </ul>
-
-                <a href="/coaching" class="w-full text-center inline-block py-3 px-6 {{ $i === 2 ? 'bg-colorPrimary text-black hover:bg-colorPrimary/80' : 'bg-black text-colorLight hover:bg-zinc-800' }}">
-                    Beginnen
-                </a>
+                <div class="glow-content h-full flex flex-col">
+                    <h3 class="text-2xl font-bold text-colorLight mb-2">{{ $plan['title'] }}</h3>
+                    <div class="text-sm font-mono text-zinc-500 uppercase mb-8">{{ $plan['price'] }}</div>
+                    <ul class="flex-1 space-y-4 mb-8">
+                        @foreach ($plan['features'] as $feature)
+                            <li class="flex items-center gap-3 text-sm text-zinc-300">
+                                <div class="w-1.5 h-1.5 rounded-full {{ $i === 2 ? 'bg-colorPrimary' : 'bg-white' }}"></div>
+                                {{ $feature }}
+                            </li>
+                        @endforeach
+                    </ul>
+                    <a href="/coaching" class="w-full text-center inline-block py-3 px-6 {{ $i === 2 ? 'bg-colorPrimary text-black hover:bg-colorPrimary/80' : 'bg-black text-colorLight hover:bg-zinc-800' }}">
+                        Beginnen
+                    </a>
+                </div>
             </div>
         @endforeach
     </div>

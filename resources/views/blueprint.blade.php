@@ -49,56 +49,74 @@
         </div>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+                    
             <!-- MODULE 1: EXECUTION/DISCIPLINE -->
-            <div class="module-card p-8 border border-zinc-800 bg-black/50 rounded-lg">
-                <span data-theme-fixed class="font-mono text-xs uppercase tracking-widest text-colorSecondary block mb-4">Blueprint 01</span>
-                <h3 class="text-3xl font-bold text-colorLight mb-4 uppercase">Gezonde gedachten</h3>
-                <p class="text-zinc-400 mb-6">
-                    Het stappenplan om uitstelgedrag en mentale blokkades te stoppen.
-                </p>
-                <ul class="space-y-2 text-zinc-300 font-mono text-sm uppercase">
-                    <li>— Pijn: Chroninsch uitstellen</li>
-                    <li>— Focus: Direct actie nemen</li>
-                    <li>— Duur: 7 dagen zelf-handleiding</li>
-                </ul>
-                <a href="#cta" data-theme-fixed class="mt-6 inline-block font-mono text-colorSecondary text-sm hover:text-colorLight transition-colors">
-                    Ontgrendelt Blueprint 02 - Emoties
-                </a>
+            {{-- Toegevoegd: glow-card, relative, data-glow-theme="secondary" --}}
+            <div class="glow-card relative rounded-xl p-8 transition-all duration-300" data-glow-theme="secondary">
+                
+                <div class="glow-blob"></div>
+
+                <div class="glow-content">
+                    <span data-theme-fixed class="font-mono text-xs uppercase tracking-widest text-colorSecondary block mb-4">Blueprint 01</span>
+                    <h3 class="text-3xl font-bold text-colorLight mb-4 uppercase">Gezonde gedachten</h3>
+                    <p class="text-zinc-400 mb-6">
+                        Het stappenplan om uitstelgedrag en mentale blokkades te stoppen.
+                    </p>
+                    <ul class="space-y-2 text-zinc-300 font-mono text-sm uppercase">
+                        <li>— Pijn: Chroninsch uitstellen</li>
+                        <li>— Focus: Direct actie nemen</li>
+                        <li>— Duur: 7 dagen zelf-handleiding</li>
+                    </ul>
+                    <a href="#cta" data-theme-fixed class="mt-6 inline-block font-mono text-colorSecondary text-sm hover:text-colorLight transition-colors">
+                        Ontgrendelt Blueprint 02 - Emoties
+                    </a>
+                </div>
             </div>
 
             <!-- MODULE 2: DEEP WORK/FOCUS -->
-            <div class="module-card p-8 border border-zinc-800 bg-black/50 rounded-lg">
-                <span data-theme-fixed class="font-mono text-xs uppercase tracking-widest text-colorSecondary block mb-4">Blueprint 02</span>
-                <h3 class="text-3xl font-bold text-colorLight mb-4 uppercase">Emoties</h3>
-                <p class="text-zinc-400 mb-6">
-                    Het stappenplan om emoties te herkennen, accepteren en bewust te sturen.
-                </p>
-                <ul class="space-y-2 text-zinc-300 font-mono text-sm uppercase">
-                    <li>— Pijn: Onbewuste emoties die je beïnvloeden</li>
-                    <li>— Focus: Bewust reageren op gevoelens</li>
-                    <li>— Duur: 14 dagen zelf-handleiding</li>
-                </ul>
-                <a href="#cta" data-theme-fixed class="mt-6 inline-block font-mono text-colorSecondary text-sm hover:text-colorLight transition-colors">
-                    Ontgrendelt Blueprint 03 - Angst & Onzekerheid
-                </a>
+            {{-- Toegevoegd: glow-card, relative, data-glow-theme="secondary" --}}
+            <div class="glow-card relative rounded-xl p-8 transition-all duration-300" data-glow-theme="secondary">
+                
+                <div class="glow-blob"></div>
+
+                <div class="glow-content">
+                    <span data-theme-fixed class="font-mono text-xs uppercase tracking-widest text-colorSecondary block mb-4">Blueprint 02</span>
+                    <h3 class="text-3xl font-bold text-colorLight mb-4 uppercase">Emoties</h3>
+                    <p class="text-zinc-400 mb-6">
+                        Het stappenplan om emoties te herkennen, accepteren en bewust te sturen.
+                    </p>
+                    <ul class="space-y-2 text-zinc-300 font-mono text-sm uppercase">
+                        <li>— Pijn: Onbewuste emoties die je beïnvloeden</li>
+                        <li>— Focus: Bewust reageren op gevoelens</li>
+                        <li>— Duur: 14 dagen zelf-handleiding</li>
+                    </ul>
+                    <a href="#cta" data-theme-fixed class="mt-6 inline-block font-mono text-colorSecondary text-sm hover:text-colorLight transition-colors">
+                        Ontgrendelt Blueprint 03 - Angst & Onzekerheid
+                    </a>
+                </div>
             </div>
             
             <!-- MODULE 3: ENERGY/BIO-OPTIMALISATIE -->
-            <div class="module-card p-8 border border-zinc-800 bg-black/50 rounded-lg">
-                <span data-theme-fixed class="font-mono text-xs uppercase tracking-widest text-colorSecondary block mb-4">Blueprint 03</span>
-                <h3 class="text-3xl font-bold text-colorLight mb-4 uppercase">Angst & Onzekerheid</h3>
-                <p class="text-zinc-400 mb-6">
-                    Beheers angst en onzekerheid. Krijg controle en bouw dagelijks zelfvertrouwen op.
-                </p>
-                <ul class="space-y-2 text-zinc-300 font-mono text-sm uppercase">
-                    <li>— Pijn: Angst, twijfel en vastzitten</li>
-                    <li>— Focus: Patronen doorbreken, mentale kracht opbouwen</li>
-                    <li>— Duur: 21 dagen zelf-handleiding</li>
-                </ul>
-                <a href="#cta" data-theme-fixed class="mt-6 inline-block font-mono text-colorSecondary text-sm hover:text-colorLight transition-colors">
-                    Word lid voor nog 30+ andere Blueprints!
-                </a>
+            {{-- Toegevoegd: glow-card, relative, data-glow-theme="secondary" --}}
+            <div class="glow-card relative rounded-xl p-8 transition-all duration-300" data-glow-theme="secondary">
+                
+                <div class="glow-blob"></div>
+
+                <div class="glow-content">
+                    <span data-theme-fixed class="font-mono text-xs uppercase tracking-widest text-colorSecondary block mb-4">Blueprint 03</span>
+                    <h3 class="text-3xl font-bold text-colorLight mb-4 uppercase">Angst & Onzekerheid</h3>
+                    <p class="text-zinc-400 mb-6">
+                        Beheers angst en onzekerheid. Krijg controle en bouw dagelijks zelfvertrouwen op.
+                    </p>
+                    <ul class="space-y-2 text-zinc-300 font-mono text-sm uppercase">
+                        <li>— Pijn: Angst, twijfel en vastzitten</li>
+                        <li>— Focus: Patronen doorbreken, mentale kracht opbouwen</li>
+                        <li>— Duur: 21 dagen zelf-handleiding</li>
+                    </ul>
+                    <a href="#cta" data-theme-fixed class="mt-6 inline-block font-mono text-colorSecondary text-sm hover:text-colorLight transition-colors">
+                        Word lid voor nog 30+ andere Blueprints!
+                    </a>
+                </div>
             </div>
 
         </div>
