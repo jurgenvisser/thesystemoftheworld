@@ -26,6 +26,12 @@ export function setTheme(theme) {
                     if (el.classList.contains(`hover:bg-${colorClass}`)) {
                         el.classList.replace(`hover:bg-${colorClass}`, `hover:bg-colorPrimary`);
                     }
+                    if (el.classList.contains(`hover:text-${colorClass}`)) {
+                        el.classList.replace(`hover:text-${colorClass}`, `hover:text-colorPrimary`);
+                    }
+                    if (el.classList.contains(`hover:border-${colorClass}`)) {
+                        el.classList.replace(`hover:border-${colorClass}`, `hover:border-colorPrimary`);
+                    }
                     defaultOpacities.forEach((opacity) => {
                         if (el.classList.contains(`bg-${colorClass}/${opacity}`)) {
                             el.classList.replace(`bg-${colorClass}/${opacity}`, `bg-colorPrimary/${opacity}`);
@@ -106,6 +112,13 @@ export function setTheme(theme) {
                     if (el.classList.contains(`hover:bg-${colorClass}`)) {
                         el.classList.replace(`hover:bg-${colorClass}`, `hover:bg-colorSecondary`);
                     }
+                    if (el.classList.contains(`hover:text-${colorClass}`)) {
+                        el.classList.replace(`hover:text-${colorClass}`, `hover:text-colorSecondary`);
+                    }
+                    if (el.classList.contains(`hover:border-${colorClass}`)) {
+                        el.classList.replace(`hover:border-${colorClass}`, `hover:border-colorSecondary`);
+                    }
+
                     defaultOpacities.forEach((opacity) => {
                         if (el.classList.contains(`bg-${colorClass}/${opacity}`)) {
                             el.classList.replace(`bg-${colorClass}/${opacity}`, `bg-colorSecondary/${opacity}`);

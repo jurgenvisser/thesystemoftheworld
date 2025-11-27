@@ -13,7 +13,7 @@ use App\Http\Controllers\FacebookController;
 use Illuminate\Http\Request;
 
 View::share([
-    'appVersion' => 'TSotW.3.0.6p',
+    'appVersion' => 'TSotW.3.1.0p',
 ]);
 
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
@@ -66,6 +66,16 @@ Route::redirect('/intake', env('BREVO_FORM_LINK'), 301);
 // Route::get('/nieuws', function () {
 //     return view('news'); // Refer to news.blade.php
 // });
+
+// Route for the 'Quinn' page
+Route::get('/quinn', function () {
+    return view('quinn'); // Refer to quinn.blade.php
+});
+
+// Route for the 'Resultaten' page
+Route::get('/resultaten', function () {
+    return view('results'); // Refer to results.blade.php
+});
 
 // Route for the 'Community' page
 Route::get('/community', function () {

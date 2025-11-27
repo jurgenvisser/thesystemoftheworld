@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const marquees = document.querySelectorAll(".scrolling-banner");
 
     if (!marquees.length) {
-        console.error("No elements with the class '.scrolling-banner' were found.");
+        // console.warn("No elements with the class '.scrolling-banner' were found.");
         return;
     }
 

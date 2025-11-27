@@ -9,12 +9,6 @@
     --colorSecondary: theme(colors.colorSecondary);
 }
 
-/* Set Roboto Slab as the default font globally */
-/*. has been moved to the body tag using a custon tailwind class */
-/* body {
-    font-family: 'Roboto Slab', serif;
-} */
-
 select {
     -webkit-appearance: none; /* Verwijdert standaard Safari-styling */
     -moz-appearance: none;    /* Verwijdert standaard Firefox-styling */
@@ -62,7 +56,7 @@ select {
 }
 
 
-
+/* ..........  Glow Blob Styling  .......... */
 
 
 /* GLOW SETTINGS */
@@ -188,4 +182,50 @@ body {
 .glow-content {
     position: relative;
     z-index: 2;
+}
+
+
+/* ..........  Scrollytelling Styling  .......... */
+
+
+/* Basis animatie state: onzichtbaar en iets verschoven */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Zichtbare state: volledig zichtbaar en op oorspronkelijke positie */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Voor elementen die ook moeten faden bij het verlaten van de viewport */
+.animate-on-scroll.fade-out-on-leave.is-not-visible {
+    opacity: 0;
+    transform: translateY(20px); /* Kan ook -20px zijn voor een fade-down effect */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+/* ..........  Scroll Animation Styling  .......... */
+
+
+/* De canvas/afbeelding moet 'vastplakken' aan de viewport */
+#animation-canvas {
+    position: sticky;
+    top: 4rem; /* Plakt aan de bovenkant van de viewport */
+    width: auto; 
+    height: calc(100vh - 4rem); /* Zorg dat de hoogte de ratio volgt */
+    aspect-ratio: 1 / 1; /* Dwing een 1:1 verhouding af */
+}
+
+/* Container aanpassen zodat het canvas de breedte volgt */
+.scroll-animation-container {
+    height: 800vh; /* Blijft de scroll-ruimte bepalen */
+    position: relative;
+    display: flex; /* Activeer Flexbox */
+    justify-content: center; /* Centreer de inhoud horizontaal */
+    align-items: flex-start; /* Zorg dat sticky elementen aan de bovenkant starten */
 }

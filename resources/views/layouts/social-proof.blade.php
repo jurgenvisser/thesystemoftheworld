@@ -2,9 +2,9 @@
 <section class="border-y border-zinc-800 bg-zinc-900/30">
     @php
         $stats = [
-            ['label' => 'Leden', 'val' => $totalFollowerCount],
+            ['label' => 'Volgers', 'val' => $totalFollowerCount],
             ['label' => 'Levens Veranderd', 'val' => floor($totalFollowerCount*0.075) . '+'],
-            ['label' => 'Actieve Leden', 'val' => $discordMemberCount],
+            ['label' => 'Community Leden', 'val' => $discordMemberCount],
             ['label' => 'Inzet', 'val' => '100%'],
         ];
     @endphp

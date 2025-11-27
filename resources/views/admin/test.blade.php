@@ -19,6 +19,8 @@
     </div>
 </div> --}}
 
+{{-- @include('layouts.apple-logo-animation')  Include the scroll animation --}}
+
 <!-- Main Content Section -->
 <div class="bg-colorPrimary/20 h-auto m-0 pt-12 lg:pt-24 pb-12 lg:pb-24 flex justify-center items-center">
     <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
@@ -33,6 +35,15 @@
                     <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
                         Body of text
                     </p>
+                    <script async
+                    src="https://js.stripe.com/v3/buy-button.js">
+                    </script>
+
+                    <stripe-buy-button 
+                    buy-button-id="buy_btn_1SXRgrCStvZ96IUrUMUsGgTo"
+                    publishable-key="pk_test_51SXO4cCStvZ96IUr43wHnm7gMk6MCfJX4awahS3MDUHWNTHUODvvJqTnhGOwMzy92GIIFcOzyQCWmlx7QpdFCWb700t33t2THO"
+                    >
+                    </stripe-buy-button>
                 </div>
 
             </div>

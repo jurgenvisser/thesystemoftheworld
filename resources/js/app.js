@@ -8,6 +8,7 @@ import './utils/testing-menu.js';
 import './utils/scrolling-banner.js';
 import './services/privacy-policy.js';
 import './services/terms-and-conditions.js';
+// import './config/scroll-animation.js';
 import { setCookie, getCookie } from './services/cookie.js';
 import { setTheme } from './config/theme.js';
 
@@ -291,5 +292,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggleButtons = document.querySelectorAll('.theme-toggle');
     themeToggleButtons.forEach((button) => {
         button.addEventListener('click', toggleTheme);
+    });
+
+    const videoElement = document.getElementById('quinn-video-background');
+        
+    console.log('DOMContentLoaded.'); 
+    if (videoElement) {
+        console.log('Video gevonden.'); 
+        
+        // 1. Voeg een event listener toe die wacht tot de video metadata geladen is
+        videoElement.addEventListener('loadedmetadata', function() {
+            
+            // 2. Stel de snelheid pas HIER in (0.5 = halve snelheid)
+            videoElement.playbackRate = 0.65;
+            
+            // Optioneel: Voeg een extra check toe in de console om te zien of het gelukt is
+            console.log('Video Playback Rate succesvol aangepast in Safari.'); 
+        });
+
+        // TIP: Soms helpt het in Safari om de video handmatig te "activeren"
+        // Dit is meestal niet nodig, maar kan een laatste redmiddel zijn.
+        // videoElement.play().catch(e => console.error("Video play error:", e)); 
+    }
+
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    const observerOptions = {
+        root: null, // De viewport is de root
+        rootMargin: '0px',
+        threshold: 0.2 // Trigger wanneer 20% van het element zichtbaar is
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Element komt in beeld
+                entry.target.classList.add('is-visible');
+                entry.target.classList.remove('is-not-visible');
+            } else {
+                // Element is uit beeld, en moet uitfaden als fade-out-on-leave is ingesteld
+                if (entry.target.classList.contains('fade-out-on-leave')) {
+                    entry.target.classList.add('is-not-visible');
+                    entry.target.classList.remove('is-visible');
+                }
+            }
+        });
+    }, observerOptions);
+
+    elements.forEach(element => {
+        observer.observe(element);
     });
 });
