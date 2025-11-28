@@ -10,11 +10,16 @@ use App\Http\Controllers\Auth\DiscordController;
 use App\Http\Controllers\Auth\TikTokController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\RateLimitedController;
 use Illuminate\Http\Request;
 
 View::share([
-    'appVersion' => 'TSotW.3.1.2p',
+    'appVersion' => 'TSotW.3.1.5p',
 ]);
+
+// . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.
+// De resource-methode 'store' pakt de POST-request op:
+// Route::post('/verstuur-bericht', [RateLimitedController::class, 'store'])->name('bericht.verstuur');
 
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
 Route::get('/callback', [DiscordController::class, 'handleDiscordCallback']);
@@ -44,7 +49,7 @@ require __DIR__ . '/auth.php';
 // Route to access the admin login page
 Route::get('/admin', function () {
     return view('admin.admin'); // You can create a view that shows the login form if needed.
-});
+})->middleware('throttle:5,1');
 
 Route::post('/logout', function () {
     Auth::logout();
@@ -182,7 +187,7 @@ Route::post('/login', function (Request $request) {
     return back()->withErrors([
         'email' => 'De ingevoerde gegevens zijn onjuist.',
     ])->onlyInput('email');
-})->name('login');
+})->middleware('throttle:5,1')->name('login');
 
 
 
