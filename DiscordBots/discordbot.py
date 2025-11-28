@@ -169,6 +169,12 @@ async def load_cogs() -> None:
     except Exception as exc:
         print(f"Failed to load AutoModDM cog: {exc}")
 
+    # Load the paying_tier_0 cog for managing paid customer memberships
+    try:
+        await bot.load_extension("cogs.paying_tier_0")
+    except Exception as exc:
+        print(f"Failed to load PayingTier0 cog: {exc}")
+        
     # Load the paying_tier_1 cog for managing paid customer memberships
     try:
         await bot.load_extension("cogs.paying_tier_1")

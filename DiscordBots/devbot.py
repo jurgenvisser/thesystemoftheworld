@@ -147,6 +147,14 @@ async def load_cogs() -> None:
     Because cog ``setup`` functions may be asynchronous, this function must
     also be ``async`` and awaited before starting the bot.
     """
+
+     # Load the paying_tier_0 cog for managing paid customer memberships
+    try:
+        await bot.load_extension("cogs.paying_tier_0")
+    except Exception as exc:
+        print(f"Failed to load PayingTier0 cog: {exc}")
+        
+        
     # Load the ping cog if present
     # try:
     #     await bot.load_extension("cogs.ping")
