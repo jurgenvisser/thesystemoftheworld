@@ -81,7 +81,7 @@ class ListRegistered(commands.Cog):
             )
             return
         # Separate paid by tier and trials
-        paid_members = {uid: info for uid, info in self.bot.active_paid.items() if info.get("tier") in ("1", "2", "3")}
+        paid_members = {uid: info for uid, info in self.bot.active_paid.items() if info.get("tier") in ("0", "1", "2", "3")}
         trials = {uid: info for uid, info in self.bot.active_paid.items() if info.get("tier") == "trial"}
         if not paid_members and not trials:
             await interaction.response.send_message(
@@ -89,10 +89,10 @@ class ListRegistered(commands.Cog):
                 ephemeral=True,
             )
             return
-        tier_order = [("3", "Elite"), ("2", "Groei"), ("1", "Basis")]
+        tier_order = [("3", "Elite"), ("2", "Groei"), ("1", "Basis"), ("0", "Instap")]
         users_by_tier = {tier: [] for tier, _ in tier_order}
         for user_id, info in paid_members.items():
-            tier = str(info.get("tier", "1"))
+            tier = str(info.get("tier", "0"))
             users_by_tier.setdefault(tier, []).append((user_id, info))
         lines = ["# Tierlist", ""]
         for tier, heading in tier_order:
@@ -105,6 +105,8 @@ class ListRegistered(commands.Cog):
                     lines.append("Geen groei gebruikers")
                 elif heading == "Basis":
                     lines.append("Geen basis gebruikers")
+                elif heading == "Instap":
+                    lines.append("Geen instap gebruikers")
                 else:
                     lines.append("Geen gebruikers")
             else:
