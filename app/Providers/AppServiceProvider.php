@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $recensies = [
             ['naam' => 'Noémi', 'sterren' => 5, 'datum' => '2025-11-27 15:05:00', 'beschrijving' => 
-                'Sinds ik bij The System zit, heb ik mijn kracht teruggevonden: durven door te gaan, hulp vragen wanneer nodig en steeds dichter bij mezelf komen. <br><br> The System heeft me geholpen door structuur, vertrouwen en een diepe verbinding met mezelf te geven, waardoor ik de tools heb gekregen om mijn leven bewust vorm te geven.'
+                'Sinds ik bij The System zit, heb ik mijn kracht teruggevonden: durven door te gaan, hulp vragen wanneer nodig is en steeds dichter bij mezelf komen. <br><br> The System heeft me geholpen door structuur, vertrouwen en een diepe verbinding met mezelf te geven, waardoor ik de tools heb gekregen om mijn leven bewust vorm te geven.'
             ],
             ['naam' => 'Feyona', 'sterren' => 5, 'datum' => '2025-11-27 15:09:00', 'beschrijving' => 
                 'Door The System heb ik overwonnen dat ik over mijn angsten heen ben gekomen. <br><br> Deze mensen willen je helpen juist omdat je pijn hebt en het je niet alleen lukt.'
@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
                 'Dankzij The System, de community en de oprechte juiste aandacht en begeleiding heb ik overwonnen dat ik mezelf mag zijn, meer durf te spreken en herinner dat mijn emoties er gewoon mogen zijn.'
             ],
             ['naam' => 'Mark V.', 'sterren' => 5, 'datum' => '2025-11-27 20:56:00', 'beschrijving' => 
-                'Toen ik bij the system kwam toen wist ik niet meer wie is nou echt was, maar nu that er in zit krijg ik weer steeds beter teweten wie ik nou echt ben. <br><br> The system is een community die kijkt naar jou persoonlijke groei, waar je niet aan een deadline zit en alles gaat om je eigen tempo.'
+                'Toen ik bij the system kwam toen wist ik niet meer wie is nou echt was, maar nu dat ik erin zit krijg ik weer steeds beter te weten wie ik nou echt ben. <br><br> The system is een community die kijkt naar jouw persoonlijke groei, waar je niet aan een deadline zit en alles gaat om je eigen tempo.'
             ]
         ];
 

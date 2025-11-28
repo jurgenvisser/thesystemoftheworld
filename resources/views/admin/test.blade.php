@@ -19,7 +19,8 @@
     </div>
 </div> --}}
 
-{{-- @include('layouts.apple-logo-animation')  Include the scroll animation --}}
+{{-- . Include the scroll animation --}}
+{{-- @include('layouts.apple-logo-animation')  --}}
 
 <!-- Main Content Section -->
 <div class="bg-colorPrimary/20 h-auto m-0 pt-12 lg:pt-24 pb-12 lg:pb-24 flex justify-center items-center">

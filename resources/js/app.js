@@ -8,7 +8,7 @@ import './utils/testing-menu.js';
 import './utils/scrolling-banner.js';
 import './services/privacy-policy.js';
 import './services/terms-and-conditions.js';
-// import './config/scroll-animation.js';
+// import './config/scroll-animation.js'; // Momenteel uitgeschakeld
 import { setCookie, getCookie } from './services/cookie.js';
 import { setTheme } from './config/theme.js';
 
