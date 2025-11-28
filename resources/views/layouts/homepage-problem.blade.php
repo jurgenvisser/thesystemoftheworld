@@ -9,7 +9,7 @@
             </h2>
             <p class="text-zinc-400 text-lg">
                 Je kunt meer, maar je hoofd remt je af.
-                Je hebt motivatie genoeg je mist orde.
+                Je hebt motivatie genoeg, je mist orde.
             </p>
             <ul class="space-y-4 font-mono text-sm text-zinc-500 uppercase">
                 <li class="flex items-center gap-3">
