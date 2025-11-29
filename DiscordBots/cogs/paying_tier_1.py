@@ -176,7 +176,11 @@ class PayingTier1(commands.Cog):
                     "# Je bent nu lid van The System Basis!\n\n"
 
                     "The System Basis geeft je de volgende voordelen:\n"
+                    "- Toegang tot communicatieve kanalen zoals:\n"
+                    f"{indent}- <#1377633695325749268>\n" #gesprekken
+                    f"{indent}- <#1378431680888705149>\n" #off-topic
                     "- Toegang tot informatieve en motiverende kanalen zoals:\n"
+                    f"{indent}- <#1390406327322280058>\n" #het-systeem
                     f"{indent}- <#1382001389907087390>\n" #dagtips
                     f"{indent}- <#1382009838036455516>\n" #dagquote
                     "- Deelname aan de kanalen:\n"
@@ -190,7 +194,7 @@ class PayingTier1(commands.Cog):
 
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
-                color=discord.Color(int("D9AF5C", 16)),
+                color=discord.Color(int("0066ff", 16)),
             )
             try:
                 await user.send(embed=embed)
@@ -223,6 +227,7 @@ class PayingTier1(commands.Cog):
 
         await interaction.response.send_message(
             f"The System Basis status toegekend aan {user.mention}.",
+            ephemeral=True,
             suppress_embeds=True,
         )
 
@@ -283,7 +288,7 @@ class PayingTier1(commands.Cog):
                     "- Als je denkt dat dit een vergissing is, neem dan contact op met een beheerder.\n\n"
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
-                color=discord.Color(int("dc143c", 16)),
+                color=discord.Color(int("0066ff", 16)),
             )
             try:
                 await user.send(embed=embed)
@@ -316,6 +321,7 @@ class PayingTier1(commands.Cog):
 
         await interaction.response.send_message(
             f"The System Basis status verwijderd voor {user.mention}.",
+            ephemeral=True,
             suppress_embeds=True,
         )
         

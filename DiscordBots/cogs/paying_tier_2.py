@@ -12,6 +12,7 @@ can be provided via environment variables. If not set, the defaults mirror
 those used in the trial system:
 
 * ``DISCORD_GUILD_ID`` – the guild in which commands are registered.
+* ``ONE_PERCENT_ROLE_ID`` – the role assigned to one percent members (default: 1403387097779408956).
 * ``PAID_TIER_2_ROLE_ID`` – role assigned to paying customers (default: 1429883911839809599).
 * ``MANAGER_ROLE_ID`` – role allowed to invoke paid commands
 * ``TRIAL_CHANNEL_ID`` – channel for notifications; used for both trials and paid lists.
@@ -81,6 +82,12 @@ class PayingTier2(commands.Cog):
         except ValueError:
             self.manager_role_id = 1377620953135190127
 
+        one_percent_env = os.getenv("ONE_PERCENT_ROLE_ID")
+        try:
+            self.one_percent_role_id: int = int(one_percent_env) if one_percent_env else 1403387097779408956
+        except ValueError:
+            self.one_percent_role_id = 1403387097779408956
+
         # Path to JSON file storing active paid members
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self.paid_file: str = os.path.join(base_dir, "registered_members.json")
@@ -147,7 +154,7 @@ class PayingTier2(commands.Cog):
             return
 
         # Assign tier and role
-        tier = "1"
+        tier = "2"
         tier_info = self.assign_tier(guild, user, tier)
         role = tier_info["role"]
         role_name = tier_info["role_name"]
@@ -169,6 +176,22 @@ class PayingTier2(commands.Cog):
         # Assign the role
         try:
             await user.add_roles(role, reason=f"Granted tier {tier} membership")
+            one_percent_role = guild.get_role(self.one_percent_role_id)
+            if one_percent_role:
+                try:
+                    await user.add_roles(one_percent_role, reason="Granted 1% role as part of tier 2 membership")
+                except discord.Forbidden:
+                    await interaction.response.send_message(
+                        "I do not have permission to add the 1% role.",
+                        ephemeral=True,
+                    )
+                    return
+                except Exception as exc:
+                    await interaction.response.send_message(
+                        f"Failed to add the 1% role: {exc}",
+                        ephemeral=True,
+                    )
+                    return
             # DM the user to thank them
             indent = "\u00A0" * 4  # non-breaking spaces (echte spaties die blijven staan)
             embed = discord.Embed(
@@ -176,7 +199,11 @@ class PayingTier2(commands.Cog):
                     "# Je bent nu lid van The System Groei!\n\n"
 
                     "The System Groei geeft je de volgende voordelen:\n"
+                    "- Toegang tot communicatieve kanalen zoals:\n"
+                    f"{indent}- <#1377633695325749268>\n" #gesprekken
+                    f"{indent}- <#1378431680888705149>\n" #off-topic
                     "- Toegang tot informatieve en motiverende kanalen zoals:\n"
+                    f"{indent}- <#1390406327322280058>\n" #het-systeem
                     f"{indent}- <#1382001389907087390>\n" #dagtips
                     f"{indent}- <#1382009838036455516>\n" #dagqouto
                     "- Deelname aan de kanalen:\n"
@@ -193,7 +220,7 @@ class PayingTier2(commands.Cog):
 
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
-                color=discord.Color(int("D9AF5C", 16)),
+                color=discord.Color(int("dc143c", 16)),
             )
             try:
                 await user.send(embed=embed)
@@ -226,6 +253,7 @@ class PayingTier2(commands.Cog):
 
         await interaction.response.send_message(
             f"The System Groei status toegekend aan {user.mention}.",
+            ephemeral=True,
             suppress_embeds=True,
         )
 
@@ -279,6 +307,13 @@ class PayingTier2(commands.Cog):
         # Remove the role and DM the user
         try:
             await user.remove_roles(role, reason="Revoked tier 2 membership")
+            # Remove the 1% role as well
+            one_percent_role = guild.get_role(self.one_percent_role_id)
+            if one_percent_role:
+                try:
+                    await user.remove_roles(one_percent_role, reason="Revoked 1% role as part of tier 2 removal")
+                except Exception:
+                    pass
             embed = discord.Embed(
                 description=(
                     "## Je The System Groei lidmaatschap is beëindigd.\n\n"
@@ -319,6 +354,7 @@ class PayingTier2(commands.Cog):
 
         await interaction.response.send_message(
             f"The System Groei status verwijderd voor {user.mention}.",
+            ephemeral=True,
             suppress_embeds=True,
         )
         

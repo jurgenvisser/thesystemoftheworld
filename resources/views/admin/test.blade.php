@@ -29,6 +29,7 @@
         <!-- First Section (6/6) -->
         <div class="h-auto lg:h-full col-span-6">
             <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
+                @include('layouts.coaching-table')
                 <!-- Content goes here -->
                 <div class="">
                     <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Test</h1>

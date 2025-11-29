@@ -69,9 +69,9 @@ class PayingTier0(commands.Cog):
         # Role ID for paid members; default provided by the user.
         paid_tier_0_role_env = os.getenv("PAID_TIER_0_ROLE_ID")
         try:
-            self.paid_tier_0_role_id: int = int(paid_tier_0_role_env) if paid_tier_0_role_env else 1377733286125637754
+            self.paid_tier_0_role_id: int = int(paid_tier_0_role_env) if paid_tier_0_role_env else 1444401255542816949
         except ValueError:
-            self.paid_tier_0_role_id = 1377733286125637754
+            self.paid_tier_0_role_id = 1444401255542816949
 
         # Manager role allowed to run paid commands; fall back to TRIAL_MANAGER_ROLE_ID
         # if specified, else the default used in trials.
@@ -188,7 +188,7 @@ class PayingTier0(commands.Cog):
 
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
-                color=discord.Color(int("D9AF5C", 16)),
+                color=discord.Color(int("008000", 16)),
             )
             try:
                 await user.send(embed=embed)
@@ -221,6 +221,7 @@ class PayingTier0(commands.Cog):
 
         await interaction.response.send_message(
             f"The System Instap status toegekend aan {user.mention}.",
+            ephemeral=True,
             suppress_embeds=True,
         )
 
@@ -281,7 +282,7 @@ class PayingTier0(commands.Cog):
                     "- Als je denkt dat dit een vergissing is, neem dan contact op met een beheerder.\n\n"
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
-                color=discord.Color(int("dc143c", 16)),
+                color=discord.Color(int("008000", 16)),
             )
             try:
                 await user.send(embed=embed)
@@ -314,6 +315,7 @@ class PayingTier0(commands.Cog):
 
         await interaction.response.send_message(
             f"The System Instap status verwijderd voor {user.mention}.",
+            ephemeral=True,
             suppress_embeds=True,
         )
         

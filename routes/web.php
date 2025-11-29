@@ -14,7 +14,7 @@ use App\Http\Controllers\RateLimitedController;
 use Illuminate\Http\Request;
 
 View::share([
-    'appVersion' => 'TSotW.3.1.5p',
+    'appVersion' => 'TSotW.3.1.6p',
 ]);
 
 // . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.
@@ -162,6 +162,11 @@ Route::get('/admin/force-apis', function () {
 // Route for the 'Test' page
 Route::get('/admin/test', function () {
     return view('admin.test');
+})->middleware('auth');
+
+// Route for the 'Test' page
+Route::get('/admin/new-coaching', function () {
+    return view('new-coaching');
 })->middleware('auth');
 
 

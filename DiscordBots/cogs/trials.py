@@ -133,18 +133,34 @@ class Trials(commands.Cog):
             return
         try:
             await user.add_roles(role, reason="Started 7‑day trial")
+            # DM the user to welcome them
+            indent = "\u00A0" * 4  # non-breaking spaces (echte spaties die blijven staan)
             embed = discord.Embed(
                 description=(
                     "# Jouw 7 dagen proefperiode is gestart!\n"
                     "Jouw proefperiode geeft je toegang tot het pakket **The System Basis** voor een periode van 7 dagen.\n\n"
+
                     "The System Basis geeft je de volgende voordelen:\n"
-                    "- Toegang tot verschillende kanalen op de Discord-server.\n"
-                    "- Deelname aan de dagcheck en de weekuitdaging.\n\n"
+                    "- Toegang tot communicatieve kanalen zoals:\n"
+                    f"{indent}- <#1377633695325749268>\n" #gesprekken
+                    f"{indent}- <#1378431680888705149>\n" #off-topic
+                    "- Toegang tot informatieve en motiverende kanalen zoals:\n"
+                    f"{indent}- <#1390406327322280058>\n" #het-systeem
+                    f"{indent}- <#1382001389907087390>\n" #dagtips
+                    f"{indent}- <#1382009838036455516>\n" #dagquote
+                    "- Deelname aan de kanalen:\n"
+                    f"{indent}- <#1397302060139020309>\n" #dagcheck
+                    f"{indent}- <#1390407711757303808>\n" #uitdaging-van-de-week
+                    "- De kans om gratis deel uit te maken van de 1% groep!\n"
+                    "- 2 afspraken met <@1282862220631478454> per week om je voortgang te bespreken en doelen te stellen.\n\n"
+
                     "Geniet van je proefperiode van The System Basis en ontdek wat onze community te bieden heeft.\n\n"
-                    "-# De proefperiode wordt automatisch beëindigd na 7 dagen. Je hoeft hier niets voor te doen.\n"
+                    
+                    "De proefperiode wordt automatisch beëindigd na 7 dagen. Je hoeft hier niets voor te doen.\n\n"
+
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
-                color=discord.Color(int("D9AF5C", 16)),
+                color=discord.Color(int("27a58c", 16)),
             )
             try:
                 await user.send(embed=embed)
@@ -175,6 +191,7 @@ class Trials(commands.Cog):
         save_paid(self.bot)
         await interaction.response.send_message(
             f"7 dagen proefperiode gestart voor {user.mention}.",
+            ephemeral=True,
             suppress_embeds=True,
         )
 
@@ -223,9 +240,11 @@ class Trials(commands.Cog):
             embed = discord.Embed(
                 description=(
                     "## Jouw proefperiode is handmatig geëindigd door een Discord Administrator!\n\n"
+                    "- Je hebt geen toegang meer tot de voordelen van The System Basis (Proefperiode).\n"
+                    "- Als je denkt dat dit een vergissing is, neem dan contact op met een beheerder.\n\n"
                     "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                 ),
-                color=discord.Color(int("dc143c", 16)),
+                color=discord.Color(int("27a58c", 16)),
             )
             try:
                 await user.send(embed=embed)
@@ -247,6 +266,7 @@ class Trials(commands.Cog):
         save_paid(self.bot)
         await interaction.response.send_message(
             f"Proefperiode beëindigd voor {user.mention}.",
+            ephemeral=True,
             suppress_embeds=True,
         )
 
@@ -330,7 +350,7 @@ class Trials(commands.Cog):
                                 "- Overweeg lid te worden van onze community om blijvende toegang te krijgen tot alle voordelen.\n\n"
                                 "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
                             ),
-                            color=discord.Color(int("D9AF5C", 16)),
+                            color=discord.Color(int("27a58c", 16)),
                         )
                         try:
                             await member.send(embed=embed)
