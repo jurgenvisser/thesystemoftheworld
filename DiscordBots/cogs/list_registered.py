@@ -65,7 +65,7 @@ class ListRegistered(commands.Cog):
     @app_commands.command(name="plist", description="List all paid customers and active trials")
     @app_commands.guilds(_GUILD)
     async def plist(self, interaction: discord.Interaction) -> None:
-        """Send a message listing all current paid customers sorted by tier and trials at the bottom."""
+        """Send a message listing all current paid customers sorted by tier, including 1% members, and trials at the bottom."""
         guild = interaction.guild
         if guild is None:
             await interaction.response.send_message(
@@ -80,6 +80,7 @@ class ListRegistered(commands.Cog):
                 ephemeral=True,
             )
             return
+        
         # Separate paid by tier and trials
         paid_members = {uid: info for uid, info in self.bot.active_paid.items() if info.get("tier") in ("0", "1", "2", "3")}
         trials = {uid: info for uid, info in self.bot.active_paid.items() if info.get("tier") == "trial"}
@@ -89,12 +90,32 @@ class ListRegistered(commands.Cog):
                 ephemeral=True,
             )
             return
-        tier_order = [("3", "Elite"), ("2", "Groei"), ("1", "Basis"), ("0", "Instap")]
+
+        tier_order = [("3", "Elite"), ("2", "Groei"), ("1%", "1%"), ("1", "Basis"), ("0", "Instap")]        
         users_by_tier = {tier: [] for tier, _ in tier_order}
+
+        # Organize regular paid members
         for user_id, info in paid_members.items():
             tier = str(info.get("tier", "0"))
             users_by_tier.setdefault(tier, []).append((user_id, info))
+
+
+        # Add 1% members
+        one_percent_role_id = os.getenv("ONE_PERCENT_ROLE_ID")
+        one_percent_members = []
+        if one_percent_role_id:
+            try:
+                role_id_int = int(one_percent_role_id)
+                role = guild.get_role(role_id_int)
+                if role:
+                    one_percent_members = [(str(member.id), {"username": member.display_name, "tier": "1%"}) for member in role.members]
+            except ValueError:
+                pass
+
+        users_by_tier["1%"].extend(one_percent_members)
+
         lines = ["# Tierlist", ""]
+
         for tier, heading in tier_order:
             lines.append(heading)
             tier_users = users_by_tier.get(tier, [])
@@ -103,6 +124,8 @@ class ListRegistered(commands.Cog):
                     lines.append("Geen elite gebruikers")
                 elif heading == "Groei":
                     lines.append("Geen groei gebruikers")
+                elif heading == "1%":
+                    lines.append("Geen 1% gebruikers")
                 elif heading == "Basis":
                     lines.append("Geen basis gebruikers")
                 elif heading == "Instap":
