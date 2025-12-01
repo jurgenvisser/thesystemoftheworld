@@ -21,17 +21,17 @@
                 [
                     'title' => 'Basis',
                     'price' => 'Voor een laagdrempelige start, begin je hier',
-                    'features' => ['Toegang tot Discord', 'Nieuwe Blueprint per oplossing', 'Dagchecks', 'Dagelijkse Opdrachten', 'Weekuitdagingen', 'Supportkanalen voor vragen'],
+                    'features' => ['Toegang tot Discord', 'Altijd begeleiding via de chat', 'Nieuwe Blueprint per oplossing', 'Dagchecks', 'Dagelijkse Opdrachten', 'Weekuitdagingen', 'Supportkanalen voor vragen'],
                 ],
                 [
                     'title' => 'Groei',
                     'price' => 'De mensen die echt willen groeien en veranderen',
-                    'features' => ['Alles van Basis', '1-op-1 Coaching', 'Maandelijks nieuwe Blueprint', 'Besloten Community', 'Dagelijkse check-ins', 'Crisisondersteuning'],
+                    'features' => ['Alles van Basis', '1-op-1 Coaching (2 uur per maand)', 'Maandelijks nieuwe Blueprint', 'Besloten Community', 'Dagelijkse check-ins', 'Crisisondersteuning'],
                 ],
                 [
                     'title' => 'Elite',
                     'price' => 'Maak gebruik van alles wat The System te bieden heeft',
-                    'features' => ['Alles van Basis en Groei', '1-op-1 Coaching 2x per week', 'Altijd begeleiding', 'Alle blueprints + toegang tot extra content', 'Groepsgesprekken met jouw elite', 'Exclusieve tips, video’s en tools ', 'Crisisondersteuning 24/7'],
+                    'features' => ['Alles van Basis en Groei', '1-op-1 Coaching (4,5 uur per maand)', 'Altijd begeleiding', 'Alle blueprints + toegang tot extra content', 'Groepsgesprekken met jouw elite', 'Exclusieve tips, video’s en tools ', 'Crisisondersteuning 24/7'],
                 ],
             ];
         @endphp
