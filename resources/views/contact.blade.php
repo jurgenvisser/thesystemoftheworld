@@ -11,7 +11,6 @@
     subtitle="Tijd is de meest waardevolle asset. Communiceer direct en efficiënt."
     background="bg-v-backdrop-7 lg:bg-h-backdrop-2"
 /> --}}
-@include('layouts.reviewstats')
 
 @include('layouts.contact-and-form')
 
