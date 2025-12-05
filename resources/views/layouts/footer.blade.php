@@ -38,7 +38,7 @@
                         <span class="col-span-1 block 2xl:hidden"></span>
                         {{-- ! This is a spacer for smaller screens. Please remove if there are 3 links in this div --}}
                         <!-- YouTube -->
-                        <a href="https://www.youtube.com/@TheSystem_oftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                        <a href="https://www.youtube.com/@thesystemoftheworld" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             YouTube
                         </a>
                         <!-- Facebook -->

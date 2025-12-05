@@ -36,18 +36,8 @@
                 <span class="text-colorPrimary font-mono text-sm">JOIN</span>
             </a>
 
-            <!-- Instagram -->
-            <a href="https://instagram.com" target="_blank" 
-               class="flex items-center justify-between p-4 bg-black border border-zinc-700 hover:border-colorPrimary transition-colors">
-                <div class="flex items-center gap-4">
-                    <span class="h-6 aspect-[1/1] bg-instagram-white bg-cover bg-center block"></span>
-                    <span class="font-mono text-colorLight uppercase tracking-widest">INSTAGRAM</span>
-                </div>
-                <span class="text-colorPrimary font-mono text-sm">VOLG</span>
-            </a>
-
             <!-- TikTok -->
-            <a href="https://tiktok.com" target="_blank" 
+            <a href="https://www.tiktok.com/@thesystemoftheworld" target="_blank" 
                class="flex items-center justify-between p-4 bg-black border border-zinc-700 hover:border-colorPrimary transition-colors">
                 <div class="flex items-center gap-4">
                     <span class="h-6 aspect-[1/1] bg-tiktok-white bg-cover bg-center block"></span>
@@ -56,22 +46,32 @@
                 <span class="text-colorPrimary font-mono text-sm">VOLG</span>
             </a>
 
-            <!-- Facebook -->
-            <a href="https://facebook.com" target="_blank" 
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/thesystemoftheworld" target="_blank" 
                class="flex items-center justify-between p-4 bg-black border border-zinc-700 hover:border-colorPrimary transition-colors">
                 <div class="flex items-center gap-4">
-                    <span class="h-6 aspect-[1/1] bg-facebook-white bg-cover bg-center block"></span>
-                    <span class="font-mono text-colorLight uppercase tracking-widest">FACEBOOK</span>
+                    <span class="h-6 aspect-[1/1] bg-instagram-white bg-cover bg-center block"></span>
+                    <span class="font-mono text-colorLight uppercase tracking-widest">INSTAGRAM</span>
                 </div>
                 <span class="text-colorPrimary font-mono text-sm">VOLG</span>
             </a>
 
             <!-- YouTube -->
-            <a href="https://youtube.com" target="_blank" 
+            <a href="https://www.youtube.com/@thesystemoftheworld" target="_blank" 
                class="flex items-center justify-between p-4 bg-black border border-zinc-700 hover:border-colorPrimary transition-colors">
                 <div class="flex items-center gap-4">
                     <span class="w-6 aspect-[1.5/1] bg-youtube-white bg-cover bg-center block"></span>
                     <span class="font-mono text-colorLight uppercase tracking-widest">YOUTUBE</span>
+                </div>
+                <span class="text-colorPrimary font-mono text-sm">VOLG</span>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/people/The-System/61578064385680/" target="_blank" 
+               class="flex items-center justify-between p-4 bg-black border border-zinc-700 hover:border-colorPrimary transition-colors">
+                <div class="flex items-center gap-4">
+                    <span class="h-6 aspect-[1/1] bg-facebook-white bg-cover bg-center block"></span>
+                    <span class="font-mono text-colorLight uppercase tracking-widest">FACEBOOK</span>
                 </div>
                 <span class="text-colorPrimary font-mono text-sm">VOLG</span>
             </a>
