@@ -5,7 +5,6 @@ import os
 from dotenv import load_dotenv
 from discord.ext import tasks
 from datetime import datetime, time
-from zoneinfo import ZoneInfo
 
 load_dotenv()
 
@@ -16,7 +15,6 @@ COMMUNITYLEDEN_ROLE_ID = int(os.getenv("COMMUNITYLEDEN_ROLE_ID"))
 
 REMINDERS_CHANNEL_ID = int(os.getenv("BOT_REMINDERS_CHANNEL_ID"))
 # REMINDERS_CHANNEL_ID = int(os.getenv("BOT_MESSAGES_CHANNEL_ID"))
-TIMEZONE = ZoneInfo("Europe/Amsterdam")
 
 # Determine the guild object for slash command registration. Commands in this cog
 # will be registered to the specific guild specified by ``DISCORD_GUILD_ID``. If the
@@ -45,7 +43,7 @@ class ReminderMessages(commands.Cog):
 
     @tasks.loop(minutes=1)
     async def daily_reflection(self):
-        now = datetime.now(TIMEZONE)
+        now = datetime.now()
         current_time = now.time().replace(second=0, microsecond=0)
 
         if current_time in self._sent_times:
@@ -92,7 +90,7 @@ class ReminderMessages(commands.Cog):
 
     @tasks.loop(minutes=1)
     async def check_participation(self):
-        now = datetime.now(TIMEZONE)
+        now = datetime.now()
         if now.time().replace(second=0, microsecond=0) != time(19, 10):
             return
 
