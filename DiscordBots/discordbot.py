@@ -211,6 +211,12 @@ async def load_cogs() -> None:
     except Exception as exc:
         print(f"Failed to load cognitive-reset cog: {exc}")
 
+    # Load the reminder_messages cog if present
+    # try:
+    #     await bot.load_extension("cogs.reminder_messages")
+    # except Exception as exc:
+    #     print(f"Failed to load reminder_messages cog: {exc}")
+
 
 async def main() -> None:
     """Main entry point for running the bot."""
