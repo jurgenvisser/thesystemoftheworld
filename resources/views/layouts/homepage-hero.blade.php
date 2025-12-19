@@ -21,11 +21,9 @@
 
         {{-- Hero Text --}}
         <p class="max-w-xl text-lg md:text-xl text-zinc-400 leading-relaxed mb-12 border-l-2 border-colorPrimary pl-6" style="animation: fadeIn 0.5s ease forwards; animation-delay: 0.6s;">
-            The System jouw mentale onderhoud.
+            Jouw mentale onderhoud.
 
-            Geen excuses, slap advies of tijdelijke motivatie.
-
-            Alleen een systeem dat je sterker maakt mentaal, dagelijks, blijvend.
+            Als je voelt dat motivatie niet genoeg is hoor je hier.
         </p>
 
         {{-- Buttons --}}

@@ -1,0 +1,323 @@
+{
+    "meta": {
+        "version": "2.0",
+        "description": "Template-based tier & trial configuration for The System bot"
+    },
+
+    "channels": {
+        "gesprekken": "<#1377633695325749268>",
+        "off_topic": "<#1378431680888705149>",
+
+        "het_systeem": "<#1390406327322280058>",
+        "dagtips": "<#1382001389907087390>",
+        "dagquote": "<#1382009838036455516>",
+
+        "dagcheck": "<#1397302060139020309>",
+        "uitdaging_van_de_week": "<#1390407711757303808>",
+
+        "wekelijks_groepsgesprek": "<#1403390531492642947>",
+        "groepsgesprek": "<#1403391139226058883>",
+        "one_percent_off_topic": "<#1403398238144430101>",
+
+        "elite_de_kern": "<#1389335090080907394>",
+        "elite_voice": "<#1390685336190845009>"
+    },
+
+    "dm_templates": {
+        "membership_default": {
+            "content": [
+                {
+                    "type": "text",
+                    "lines": [
+                        "# {{dm_title}}",
+                        "",
+                        "The System {{tier_name}} geeft je de volgende voordelen:",
+                        "- Toegang tot communicatieve kanalen zoals:"
+                    ]
+                },
+                {
+                    "type": "channels",
+                    "section": "communication"
+                },
+                {
+                    "type": "text",
+                    "lines": [
+                        "- Toegang tot informatieve en motiverende kanalen zoals:"
+                    ]
+                },
+                {
+                    "type": "channels",
+                    "section": "information"
+                },
+                {
+                    "type": "text",
+                    "lines": [
+                        "- Deelname aan de kanalen:"
+                    ]
+                },
+                {
+                    "type": "channels",
+                    "section": "participation"
+                },
+                {
+                    "type": "conditional",
+                    "condition": "one_percent",
+                    "content": [
+                        {
+                            "type": "text",
+                            "lines": [
+                                "- Je maakt standaard deel uit van de 1% groep en krijg toegang tot de kanalen:"
+                            ]
+                        },
+                        {
+                            "type": "channels",
+                            "section": "one_percent"
+                        }
+                    ]
+                },
+                {
+                    "type": "conditional",
+                    "condition": "elite_extra",
+                    "content": [
+                        {
+                            "type": "text",
+                            "lines": [
+                                "- Je krijgt toegang tot exclusieve Elite kanalen zoals:"
+                            ]
+                        },
+                        {
+                            "type": "channels",
+                            "section": "elite_extra"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "lines": [
+                        "Geniet van The System {{tier_name}} en ontdek wat onze community te bieden heeft.",
+                        "Als je vragen hebt of ondersteuning nodig hebt, laat het ons dan weten."
+                    ]
+                }
+            ]
+        },
+        "membership_end": {
+            "content": [
+                {
+                    "type": "text",
+                    "lines": [
+                    "## {{dm_title}}",
+                    "",
+                    "- Je hebt geen toegang meer tot de voordelen van The System {{tier_name}}.",
+                    "- Als je denkt dat dit een vergissing is, neem dan contact op met een beheerder."
+                    ]
+                }
+            ]
+        },
+        "trial_start": {
+            "content": [
+                {
+                    "type": "text",
+                    "lines": [
+                        "# {{dm_title}}",
+                        "Jouw proefperiode geeft je toegang tot het pakket **The System {{tier_name}}** voor {{trial_days}} dagen.",
+                        "",
+                        "The System {{tier_name}} geeft je de volgende voordelen:",
+                        "- Toegang tot communicatieve kanalen zoals:"
+                    ]
+                },
+                {
+                    "type": "channels",
+                    "section": "communication"
+                },
+                {
+                    "type": "text",
+                    "lines": [
+                        "- Toegang tot informatieve en motiverende kanalen zoals:"
+                    ]
+                },
+                {
+                    "type": "channels",
+                    "section": "information"
+                },
+                {
+                    "type": "text",
+                    "lines": [
+                        "- Deelname aan de kanalen:"
+                    ]
+                },
+                {
+                    "type": "channels",
+                    "section": "participation"
+                },
+                {
+                    "type": "text",
+                    "lines": [
+                        "",
+                        "De proefperiode wordt automatisch beëindigd na {{trial_days}} dagen.",
+                        "",
+                        "Geniet van je proefperiode en ontdek wat The System je te bieden heeft."
+                    ]
+                }
+            ]
+        },
+        "trial_terminated": {
+            "content": [
+                {
+                    "type": "text",
+                    "lines": [
+                        "## {{dm_title}}",
+                        "",
+                        "- Je hebt geen toegang meer tot de voordelen van The System {{tier_name}} (Proefperiode).",
+                        "- Als je denkt dat dit een vergissing is, neem dan contact op met een beheerder."
+                    ]
+                }
+            ],
+            "color": "27a58c"
+        },
+        "trial_expired": {
+            "content": [
+                {
+                    "type": "text",
+                    "lines": [
+                        "## {{dm_title}}",
+                        "",
+                        "- We hopen dat je genoten hebt van de exclusieve kanalen en functies tijdens je proefperiode.",
+                        "- Overweeg lid te worden van onze community om blijvende toegang te krijgen tot alle voordelen."
+                    ]
+                }
+            ],
+            "color": "27a58c"
+        },
+        "titles": {
+            "start": "Je bent nu lid van The System {{tier_name}}!",
+            "upgrade": "Je bent geüpgraded naar The System {{tier_name}}!",
+            "downgrade": "Je pakket is veranderd naar The System {{tier_name}}.",
+            "trial": "Jouw {{trial_days}} dagen proefperiode van The System {{tier_name}} is gestart!",
+            "terminated": "Jouw proefperiode is handmatig geëindigd door een Discord Administrator!",
+            "expired": "Jouw {{trial_days}} dagen proefperiode van The System {{tier_name}} is geëindigd!",
+            "end": "Je The System {{tier_name}} lidmaatschap is beëindigd."
+        }
+    },
+
+    "tiers": {
+        "instap": {
+            "tier_number": 0,
+            "display_name": "Instap",
+            "role_id_env": "INSTAP_ROLE_ID",
+            "color": "008000",
+            "template": "membership_default",
+            "end_template": "membership_end",
+            "sections": {
+                "communication": [
+                    "gesprekken",
+                    "off_topic"
+                ],
+                "information": [
+                    "het_systeem"
+                ]
+            }
+        },
+
+        "basis": {
+            "tier_number": 1,
+            "display_name": "Basis",
+            "role_id_env": "BASIS_ROLE_ID",
+            "color": "0066ff",
+            "template": "membership_default",
+            "trial_template": "trial_start",
+            "end_template": "membership_end",
+            "sections": {
+                "communication": [
+                    "gesprekken",
+                    "off_topic"
+                ],
+                "information": [
+                    "het_systeem",
+                    "dagtips",
+                    "dagquote"
+                ],
+                "participation": [
+                    "dagcheck",
+                    "uitdaging_van_de_week"
+                ]
+            }
+        },
+
+        "groei": {
+            "tier_number": 2,
+            "display_name": "Groei",
+            "role_id_env": "GROEI_ROLE_ID",
+            "color": "dc143c",
+            "template": "membership_default",
+            "end_template": "membership_end",
+            "sections": {
+                "communication": [
+                    "gesprekken",
+                    "off_topic"
+                ],
+                "information": [
+                    "het_systeem",
+                    "dagtips",
+                    "dagquote"
+                ],
+                "participation": [
+                    "dagcheck",
+                    "uitdaging_van_de_week"
+                ],
+                "one_percent": [
+                    "wekelijks_groepsgesprek",
+                    "groepsgesprek",
+                    "one_percent_off_topic"
+                ]
+            }
+        },
+
+        "elite": {
+            "tier_number": 3,
+            "display_name": "Elite",
+            "role_id_env": "ELITE_ROLE_ID",
+            "color": "d2691e",
+            "template": "membership_default",
+            "end_template": "membership_end",
+            "sections": {
+                "communication": [
+                    "gesprekken",
+                    "off_topic"
+                ],
+                "information": [
+                    "het_systeem",
+                    "dagtips",
+                    "dagquote"
+                ],
+                "participation": [
+                    "dagcheck",
+                    "uitdaging_van_de_week"
+                ],
+                "one_percent": [
+                    "wekelijks_groepsgesprek",
+                    "groepsgesprek",
+                    "one_percent_off_topic"
+                ],
+                "elite_extra": [
+                    "elite_de_kern",
+                    "elite_voice"
+                ]
+            }
+        }
+    },
+
+    "trials": {
+        "default_duration_days": 8,
+        "check_interval_minutes": 15,
+        "text_duration_days": 7,
+        "storage": {
+            "type": "json",
+            "file": "registered_members.json"
+        }
+    },
+
+    "dm_footer": [
+        "",
+        "-# Dit bericht is automatisch verstuurd door een bot en reacties op deze DM kunnen niet worden gelezen."
+    ]
+}

@@ -157,43 +157,19 @@ async def load_cogs() -> None:
     except Exception as exc:
         print(f"Failed to load ping cog: {exc}")
 
-    # Load the trials cog which provides /trial, /endtrial, /triallist and /tlist
-    try:
-        await bot.load_extension("cogs.trials")
-    except Exception as exc:
-        print(f"Failed to load trials cog: {exc}")
-
     # Load the AutoMod DM cog for sending direct messages when AutoMod triggers
     try:
         await bot.load_extension("cogs.automod")
     except Exception as exc:
         print(f"Failed to load AutoModDM cog: {exc}")
 
-    # Load the paying_tier_0 cog for managing paid customer memberships
+    # Load the tier_commands cog for managing paid customer memberships
     try:
-        await bot.load_extension("cogs.paying_tier_0")
+        await bot.load_extension("cogs.tier_commands")
     except Exception as exc:
-        print(f"Failed to load PayingTier0 cog: {exc}")
-        
-    # Load the paying_tier_1 cog for managing paid customer memberships
-    try:
-        await bot.load_extension("cogs.paying_tier_1")
-    except Exception as exc:
-        print(f"Failed to load PayingTier1 cog: {exc}")
+        print(f"Failed to load tier_commands cog: {exc}")
 
-    # Load the paying_tier_2 cog for managing paid customer memberships
-    try:
-        await bot.load_extension("cogs.paying_tier_2")
-    except Exception as exc:
-        print(f"Failed to load PayingTier2 cog: {exc}")
-
-    # Load the paying_tier_3 cog for managing paid customer memberships
-    try:
-        await bot.load_extension("cogs.paying_tier_3")
-    except Exception as exc:
-        print(f"Failed to load PayingTier3 cog: {exc}")
-
-    # Load the list_paying cog for listing paid customers
+    # Load the list_registered cog for listing paid customers and trials
     try:
         await bot.load_extension("cogs.list_registered")
     except Exception as exc:

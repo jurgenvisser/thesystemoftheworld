@@ -149,9 +149,9 @@ async def load_cogs() -> None:
     """
 
     try:
-        await bot.load_extension("cogs.reminder_messages")
+        await bot.load_extension("cogs.tier_commands")
     except Exception as exc:
-        print(f"Failed to load reminder_messages cog: {exc}")
+        print(f"Failed to load tier_commands cog: {exc}")
 
 
 async def main() -> None:
