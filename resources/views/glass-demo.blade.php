@@ -1,60 +1,45 @@
-@extends('layouts.app')
+{{-- resources/views/glass-demo.blade.php --}}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Liquid Glass Demo</title>
 
-@section('title', 'Test')  <!-- Set the title for this page -->
-@section('content')
+    <script src="https://cdn.tailwindcss.com"></script>
 
-@include('layouts.admin-testing-panel') {{-- !! This line needs to be removed if the page goes into the production environment --}}
+    <style>
+        /* Unified glass material (Tailwind-color driven) */
+        .glass {
+            position: relative;
+            backdrop-filter: blur(var(--glass-blur, 12px));
+            -webkit-backdrop-filter: blur(var(--glass-blur, 12px));
+            border-radius: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.25);
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.25),
+                inset 0 1px 0 rgba(255,255,255,0.35);
+            overflow: hidden;
+            transition: backdrop-filter .3s ease, transform .3s ease;
+        }
 
-{{-- <!-- Hero Content Section -->
-<div class="h-[calc(100vh-4rem)] bg-v-backdrop-8 lg:bg-h-backdrop-1 bg-cover relative m-0">
-    <div class="h-full flex flex-col">
-        <div class="flex-1 flex items-center justify-center flex-col lg:flex-row mt-0 relative">
+        /* Optional hover lift */
+        .glass:hover {
+            transform: translateY(-2px);
+        }
 
-            <!-- Title Section -->
-            <div class="bg-colorPrimary/60 flex flex-col justify-center items-center p-8 lg:p-20 h-auto w-[85vw] lg:w-auto">
-                <h1 class="text-4xl lg:text-9xl text-white font-bold uppercase font-times">Test</h1>
-            </div>
-
-        </div>
-    </div>
-</div> --}}
-
-{{-- . Include the scroll animation --}}
-{{-- @include('layouts.apple-logo-animation')  --}}
-
-<!-- Main Content Section -->
-<div class="bg-colorPrimary/20 h-auto m-0 pt-12 lg:pt-24 pb-12 lg:pb-24 flex justify-center items-center">
-    <div class="responsive-width flex flex-col lg:grid grid-cols-1 lg:grid-cols-6 gap-10">
-        
-        <!-- First Section (6/6) -->
-        <div class="h-auto lg:h-full col-span-6">
-            <div class="bg-colorPrimary/60 text-sm lg:text-2xl flex flex-col justify-center items-center text-white p-8 lg:p-20 py-20 text-left lg:text-justify">
-                @include('layouts.coaching-table')
-                <!-- Content goes here -->
-                <div class="">
-                    <h1 class="mb-8 px-4 lg:px-0 text-4xl font-bold uppercase font-times">Test</h1>
-    
-                    <p class="text-base lg:text-lg mb-6 px-4 lg:px-0">
-                        Body of text
-                    </p>
-                    <script async
-                    src="https://js.stripe.com/v3/buy-button.js">
-                    </script>
-
-                    <stripe-buy-button 
-                    buy-button-id="buy_btn_1SXRgrCStvZ96IUrUMUsGgTo"
-                    publishable-key="pk_test_51SXO4cCStvZ96IUr43wHnm7gMk6MCfJX4awahS3MDUHWNTHUODvvJqTnhGOwMzy92GIIFcOzyQCWmlx7QpdFCWb700t33t2THO"
-                    >
-                    </stripe-buy-button>
-                </div>
-
-            </div>
-        </div>
-
-        
-    </div>
-</div>
-
+        /* Refraction overlay */
+        .glass::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('#refraction');
+            opacity: var(--refraction-opacity, 0.18);
+            transform: translateY(var(--refraction-shift, 0px));
+            pointer-events: none;
+            transition: opacity .2s ease;
+        }
+    </style>
+</head>
 <div class="bg-neutral-900 text-white overflow-y-auto">
 
     <div class="relative" style="height:200vh;">
@@ -121,6 +106,4 @@
     </div>
 
 </div>
-
-
-@endsection
+</html>

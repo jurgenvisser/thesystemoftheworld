@@ -229,3 +229,24 @@ body {
     justify-content: center; /* Centreer de inhoud horizontaal */
     align-items: flex-start; /* Zorg dat sticky elementen aan de bovenkant starten */
 }
+
+
+
+/* Unified glass material (Tailwind-color driven) */
+.glass {
+    position: relative;
+    backdrop-filter: blur(var(--glass-blur, 10px));
+    -webkit-backdrop-filter: blur(var(--glass-blur, 10px));
+    /* border-radius: 1.25rem; */
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.35);
+    overflow: hidden;
+    transition: transform .2s ease;
+}
+
+/* Optional hover lift */
+.glass:hover {
+    transform: translateY(-2px);
+}
