@@ -1,7 +1,7 @@
 <button id="scrollToTopBtn" 
     class="hidden fixed bottom-20 xl:bottom-48 right-6 xl:right-20 z-40"
     aria-label="Scroll to top">
-    <div class="glass bg-colorPrimary/40 rounded-sm px-4 py-2 shadow-md text-colorLight cursor-pointer text-base flex flex-col items-center gap-2">
+    <div class="glass bg-colorPrimary/40 rounded-xl px-4 py-2 shadow-md text-colorLight cursor-pointer text-base flex flex-col items-center gap-2">
         <x-lucide-arrow-up class="h-6 w-6 text-colorLight" />
         Top
     </div>
