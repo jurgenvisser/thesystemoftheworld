@@ -64,11 +64,11 @@ class ReminderMessages(commands.Cog):
             return
 
         messages = {
-            time(18, 50): "⏳ Over **10 minuten** is het **Dagelijks reflectiemoment (19:00)**.\n<#1377733286125637754>, zorg dat je er online bij bent.",
-            time(18, 55): "⏳ Nog **5 minuten** tot het **Dagelijks reflectiemoment**.\n<#1377733286125637754>, begin alvast aan jou reflectie.",
+            time(18, 50): "⏳ Over **10 minuten** is het **Dagelijks reflectiemoment (19:00)**.\n<@&1377733286125637754>, zorg dat je er online bij bent.",
+            time(18, 55): "⏳ Nog **5 minuten** tot het **Dagelijks reflectiemoment**.\n <@&1377733286125637754>, begin alvast aan jou reflectie.",
             time(19, 00): (
                 "# 🕖 Dagelijks reflectiemoment — 19:00\n"
-                "<#1377733286125637754>\n\n"
+                "<@&1377733286125637754>\n\n"
                 "Neem nu een moment om terug te kijken op je dag.\n\n"
                 "➡️ Deel een korte reflectie (minimaal 1–2 zinnen)\n"
                 "➡️ Of reageer met een :white_check_mark: op dit bericht om je aanwezigheid te melden\n\n"
