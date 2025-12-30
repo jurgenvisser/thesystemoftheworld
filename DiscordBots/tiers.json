@@ -310,6 +310,7 @@
         "default_duration_days": 8,
         "check_interval_minutes": 15,
         "text_duration_days": 7,
+        "display_name": "7 Dagen Proefperiode",
         "storage": {
             "type": "json",
             "file": "registered_members.json"

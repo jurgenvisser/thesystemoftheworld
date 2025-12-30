@@ -28,7 +28,7 @@ TIERS_CONFIG_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "tiers.json"))
 
 with open(TIERS_CONFIG_PATH, "r", encoding="utf-8") as f:
     TIERS_CONFIG = json.load(f)
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Dict, Any
 
 import discord
@@ -52,6 +52,7 @@ _GUILD = discord.Object(id=_GUILD_ID) if _GUILD_ID else None
 TIER_ORDER = ["instap", "basis", "groei", "elite"]
 
 TIER_ROLE_ENV_MAP = {
+    "trial": "TRIAL_ROLE_ID",
     "instap": "INSTAP_ROLE_ID",
     "basis": "BASIS_ROLE_ID",
     "groei": "GROEI_ROLE_ID",
@@ -177,6 +178,10 @@ class TierMembershipManager(commands.Cog):
         self.bot = bot
         load_dotenv()
 
+        # Load trial config for lifecycle persistence
+        self.trials_cfg = TIERS_CONFIG.get("trials", {})
+        self.trial_real_days = int(self.trials_cfg.get("default_duration_days", 8))
+
         # Read guild ID from environment; default to zero (no guild) if unset or invalid.
         try:
             self.guild_id: int = int(os.getenv("DISCORD_GUILD_ID"))
@@ -224,6 +229,9 @@ class TierMembershipManager(commands.Cog):
                     self.tier_role_ids[tier] = int(val)
                 except ValueError:
                     pass
+        # (Safety) Guard against missing env var
+        if "trial" not in self.tier_role_ids:
+            raise RuntimeError("TRIAL_ROLE_ID is not set or could not be parsed.")
 
         # Path to JSON file storing active paid members
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -325,14 +333,14 @@ class TierMembershipManager(commands.Cog):
         return guild.get_role(role_id) if role_id else None
 
     def get_current_tier(self, member: discord.Member, guild: discord.Guild) -> str | None:
-        for tier in TIER_ORDER:
+        for tier in [t for t in TIER_ORDER if t != "trial"]:
             role = self.get_tier_role(guild, tier)
             if role and role in member.roles:
                 return tier
         return None
 
     async def clear_all_tiers(self, member: discord.Member, guild: discord.Guild):
-        for tier in TIER_ORDER:
+        for tier in ["trial"] + TIER_ORDER:
             role = self.get_tier_role(guild, tier)
             if role and role in member.roles:
                 await member.remove_roles(role, reason="Tier reset")
@@ -359,9 +367,39 @@ class TierMembershipManager(commands.Cog):
             )
             return
         await self.clear_all_tiers(user, guild)
-        role = self.get_tier_role(guild, "basis")
+
+        role = self.get_tier_role(guild, "trial")
         if role:
             await user.add_roles(role, reason="Trial start")
+
+        # Persist real trial lifecycle (8 days real, 7 days text)
+        now = datetime.now(timezone.utc)
+        end = now + timedelta(days=self.trial_real_days)
+
+        user_id = str(user.id)
+        trial_role = self.get_tier_role(guild, "trial")
+        self.bot.active_paid[user_id] = {
+            "role_id": trial_role.id if trial_role else None,
+            "role_name": self.trials_cfg.get("display_name", "7 Dagen Proefperiode"),
+            "tier": "trial",
+            "username": user.name,
+            "start": now,
+            "end": end,
+        }
+
+        # Serialize immediately
+        serializable = {}
+        for uid, data in self.bot.active_paid.items():
+            serializable[uid] = {
+                **data,
+                "start": data["start"].isoformat() if isinstance(data.get("start"), datetime) else data.get("start"),
+                "end": data["end"].isoformat() if isinstance(data.get("end"), datetime) else data.get("end"),
+            }
+
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        with open(os.path.join(base_dir, "registered_members.json"), "w", encoding="utf-8") as f:
+            json.dump(serializable, f, indent=4, ensure_ascii=False)
+
         await self.send_membership_dm(user, "basis", "trial")
         await interaction.followup.send("Trial gestart.", ephemeral=True)
 
@@ -583,7 +621,7 @@ class TierMembershipManager(commands.Cog):
     async def endtrial(self, interaction: discord.Interaction, user: discord.Member):
         await interaction.response.defer(ephemeral=True)
         guild = interaction.guild
-        role = self.get_tier_role(guild, "basis")
+        role = self.get_tier_role(guild, "trial")
         if role:
             await user.remove_roles(role, reason="Trial beëindigd")
         await self.send_membership_dm(user, "basis", "terminated")
