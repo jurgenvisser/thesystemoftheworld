@@ -7,14 +7,16 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\DiscordController;
+use App\Http\Controllers\Auth\DiscordInstallController;
 use App\Http\Controllers\Auth\TikTokController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\RateLimitedController;
 use Illuminate\Http\Request;
 
+
 View::share([
-    'appVersion' => 'TSotW.3.1.19p',
+    'appVersion' => 'TSotW.3.1.20p',
 ]);
 
 // . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.
@@ -23,6 +25,12 @@ View::share([
 
 Route::get('/auth/discord', [DiscordController::class, 'redirectToDiscord']);
 Route::get('/callback', [DiscordController::class, 'handleDiscordCallback']);
+
+Route::get('/discord/install', [DiscordInstallController::class, 'redirect'])
+    ->name('discord.install');
+
+Route::get('/discord/install/callback', [DiscordInstallController::class, 'callback'])
+    ->name('discord.install.callback');
 
 // TikTok authentication routes
 Route::middleware('auth')->group(function () {
