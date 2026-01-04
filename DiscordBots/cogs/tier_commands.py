@@ -167,6 +167,21 @@ class TierMembershipManager(commands.Cog):
                             for ch_key in tier["sections"][condition]:
                                 lines.append(f"{indent}- {channels[ch_key]}")
 
+        # --- Inject Blueprint block ONCE if enabled for this tier ---
+        sections_cfg = tier.get("sections", {})
+        if sections_cfg.get("blueprints") is True:
+            blueprint_block = TIERS_CONFIG.get("dm_templates", {}).get("blueprint_block")
+            if not blueprint_block:
+                raise KeyError("blueprint_block not found in dm_templates")
+
+            for bp_block in blueprint_block.get("content", []):
+                if bp_block["type"] == "external_link":
+                    lines.append("")
+                    for desc_line in bp_block.get("description", []):
+                        lines.append(replace_vars(desc_line))
+                    lines.append(f"\n👉 {bp_block['cta']}")
+                    lines.append(bp_block["url"])
+
         lines.extend(TIERS_CONFIG["dm_footer"])
 
         return discord.Embed(
@@ -690,60 +705,6 @@ class TierMembershipManager(commands.Cog):
         await self.send_membership_dm(user, "elite", "end")
         await interaction.followup.send("Elite beëindigd.", ephemeral=True)
 
-    # --------------- Perk commands: 1% role ---------------
-    @app_commands.command(name="onepercent", description="Geef de gebruiker toegang tot de 1% groep")
-    @app_commands.guilds(_GUILD)
-    async def onepercent(self, interaction: discord.Interaction, user: discord.Member):
-        await interaction.response.defer(ephemeral=True)
-        guild = interaction.guild
-        one_percent = guild.get_role(self.one_percent_role_id)
-
-        if not one_percent:
-            await interaction.followup.send(
-                "1% role niet gevonden. Controleer de configuratie.",
-                ephemeral=True,
-            )
-            return
-
-        if one_percent in user.roles:
-            await interaction.followup.send(
-                f"{user.display_name} is al lid van de 1% groep.",
-                ephemeral=True,
-            )
-            return
-
-        await user.add_roles(one_percent, reason="1% perk toegekend")
-        await interaction.followup.send(
-            f"{user.display_name} heeft nu toegang tot de 1% groep.",
-            ephemeral=True,
-        )
-
-    @app_commands.command(name="endonepercent", description="Verwijder toegang tot de 1% groep")
-    @app_commands.guilds(_GUILD)
-    async def endonepercent(self, interaction: discord.Interaction, user: discord.Member):
-        await interaction.response.defer(ephemeral=True)
-        guild = interaction.guild
-        one_percent = guild.get_role(self.one_percent_role_id)
-
-        if not one_percent:
-            await interaction.followup.send(
-                "1% role niet gevonden. Controleer de configuratie.",
-                ephemeral=True,
-            )
-            return
-
-        if one_percent not in user.roles:
-            await interaction.followup.send(
-                f"{user.display_name} is geen lid van de 1% groep.",
-                ephemeral=True,
-            )
-            return
-
-        await user.remove_roles(one_percent, reason="1% perk verwijderd")
-        await interaction.followup.send(
-            f"{user.display_name} heeft geen toegang meer tot de 1% groep.",
-            ephemeral=True,
-        )
 
 async def setup(bot: commands.Bot) -> None:
     """Load the TierMembershipManager cog."""

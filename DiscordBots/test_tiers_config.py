@@ -1,12 +1,15 @@
-from discord import Embed
+# test_tiers_config.py
+
+import os
+
+# ⬇️ Forceer een fake guild id zodat decorators niet crashen
+os.environ["DISCORD_GUILD_ID"] = "1"
+
+import discord
+from discord.ext import commands
 from cogs.tier_commands import TierMembershipManager
-import discord
-from discord.ext import commands
 
-# Fake bot (geen connectie)
-import discord
-from discord.ext import commands
-
+# Fake bot (geen connectie met Discord)
 intents = discord.Intents.none()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
@@ -14,7 +17,7 @@ manager = TierMembershipManager(bot)
 
 embed = manager.build_membership_embed(
     tier_key="basis",
-    mode="end"   # start | upgrade | downgrade | trial | terminated | expired | end
+    mode="start"   # start | upgrade | downgrade | trial | terminated | expired | end
 )
 
 print("✅ Embed description:\n")

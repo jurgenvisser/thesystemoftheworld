@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 
 
 View::share([
-    'appVersion' => 'TSotW.3.1.20p',
+    'appVersion' => 'TSotW.3.1.21p',
 ]);
 
 // . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.

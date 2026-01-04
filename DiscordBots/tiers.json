@@ -1,6 +1,6 @@
 {
     "meta": {
-        "version": "2.0",
+        "version": "3.0",
         "description": "Template-based tier & trial configuration for The System bot"
     },
 
@@ -8,19 +8,11 @@
         "gesprekken": "<#1377633695325749268>",
         "off_topic": "<#1378431680888705149>",
 
-        "het_systeem": "<#1390406327322280058>",
         "dagtips": "<#1382001389907087390>",
         "dagquote": "<#1382009838036455516>",
 
         "dagcheck": "<#1397302060139020309>",
-        "uitdaging_van_de_week": "<#1390407711757303808>",
-
-        "wekelijks_groepsgesprek": "<#1403390531492642947>",
-        "groepsgesprek": "<#1403391139226058883>",
-        "one_percent_off_topic": "<#1403398238144430101>",
-
-        "elite_de_kern": "<#1389335090080907394>",
-        "elite_voice": "<#1390685336190845009>"
+        "uitdaging_van_de_week": "<#1390407711757303808>"
     },
 
     "dm_templates": {
@@ -60,43 +52,31 @@
                     "section": "participation"
                 },
                 {
-                    "type": "conditional",
-                    "condition": "one_percent",
-                    "content": [
-                        {
-                            "type": "text",
-                            "lines": [
-                                "- Je maakt standaard deel uit van de 1% groep en krijg toegang tot de kanalen:"
-                            ]
-                        },
-                        {
-                            "type": "channels",
-                            "section": "one_percent"
-                        }
-                    ]
-                },
-                {
-                    "type": "conditional",
-                    "condition": "elite_extra",
-                    "content": [
-                        {
-                            "type": "text",
-                            "lines": [
-                                "- Je krijgt toegang tot exclusieve Elite kanalen zoals:"
-                            ]
-                        },
-                        {
-                            "type": "channels",
-                            "section": "elite_extra"
-                        }
-                    ]
-                },
-                {
                     "type": "text",
                     "lines": [
                         "Geniet van The System {{tier_name}} en ontdek wat onze community te bieden heeft.",
                         "Als je vragen hebt of ondersteuning nodig hebt, laat het ons dan weten."
                     ]
+                }
+            ]
+        },
+        "blueprint_block": {
+            "content": [
+                {
+                    "type": "external_link",
+                    "description": [
+                        "## The System Blueprints",
+                        "De Blueprints vormen de kern van The System en bevinden zich in een aparte Discord-server.",
+                        "In deze omgeving werk je zelfstandig aan structuur, mentale stabiliteit en eigenaarschap.",
+                        "",
+                        "➡️ Start in het kanaal **#hoe-werkt-blueprint** binnen de Blueprint-server.",
+                        "",
+                        "Aanspreekpunten:",
+                        "- Blueprint-server: <@1377701835053334696>",
+                        "- Community-server: <@1377743860427657348>"
+                    ],
+                    "cta": "Ga naar de Blueprint-server",
+                    "url": "https://discord.gg/tsTMwBFT3c"
                 }
             ]
         },
@@ -213,7 +193,12 @@
                     "off_topic"
                 ],
                 "information": [
-                    "het_systeem"
+                    "dagtips",
+                    "dagquote"
+                ],
+                "participation": [
+                    "dagcheck",
+                    "uitdaging_van_de_week"
                 ]
             }
         },
@@ -232,14 +217,14 @@
                     "off_topic"
                 ],
                 "information": [
-                    "het_systeem",
                     "dagtips",
                     "dagquote"
                 ],
                 "participation": [
                     "dagcheck",
                     "uitdaging_van_de_week"
-                ]
+                ],
+                "blueprints": true
             }
         },
 
@@ -256,7 +241,6 @@
                     "off_topic"
                 ],
                 "information": [
-                    "het_systeem",
                     "dagtips",
                     "dagquote"
                 ],
@@ -264,11 +248,7 @@
                     "dagcheck",
                     "uitdaging_van_de_week"
                 ],
-                "one_percent": [
-                    "wekelijks_groepsgesprek",
-                    "groepsgesprek",
-                    "one_percent_off_topic"
-                ]
+                "blueprints": true
             }
         },
 
@@ -285,7 +265,6 @@
                     "off_topic"
                 ],
                 "information": [
-                    "het_systeem",
                     "dagtips",
                     "dagquote"
                 ],
@@ -293,15 +272,7 @@
                     "dagcheck",
                     "uitdaging_van_de_week"
                 ],
-                "one_percent": [
-                    "wekelijks_groepsgesprek",
-                    "groepsgesprek",
-                    "one_percent_off_topic"
-                ],
-                "elite_extra": [
-                    "elite_de_kern",
-                    "elite_voice"
-                ]
+                "blueprints": true
             }
         }
     },
