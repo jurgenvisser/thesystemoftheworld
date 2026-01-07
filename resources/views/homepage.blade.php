@@ -17,7 +17,9 @@
 
 @include('layouts.coach-quinn')
 
-@include('layouts.onze-waarden')
+@include('layouts.cta-klaar-om-te-beginnen')
+
+{{-- @include('layouts.onze-waarden') --}}
 
 {{-- @include('layouts.mentorship-program') --}}
 

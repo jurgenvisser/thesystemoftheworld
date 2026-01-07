@@ -12,9 +12,10 @@
                 Geen droge theorie, maar concrete structuur, echte gesprekken en begeleiding die je daadwerkelijk vooruit helpen.
             </p>
             <ul class="space-y-4 mb-10 font-mono text-sm text-zinc-400">
-                <li class="flex items-center gap-3"><span class="text-colorPrimary"><x-lucide-chevron-right class="h-6 w-6 text-colorPrimary" /></span> Geen oordeel over je verleden</li>
-                <li class="flex items-center gap-3"><span class="text-colorPrimary"><x-lucide-chevron-right class="h-6 w-6 text-colorPrimary" /></span> 1-op-1 gesprekken & begeleiding</li>
-                <li class="flex items-center gap-3"><span class="text-colorPrimary"><x-lucide-chevron-right class="h-6 w-6 text-colorPrimary" /></span> Focus op herstel en groei</li>
+                <li class="flex items-center gap-3"><span class="text-colorPrimary"><x-lucide-chevron-right class="h-6 w-6 text-colorPrimary" /></span> Geen oordeel. Wel verantwoordelijkheid.</li>
+                <li class="flex items-center gap-3"><span class="text-colorPrimary"><x-lucide-chevron-right class="h-6 w-6 text-colorPrimary" /></span> Focus op mentale gezondheid, discipline en groei</li>
+                <li class="flex items-center gap-3"><span class="text-colorPrimary"><x-lucide-chevron-right class="h-6 w-6 text-colorPrimary" /></span> Dagelijkse structuur in plaats van losse gesprekken</li>
+                <li class="flex items-center gap-3"><span class="text-colorPrimary"><x-lucide-chevron-right class="h-6 w-6 text-colorPrimary" /></span> Een systeem dat jou leert jezelf te leiden</li>
             </ul>
             <a href="/quinn" class="inline-block px-8 py-4 font-mono text-sm uppercase bg-colorPrimary text-black font-bold hover:bg-colorPrimary/80 transition-all">
                 Lees Quinn's Verhaal

@@ -7,6 +7,7 @@
 :root {
     --colorPrimary: theme(colors.colorPrimary);
     --colorSecondary: theme(colors.colorSecondary);
+    --colorBlurple: theme(colors.blurple);
 }
 
 select {
@@ -184,6 +185,35 @@ body {
     z-index: 2;
 }
 
+/* ========================================= */
+/* DISCORD THEMA OVERRIDE */
+/* ========================================= */
+.glow-card.glow-discord {
+    /* Forceer Discord Blurple (#5865F2) als enige kleurbron */
+    --card-glow-rgb-blob: 88, 101, 242 !important;
+    --card-glow-rgb-border: 88, 101, 242 !important;
+
+    /* Activeer zichtbare border glow */
+    --current-border-opacity: 0.85;
+    
+    /* Subtiele Discord-achtergrond en rand */
+    background-color: rgba(88, 101, 242, 0.10);
+    border: 1px solid rgba(88, 101, 242, 0.35);
+}
+
+.glow-card.glow-error {
+    /* Forceer rood als enige kleurbron */
+    --card-glow-rgb-blob: 239, 68, 68 !important;
+    --card-glow-rgb-border: 127, 29, 29 !important;
+
+    /* Activeer zichtbare border glow */
+    --current-border-opacity: 0.25;
+    
+    /* Subtiele Discord-achtergrond en rand */
+    background-color: rgba(69, 10, 10, 0.15);
+    border: 1px solid rgba(127, 29, 29, 0.40);
+}
+
 
 /* ..........  Scrollytelling Styling  .......... */
 
@@ -249,4 +279,14 @@ body {
 /* Optional hover lift */
 .glass:hover {
     transform: translateY(-2px);
+}
+
+
+
+/* Zwevende knop animatie */
+.fab-discord {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.fab-discord:hover {
+    transform: scale(1.1) rotate(5deg);
 }

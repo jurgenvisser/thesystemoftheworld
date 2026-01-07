@@ -21,8 +21,8 @@
     </a>
 </div>
 <div class="w-full xl:w-auto border-b border-colorPrimary/60 xl:border-none flex justify-center">
-    <a href="/coaching" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base py-2 xl:py-0 theme-primary text-center">
-        Coaching
+    <a href="/mentorschap" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base py-2 xl:py-0 theme-primary text-center">
+        Mentorschap
     </a>
 </div>
 <div class="w-full xl:w-auto border-b border-colorPrimary/50 xl:border-none flex justify-center">

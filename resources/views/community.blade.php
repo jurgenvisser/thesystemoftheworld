@@ -14,6 +14,6 @@
 
 @include('layouts.onze-waarden')
 
-{{-- @include('layouts.socials-section') --}}
+@include('layouts.socials-section')
 
 @endsection

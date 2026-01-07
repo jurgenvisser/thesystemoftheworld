@@ -28,7 +28,7 @@
 
         {{-- Buttons --}}
         <div class="flex flex-col sm:flex-row gap-4" style="animation: fadeIn 0.5s ease forwards; animation-delay: 0.8s;">
-            <a href="/coaching" class="inline-block bg-colorPrimary text-black py-3 px-6 text-center hover:bg-colorPrimary/80">Start Coaching</a>
+            <a href="/mentorschap" class="inline-block bg-colorPrimary text-black py-3 px-6 text-center hover:bg-colorPrimary/80">Ontdek Mentorschap</a>
             {{-- <a href="#" class="inline-block bg-black text-colorLight py-3 px-6 text-center hover:bg-zinc-800">Lees Het Manifest</a> --}}
         </div>
     </div>

@@ -19,25 +19,45 @@
                     </div>
                     <h3 class="text-2xl font-mono text-colorPrimary mb-4 uppercase tracking-wider text-center lg:text-left">Aanmelding</h3>
                     <p class="text-zinc-400 leading-relaxed mb-6 text-center lg:text-left">
-                        We starten met een korte intake om te kijken waar je nu staat en wat je wilt bereiken.
+                        Je stapt uit chaos en begint met structuur.
                     </p>
                     <ul class="space-y-2 text-zinc-300 font-mono text-sm text-left">
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Intake formulier</span>
+                                <span class="font-bold">Directe toegang tot alle kanalen in onze community
+                                </span>
                             </div>
                         </li>
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">30 min. 1-op-1</span> (geen kosten)
+                                <span class="font-bold">Dagelijkse dagcheck
+                                </span>
                             </div>
                         </li>
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Nul-meting van discipline</span>
+                                <span class="font-bold">Dagdoelen & dagtips</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
+                            <div class="flex-1">
+                                <span class="font-bold">Je stelt jezelf voor binnen The System</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
+                            <div class="flex-1">
+                                <span class="font-bold">Start met de weekuitdaging</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
+                            <div class="flex-1">
+                                <span class="font-bold">Uitleg hoe The System werkt</span>
                             </div>
                         </li>
                     </ul>
@@ -62,25 +82,38 @@
                     </div>
                     <h3 class="text-2xl font-mono text-colorPrimary mb-4 uppercase tracking-wider text-center lg:text-left">Het plan</h3>
                     <p class="text-zinc-400 leading-relaxed mb-6 text-center lg:text-left">
-                        We bouwen een persoonlijk systeem dat werkt voor jou en jouw uitdagingen.
+                        Je bouwt discipline, focus en mentale stabiliteit.
                     </p>
                     <ul class="space-y-2 text-zinc-300 font-mono text-sm text-left">
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Blueprint-modules</span> – mentale onderhoud, opdrachten en uitdagingen afgestemd op jou
+                                <span class="font-bold">Werken met The System Blueprint</span> – mentale onderhoud, opdrachten en uitdagingen afgestemd op jou
                             </div>
                         </li>
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Persoonlijke weekplanning & routines</span> – structuur en focus in je dagelijks leven
+                                <span class="font-bold">Structuur, routines en mentale training
+                                </span>
                             </div>
                         </li>
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Wekelijkse 1-op-1 sessie (optioneel)</span> – extra coaching als je merkt dat je het nodig hebt
+                                <span class="font-bold">Wekelijkse voorlichting door Quinn</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
+                            <div class="flex-1">
+                                <span class="font-bold">Wekelijkse voorlichting door Quinn</span> - vragen stellen & begeleiding tijdens de voorlichting mogelijk
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
+                            <div class="flex-1">
+                                <span class="font-bold">Mogelijkheid om 1x per week een gesprek aan te vragen</span> (wachtlijst)
                             </div>
                         </li>
                     </ul>
@@ -105,37 +138,43 @@
                     </div>
                     <h3 class="text-2xl font-mono text-colorPrimary mb-4 uppercase tracking-wider text-center lg:text-left">Resultaat</h3>
                     <p class="text-zinc-400 leading-relaxed mb-6 text-center lg:text-left">
-                        Dit is je maandelijkse mentale onderhoud. Hier pas je het systeem toe en zie je echt resultaat.
+                        Je leeft vanuit controle, rust en mentale kracht.
                     </p>
                     <ul class="space-y-2 text-zinc-300 font-mono text-sm text-left">
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Angsten overwonnen</span> – je oude blokkades verdwijnen stap voor stap
+                                <span class="font-bold">Je wordt wakker met rust in je hoofd</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Discipline vanzelfsprekend</span> – routines zijn onderdeel van je dagelijks leven
+                                <span class="font-bold">Je doet wat nodig is, ook zonder motivatie</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Zelfstandiger en gefocust</span> – je weet wat je moet doen en hoe je vooruitkomt
+                                <span class="font-bold">Angst, uitstelgedrag en zelftwijfel beheersen je niet meer</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Mentale kracht en veerkracht</span> – je blijft sterk, ook onder druk
+                                <span class="font-bold">Je hebt focus, richting en eigenwaarde</span>
                             </div>
                         </li>
                         <li class="flex items-start gap-2">
                             <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
                             <div class="flex-1">
-                                <span class="font-bold">Hulp wanneer nodig</span> – altijd support beschikbaar
+                                <span class="font-bold">Je kunt omgaan met druk, tegenslagen en emoties</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <x-lucide-check class="h-6 w-6 text-colorPrimary flex-shrink-0" />
+                            <div class="flex-1">
+                                <span class="font-bold">Je hebt een systeem dat je altijd terugbrengt in kracht</span>
                             </div>
                         </li>
                     </ul>

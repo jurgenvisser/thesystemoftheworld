@@ -294,6 +294,9 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', toggleTheme);
     });
 
+    // Laad de glow effecten van de sticky discord button
+    if(typeof initGlowEffect === 'function') initGlowEffect();
+
     const videoElement = document.getElementById('quinn-video-background');
         
     console.log('DOMContentLoaded.'); 
