@@ -1,111 +1,3 @@
-{{-- Mentorship Program Section --}}
-{{-- <section id="mentorship" class="py-16 px-12">
-    <div class="max-w-4xl mx-auto text-center mb-16">
-        <span class="inline-block text-colorPrimary py-1 px-3 border border-zinc-700 rounded-full text-xs font-mono uppercase tracking-widest mb-6">
-            Het Protocol
-        </span>
-        <h2 class="text-4xl md:text-5xl font-bold text-colorLight mb-6">MENTORSCHAP</h2>
-        <p class="text-zinc-400 text-lg">
-            Mentoren die het pad al hebben gelopen. Gesprekken, structuur en begeleiding. Jij groeit, wij zorgen dat je doorgaat. Kies jouw pad. Van gratis start tot elite begeleiding.
-        </p>
-    </div>
-
-    <div class="grid md:grid-cols-5 gap-8 max-w-[90rem] mx-auto">
-        @php
-            $plans = [
-                [
-                    'title' => 'Instap',
-                    'goal' => 'Voor iedereen. Altijd gratis. De fundering van mentale gezondheid',
-                    'price' => 'Gratis',
-                    'contract' => 'Altijd Beschikbaar',
-                    // 'features' => ['Elke dag dezelfde excuses', 'Angst die blijft regeren', 'Geen begeleiding, geen systeem', 'Geen toegang, nul diepgang', 'Alleen social media, geen omgeving', 'Motivatievideo’s zonder actie', 'Tijd gaat voorbij, jij staat stil'],
-                    'features' => ['Toegang tot Discord', 'Dagelijkse dagcheck (verplicht)', 'Dagdoelen & dagingtips', 'Weekuitdagingen', 'Supportkanalen', 'Wekelijkse voorlichting van Quinn', 'Wekelijkse voorlichting', 'Verbinding & structuur'],
-                    'button' => 'Beginnen',
-                    'href' => $discordInviteLink,
-                ],
-                [
-                    'title' => 'Basis',
-                    'goal' => 'Gericht werken aan je mentale gezondheid, stap voor stap',
-                    'price' => '€50 p/m',
-                    'contract' => 'Maandelijks opzegbaar',
-                    // 'features' => ['Toegang tot alle kanalen', 'Dagelijkse dagcheck (verplicht)', 'Dagdoelen & dagingtips', 'Weekuitdagingen', 'Supportkanalen', 'Wekelijkse voorlichting van Quinn', 'Live vragenmomenten', 'Kans op maandelijkse blueprint-selecties'],
-                    'features' => ['Alles van Instap', 'Voorrang bij blueprint-selecties', 'Extra verdiepende content', 'Uitgebreidere voorlichtingen', 'Mogelijkheid om 1x per week een gesprek aan te vragen (wachtlijst)', 'Extra opdrachten & mentale trainingen'],
-                    'button' => 'Beginnen',
-                    'href' => $discordInviteLink,
-                ],
-                [
-                    'title' => 'Groei',
-                    'goal' => 'Mentale stabiliteit, focus en structurele verandering',
-                    'price' => 'Vanaf €48 p/m',
-                    'contract' => '3 tot 6 maanden',
-                    // 'features' => ['Alles van Basis', 'Voorrang bij blueprint-selecties', 'Extra verdiepende content', 'Uitgebreidere voorlichtingen', 'Mogelijkheid om 1x per week een gesprek aan te vragen (wachtlijst)', 'Extra opdrachten & mentale trainingen'],
-                    'features' => ['Alles van Instap en Basis', 'Voorrang op gesprekken en trajecten', 'Toegang tot alle blueprints', 'Exclusieve sessies & groepsgesprekken', 'Extra tools, video’s en mentale programma’s', 'Nauwere betrokkenheid bij The System', 'Mogelijkheid tot intensievere begeleiding'],
-                    'button' => 'Beginnen',
-                    'href' => $discordInviteLink,
-                ],
-                [
-                    'title' => 'Elite',
-                    'goal' => 'Diepe mentale genezing, zelfstandigheid en levensopbouw',
-                    'price' => 'Vanaf €45 p/m',
-                    'contract' => '12 tot 36 maanden',
-                    'features' => ['Alles van Instap, Basis en Groei', 'Voorrang op gesprekken en trajecten', 'Toegang tot alle blueprints', 'Exclusieve sessies & groepsgesprekken', 'Extra tools, video’s en mentale programma’s', 'Nauwere betrokkenheid bij The System', 'Mogelijkheid tot intensievere begeleiding'],
-                    'button' => 'Beginnen',
-                    'href' => $discordInviteLink,
-                ],
-                [
-                    'title' => 'Niet-Lid',
-                    'goal' => 'Voor de bankzitters die klagen, scrollen en niets veranderen',
-                    'price' => '',
-                    'contract' => '',
-                    'features' => ['Niks van alle pakketten', 'Elke dag dezelfde excuses', 'Angst die blijft regeren', 'Geen begeleiding, geen systeem', 'Geen toegang, nul diepgang', 'Alleen social media, geen omgeving', 'Motivatievideo’s zonder actie', 'Tijd gaat voorbij, jij staat stil'],
-                    'button' => 'Stop met klagen',
-                    'href' => '/',
-                ],
-            ];
-
-            $nonMember = [
-                'title' => 'Het Alternatief (Niet-Lid)',
-                'features' => ['Elke dag dezelfde excuses', 'Angst die blijft regeren', 'Geen begeleiding', 'Geen toegang', 'Alleen social media scrollen', 'Geen actie, alleen dromen', 'Tijd gaat voorbij, jij staat stil']
-            ];
-
-            $selectedPlanIndex = 2; // Groei plan
-        @endphp
-
-        @foreach ($plans as $i => $plan)
-            <div class="glow-card relative p-8 border {{ $i === $selectedPlanIndex ? 'outline outline-2 -outline-offset-1 outline-colorPrimary bg-zinc-900' : 'border-zinc-800 hover:border-zinc-700' }} flex flex-col transition-all duration-300"
-            style="{{ $i === $selectedPlanIndex ? '--default-opacity: 0.3; --disable-border-glow: 1;' : '' }}">
-                <div class="glow-blob"></div>
-                
-                @if ($i === $selectedPlanIndex)
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-colorPrimary text-black px-3 py-1 text-xs font-bold uppercase tracking-widest">Aanbevolen</div>
-                @endif
-
-                <div class="glow-content h-full flex flex-col">
-                    <div class="flex items-center justify-between mb-8">
-                        <h3 class="text-2xl font-bold text-colorLight">{{ $plan['title'] }} </h3>
-                        <span class="text-sm font-mono text-zinc-500 uppercasefont-normal">{{ $plan['price'] }}</span>
-                    </div>
-                    <div class="text-sm text-zinc-500 mb-4">{{ $plan['goal'] }}</div>
-                    <ul class="flex-1 space-y-4 mb-8">
-                        @foreach ($plan['features'] as $feature)
-                        <li class="flex items-center gap-3 text-sm text-zinc-300">
-                            <div class="w-1.5 h-1.5 rounded-full {{ $i === $selectedPlanIndex ? 'bg-colorPrimary' : 'bg-white' }}"></div>
-                            {{ $feature }}
-                        </li>
-                        @endforeach
-                    </ul>
-                    <div class="text-sm font-mono text-zinc-500 mb-4 justify-end">{{ $plan['contract'] }}</div>
-                    <a href="{{ $plan['href'] }}" class="w-full text-center inline-block py-3 px-6 {{ $i === $selectedPlanIndex ? 'bg-colorPrimary text-black hover:bg-colorPrimary/80' : 'bg-black text-colorLight hover:bg-colorPrimary/10' }}">
-                        {{ $plan['button'] }}
-                    </a>
-                </div>
-            </div>
-        @endforeach
-    </div>
-
-</section> --}}
-
-
 <section id="mentorship" class="py-16 px-4 md:px-12">
     <div class="max-w-4xl mx-auto text-center mb-16">
         <span class="inline-block text-colorPrimary py-1 px-3 border border-zinc-700 rounded-full text-xs font-mono uppercase tracking-widest mb-6">
@@ -124,91 +16,73 @@
                 'id' => 'instap', // Unieke ID voor JS
                 'title' => 'Instap',
                 'goal' => 'Bewustwording & verbinding',
-                'price' => 'Gratis',
-                'contract' => 'Altijd',
-                'features' => ['Toegang tot Discord', 'Dagdoelen', 'Dagelijkse dagcheck', 'Weekuitdagingen', 'Supportkanalen', 'Wekelijkse korte voorlichting', 'Verbinding & structuur', 'Blueprint gratis testen'],
-                'button' => 'Start Instap',
+                'price' => ['new'=> '0', 'original' => '29'],
+                // 'contract' => 'Altijd',
+                'features' => ['Toegang tot Discord Community', 'Dagdoelen & Dagtips', 'Dagelijkse check', 'Weekuitdagingen', 'Wekelijkse korte voorlichtingsvideo', 'Blueprint Demo'],
                 'href' => $discordInviteLink,
                 'type' => 'free',
-                // Extra info voor de modal
                 'modal_description' => [
-                    'Het Instap-pakket is perfect om kennis te maken met onze community en werkwijze.',
-                    'Je krijgt direct toegang tot gelijkgestemden en basisstructuur zonder kosten.'
-                ],
-                'modal_details' => [
-                    'Toegang: Direct en onbeperkt',
-                    'Focus: Kennismaking en basisritme',
-                    'Support: Community-based'
+                    'Instap is gratis, maar niet vrijblijvend.',
+                    'Je krijgt toegang tot de community van The System en daarmee ook tot het ritme, de regels en de verantwoordelijkheid die daarbij horen.',
+                    'Dit pakket vraagt initiatief. Je volgt dagdoelen, neemt deel aan uitdagingen en wordt geacht actief aanwezig te zijn. Wie alleen wil meekijken of afwachten, gaat hier snel afhaken.'
                 ]
             ],
             [
                 'id' => 'basis',
                 'title' => 'Basis',
                 'goal' => 'Mentale basis & ritme',
-                'price' => '€60 p/m',
-                'contract' => 'Maandelijks opzegbaar',
-                'features' => ['Alles van Instap', 'Voorrang blueprints', 'Extra content', 'Uitgebreide wekelijkse voorlichting', 'Extra trainingen'],
-                'not-included' => ['1-op-1 gesprekken'],
-                'button' => 'Kies Basis',
+                'price' => ['new' => '50', 'original' => '59'],
+                // 'contract' => 'Maandelijks opzegbaar',
+                'features' => ['Alles van Instap', 'WhatsApp bereik voor jou vooruitgang (tot 18:00)', 'Persoonlijke schema\'s op maat (Beweging, Slaap, en meer...)', 'Toegang tot Blueprint omgeving', '1 Blueprint per maand', 'Blueprint mentorschap in groepsverband', 'Wekelijkse voorlichting (Livestream)'],
+                // 'not-included' => ['1-op-1 gesprekken'],
                 'href' => $discordInviteLink,
                 'type' => 'paid',
                 'modal_description' => [
-                    'Met Basis leg je een serieus fundament.',
-                    'Je krijgt toegang tot diepgaandere content en voorrang, ideaal voor wie zelfstandig aan de slag wil met extra handvatten.'
-                ],
-                'modal_details' => [
-                    'Toegang: Uitgebreide content bibliotheek',
-                    'Focus: Zelfontwikkeling met extra tools',
-                    'Support: Wekelijkse groepssessies'
+                    'Basis is bedoeld voor mensen die willen bouwen aan structuur en mentale stabiliteit.',
+                    'Je werkt zelfstandig met duidelijke kaders, vaste ritmes en toegang tot de Blueprint-omgeving.',
+                    'Dit pakket vraagt eigen verantwoordelijkheid. Je krijgt richting en handvatten, maar geen constante aansporing of bevestiging. Vooruitgang ontstaat hier door doen, niet door afwachten.'
                 ]
             ],
             [
                 'id' => 'groei',
                 'title' => 'Groei',
                 'goal' => 'Structurele verandering',
-                'price' => 'Vanaf €50 p/m',
-                'contract' => '3 maanden contract',
-                'features' => ['Alles van Basis', 'Voorrang gesprekken', 'Alle blueprints', 'Exclusieve sessies', 'Extra tools & video’s', 'Nauwere betrokkenheid', 'Intensievere begeleiding'],
-                'included' => ['1-op-1 gesprekken (wachtlijst)'],
-                'button' => 'Kies Groei',
+                'price' => ['new' => '55', 'original' => '122'],
+                // 'contract' => '3 maanden contract',
+                'features' => ['Alles van Basis', 'WhatsApp bereik voor jou vooruitgang (tot 22:00)', 'Altijd begeleiding bij Blueprints', 'Crisisplan', 'Onderwerpen aandragen bij weekelijkse voorlichtingen', 'Eén 1-op-1 gesprek per maand (wachtlijst)', 'Videoideën aandragen'],
+                // 'included' => [],
                 'href' => $discordInviteLink,
                 'type' => 'paid',
                 'recommended' => true,
                 'modal_description' => [
-                    'Groei is voor degenen die klaar zijn voor de volgende stap.',
-                    'Met persoonlijke aandacht en toegang tot al onze blueprints ga je structureel aan de slag met je doelen.'
-                ],
-                'modal_details' => [
-                    'Toegang: Volledige blueprint database',
-                    'Focus: Doorbreken van patronen',
-                    'Support: Mogelijkheid tot 1-op-1 (wachtlijst)'
+                    'Groei is voor mensen die vastlopen in terugkerende patronen en daar actief verandering in willen brengen.',
+                    'Je werkt intensiever met de Blueprints en krijgt meer directe begeleiding en feedback tijdens dat proces.',
+                    'Dit traject vraagt consistentie: afspraken nakomen, reflecteren op gedrag en verantwoordelijkheid nemen voor keuzes die je maakt.',
+                    'Groei betekent hier niet praten over verandering, maar structureel ander gedrag laten zien over langere tijd.'
                 ]
             ],
             [
                 'id' => 'elite',
                 'title' => 'Elite',
                 'goal' => 'Diepe genezing & levensopbouw',
-                'price' => 'Vanaf €40 p/m',
-                'contract' => '12 maanden contract',
-                'features' => ['Alles van Groei', 'Hoogste prioriteit', '1-op-1 Mentorschap', 'VIP sessies', 'Toegang tot alles', 'Persoonlijke roadmap'],
-                'button' => 'Kies Elite',
+                'price' => ['new' => '70', 'original' => '349'],
+                // 'contract' => '12 maanden contract',
+                'features' => ['Alles van Groei', 'WhatsApp bereik voor crisis op recept (tot 00:00)', 'Bellen op recept', 'Alle Blueprints direct beschikbaar', '1-op-1 Blueprint mentorschap', 'Eén 1-op-1 belgesprek per maand (Waarde: €70)', '4 voortgangsgesprekken per maand'],
                 'href' => $discordInviteLink,
                 'type' => 'paid',
                 'modal_description' => [
-                    'Elite is het hoogste niveau binnen The System. Je krijgt persoonlijke 1-op-1 begeleiding, een systeem op maat en volledige toegang tot alles wat nodig is voor blijvende mentale stabiliteit en discipline.',
-                    'Dit traject is voor wie verantwoordelijkheid neemt en geen halve stappen zet.'
-                ],
-                'modal_details' => [
-                    'Begeleiding: Persoonlijk 1-op-1 mentorschap',
-                    'Structuur: Individuele roadmap afgestemd op jouw situatie',
-                    'Toegang: Volledige VIP-toegang tot The System',
-                    'Doel: Duurzame mentale kracht en levensstructuur'
+                    'Elite is geen upgrade. Het is een commitment.',
+                    'Dit traject is bedoeld voor mensen die structureel hun leven willen heropbouwen en daar volledige verantwoordelijkheid voor nemen.',
+                    'Je krijgt directe toegang, persoonlijke begeleiding en maximale betrokkenheid, maar alleen binnen een duidelijke werkstructuur en met actieve inzet van jouw kant.',
+                    'Elite vraagt beschikbaarheid, eerlijkheid en het nakomen van afspraken. Dit is geen vangnet en geen reddingsboei.'
                 ]
             ]
         ];
 
         $nonMember = [
-            'title' => 'Het Alternatief (Niet-Lid)',
+            'title' => 'Het Alternatief',
+            'description' => 'Dit is de standaard. Het pad van de minste weerstand. Geen kosten, maar de prijs die je betaalt is je toekomst.',
+            'warning' => 'Waarschuwing: Comfortzone',
             'features' => ['Elke dag dezelfde excuses', 'Angst die blijft regeren', 'Geen begeleiding', 'Geen toegang', 'Alleen social media scrollen', 'Geen actie, alleen dromen', 'Tijd gaat voorbij, jij staat stil']
         ];
     @endphp
@@ -244,11 +118,9 @@
 
                 <div class="glow-content h-full flex flex-col">
                     {{-- Header --}}
-                    <div class="mb-6 text-center">
+                    <div class="mb-4 text-center">
                         <h3 class="text-2xl font-bold text-white mb-1">{{ $plan['title'] }}</h3>
-                        <p class="text-xs text-zinc-500 font-mono uppercase tracking-wide mb-4 h-8 flex items-center justify-center">{{ $plan['goal'] }}</p>
-                        <div class="{{ $isRecommended ? 'text-3xl' : 'text-2xl' }} font-bold text-colorPrimary">{{ $plan['price'] }}</div>
-                        <div class="text-xs text-zinc-600 mt-1">{{ $plan['contract'] }}</div>
+                        <p class="text-xs text-zinc-500 font-mono uppercase tracking-wide h-8 flex items-center justify-center">{{ $plan['goal'] }}</p>
                     </div>
 
                     {{-- Features List --}}
@@ -256,7 +128,6 @@
                         @foreach ($plan['features'] as $feature)
                             <li class="flex justify-start items-center gap-3 text-sm text-zinc-300 leading-snug">
                                 <x-lucide-check class="w-4 h-4 {{ $isRecommended ? 'text-colorPrimary' : 'text-white' }} flex-shrink-0" />
-                                {{-- <div class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 {{ $isRecommended ? 'bg-colorPrimary' : 'bg-white' }}"></div> --}}
                                 <span>{{ $feature }}</span>
                             </li>
                         @endforeach
@@ -265,7 +136,6 @@
                             @foreach ($plan['not-included'] as $notInclude)
                                 <li class="flex justify-start items-center gap-3 text-sm text-zinc-300 leading-snug">
                                     <x-lucide-x class="w-4 h-4 text-red-500 flex-shrink-0" />
-                                    {{-- <div class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 {{ $isRecommended ? 'bg-colorPrimary' : 'bg-white' }}"></div> --}}
                                     <span>{{ $notInclude }}</span>
                                 </li>
                             @endforeach
@@ -275,12 +145,65 @@
                             @foreach ($plan['included'] as $include)
                                 <li class="flex justify-start items-center gap-3 text-sm text-zinc-300 leading-snug">
                                     <x-lucide-check class="w-4 h-4 text-green-500 flex-shrink-0" />
-                                    {{-- <div class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 {{ $isRecommended ? 'bg-colorPrimary' : 'bg-white' }}"></div> --}}
-                                    <span>{{ $include }}</span>
                                 </li>
                             @endforeach
                         @endif
                     </ul>
+
+                    <!-- DE PRIJS VERGELIJKING -->
+                    <div class="flex justify-center items-center flex-col">
+                        @if(is_array($plan['price']))
+
+                            @if(isset($plan['price']['original']))
+                            <span class="text-base font-normal line-through text-zinc-400">Waarde: €{{ $plan['price']['original'] }}</span>
+                            @endif
+
+                            <div class="mb-6 flex items-center justify-center gap-3">
+
+                                <div class="flex items-baseline justify-center gap-3">
+                                    <span class="{{ $isRecommended ? 'text-3xl' : 'text-2xl' }} font-bold text-colorPrimary">
+                                        @if($plan['price']['new'] == '0' || $plan['price']['new'] == 0)
+                                            Gratis
+                                        @else
+                                            €{{ $plan['price']['new'] }}
+                                        @endif
+                                    </span>
+                            
+                                    @if($plan['price']['new'] != '0' && $plan['price']['new'] != 0)
+                                        <span class="mb-1 self-end text-sm font-normal text-zinc-400">p/m</span>
+                                    @endif
+                                </div>
+
+                                @if(isset($plan['price']['original']) && isset($plan['price']['new']) && $plan['price']['original'] > 0)
+                                    @php
+                                        // Bereken het percentage: (1 - (nieuw / oud)) * 100
+                                        $discountAmount = (1 - ($plan['price']['new'] / $plan['price']['original'])) * 100;
+                                        // Afronden naar het dichtstbijzijnde hele getal
+                                        $roundedDiscount = round($discountAmount);
+                                    @endphp
+
+                                    @if($roundedDiscount > 0 && $roundedDiscount < 100)
+                                        <span class="ml-2 inline-block rounded border border-colorPrimary/30 bg-colorPrimary/10 px-1.5 py-0.5 text-sm font-bold uppercase text-colorPrimary">
+                                            ± {{ $roundedDiscount }}% KORTING
+                                        </span>
+                                    @endif
+                                @elseif(isset($plan['price']['discount']))
+                                    {{-- Fallback voor als er handmatig een discount string is meegegeven --}}
+                                    <span class="ml-2 inline-block rounded border border-colorPrimary/30 bg-colorPrimary/10 px-1.5 py-0.5 text-sm font-bold uppercase text-colorPrimary">
+                                        {{ $plan['price']['discount'] }}% KORTING
+                                    </span>
+                                @endif
+                            @else
+                                {{-- Fallback voor als prijs nog string is (voor zekerheid) --}}
+                                <span class="text-3xl font-bold text-colorPrimary">{{ $plan['price'] }}</span>
+                            @endif
+                        </div>
+
+                        @if(isset($plan['contract']))
+                            <div class="text-xs text-zinc-400 mb-6">{{ $plan['contract'] }}</div>
+                        @endif
+                    </div>
+
 
                     {{-- Button --}}
                     <a href="{{ $plan['href'] }}" 
@@ -288,7 +211,7 @@
                        {{ $isRecommended 
                           ? 'bg-colorPrimary text-black hover:bg-white hover:text-black shadow-lg shadow-colorPrimary/20' 
                           : 'bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700' }}">
-                        {{ $plan['button'] }}
+                        Kies {{ $plan['title'] }}
                     </a>
                 </div>
             </div>
@@ -308,12 +231,9 @@
                         <x-lucide-x-circle class="w-6 h-6" />
                         {{ $nonMember['title'] }}
                     </h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed">
-                        Dit is de standaard. Het pad van de minste weerstand. 
-                        Geen kosten, maar de prijs die je betaalt is je toekomst.
-                    </p>
+                    <p class="text-zinc-400 text-sm leading-relaxed">{{ $nonMember['description'] }}</p>
                     <div class="mt-6 hidden md:block">
-                        <span class="text-xs font-mono text-red-900/60 uppercase">Waarschuwing: Comfortzone</span>
+                        <span class="text-xs font-mono text-red-900/60 uppercase">{{ $nonMember['warning'] }}</span>
                     </div>
                 </div>
 
@@ -349,16 +269,9 @@
                                     {{-- Dynamische Titel --}}
                                 </h3>
                                 <div class="mt-2">
-                                    <p class="text-sm text-zinc-400 mb-6 text-left" id="modalDescription">
+                                    <p class="text-sm text-zinc-400 text-left text-justify" id="modalDescription">
                                         {{-- Dynamische Beschrijving --}}
                                     </p>
-                                    
-                                    <div class="bg-zinc-800/50 rounded-md p-4 border border-zinc-700">
-                                        <h4 class="text-sm font-bold text-colorPrimary mb-3 uppercase tracking-wider text-left">Details</h4>
-                                        <ul class="space-y-2 text-sm text-zinc-300 font-mono text-left" id="modalDetails">
-                                            {{-- Dynamische Details Lijst --}}
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -384,7 +297,6 @@
     const panel = document.getElementById('modalPanel');
     const titleEl = document.getElementById('modalTitle');
     const descEl = document.getElementById('modalDescription');
-    const detailsEl = document.getElementById('modalDetails');
 
     function openInfoModal(planId) {
         // Data ophalen
@@ -408,17 +320,6 @@
             descEl.appendChild(p);
         } else {
             descEl.textContent = 'Geen extra informatie beschikbaar.';
-        }
-
-        // Details lijst leegmaken en vullen
-        detailsEl.innerHTML = '';
-        if (plan.modal_details) {
-            plan.modal_details.forEach(detail => {
-                const li = document.createElement('li');
-                li.className = 'flex items-center gap-2';
-                li.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-zinc-500"></span> ${detail}`;
-                detailsEl.appendChild(li);
-            });
         }
 
         // Modal tonen (eerst hidden weghalen)

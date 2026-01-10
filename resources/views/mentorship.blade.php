@@ -4,7 +4,7 @@
 
 @section('content')
 
-{{-- <x-standard-hero 
+<x-standard-hero 
     label="Het Protocol"
     title="Mentorship" 
     subtitle="Mentaal onderhoud is geen keuze. Het is je maandelijkse overleving. Je onderhoudt je huis, waarom niet je hoofd?"
@@ -14,7 +14,7 @@
 <!-- Main Content Section -->
 @include('layouts.3-fasen-systeem')
 
-@include('layouts.coach-quinn') --}}
+@include('layouts.coach-quinn')
 
 @include('layouts.mentorship-program')
 
