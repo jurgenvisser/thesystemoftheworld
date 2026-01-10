@@ -106,7 +106,7 @@
                 <div class="glow-blob"></div>
                 
                 {{-- Info Icoon (Rechtsboven) --}}
-                <button onclick="openInfoModal('{{ $plan['id'] }}')" 
+                <button data-open-plan="{{ $plan['id'] }}"
                         class="absolute top-4 right-4 z-30 text-zinc-500 hover:text-colorLight transition-colors p-1 rounded-full hover:bg-zinc-800"
                         aria-label="Meer informatie over {{ $plan['title'] }}">
                     <x-lucide-info class="w-5 h-5" />
@@ -278,7 +278,7 @@
                     </div>
                     
                     <div class="p-6 pt-0 sm:flex sm:flex-row-reverse">
-                        <button type="button" onclick="closeInfoModal()" class="inline-flex w-full justify-center rounded-md bg-colorPrimary px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-opacity-80 sm:w-auto transition-colors">
+                        <button type="button" data-close-modal class="inline-flex w-full justify-center rounded-md bg-colorPrimary px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-opacity-80 sm:w-auto transition-colors">
                             Sluiten
                         </button>
                     </div>
@@ -288,71 +288,3 @@
     </div>
 
 </section>
-
-{{-- JAVASCRIPT VOOR MODAL LOGICA --}}
-<script>
-    // Elementen selecteren
-    const modal = document.getElementById('infoModal');
-    const backdrop = document.getElementById('modalBackdrop');
-    const panel = document.getElementById('modalPanel');
-    const titleEl = document.getElementById('modalTitle');
-    const descEl = document.getElementById('modalDescription');
-
-    function openInfoModal(planId) {
-        // Data ophalen
-        const plan = window.planData.find(p => p.id === planId);
-        if (!plan) return;
-
-        // Content vullen
-        titleEl.textContent = plan.title;
-        descEl.innerHTML = '';
-
-        if (Array.isArray(plan.modal_description)) {
-            plan.modal_description.forEach(paragraph => {
-                const p = document.createElement('p');
-                p.className = 'mb-4 last:mb-0';
-                p.textContent = paragraph;
-                descEl.appendChild(p);
-            });
-        } else if (plan.modal_description) {
-            const p = document.createElement('p');
-            p.textContent = plan.modal_description;
-            descEl.appendChild(p);
-        } else {
-            descEl.textContent = 'Geen extra informatie beschikbaar.';
-        }
-
-        // Modal tonen (eerst hidden weghalen)
-        modal.classList.remove('hidden');
-
-        // Kleine timeout voor de transitie (zodat de browser de render update)
-        setTimeout(() => {
-            backdrop.classList.remove('opacity-0');
-            panel.classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
-            panel.classList.add('opacity-100', 'translate-y-0', 'sm:scale-100');
-        }, 10);
-    }
-
-    function closeInfoModal() {
-        // Transities terugdraaien
-        backdrop.classList.add('opacity-0');
-        panel.classList.remove('opacity-100', 'translate-y-0', 'sm:scale-100');
-        panel.classList.add('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
-
-        // Wachten op transitie einde voordat we hidden toevoegen
-        setTimeout(() => {
-            modal.classList.add('hidden');
-        }, 300); // 300ms is de standaard duration in Tailwind transitions vaak
-    }
-
-    // Sluiten als je buiten de modal klikt
-    modal.addEventListener('click', (e) => {
-        if (e.target === backdrop || e.target.closest('.fixed.inset-0.z-10')) {
-             // Check of er niet op het panel zelf geklikt wordt is lastig met deze structuur, 
-             // makkelijker is checken of e.target == de backdrop container wrapper
-        }
-    });
-    
-    // Betere click-outside implementatie voor deze structuur
-    backdrop.addEventListener('click', closeInfoModal);
-</script>
