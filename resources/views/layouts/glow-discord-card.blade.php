@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <a href="#" class="bg-blurple hover:bg-blurple/80 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(88,101,242,0.3)]">
+            <a href="{{ $brevoFormLink }}" class="bg-blurple hover:bg-blurple/80 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(88,101,242,0.3)]">
                 Join Nu
             </a>
         </div>

@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 
 
 View::share([
-    'appVersion' => 'TSotW.3.2.2p',
+    'appVersion' => 'TSotW.3.2.3p',
 ]);
 
 // . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.
@@ -127,6 +127,10 @@ Route::get('/contact', function () {
 // Route for the 'Bedankt voor je bericht' page
 Route::get('/bedankt-voor-je-bericht', function () {
     return view('thanks-for-contacting'); // Refer to thanks-for-contacting.blade.php
+});
+// Route for the 'Bedankt voor jou aanmelding' page
+Route::get('/bedankt-voor-jou-aanmelding', function () {
+    return view('thanks-for-signup'); // Refer to thanks-for-signup.blade.php
 });
 
 // // Route for the 'For Business' page

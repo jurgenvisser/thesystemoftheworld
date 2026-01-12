@@ -30,14 +30,13 @@ class SendFormEmail
     public function send(array $formData, string $toEmail, string $toName = 'Team The System')
     {
         // HTML template als string of vanaf een file
-        $discordInviteLink = SocialStat::where('platform', 'discord')->value('invite_link') ?? env('DISCORD_FALLBACK_INVITE', 'https://discord.gg/vmyW5gYQgA');
-
         $htmlContent = '
         <html>
         <body>
-        <p>We zijn blij om je te verwelkomen bij The System-familie. Samen gaan we aan de slag om jouw doelen te bereiken en je leven te transformeren.</p>
-        <p>Wil je meteen beginnen met onze community? <a href="' . $discordInviteLink . '">Krijg dan toegang via deze link: <strong>Discord Community</strong></a></p>
-        <p>In deze mail vind je ook jouw antwoorden van de vragenlijst.</p>
+        <p>Welkom! Je bent nu onderdeel van The System.</p>
+        <p>Dit is een plek waar mensen werken aan rust, helderheid en structuur in hun eigen tempo. Je hoeft niets voor te bereiden en je kan vandaag beginnen. </p>
+        <p>Wil je meteen beginnen met onze community? <a href="https://thesystemoftheworld.com/bedankt-voor-jou-aanmelding">Krijg dan toegang via deze link: <strong>Discord Community</strong></a>.</p>
+        <p>Kijk eerst rustig rond. En begin gelijk aan jou herstel.In deze mail vind je ook jouw antwoorden van de vragenlijst.</p>
 
         <br>
         <h2>Persoonlijke gegevens</h2>

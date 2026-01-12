@@ -49,7 +49,7 @@
             <p class="text-zinc-400 mb-6">
                 Wil je ook zulke resultaten behalen? Je hoofd verandert niet door hoop. Het verandert door onderhoud, herhaling en begeleiding. Dat is wat je hier krijgt.
             </p>
-            <a href="/coaching" class="inline-block w-full text-center px-8 py-4 font-mono text-sm uppercase bg-colorPrimary text-black font-bold hover:bg-colorPrimary/80 transition-all">
+            <a href="/mentorschap" class="inline-block w-full text-center px-8 py-4 font-mono text-sm uppercase bg-colorPrimary text-black font-bold hover:bg-colorPrimary/80 transition-all">
                 Begin Jouw Reis
             </a>
         </div>
