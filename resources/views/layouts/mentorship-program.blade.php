@@ -269,7 +269,7 @@
                                     {{-- Dynamische Titel --}}
                                 </h3>
                                 <div class="mt-2">
-                                    <p class="text-sm text-zinc-400 text-left text-justify" id="modalDescription">
+                                    <p class="text-sm text-zinc-400 text-justify" id="modalDescription">
                                         {{-- Dynamische Beschrijving --}}
                                     </p>
                                 </div>

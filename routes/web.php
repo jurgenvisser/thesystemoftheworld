@@ -14,9 +14,8 @@ use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\RateLimitedController;
 use Illuminate\Http\Request;
 
-
 View::share([
-    'appVersion' => 'TSotW.3.2.5p',
+    'appVersion' => 'TSotW.3.2.6p',
 ]);
 
 // . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.
@@ -99,8 +98,9 @@ Route::get('/bedankt-voor-je-bericht', function () {
     return view('thanks-for-contacting'); // Refer to thanks-for-contacting.blade.php
 });
 // Route for the 'Bedankt voor jou aanmelding' page
-Route::get('/bedankt-voor-jou-aanmelding', function () {
-    return view('thanks-for-signup'); // Refer to thanks-for-signup.blade.php
+Route::get('/bedankt-voor-jou-aanmelding', function (Request $request) {
+    abort_unless($request->query('t') === 'brevo', 404);
+    return view('thanks-for-singup');
 });
 
 // // Route for the 'For Business' page
