@@ -45,9 +45,9 @@ Route::post('/brevo-webhook', function (Request $request) {
 
     $emailService = new \App\Services\SendFormEmail();
     $recipients = [
-        'jurgenbv@gmail.com',
-        'limitedjq@gmail.com',
+        'limitedjqc@gmail.com',
         'business@thesystemoftheworld.com',
+        $formData['EMAIL'] ?? null,
     ];
     $results = [];
     foreach ($recipients as $recipient) {

@@ -5,6 +5,7 @@ namespace App\Services;
 use SendinBlue\Client\Configuration;
 use SendinBlue\Client\Api\TransactionalEmailsApi;
 use SendinBlue\Client\Model\SendSmtpEmail;
+use App\Models\SocialStat;
 
 class SendFormEmail
 {
@@ -29,11 +30,16 @@ class SendFormEmail
     public function send(array $formData, string $toEmail, string $toName = 'Team The System')
     {
         // HTML template als string of vanaf een file
+        $discordInviteLink = SocialStat::where('platform', 'discord')->value('invite_link') ?? env('DISCORD_FALLBACK_INVITE', 'https://discord.gg/vmyW5gYQgA');
+
         $htmlContent = '
         <html>
         <body>
-        <p><strong>{{FIRSTNAME}} {{LASTNAME}}</strong> heeft zich aangemeld voor een coaching traject. Hier zijn de antwoorden van de vragenlijst. Je kunt ze bereiken op <em>{{SMS}}</em>.</p>
+        <p>We zijn blij om je te verwelkomen bij The System-familie. Samen gaan we aan de slag om jouw doelen te bereiken en je leven te transformeren.</p>
+        <p>Wil je meteen beginnen met onze community? <a href="' . $discordInviteLink . '">Krijg dan toegang via deze link: <strong>Discord Community</strong></a></p>
+        <p>In deze mail vind je ook jouw antwoorden van de vragenlijst.</p>
 
+        <br>
         <h2>Persoonlijke gegevens</h2>
         <p><strong>Naam:</strong> <em>{{FIRSTNAME}} {{LASTNAME}}</em><br>
         <strong>Telefoonnummer:</strong> <em>{{SMS}}</em><br>
@@ -45,16 +51,15 @@ class SendFormEmail
         <h2>Huidige situatie</h2>
         <p><strong>Wat is momenteel de grootste uitdaging in jouw leven?</strong><br><em>{{GROOTSTE_UITDAGING}}</em></p>
         <p><strong>Hoe zou jij je huidige mentale en emotionele welzijn beschrijven?</strong><br><em>{{HUIDIGE_MENTALE_EMOTIONELE_WELZIJN}}</em></p>
-        <p><strong>Wat is je belangrijkste doel voor de komende 6 maanden?</strong><br><em>{{BELANGRIJKSTE_DOEL}}</em></p>
-        <p><strong>Heb je eerdere coaching of begeleiding gehad?</strong><br><em>{{EERDERE_COACHING_GEHAD}}</em></p>
-        <p><strong>Wat is jouw ervaring met coaching of begeleiding?</strong><br><em>{{EERDERE_COACHING_ERVARING}}</em></p>
-        <p><strong>Wanneer ga je het als succes beschouwen?</strong><br><em>{{WANNEER_SUCCES}}</em></p>
+        <p><strong>Wat is je belangrijkste doel die jij wilt behalen de komende 6 maanden?</strong><br><em>{{BELANGRIJKSTE_DOEL}}</em></p>
+        <p><strong>Heb je eerdere mentoring of begeleiding gehad?</strong><br><em>{{EERDERE_COACHING_GEHAD}}</em></p>
+        <p><strong>Wat is jouw ervaring met mentoring of begeleiding?</strong><br><em>{{EERDERE_COACHING_ERVARING}}</em></p>
+        <p><strong>Heb jij meer hulp nodig dan 12 maanden?</strong><br><em>{{WANNEER_SUCCES}}</em></p>
 
         <h2>Verwachting van The System</h2>
-        <p><strong>Wat hoop jij te bereiken met ons coachingstraject?</strong><br><em>{{WAT_WIL_JE_BEREIKEN}}</em></p>
-        <p><strong>Hoeveel tijd kun jij per week investeren in je persoonlijke ontwikkeling?</strong><br><em>{{ONTWIKKELING_INVESTERING}}</em></p>
-        <p><strong>Welke coachingstijl past het beste bij jou?</strong><br><em>{{WELKE_COACHINGSTIJL}}</em></p>
-        <p><strong>Wat denk je dat jouw grootste struikelblok zal zijn tijdens het traject?</strong><br><em>{{GROOTSTE_STRUIKELBLOK}}</em></p>
+        <p><strong>Wat hoop jij te bereiken met onze dienstverlening?</strong><br><em>{{WAT_WIL_JE_BEREIKEN}}</em></p>
+        <p><strong>Hoeveel tijd heb je nodig om jezelf terug te vinden?</strong><br><em>{{ONTWIKKELING_INVESTERING}}</em></p>
+        <p><strong>Wat denk je dat jouw grootste struikelblok zal zijn binnen The System?</strong><br><em>{{GROOTSTE_STRUIKELBLOK}}</em></p>
 
         <h2>Marketing & Communicatie</h2>
         <p><strong>Ben jij geïnteresseerd in exclusieve tips, blogs en aanbiedingen via E-mail?</strong><br><em>{{MARKETING_VOORKEUR}}</em></p>
@@ -62,6 +67,10 @@ class SendFormEmail
         <h2>Overige informatie</h2>
         <p><strong>Is er iets anders dat we moeten weten om je beter te kunnen helpen?</strong><br><em>{{ANDERE_BELANGRIJKE_INFORMATIE}}</em></p>
         
+        <br>
+        <h2>Klopt er iets niet?</h2>
+        <p>Stuur dan een e-mail naar business@thesystemoftheworld.com en vertel ons wat we voor je kunnen doen!</p>
+
         <br><br>
         <h1>Keep It Up! 🍀♟️</h2>
         <p><em>"Je hoeft niet meer alleen te lopen, dat hebben wij al voor je gedaan!"</em> - The System</p>
@@ -76,10 +85,10 @@ class SendFormEmail
                 '2' => 'Nee',
             ],
             'ONTWIKKELING_INVESTERING' => [
-                '1' => 'Minder dan 2 uur',
-                '2' => '2-4 uur',
-                '3' => '4-6 uur',
-                '4' => 'Meer dan 6 uur',
+                '1' => 'Minder dan 2 maanden',
+                '2' => '2-4 maanden',
+                '3' => '4-6 maanden',
+                '4' => 'Meer dan 6 maanden',
             ],
             'WELKE_COACHINGSTIJL' => [
                 '1' => 'Praktisch en resultaatgericht',
@@ -103,7 +112,7 @@ class SendFormEmail
 
         // Email versturen
         $sendSmtpEmail = new SendSmtpEmail([
-            'subject' => 'Nieuwe intake via Brevo',
+            'subject' => 'Bedankt dat jij ons hebt gekozen ' . ($formData['FIRSTNAME'] ?? 'Onbekend') . '!',
             'sender' => ['name' => 'The System - Aanmeldingen', 'email' => 'admin@thesystemoftheworld.com'],
             'to' => [
                 ['email' => $toEmail, 'name' => $toName]
