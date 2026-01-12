@@ -6,11 +6,11 @@
 
 {{-- !! Let erop dat als deze informatie verandert dat de terms-and-conditions.js ook aangepast wordt zodat de download klopt! --}}
 
-<div class="bg-colorPrimary/20 h-auto m-0 py-24 flex justify-center items-center">
-  <div class="bg-colorPrimary/60 max-w-4xl mx-auto p-6 text-colorLight">
+<div class="bg-colorPrimary/10 h-auto m-0 md:py-24 flex justify-center items-center">
+  <div class="bg-black max-w-4xl mx-auto p-6 md:p-12 text-colorLight">
     <h1 class="text-3xl font-bold text-center mb-6">Terms & Conditions</h1>
     <p class="text-sm text-center">thesystemoftheworld.com</p>
-    <p class="text-sm text-center">Laatste bijwerking: 27 augustus 2025</p>
+    <p class="text-sm text-center text-zinc-500">Laatste bijwerking: 27 augustus 2025</p>
   
     <section class="mt-8">
       <h2 class="text-xl font-semibold mb-4">Inleiding</h2>
@@ -104,11 +104,11 @@
       </p>
     </section>
 
-    <footer class="mt-8 text-center text-sm">
-      <p>Heb je vragen over onze Terms & Conditions? Neem contact met ons op via: <a href="mailto:contact@thesystemoftheworld.com" class="animate-underline animate-text-color theme-primary">contact@thesystemoftheworld.com</a></p>
+    <footer class="mt-8 text-center text-sm text-zinc-500">
+      <p>Heb je vragen over onze Terms & Conditions? Neem contact met ons op via: <a href="mailto:contact@thesystemoftheworld.com" class="animate-underline animate-text-color theme-primary text-colorLight">contact@thesystemoftheworld.com</a></p>
       <p>
         Wil je de Terms & Conditions downloaden voor later gebruik?
-        <button id="downloadTCBtn" class="animate-underline animate-text-color theme-primary">
+        <button id="downloadTCBtn" class="animate-underline animate-text-color theme-primary text-colorLight">
           Download Terms & Conditions PDF
         </button>
       </p>
