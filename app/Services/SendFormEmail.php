@@ -35,7 +35,7 @@ class SendFormEmail
         <body>
         <p>Welkom! Je bent nu onderdeel van The System.</p>
         <p>Dit is een plek waar mensen werken aan rust, helderheid en structuur in hun eigen tempo. Je hoeft niets voor te bereiden en je kan vandaag beginnen. </p>
-        <p>Wil je meteen beginnen met onze community? <a href="https://thesystemoftheworld.com/bedankt-voor-jou-aanmelding">Krijg dan toegang via deze link: <strong>Discord Community</strong></a>.</p>
+        <p>Wil je meteen beginnen met onze community? <a href="https://thesystemoftheworld.com/bedankt-voor-jou-aanmelding?t=brevo">Krijg dan toegang via deze link: <strong>Discord Community</strong></a>.</p>
         <p>Kijk eerst rustig rond. En begin gelijk aan jou herstel.In deze mail vind je ook jouw antwoorden van de vragenlijst.</p>
 
         <br>
