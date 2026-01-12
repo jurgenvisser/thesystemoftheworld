@@ -40,18 +40,3 @@
         Contact
     </a>
 </div>
-{{-- <div class="w-full xl:w-auto border-b border-colorPrimary/40 xl:border-none flex justify-center">
-    <a href="/missie-visie" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base py-2 xl:py-0 theme-primary text-center">
-        Missie & Visie
-    </a>
-</div>
-<div class="w-full xl:w-auto border-b border-colorPrimary/30 xl:border-none flex justify-center">
-    <a href="/over-ons" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base py-2 xl:py-0 theme-primary text-center">
-        Over Ons
-    </a>
-</div> --}}
-{{-- <div class="w-full xl:w-auto border-b border-colorPrimary/20 xl:border-none flex justify-center">
-    <a href="/contact" class="2xl:animate-underline animate-text-color text-lg lg:text-base 2xl:text-base py-2 xl:py-0 theme-primary text-center">
-        Contact
-    </a>
-</div> --}}

@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 
 
 View::share([
-    'appVersion' => 'TSotW.3.2.3p',
+    'appVersion' => 'TSotW.3.2.4p',
 ]);
 
 // . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.
@@ -40,11 +40,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/facebook/login', [FacebookController::class, 'redirectToFacebook'])->name('facebook.login');
 Route::get('/facebook/callback', [FacebookController::class, 'handleFacebookCallback'])->name('facebook.callback');
-
-// Route::middleware('guest')->group(function () {
-//     Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
-//     Route::post('/register', [RegisteredUserController::class, 'store']);
-// });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -75,11 +70,6 @@ Route::get('/', function () {
 // Redirect for intake form
 Route::redirect('/intake', env('BREVO_FORM_LINK'), 301);
 
-// // Route for the 'Nieuws' page
-// Route::get('/nieuws', function () {
-//     return view('news'); // Refer to news.blade.php
-// });
-
 // Route for the 'Quinn' page
 Route::get('/quinn', function () {
     return view('quinn'); // Refer to quinn.blade.php
@@ -90,30 +80,10 @@ Route::get('/resultaten', function () {
     return view('results'); // Refer to results.blade.php
 });
 
-// Route for the 'Community' page
-Route::get('/community', function () {
-    return view('community'); // Refer to community.blade.php
-});
-
-// // Route for the 'Missie & Visie' page
-// Route::get('/missie-visie', function () {
-//     return view('missie-visie'); // Refer to missie-visie.blade.php
-// });
-
-// // Route for the 'Over Ons' page
-// Route::get('/over-ons', function () {
-//     return view('about-us'); // Refer to team-and-origin.blade.php
-// });
-
 // Route for the 'Mentorschap' page
 Route::get('/mentorschap', function () {
     return view('mentorship'); // Refer to mentorship.blade.php
 });
-
-// // Route for the 'Coaching' page
-// Route::get('/coaching', function () {
-//     return view('coaching'); // Refer to coaching.blade.php
-// });
 
 // Route for the 'Blueprint' page
 Route::get('/blueprint', function () {
@@ -152,10 +122,6 @@ Route::get('/terms-and-conditions', function () {
 Route::get('/admin/facebook-token', function () {
     return view('admin.facebook-token', ['token' => session('token')]);
 })->name('facebook.token.show')->middleware('auth');
-
-// Route::get('/dashboard', function () {
-//     return view('admin');
-// })->middleware('auth')->name('dashboard');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
