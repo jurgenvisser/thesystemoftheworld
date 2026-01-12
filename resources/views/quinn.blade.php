@@ -144,7 +144,7 @@
             <p class="text-2xl font-light text-zinc-400 leading-relaxed mb-4">
                 Wil jij ook de persoon worden die je vroeger nodig had? Neem vandaag nog de eerste stap!
             </p>
-            <a href="{{ $brevoFormLink }}" class="inline-block px-10 py-4 border border-white text-colorLight font-mono uppercase text-sm hover:bg-white hover:text-black transition-all duration-300">
+            <a href="aanmelden" class="inline-block px-10 py-4 border border-white text-colorLight font-mono uppercase text-sm hover:bg-white hover:text-black transition-all duration-300">
                 Laat je gegevens achter
             </a>
         </div>

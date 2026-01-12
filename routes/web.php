@@ -15,7 +15,7 @@ use App\Http\Controllers\RateLimitedController;
 use Illuminate\Http\Request;
 
 View::share([
-    'appVersion' => 'TSotW.3.2.7p',
+    'appVersion' => 'TSotW.3.2.8p',
 ]);
 
 // . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.
@@ -66,8 +66,11 @@ Route::get('/', function () {
     return view('homepage'); // Refer to homepage.blade.php
 });
 
-// Redirect for intake form
+// Redirect for signup form
 Route::redirect('/intake', env('BREVO_FORM_LINK'), 301);
+
+// Redirect for signup form
+Route::redirect('/aanmelden', env('BREVO_FORM_LINK'), 301);
 
 // Route for the 'Quinn' page
 Route::get('/quinn', function () {

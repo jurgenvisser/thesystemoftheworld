@@ -19,7 +19,7 @@
                 'price' => ['new'=> '0', 'original' => '29'],
                 // 'contract' => 'Altijd',
                 'features' => ['Toegang tot Discord Community', 'Dagdoelen & Dagtips', 'Dagelijkse check', 'Weekuitdagingen', 'Wekelijkse korte voorlichtingsvideo', 'Blueprint Demo'],
-                'href' => $brevoFormLink,
+                'href' => 'aanmelden',
                 'type' => 'free',
                 'modal_description' => [
                     'Instap is gratis, maar niet vrijblijvend.',
@@ -35,7 +35,7 @@
                 // 'contract' => 'Maandelijks opzegbaar',
                 'features' => ['Alles van Instap', 'WhatsApp bereik voor jou vooruitgang (tot 18:00)', 'Persoonlijke schema\'s op maat (Beweging, Slaap, en meer...)', 'Toegang tot Blueprint omgeving', '1 Blueprint per maand', 'Blueprint mentorschap in groepsverband', 'Wekelijkse voorlichting (Livestream)'],
                 // 'not-included' => ['1-op-1 gesprekken'],
-                'href' => $brevoFormLink,
+                'href' => 'aanmelden',
                 'type' => 'paid',
                 'modal_description' => [
                     'Basis is bedoeld voor mensen die willen bouwen aan structuur en mentale stabiliteit.',
@@ -51,7 +51,7 @@
                 // 'contract' => '3 maanden contract',
                 'features' => ['Alles van Basis', 'WhatsApp bereik voor jou vooruitgang (tot 22:00)', 'Altijd begeleiding bij Blueprints', 'Crisisplan', 'Onderwerpen aandragen bij weekelijkse voorlichtingen', 'Eén 1-op-1 gesprek per maand (wachtlijst)', 'Videoideën aandragen'],
                 // 'included' => [],
-                'href' => $brevoFormLink,
+                'href' => 'aanmelden',
                 'type' => 'paid',
                 'recommended' => true,
                 'modal_description' => [
@@ -68,7 +68,7 @@
                 'price' => ['new' => '70', 'original' => '349'],
                 // 'contract' => '12 maanden contract',
                 'features' => ['Alles van Groei', 'WhatsApp bereik voor crisis op recept (tot 00:00)', 'Bellen op recept', 'Alle Blueprints direct beschikbaar', '1-op-1 Blueprint mentorschap', 'Eén 1-op-1 belgesprek per maand (Waarde: €70)', '4 voortgangsgesprekken per maand'],
-                'href' => $brevoFormLink,
+                'href' => 'aanmelden',
                 'type' => 'paid',
                 'modal_description' => [
                     'Elite is geen upgrade. Het is een commitment.',

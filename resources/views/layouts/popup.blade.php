@@ -23,7 +23,7 @@
             Als je verschijnt, groei je.
         </p>
         <div class="flex py-2 lg:py-8">
-            <a href="{{ $brevoFormLink }}" class="bg-colorPrimary text-black text-base md:text-lg lg:text-xl px-6 py-2.5 shadow hover:bg-colorPrimary/80 w-full text-center font-mono flex items-center justify-center gap-4">
+            <a href="aanmelden" class="bg-colorPrimary text-black text-base md:text-lg lg:text-xl px-6 py-2.5 shadow hover:bg-colorPrimary/80 w-full text-center font-mono flex items-center justify-center gap-4">
                 <x-lucide-notebook class="w-6 h-6 text-black" />Ik ben klaar <x-lucide-pen-line class="w-6 h-6 text-black" />
             </a>
         </div>

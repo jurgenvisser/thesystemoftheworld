@@ -17,7 +17,7 @@
                 Doe mee. Word sterker. Verander je leven.
             </p>
 
-            <a href="{{ $brevoFormLink }}" target="_blank" 
+            <a href="aanmelden" target="_blank" 
                class="inline-block px-8 py-4 font-mono text-sm uppercase bg-colorPrimary text-black font-bold hover:bg-colorPrimary/90 transition-all">
                 JOIN DE DISCORD NU
             </a>
@@ -27,7 +27,7 @@
         <div class="flex flex-col gap-4 text-sm md:text-base">
 
             <!-- Discord -->
-            <a href="{{ $brevoFormLink }}" target="_blank" 
+            <a href="aanmelden" target="_blank" 
                class="flex items-center justify-between p-4 bg-black border border-zinc-700 hover:border-colorPrimary transition-colors">
                 <div class="flex items-center gap-4">
                     <span class="h-6 aspect-[1/1] bg-discord-white bg-cover bg-center block"></span>

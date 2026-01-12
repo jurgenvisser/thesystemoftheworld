@@ -24,7 +24,7 @@
                             TikTok
                         </a>
                         <!-- Discord -->
-                        <a href="{{ $brevoFormLink }}" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
+                        <a href="aanmelden" target="_blank" class="col-span-2 animate-underline animate-text-color theme-primary">
                             Discord
                         </a>
                         <!-- Instagram -->
