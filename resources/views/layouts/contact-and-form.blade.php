@@ -69,7 +69,7 @@
 
             <form action="https://formsubmit.co/contact@thesystemoftheworld.com" method="POST" class="space-y-6">
                 <input type="hidden" name="_autoresponse" value="Dankjewel voor je bericht aan The System! Wij zullen je zo snel mogenlijk een passend antwoord geven.">
-                <input type="hidden" name="_next" value="thesystemoftheworld.com/bedankt-voor-je-bericht">
+                <input type="hidden" name="_next" value="https://thesystemoftheworld.com/bedankt-voor-je-bericht">
                 <input type="hidden" name="_template" value="basic">
                 <input type="text" name="_honey" style="display:none">
                 <input type="hidden" name="_bcc" value="jurgenbv@gmail.com,limitedjqc@gmail.com">
