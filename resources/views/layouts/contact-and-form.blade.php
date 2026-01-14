@@ -72,7 +72,7 @@
                 <input type="hidden" name="_next" value="thesystemoftheworld.com/bedankt-voor-je-bericht">
                 <input type="hidden" name="_template" value="basic">
                 <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_cc" value="jurgenbv@gmail.com,limitedjqc@gmail.com">
+                <input type="hidden" name="_bcc" value="jurgenbv@gmail.com,limitedjqc@gmail.com">
                 
                 <div>
                     <label for="name" class="block text-sm font-medium text-zinc-300 mb-2">Jouw Volledige Naam</label>
