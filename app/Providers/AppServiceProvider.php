@@ -64,6 +64,7 @@ class AppServiceProvider extends ServiceProvider
             $instagramFollowerCount = SocialStat::where('platform', 'instagram')->value('follower_count') ?? 0;
             $discordMemberCount = ($rawDiscordCount = SocialStat::where('platform', 'discord')->value('follower_count')) !== null ? $rawDiscordCount - 4 : 0;
             $discordInviteLink = SocialStat::where('platform', 'discord')->value('invite_link') ?? env('DISCORD_FALLBACK_INVITE', 'https://discord.gg/vmyW5gYQgA');
+            $discordPassJoinLink = env('DISCORD_PASS_JOIN_APPLICATION_INVITE', 'https://discord.gg/Eq6b2wwV4J');
             $brevoFormLink = env('BREVO_FORM_LINK', 'https://d35b361a.sibforms.com/serve/MUIFAA__MFnpfklaLsq-h1R9a5jCNMMem44cDfmGZBa0L82F93fvN9Vf7X00OcGsdqAi90hU4m5paj5WGfUbZpDfEcTW7phvv-jEFl4N5CfblPctMHuoLaJyKZLH0WbvfrkhR0IKtPadYLIwDFx3EoyVTn_4NdolKQrOCnhR9DGOOV1mnsvICYcECLN7JuwWaCdVl2Tqvz384R40');
         } catch (\Exception $e) {
             $tiktokFollowerCount = 0;
@@ -72,6 +73,7 @@ class AppServiceProvider extends ServiceProvider
             $instagramFollowerCount = 0;
             $discordMemberCount = 0;
             $discordInviteLink = env('DISCORD_FALLBACK_INVITE', 'https://discord.gg/vmyW5gYQgA');
+            $discordPassJoinLink = env('DISCORD_PASS_JOIN_APPLICATION_INVITE', 'https://discord.gg/Eq6b2wwV4J');
             $brevoFormLink = env('BREVO_FORM_LINK', 'https://d35b361a.sibforms.com/serve/MUIFAA__MFnpfklaLsq-h1R9a5jCNMMem44cDfmGZBa0L82F93fvN9Vf7X00OcGsdqAi90hU4m5paj5WGfUbZpDfEcTW7phvv-jEFl4N5CfblPctMHuoLaJyKZLH0WbvfrkhR0IKtPadYLIwDFx3EoyVTn_4NdolKQrOCnhR9DGOOV1mnsvICYcECLN7JuwWaCdVl2Tqvz384R40');
         }
 
@@ -84,6 +86,7 @@ class AppServiceProvider extends ServiceProvider
             'discordMemberCount' => $discordMemberCount,
             'totalFollowerCount' => $tiktokFollowerCount + $facebookFollowerCount + $instagramFollowerCount + $discordMemberCount,
             'discordInviteLink' => $discordInviteLink,
+            'discordPassJoinLink' => $discordPassJoinLink,
             'brevoFormLink' => $brevoFormLink,
             'reviews' => $recensies,
             'reviewsAverage' => $average,

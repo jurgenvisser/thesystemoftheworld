@@ -30,7 +30,7 @@
                 Kijk eerst rustig rond. En begin gelijk aan jou herstel.
             </p>
             <div class="flex flex-col gap-3 pt-10 justify-center lg:px-48">
-                <a href="/" class="px-8 lg:px-10 py-5 font-mono w-full text-sm uppercase bg-blurple font-bold hover:bg-blurple/80 transition-all shadow-xl shadow-blurple/30">
+                <a href="{{ $discordPassJoinLink }}" class="px-8 lg:px-10 py-5 font-mono w-full text-sm uppercase bg-blurple font-bold hover:bg-blurple/80 transition-all shadow-xl shadow-blurple/30">
                     <div class="flex items-center gap-2 md:gap-5 justify-between md:justify-center">
                         <span class="h-6 aspect-[1/1] bg-discord-white bg-cover bg-center block"></span>
                         <span class="font-mono text-white uppercase tracking-widest">Discord Community</span>
