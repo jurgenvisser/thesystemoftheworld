@@ -14,6 +14,9 @@ class Kernel extends ConsoleKernel
         \App\Console\Commands\UpdateDiscordStats::class,
         \App\Console\Commands\UpdateMetaFollowers::class,
         \App\Console\Commands\GenerateDiscordInvite::class,
+        \App\Console\Commands\InsightSync::class,
+        \App\Console\Commands\InsightPull::class,
+        \App\Console\Commands\InsightDelete::class,
     ];
 
     protected function schedule(Schedule $schedule): void

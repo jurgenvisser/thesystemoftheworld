@@ -112,6 +112,22 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'production' => [
+            'driver' => 'mysql',
+            'host' => env('DB_PROD_HOST', '127.0.0.1'),
+            'port' => env('DB_PROD_PORT', '3306'),
+            'database' => env('DB_PROD_DATABASE'),
+            'username' => env('DB_PROD_USERNAME'),
+            'password' => env('DB_PROD_PASSWORD'),
+            'unix_socket' => env('DB_PROD_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+        ],
+
     ],
 
     /*

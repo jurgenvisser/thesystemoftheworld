@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-// use Illuminate\Support\Facades\DB;
-
 class InsightController extends Controller
 {
     public function index(\Illuminate\Http\Request $request)
     {
-        // dd(DB::connection()->getDatabaseName());
         // 1. Lees het nummer uit de query (?n=1)
         $number = $request->query('n', 1);
 

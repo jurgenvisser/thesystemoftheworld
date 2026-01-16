@@ -21,3 +21,6 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+# Temporary insight work files (export / pull workflow)
+resources/insights/
