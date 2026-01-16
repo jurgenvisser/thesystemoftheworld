@@ -15,7 +15,7 @@ use App\Http\Controllers\RateLimitedController;
 use Illuminate\Http\Request;
 
 View::share([
-    'appVersion' => 'TSotW.3.2.12p',
+    'appVersion' => 'TSotW.3.2.13d',
 ]);
 
 // . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.
@@ -122,50 +122,58 @@ Route::get('/terms-and-conditions', function () {
 });
 
 
-Route::get('/admin/facebook-token', function () {
-    return view('admin.facebook-token', ['token' => session('token')]);
-})->name('facebook.token.show')->middleware('auth');
+Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
+    Route::get('/facebook-token', function () {
+        return view('admin.facebook-token', ['token' => session('token')]);
+    })->name('facebook.token.show');
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/admin/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
-    Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('admin.dashboard');
+    Route::get('/dashboard', [AdminController::class, 'showDashboard'])
+        ->name('admin.dashboard');
 
-    Route::post('/admin/refresh-tiktok-token', [AdminController::class, 'refreshTikTokToken'])->name('admin.refresh-tiktok-token');
-    Route::post('/admin/refresh-meta-token', [AdminController::class, 'refreshMetaToken'])->name('admin.refresh-meta-token');
+    Route::post('/refresh-tiktok-token', [AdminController::class, 'refreshTikTokToken'])
+        ->name('admin.refresh-tiktok-token');
 
-    Route::post('/admin/update-followers', [AdminController::class, 'updateTikTokFollowers'])->name('admin.update-followers');
-    Route::post('/admin/update-youtube-followers', [AdminController::class, 'updateYoutubeFollowers'])->name('admin.update-youtube-followers');    
-    Route::post('/admin/update-meta-followers', [AdminController::class, 'updateMetaFollowers'])->name('admin.update-meta-followers');
-    Route::post('/admin/update-discord-followers', [AdminController::class, 'updateDiscordFollowers'])->name('admin.update-discord-followers');
-    Route::post('/admin/generate-discord-invite', [AdminController::class, 'generateDiscordInvite'])->name('admin.generate-discord-invite');
+    Route::post('/refresh-meta-token', [AdminController::class, 'refreshMetaToken'])
+        ->name('admin.refresh-meta-token');
+
+    Route::post('/update-followers', [AdminController::class, 'updateTikTokFollowers'])
+        ->name('admin.update-followers');
+
+    Route::post('/update-youtube-followers', [AdminController::class, 'updateYoutubeFollowers'])
+        ->name('admin.update-youtube-followers');
+
+    Route::post('/update-meta-followers', [AdminController::class, 'updateMetaFollowers'])
+        ->name('admin.update-meta-followers');
+
+    Route::post('/update-discord-followers', [AdminController::class, 'updateDiscordFollowers'])
+        ->name('admin.update-discord-followers');
+
+    Route::post('/generate-discord-invite', [AdminController::class, 'generateDiscordInvite'])
+        ->name('admin.generate-discord-invite');
+
+    Route::get('/force-apis', function () {
+        return view('admin.server-force-api');
+    });
+
+    Route::get('/test', function () {
+        return view('admin.test');
+    });
+
+    Route::get('/inzichten', [\App\Http\Controllers\InsightController::class, 'index'])
+        ->name('admin.inzichten');
+
+    Route::get('/new-coaching', function () {
+        return view('new-coaching');
+    });
+
+    Route::get('/html-css-footer-for-payhip', function () {
+        return view('admin.html-css-footer-for-payhip');
+    });
+
+    Route::get('/empty', function () {
+        return view('admin.empty');
+    });
 });
-
-// Route for the 'Force API's' page
-Route::get('/admin/force-apis', function () {
-    return view('admin.server-force-api');
-})->middleware('auth');
-
-// Route for the 'Test' page
-Route::get('/admin/test', function () {
-    return view('admin.test');
-})->middleware('auth');
-
-// Route for the 'Test' page
-Route::get('/admin/new-coaching', function () {
-    return view('new-coaching');
-})->middleware('auth');
-
-
-// Route for the 'HTML/CSS Footer for Payhip' page
-Route::get('/admin/html-css-footer-for-payhip', function () {
-    return view('admin.html-css-footer-for-payhip');
-})->middleware('auth');
-
-// Route for the 'Empty' page
-Route::get('/admin/empty', function () {
-    return view('admin.empty');
-})->middleware('auth');
-
 
 Route::post('/login', function (Request $request) {
     $credentials = $request->only('email', 'password');
