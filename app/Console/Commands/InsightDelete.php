@@ -68,7 +68,9 @@ class InsightDelete extends Command
             }
         }
 
-        $insight->delete();
+        DB::transaction(function () use ($insight) {
+            $insight->delete();
+        });
 
         $this->info("Insight '{$slug}' deleted from connection '{$connection}'.");
 

@@ -28,8 +28,8 @@ use Illuminate\Support\Facades\DB;
  *    Verwijder het bestand uit resources/insights
  *
  * BELANGRIJKE REGEL:
- * - DATABASE is altijd de bron van waarheid na sync
- * - Bestanden zijn tijdelijk en mogen verdwijnen
+ * DATABASE is altijd de bron van waarheid na sync
+ * (bestanden zijn uitsluitend tijdelijke werkmiddelen)
  *
  * EXTRA:
  * - Gebruik --to=production om expliciet naar PROD te pushen
@@ -50,7 +50,7 @@ class InsightSync extends Command
     public function handle(): int
     {
         $slug = $this->argument('slug');
-        $target = $this->option('to') ?? 'local';
+        $target = $this->option('to') ?: 'local';
 
         /**
          * SAFETY FIRST
@@ -121,10 +121,12 @@ class InsightSync extends Command
         /**
          * 5. Schrijf naar database
          */
-        $insight = Insight::on($connection)->updateOrCreate(
-            ['slug' => $data['slug']],
-            $data
-        );
+        $insight = DB::transaction(function () use ($data) {
+            return Insight::updateOrCreate(
+                ['slug' => $data['slug']],
+                $data
+            );
+        });
 
         /**
          * 6. Feedback
