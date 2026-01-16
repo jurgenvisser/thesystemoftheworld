@@ -22,13 +22,13 @@
             </div>
 
             <h1 class="text-3xl font-semibold tracking-tight pt-4">
-                Inzicht {{ str_replace('inzicht-', '', $insight['id']) }}
+                Inzicht {{ str_replace('inzicht-', '', $insight->slug) }}
             </h1>
-            <h2 class="text-2xl font-medium">{{ $insight['title'] }}</h2>
-            <p class="text-gray-500 italic">{{ $insight['subtitle'] }}</p>
+            <h2 class="text-2xl font-medium">{{ $insight->title }}</h2>
+            <p class="text-gray-500 italic">{{ $insight->content['subtitle'] ?? '' }}</p>
         </header>
 
-        @foreach ($insight['sections'] as $section)
+        @foreach ($insight->content['sections'] ?? [] as $section)
 
             @php
                 $isSubSection = substr_count($section['id'], '.') >= 2;

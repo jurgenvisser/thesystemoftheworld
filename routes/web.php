@@ -15,7 +15,7 @@ use App\Http\Controllers\RateLimitedController;
 use Illuminate\Http\Request;
 
 View::share([
-    'appVersion' => 'TSotW.3.2.13d',
+    'appVersion' => 'TSotW.3.2.14d',
 ]);
 
 // . Deze route is beschermd door mijn aangepaste RateLimiterController maar ik heb momentele geen forms waar ik deze op kan toepassen maar heb het wel klaargezet voor toekomstig gebruik.
@@ -159,8 +159,26 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
         return view('admin.test');
     });
 
-    Route::get('/inzichten', [\App\Http\Controllers\InsightController::class, 'index'])
-        ->name('admin.inzichten');
+    Route::get('/inzichten', [\App\Http\Controllers\InsightController::class, 'index'])->name('admin.inzichten');
+
+    Route::get('/inzichten/preview/{slug}', function ($slug) {
+        $path = resource_path("insights/{$slug}.php");
+
+        if (! file_exists($path)) {
+            abort(404, 'Insight preview file not found');
+        }
+
+        $data = require $path;
+
+        return view('admin.insights.index', [
+            'insight' => (object) [
+                'slug' => $data['slug'],
+                'title' => $data['title'],
+                'published' => $data['published'] ?? false,
+                'content' => $data['content'],
+            ],
+        ]);
+    })->middleware('auth');
 
     Route::get('/new-coaching', function () {
         return view('new-coaching');
